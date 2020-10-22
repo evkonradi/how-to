@@ -11,9 +11,14 @@ const Home = () => {
             {/* <Header>
             <Nav></Nav>
             </Header> */}
+            <Row xs={1} md={2}>
+                <Col><h3>Welcome to<br></br>
+                    TeachMeTo.</h3> 
+                    <h4>The place to learn.</h4> 
+                    </Col>
+            </Row>
             <Row>
-                <h1>TEST</h1>
-                <Resource></Resource>
+            <Resource></Resource>
             </Row>
         </div>
     );
