@@ -27,9 +27,9 @@ function App() {
   //  <ApolloProvider>
   //    <Router>
        <div>
-         <Header>
+         {/* <Header>
          <Nav />
-         </Header>
+         </Header> */}
          <Home></Home>
          {/* <StoreProvider> */}
            

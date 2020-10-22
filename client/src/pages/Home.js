@@ -11,12 +11,13 @@ const Home = () => {
         <div>
             <Jumbotron fluid>
             <Row xs={1} md={2}>
-                <Col sm={{ size: 6, order: 2, offset: 1}}><h3>Welcome to
+                <Col xs={{ size: 12 }} sm={{ size: 6, order: 2, offset: 1}}><h3>Welcome to
                     <br></br>TeachMETo.</h3> 
                     <h4>The place to learn.</h4> 
                 </Col>
             </Row>
             </Jumbotron>
+            
             
                 <Col xs={{ size: 8, offset:2 }} sm="4" md={{ size: 6, offset: 3 }}>
                 <Search></Search>

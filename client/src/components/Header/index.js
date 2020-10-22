@@ -3,11 +3,13 @@ import { Container, Row } from 'reactstrap';
 
 const Header = () => {
     return (
-        <Container>
-            <Row>
-                <h2>TEACHMETO</h2>
+        
+        <Row>
+                <h2>| | |</h2>
+
                 </Row>
-                </Container>
+     
+                
     )
 }
 

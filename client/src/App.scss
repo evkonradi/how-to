@@ -61,9 +61,13 @@ h5 {
 .jumbotron.jumbotron-fluid{
     background-color: #5C6B73;
     border-radius: 0 0 15px 15px;
+    width: 100%;
 }
 
 a {
     color: $info
 }
 
+Header {
+    background-color: $primary;
+}
