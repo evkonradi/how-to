@@ -37,8 +37,8 @@ function App() {
        
        <Footer></Footer>
        </div>
-  //    </Router>
-  //  </ApolloProvider>
+    //  </Router>
+    // </ApolloProvider>
   );
 }
 
