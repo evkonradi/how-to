@@ -6,25 +6,17 @@ import {Row, Col} from 'reactstrap';
 import Carousel from "react-bootstrap/Carousel";
 // import cook from '../../public/cook.jpg';
 
+// body inverse style={{ backgroundColor: '#9DB4C0', borderColor: '#333' }}>
+
 function Resource() {
   return (
-    //         <CardDeck>
-    //             <Card>
-    //                 <Card.Img />
-    //                     <Card.Body>
-    //                         <Card.Title>Test</Card.Title>
-    //                         <Card.Text>this is to see what it looks like
-    //                         </Card.Text>
-    //                         </Card.Body>
-    //                         <Card.Footer>what does this look like?</Card.Footer>
-    //   </Card>
-    //   </CardDeck>
     <div>
     <Row>
     <Carousel>
       <Carousel.Item>
-        <Col sm="6">
-          <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+        <Col>
+        
+          <Card style={{ width: "18rem" }}>
             <CardBody>
           <CardTitle>How To Cook</CardTitle>
           <CardSubtitle>Contributor</CardSubtitle>
