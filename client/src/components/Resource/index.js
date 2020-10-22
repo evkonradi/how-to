@@ -19,11 +19,12 @@ function Resource() {
     //                         <Card.Footer>what does this look like?</Card.Footer>
     //   </Card>
     //   </CardDeck>
-    <div className="resource">
+    <div>
     <Row>
     <Carousel>
       <Carousel.Item>
-          <Card style={{ width: "18rem" }}>
+        <Col sm="6">
+          <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
             <CardBody>
           <CardTitle>How To Cook</CardTitle>
           <CardSubtitle>Contributor</CardSubtitle>
@@ -35,6 +36,7 @@ function Resource() {
           <CardLink href='#'>Link to Resource</CardLink>
           </CardBody>
         </Card>
+        </Col>
       </Carousel.Item>
       <Carousel.Item>
       <Card style={{ width: "18rem" }}>

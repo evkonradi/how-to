@@ -16,8 +16,10 @@ const Home = () => {
                 <Col><h3>Welcome to<br></br>
                     TeachMeTo.</h3> 
                     <h4>The place to learn.</h4> 
-                    <Search></Search>
-                    </Col>
+                </Col>
+            </Row>
+            <Row>
+                <Search></Search>
             </Row>
             <Row>
             <Resource></Resource>
