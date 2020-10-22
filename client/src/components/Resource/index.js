@@ -15,7 +15,6 @@ function Resource() {
     <Carousel>
       <Carousel.Item>
         <Col>
-        
           <Card style={{ width: "18rem" }}>
             <CardBody>
           <CardTitle>How To Cook</CardTitle>

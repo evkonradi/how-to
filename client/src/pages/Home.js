@@ -25,8 +25,9 @@ const Home = () => {
                 <Search></Search>
                 </Col>
             </Row>
+            <br></br>
             <Row>
-            <Col sm="12" md={{ size: 6, offset: 4 }}>
+            <Col xs="12" sm="10" md={{ size: 6, offset: 4 }}>
             <Resource></Resource>
             </Col>
             </Row>

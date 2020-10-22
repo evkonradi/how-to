@@ -1,17 +1,18 @@
-import React from 'react';
-import { InputGroup, InputGroupText, InputGroupAddon, Input } from 'reactstrap';
+import React from "react";
+import { InputGroup, InputGroupText, InputGroupAddon, Input } from "reactstrap";
 
 const Search = () => {
-    return(
-        <div>
-                <InputGroup>
+  return (
+    <div>
+        <h5>What would you like to learn today?</h5>
+      <InputGroup>
         <Input />
         <InputGroupAddon addonType="append">
-          <InputGroupText>search</InputGroupText>
+          <InputGroupText>🔍</InputGroupText>
         </InputGroupAddon>
       </InputGroup>
-        </div>
-    )
+    </div>
+  );
 };
 
 export default Search;
