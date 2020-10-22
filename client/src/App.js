@@ -6,6 +6,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import './App.scss';
 
 import Home from './pages/Home';
+import Header from './components/Header';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 
@@ -26,7 +27,9 @@ function App() {
   //  <ApolloProvider>
   //    <Router>
        <div>
+         <Header>
          <Nav />
+         </Header>
          <Home></Home>
          {/* <StoreProvider> */}
            
