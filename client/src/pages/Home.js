@@ -3,7 +3,7 @@ import React from "react";
 import { Row, Col} from "react-bootstrap";
 // import { Header } from "./components/Header";
 // import { Nav } from "./components/Nav";
-import Card from "../components/Card";
+import Resource from "../components/Resource";
 
 const Home = () => {
     return (
@@ -13,7 +13,7 @@ const Home = () => {
             </Header> */}
             <Row>
                 <h1>TEST</h1>
-                <Card></Card>
+                <Resource></Resource>
             </Row>
         </div>
     );

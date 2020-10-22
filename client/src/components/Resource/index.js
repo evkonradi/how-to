@@ -1,8 +1,10 @@
 import React from 'react';
-import {Card, CardBody, CardTitle } from 'react-bootstrap';
-import {Carousel } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
 
-const Card = () => {
+// import CardBody from 'react-bootstrap/CardBody';
+import Carousel from 'react-bootstrap/Carousel';
+
+function Resource() {
     return(
 //         <CardDeck>
 //             <Card>
@@ -22,10 +24,10 @@ const Card = () => {
       src="holder.js/800x400?text=First slide&bg=373940"
       alt="First slide"
     />
-    <Card>
-        <CardBody>
-            <CardTitle>TEST TEST</CardTitle>
-        </CardBody>
+    <Card style={{ width: '18rem' }}>
+        
+            <Card.Title>TEST TEST</Card.Title>
+       
     </Card>
     <Carousel.Caption>
       <h3>First slide label</h3>
@@ -60,4 +62,4 @@ const Card = () => {
     )
 };
 
-export default Card;
+export default Resource;
