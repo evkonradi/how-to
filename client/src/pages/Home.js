@@ -1,6 +1,6 @@
 //comments
-import React from "react";
-import { Row, Col} from "react-bootstrap";
+import React from 'react';
+import { Row, Col} from 'reactstrap';
 // import { Header } from "./components/Header";
 // import { Nav } from "./components/Nav";
 import Resource from "../components/Resource";

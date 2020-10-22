@@ -1,9 +1,15 @@
 import React from 'react';
+import { InputGroup, InputGroupText, InputGroupAddon, Input } from 'reactstrap';
 
 const Search = () => {
     return(
         <div>
-            <p>search bar</p>
+                <InputGroup>
+        <Input />
+        <InputGroupAddon addonType="append">
+          <InputGroupText>search</InputGroupText>
+        </InputGroupAddon>
+      </InputGroup>
         </div>
     )
 };
