@@ -6,6 +6,7 @@ import {Row, Col} from 'reactstrap';
 import Carousel from "react-bootstrap/Carousel";
 // import cook from '../../public/cook.jpg';
 
+
 // body inverse style={{ backgroundColor: '#9DB4C0', borderColor: '#333' }}>
 
 function Resource() {
@@ -16,11 +17,11 @@ function Resource() {
       <Carousel.Item>
         <Col>
           <Card style={{ width: "18rem" }}>
-            <CardBody>
+            <CardBody inverse style={{ backgroundColor: "#9DB4C0"}}>
           <CardTitle>How To Cook</CardTitle>
           <CardSubtitle>Contributor</CardSubtitle>
           </CardBody>
-          <img width="100%" src="/images/cook.jpg" alt="cooking image" />
+          <img width="100%" src="/images/cook.jpg" alt="cook" />
           {/* <CardImg>image here</CardImg> */}
           <CardBody>
           <CardText>Nulla vitae elit libero, a pharetra augue mollis interdum.</CardText>
@@ -31,10 +32,11 @@ function Resource() {
       </Carousel.Item>
       <Carousel.Item>
       <Card style={{ width: "18rem" }}>
-            <CardBody>
+            <CardBody inverse style={{ backgroundColor: "#9DB4C0" }}>
           <CardTitle>How To Eat</CardTitle>
           <CardSubtitle>Contributor</CardSubtitle>
           </CardBody>
+          <img width="100%" src="/images/clean.jpg" alt="clean" />
           {/* <CardImg>image here</CardImg> */}
           <CardBody>
           <CardText>Nulla vitae elit libero, a pharetra augue mollis interdum.</CardText>
@@ -44,7 +46,7 @@ function Resource() {
       </Carousel.Item>
       <Carousel.Item>
       <Card style={{ width: "18rem" }}>
-            <CardBody>
+            <CardBody inverse style={{ backgroundColor: "#9DB4C0" }}>
           <CardTitle>How To Clean</CardTitle>
           <CardSubtitle>Contributor</CardSubtitle>
           </CardBody>

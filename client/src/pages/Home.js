@@ -20,13 +20,13 @@ const Home = () => {
                 </Col>
             </Row>
             </Jumbotron>
-            <Row>
+            
                 <Col xs={{ size: 8, offset:2 }} sm="4" md={{ size: 6, offset: 3 }}>
                 <Search></Search>
                 </Col>
-            </Row>
+            
             <br></br>
-            <Row>
+            <Row className="resource">
             <Col xs="12" sm="10" md={{ size: 6, offset: 4 }}>
             <Resource></Resource>
             </Col>

@@ -28,7 +28,7 @@
     );
   }
 
-$primary: hsl(201, 11%, 41%);
+$primary:#5C6B73;
 $secondary: #9DB4C0;
 $success: #D99748;
 $danger: #D99748;;
@@ -54,10 +54,10 @@ h5 {
 .resource {
     position: absolute;
     padding-top: 10px;
-    background-color: $success;
     width: 100%;
 }
 
-.banner {
-    background-color: $success;
+.Jumbotron{
+    background-color: #5C6B73;
 }
+
