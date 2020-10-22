@@ -1,9 +1,10 @@
-import React from "react";
-import Card from "react-bootstrap/Card";
-import {Row, Col} from "react-bootstrap";
+import React from 'react';
+import Card from 'react-bootstrap/Card';
+import {Row, Col} from 'react-bootstrap';
 
 // import CardBody from 'react-bootstrap/CardBody';
 import Carousel from "react-bootstrap/Carousel";
+// import cook from '../../public/cook.jpg';
 
 function Resource() {
   return (
@@ -18,12 +19,13 @@ function Resource() {
     //                         <Card.Footer>what does this look like?</Card.Footer>
     //   </Card>
     //   </CardDeck>
+    <div className="resource">
     <Row>
     <Carousel>
       <Carousel.Item>
         <img
           className="d-block h-60 w-100"
-          src="../public/cook_img.jpg"
+          // src={}
           alt="First slide"
         />
         <Card style={{ width: "18rem" }}>
@@ -63,6 +65,7 @@ function Resource() {
       </Carousel.Item>
     </Carousel>
     </Row>
+    </div>
   );
 }
 

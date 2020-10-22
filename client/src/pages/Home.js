@@ -4,6 +4,7 @@ import { Row, Col} from "react-bootstrap";
 // import { Header } from "./components/Header";
 // import { Nav } from "./components/Nav";
 import Resource from "../components/Resource";
+import Search from '../components/Search';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
                 <Col><h3>Welcome to<br></br>
                     TeachMeTo.</h3> 
                     <h4>The place to learn.</h4> 
+                    <Search></Search>
                     </Col>
             </Row>
             <Row>
