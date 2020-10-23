@@ -26,6 +26,8 @@ const userSchema = new Schema(
                 ref: 'Resource'
             }
         ],
+    },
+    {
         toJSON: {
             virtuals: true
         }
