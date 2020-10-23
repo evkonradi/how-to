@@ -25,7 +25,7 @@ function Resource() {
           <Card style={{ width: "18rem" }}>
             <CardBody inverse style={{ backgroundColor: "#9DB4C0"}}>
           <CardTitle>How To Cook</CardTitle>
-          <CardSubtitle>Contributor</CardSubtitle>
+          <CardSubtitle>Contributor Name</CardSubtitle>
           </CardBody>
           <img width="100%" src="/images/cook.jpg" alt="cook" />
           {/* <CardImg>image here</CardImg> */}
@@ -40,7 +40,7 @@ function Resource() {
       <Card style={{ width: "18rem" }}>
             <CardBody inverse style={{ backgroundColor: "$success" }}>
           <CardTitle>How To Eat</CardTitle>
-          <CardSubtitle>Contributor</CardSubtitle>
+          <CardSubtitle>Contributor Name</CardSubtitle>
           </CardBody>
           <img top width="100%" src="/images/clean.jpg" alt="clean" />
           {/* <CardImg>image here</CardImg> */}
@@ -54,10 +54,11 @@ function Resource() {
       <Card style={{ width: "18rem" }}>
             <CardBody inverse style={{ backgroundColor: "#9DB4C0" }}>
           <CardTitle>How To Clean</CardTitle>
-          <CardSubtitle>Contributor</CardSubtitle>
+          <CardSubtitle>Contributor Name</CardSubtitle>
           </CardBody>
           {/* <CardImg>image here</CardImg> */}
           <CardBody>
+          <img top width="100%" src="/images/blueberry.jpg" alt="clean" />
           <CardText>Nulla vitae elit libero, a pharetra augue mollis interdum.</CardText>
           <CardLink href='#'>Link to Resource</CardLink>
           </CardBody>

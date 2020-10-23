@@ -23,6 +23,7 @@
   "homepage": "https://github.com/evkonradi/teach-me-to#readme",
   "dependencies": {
     "if-env": "^1.0.4",
+    "moment": "^2.29.1",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
