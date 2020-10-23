@@ -36,7 +36,7 @@ const userSchema = new Schema(
 
 
 userSchema.virtual('resourceCount').get(function() {
-    return this.friends.length;
+    return this.resources.length;
 });
 
 const User = model('User', userSchema);
