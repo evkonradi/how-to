@@ -26,6 +26,8 @@ const userSchema = new Schema(
                 ref: 'Resource'
             }
         ],
+    },
+    {
         toJSON: {
             virtuals: true
         }
@@ -36,7 +38,7 @@ const userSchema = new Schema(
 
 
 userSchema.virtual('resourceCount').get(function() {
-    return this.friends.length;
+    return this.resources.length;
 });
 
 const User = model('User', userSchema);
