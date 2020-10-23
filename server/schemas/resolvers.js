@@ -5,8 +5,15 @@ const resolvers = {
         resources: async () => {
             return await Resource.find();
         },
-        resource: async (parent, { _id }) => {
-            return await Resource.findById(_id);
+        resource: async (parent, { _id, name }) => {
+            const params = {};
+
+            if (name) {
+                params.name = {
+                    $regex: name
+                };
+            }
+            return await Resource.findById(params).populate('resource');
         },
     },
 
