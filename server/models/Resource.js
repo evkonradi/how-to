@@ -55,7 +55,7 @@ const resourceSchema = new Schema({
     dateCreated: { 
         type: Date, 
         default: Date.now ,
-        get: timestamp => moment(timestamp).format('MMM Do, YYYY')
+        get: timestamp => moment(timestamp).format('MMM DD, YYYY')
     },
     images: [imageSchema],
     videos: [videoSchema]
