@@ -21,7 +21,8 @@ function Resource() {
     <div>
     <Carousel>
       <Carousel.Item>
-        <Col xs="12">
+    
+        <Col xs="auto" sm="12" offset="5">
           <Card style={{ width: "18rem" }}>
             <CardBody inverse style={{ backgroundColor: "#9DB4C0"}}>
           <CardTitle>How To Cook</CardTitle>
@@ -35,10 +36,12 @@ function Resource() {
           </CardBody>
         </Card>
         </Col>
+    
       </Carousel.Item>
       <Carousel.Item>
+      <Col xs="3" sm="12">
       <Card style={{ width: "18rem" }}>
-            <CardBody inverse style={{ backgroundColor: "$success" }}>
+            <CardBody inverse style={{ backgroundColor: "#9DB4C0" }}>
           <CardTitle>How To Eat</CardTitle>
           <CardSubtitle>Contributor Name</CardSubtitle>
           </CardBody>
@@ -49,8 +52,10 @@ function Resource() {
           <CardLink href='#'>Link to Resource</CardLink>
           </CardBody>
         </Card>
+        </Col>
       </Carousel.Item>
       <Carousel.Item>
+      <Col xs="12" sm="12" offset="5">
       <Card style={{ width: "18rem" }}>
             <CardBody inverse style={{ backgroundColor: "#9DB4C0" }}>
           <CardTitle>How To Clean</CardTitle>
@@ -63,6 +68,7 @@ function Resource() {
           <CardLink href='#'>Link to Resource</CardLink>
           </CardBody>
         </Card>
+        </Col>
       </Carousel.Item>
     </Carousel>
     </div>

@@ -19,7 +19,7 @@ const Home = () => {
             </Jumbotron>
             
             
-                <Col xs={{ size: 8, offset:2 }} sm="4" md={{ size: 6, offset: 3 }}>
+                <Col className="homesearch" xs={{ size: 8, offset:2 }} sm="4" md={{ size: 6, offset: 3 }}>
                 <h5>What would you like to learn today?</h5>
                 <Search></Search>
                 </Col>
