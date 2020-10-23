@@ -6,7 +6,7 @@ const { Schema } = mongoose;
 const imageSchema = new Schema({
     fileName: {
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     fileURL:{
@@ -24,7 +24,7 @@ const imageSchema = new Schema({
 const videoSchema = new Schema({
     fileName: {
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     fileURL:{
