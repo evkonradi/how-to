@@ -1,4 +1,4 @@
-const { Resource } = require('../models');
+const { User, Resource } = require('../models');
 
 const resolvers = {
     Query: {

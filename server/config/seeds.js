@@ -1,10 +1,10 @@
 const db = require('./connection');
-const { User, Resources } = require('../models');
+const { User, Resource } = require('../models');
 
 db.once('open', async () => {
-  await Resources.deleteMany();
+  await Resource.deleteMany();
 
-  const resources = await Resources.insertMany([
+  const resources = await Resource.insertMany([
     { 
     name: 'Bake a Blueberry Tart',
     shortDescription: 'Make a delicious blueberry tart in under an hour.',
@@ -189,16 +189,13 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
 
   console.log('resources seeded');
 
+  await User.deleteMany();
+
   await User.create({
     firstName: 'Frank',
     lastName: 'Furter',
     email: 'frankf@testmail.com',
     password: 'password12345',
-    orders: [
-      {
-        resources: [resources[0]._id, resources[0]._id, resources[1]._id]
-      }
-    ]
   });
 
   await User.create({
