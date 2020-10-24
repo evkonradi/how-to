@@ -3,27 +3,25 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
 
   input ImageInput{
-    fileName: String,
+
     fileURL: String,
     imageCaption: String
   }
 
   input VideoInput{
-    fileName: String,
+   
     fileURL: String,
     videoCaption: String
   }
 
   type Image{
     _id: ID!,
-    fileName: String,
     fileURL: String,
     imageCaption: String
   }
 
   type Video{
     _id: ID!,
-    fileName: String,
     fileURL: String,
     videoCaption: String
   }
