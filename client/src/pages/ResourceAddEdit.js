@@ -133,16 +133,16 @@ function ResourceAddEdit(){
             <h2>{id ? "Edit Article" : "New Article"}</h2>
             <form onSubmit={handleFormSubmit}></form>
             </Row>
-                    <Col xs={6}>
+                    <Col xs={12}>
                     <Input id ="articleName" placeholder="Article Name" name="articleName" onChange={handleChange} value={formState.articleName}></Input><br />
                     <Input id ="articleShortDesc" placeholder="Article Short Description" name="articleShortDesc" value={formState.articleShortDesc} onChange={handleChange}></Input><br />
-                    <textarea id ="articleText" rows="20" cols="100" name="articleText" value={formState.articleText} onChange={handleChange}>
+                    <Input type="textarea" id ="articleText" rows="20" cols="100" name="articleText" value={formState.articleText} onChange={handleChange}>
                         Please enter your article text here.
-                    </textarea><br /><br />
+                    </Input><br /><br />
                     </Col>
                
 
-               <Col xs={6}>
+               <Col xs={12}>
                     {formState.imageList.map(image => (
                         <div key ={`div-image-${formState.imageList.indexOf(image)}`} onClick={handleDelete}>
                             <img src={`${image.fileURL}`} alt={`${image.imageCaption}`} width="300" ></img>
@@ -152,7 +152,7 @@ function ResourceAddEdit(){
                     ))}<br /><br />
                 </Col>
 
-                <Col xs={6}>
+                <Col xs={12}>
                     <InputGroup>
                     <InputGroupAddon addonType="append">
                     <Input id ="imageLinkInput" placeholder="Link to an image" name="imageLinkInput" value={formState.imageLinkInput} onChange={handleChange}></Input>
@@ -162,7 +162,7 @@ function ResourceAddEdit(){
                     </InputGroup>
                 </Col>
 
-                <Col xs={6}>
+                <Col xs={12}>
                     {formState.videoList.map(video => (
                         <div key ={`div-video-${formState.videoList.indexOf(video)}`} onClick={handleDelete}>
                             <iframe width="300" src={`${video.fileURL}`} frameBorder="0" title={video.videoCaption}
@@ -175,7 +175,7 @@ function ResourceAddEdit(){
                 </Col>
                 
 
-                <Col xs={6}>
+                <Col xs={12}>
                     <InputGroup>
                     <InputGroupAddon addonType="append"
 >                    <Input id ="videoLinkInput" placeholder="Link to a video" name="videoLinkInput" value={formState.videoLinkInput} onChange={handleChange}></Input>
@@ -184,7 +184,7 @@ function ResourceAddEdit(){
                     </InputGroupAddon>
                     </InputGroup>
                 </Col>
-                <Col xs={6}>
+                <Col xs={12}>
                 <Button id = "btnSubmit" type="submit">Submit</Button>
                 </Col>
                 </Container>
