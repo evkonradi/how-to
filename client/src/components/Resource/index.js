@@ -27,37 +27,13 @@ const { id } = useParams();
 
 const {currentResource, setCurrentResource } = useState({});
 
-const { loading, data } = useQuery(QUERY_RESOURCE);
 const { resources } = state;
 
-  // const { name, shortDescription, link, imageURL} = Resource;
-// return state.resources.filter(resource => resource.name._id === currentResource);
-//  useEffect(() => {
-//    if(data) {
-//      dispatch({
-//        type: UPDATE_RESOURCE,
-//        resources: data.resources
-//      });
-//      data.resources.forEach((resource) => {
-//        idbPromise('resources', 'put', resource);
-//      });
-//    }  else if (!loading) {
-//      idbPromise('resources', 'get').then((resources) => {
-//        dispatch({
-//          type: UPDATE_RESOURCE,
-//          resources: data.resources
-//        });
-//      });
-//    }
-//  }, [resources, data, loading, dispatch]);   
- 
-//  function filterResources() {
-//    if (!currentResource) {
-//      return state.resources;
-//    }
+const { loading, data } = useQuery(QUERY_RESOURCE, {
+  variables: { _id: id },
+  skip : !id
+});
 
-//    return state.resources.filter(resource => resource.name._id === currentResource);
-//  }
 useEffect(() => {
   if (resources.length) {
     setCurrentResource(resources.find(resource => resource._id === id));
@@ -80,7 +56,7 @@ useEffect(() => {
       });
     });
   }
-}, [resources, data, loading, dispatch, id]);
+}, [resources, data, loading, dispatch, id])
 
   return (
     <div>

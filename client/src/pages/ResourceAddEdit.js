@@ -129,10 +129,12 @@ function ResourceAddEdit(){
     return(
         <div>
             <Container fluid>
+                <Col xs={12}>
             <Row>
             <h2>{id ? "Edit Article" : "New Article"}</h2>
             <form onSubmit={handleFormSubmit}></form>
             </Row>
+            </Col>
                     <Col xs={12}>
                     <Input id ="articleName" placeholder="Article Name" name="articleName" onChange={handleChange} value={formState.articleName}></Input><br />
                     <Input id ="articleShortDesc" placeholder="Article Short Description" name="articleShortDesc" value={formState.articleShortDesc} onChange={handleChange}></Input><br />
@@ -154,11 +156,11 @@ function ResourceAddEdit(){
 
                 <Col xs={12}>
                     <InputGroup>
-                    <InputGroupAddon addonType="append">
+                    {/* <InputGroupAddon addonType="append"> */}
                     <Input id ="imageLinkInput" placeholder="Link to an image" name="imageLinkInput" value={formState.imageLinkInput} onChange={handleChange}></Input>
                     <Input id ="imageCaption" placeholder="Image Caption" name="imageCaption" value={formState.imageCaption} onChange={handleChange}></Input>
                     <Button id="btnAddImage" onClick={handleImageAdd}>Add Image</Button>
-                    </InputGroupAddon>
+                    {/* </InputGroupAddon> */}
                     </InputGroup>
                 </Col>
 
@@ -177,14 +179,14 @@ function ResourceAddEdit(){
 
                 <Col xs={12}>
                     <InputGroup>
-                    <InputGroupAddon addonType="append"
->                    <Input id ="videoLinkInput" placeholder="Link to a video" name="videoLinkInput" value={formState.videoLinkInput} onChange={handleChange}></Input>
+                    {/* <InputGroupAddon addonType="append" */}
+                    <Input id ="videoLinkInput" placeholder="Link to a video" name="videoLinkInput" value={formState.videoLinkInput} onChange={handleChange}></Input>
                     <Input id ="videoCaption" placeholder="Video Caption" name="videoCaption" value={formState.videoCaption} onChange={handleChange}></Input>
                     <Button id="btnAddVideo" onClick={handleVideoAdd}>Add Video</Button>
-                    </InputGroupAddon>
+                    {/* </InputGroupAddon> */}
                     </InputGroup>
                 </Col>
-                <Col xs={12}>
+                <Col xs={{ span:6, offset:4 }}>
                 <Button id = "btnSubmit" type="submit">Submit</Button>
                 </Col>
                 </Container>
