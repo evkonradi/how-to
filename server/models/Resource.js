@@ -6,7 +6,7 @@ const { Schema } = mongoose;
 const imageSchema = new Schema({
     // fileName: {
     //     type: String,
-    //     required: true,
+    //     required: false,
     //     trim: true
     // },
     fileURL:{
