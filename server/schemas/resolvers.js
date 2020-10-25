@@ -1,9 +1,9 @@
-const { User, Resource, getResource } = require('../models');
+const { User, Resource } = require('../models');
 
 const resolvers = {
     Query: {
         resources: async () => {
-            return await Resource.find();
+            return Resource.find().sort({ createdAt: -1 });
         },
         resource: async (parent, { _id }) => {
             return await Resource.findById(_id);
