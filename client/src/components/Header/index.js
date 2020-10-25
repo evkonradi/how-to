@@ -1,16 +1,16 @@
-import React from 'react';
-import { Container, Row } from 'reactstrap';
+import React, { Component } from 'react';
 
-const Header = () => {
-    return (
-        
-        <Row>
-                <h2>| | |</h2>
-
-                </Row>
-     
-                
-    )
+export default
+class Header extends Component {
+  render(){
+  return (
+    <div className="Header">
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li className="float-right"><a className="active" href="#SigninLogin">Sign Up / Log In</a></li>
+            
+        </ul>
+    </div>
+  );
 }
-
-export default Header;
+}

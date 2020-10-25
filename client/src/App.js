@@ -8,7 +8,6 @@ import ApolloClient from 'apollo-boost';
 
 import Home from './pages/Home';
 import Header from './components/Header';
-import Nav from './components/Nav';
 import Footer from './components/Footer';
 import ResourceAddEdit from './pages/ResourceAddEdit';
 
@@ -30,14 +29,14 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <Nav />
+          <Header />
 
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/resource/:id?" component={ResourceAddEdit} />
             {/* <Route component={NoMatch} /> */}
           </Switch>
-
+          
           <Footer />
         </div>
       </Router>
