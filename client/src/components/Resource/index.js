@@ -22,7 +22,7 @@ import { UPDATE_RESOURCES } from '../../utils/actions';
 // key={image.id} use with Carousel.Item once db established
 
 function Resource() {
-const [state, dispatch] = useResourceContext();
+const [state, dispatch] = useResourceContext('');
 
 const {currentResource } = state;
 
@@ -56,6 +56,7 @@ const { loading, data } = useQuery(QUERY_RESOURCES);
 
    return state.resources.filter(resource => resource.name._id === currentResource);
  }
+
   return (
     <div>
     <Carousel>
@@ -67,7 +68,7 @@ const { loading, data } = useQuery(QUERY_RESOURCES);
           <CardTitle>{state.name.length}</CardTitle>
           <CardSubtitle>{state.name.length}</CardSubtitle>
           </CardBody>
-          <img width="100%" src="{imageURL}" alt="tag" />
+          <img width="100%" src="{image.id}" alt="tag" />
           {/* <CardImg>image here</CardImg> */}
           <CardBody>
           <CardText>{state.shortDescription.length}</CardText>
