@@ -51,7 +51,7 @@ const resourceSchema = new Schema({
     videos: [videoSchema]
   });
 
-//   const getResourceSchema = new Schema({
+//   const cardSchema = new Schema({
 //     name: {
 //         type: String,
 //         required: true,
