@@ -1,10 +1,10 @@
 import { useReducer } from "react";
-import { UPDATE_RESOURCES
+import { UPDATE_RESOURCE
 } from "./actions";
 
 export const reducer = (state, action) => {
     switch (action.type) {
-        case UPDATE_RESOURCES:
+        case UPDATE_RESOURCE:
             return {
                 ...state,
                 resources: [...action.resources],

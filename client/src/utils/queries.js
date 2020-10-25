@@ -1,19 +1,21 @@
 import gql from 'graphql-tag';
 
-export const QUERY_RESOURCES = gql`
-    query resources($name: String!) {
-        resources(name: $name) {
-            _id
-            name
-            shortDescription
-            image {
-                imageURL
-                description
-            }
-            video {
-                videoURL
-                description
-            }
-        }
+export const QUERY_RESOURCE = gql`
+query resource($_id: ID!) {
+    resource(_id: $_id) {
+      _id
+      name
+      shortDescription
+      resourceBody
+      dateCreated
+      images{
+            fileURL
+            imageCaption
+      }
+      videos{
+            fileURL
+            videoCaption
+      }
     }
-    `;
+  }
+`;
