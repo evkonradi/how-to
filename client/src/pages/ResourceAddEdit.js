@@ -134,8 +134,8 @@ function ResourceAddEdit(){
             <form onSubmit={handleFormSubmit}></form>
             </Row>
                     <Col xs={6}>
-                    <Input id ="articleName" placeholder="Article Name" name="articleName" onChange={handleChange} value={formState.articleName}></Input><br /><br />
-                    <Input id ="articleShortDesc" placeholder="Article Short Description" name="articleShortDesc" value={formState.articleShortDesc} onChange={handleChange}></Input><br /><br />
+                    <Input id ="articleName" placeholder="Article Name" name="articleName" onChange={handleChange} value={formState.articleName}></Input><br />
+                    <Input id ="articleShortDesc" placeholder="Article Short Description" name="articleShortDesc" value={formState.articleShortDesc} onChange={handleChange}></Input><br />
                     <textarea id ="articleText" rows="20" cols="100" name="articleText" value={formState.articleText} onChange={handleChange}>
                         Please enter your article text here.
                     </textarea><br /><br />
