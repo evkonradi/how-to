@@ -1,16 +1,16 @@
 //comments
 import React from "react";
 import { Row, Col} from "react-bootstrap";
-// import { Header } from "./components/Header";
-// import { Nav } from "./components/Nav";
+import { Header } from "./components/Header";
+import { Nav } from "./components/Nav";
 import Resource from "../components/Resource";
 
 const Home = () => {
     return (
         <div className="container">
-            {/* <Header>
+            {<Header>
             <Nav></Nav>
-            </Header> */}
+            </Header>}
             <Row xs={1} md={2}>
                 <Col><h3>Welcome to<br></br>
                     TeachMeTo.</h3> 
