@@ -157,6 +157,7 @@ function ResourceAddEdit(){
                         <div key ={`div-video-${formState.videoList.indexOf(video)}`} onClick={handleDelete}>
                             <iframe width="300" src={`${video.fileURL}`} frameBorder="0" title={video.videoCaption}
                                 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                            <span>{video.videoCaption}</span>
                             <img src="/images/icondelete.png" alt="delete" width="50" data-number={`video-${formState.videoList.indexOf(video)}`} ></img>
                             <br /><br />
                         </div>
