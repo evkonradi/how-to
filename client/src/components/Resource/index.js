@@ -1,69 +1,95 @@
-import React from "react";
-import Card from "react-bootstrap/Card";
-import {Row, Col} from "react-bootstrap";
+import React, { useState } from 'react';
+import { Card, CardImg, CardText, CardBody, CardLink, CardTitle, CardSubtitle, CarouselIndicators, CarouselControl, CarouselItem, CarouselCaption }  from 'reactstrap';
+import {Row, Col} from 'reactstrap';
+
 
 // import CardBody from 'react-bootstrap/CardBody';
 import Carousel from "react-bootstrap/Carousel";
+// import cook from '../../public/cook.jpg';
+
+// import Carousel,
+//       CarouselItem,
+//       CarouselControl,
+//       CarouselIndicators,
+//       CarouselCaption from "reactstrap";
+
+
+// body inverse style={{ backgroundColor: '#9DB4C0', borderColor: '#333' }}>
+// key={image.id} use with Carousel.Item once db established
 
 function Resource() {
   return (
-    //         <CardDeck>
-    //             <Card>
-    //                 <Card.Img />
-    //                     <Card.Body>
-    //                         <Card.Title>Test</Card.Title>
-    //                         <Card.Text>this is to see what it looks like
-    //                         </Card.Text>
-    //                         </Card.Body>
-    //                         <Card.Footer>what does this look like?</Card.Footer>
-    //   </Card>
-    //   </CardDeck>
-    <Row>
+    <div>
     <Carousel>
       <Carousel.Item>
-        <img
-          className="d-block h-60 w-100"
-          src="../public/cook_img.jpg"
-          alt="First slide"
-        />
-        <Card style={{ width: "18rem" }}>
-          <Col>
-          <Card.Title>TEST TEST</Card.Title>
-
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Col>
+    
+        <Col xs="auto" sm="12" offset="5">
+          <Card style={{ width: "18rem" }}>
+            <CardBody inverse style={{ backgroundColor: "#9DB4C0"}}>
+          <CardTitle>How To Cook</CardTitle>
+          <CardSubtitle>Contributor Name</CardSubtitle>
+          </CardBody>
+          <img width="100%" src="/images/cook.jpg" alt="cook" />
+          {/* <CardImg>image here</CardImg> */}
+          <CardBody>
+          <CardText>Nulla vitae elit libero, a pharetra augue mollis interdum.</CardText>
+          <CardLink href='#'>Link to Resource</CardLink>
+          </CardBody>
         </Card>
+        </Col>
+    
       </Carousel.Item>
       <Carousel.Item>
-        <Card style={{ width: "18rem" }}>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
-            alt="Third slide"
-          />
-
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <Col xs="3" sm="12">
+      <Card style={{ width: "18rem" }}>
+            <CardBody inverse style={{ backgroundColor: "#9DB4C0" }}>
+          <CardTitle>How To Eat</CardTitle>
+          <CardSubtitle>Contributor Name</CardSubtitle>
+          </CardBody>
+          <img top width="100%" src="/images/clean.jpg" alt="clean" />
+          {/* <CardImg>image here</CardImg> */}
+          <CardBody>
+          <CardText>Nulla vitae elit libero, a pharetra augue mollis interdum.</CardText>
+          <CardLink href='#'>Link to Resource</CardLink>
+          </CardBody>
         </Card>
+        </Col>
       </Carousel.Item>
       <Carousel.Item>
-        <Card style={{ width: "18rem" }}>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
-            alt="Third slide"
-          />
-
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+      <Col xs="12" sm="12" offset="5">
+      <Card style={{ width: "18rem" }}>
+            <CardBody inverse style={{ backgroundColor: "#9DB4C0" }}>
+          <CardTitle>How To Clean</CardTitle>
+          <CardSubtitle>Contributor Name</CardSubtitle>
+          </CardBody>
+          {/* <CardImg>image here</CardImg> */}
+          <CardBody>
+          <img top width="100%" src="/images/blueberry.jpg" alt="clean" />
+          <CardText>Nulla vitae elit libero, a pharetra augue mollis interdum.</CardText>
+          <CardLink href='#'>Link to Resource</CardLink>
+          </CardBody>
         </Card>
+        </Col>
       </Carousel.Item>
     </Carousel>
-    </Row>
+    </div>
   );
 }
+
+// CarouselControl.propTypes = {
+//   direction: PropTypes.oneOf(['prev', 'next']).isRequired,
+//   onClickHandler: PropTypes.func.isRequired,
+//   cssModule: PropTypes.object,
+//   directionText: PropTypes.string
+// };
+
+// CarouselItem.propTypes = {
+//   ...Transition.propTypes,
+//   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+//   in: PropTypes.bool,
+//   cssModule: PropTypes.object,
+//   children: PropTypes.node,
+//   slide: PropTypes.bool,
+// };
 
 export default Resource;

@@ -4,14 +4,9 @@ const moment = require('moment');
 const { Schema } = mongoose;
 
 const imageSchema = new Schema({
-    fileName: {
-        type: String,
-        required: true,
-        trim: true
-    },
     fileURL:{
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     imageCaption: {
@@ -22,14 +17,9 @@ const imageSchema = new Schema({
 });
 
 const videoSchema = new Schema({
-    fileName: {
-        type: String,
-        required: true,
-        trim: true
-    },
     fileURL:{
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     videoCaption: {
@@ -55,7 +45,7 @@ const resourceSchema = new Schema({
     dateCreated: { 
         type: Date, 
         default: Date.now ,
-        get: timestamp => moment(timestamp).format('MMM Do, YYYY')
+        get: timestamp => moment(timestamp).format('MMM DD, YYYY')
     },
     images: [imageSchema],
     videos: [videoSchema]
