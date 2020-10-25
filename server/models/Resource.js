@@ -4,11 +4,6 @@ const moment = require('moment');
 const { Schema } = mongoose;
 
 const imageSchema = new Schema({
-    // fileName: {
-    //     type: String,
-    //     required: true,
-    //     trim: true
-    // },
     fileURL:{
         type: String,
         required: false,
@@ -22,11 +17,6 @@ const imageSchema = new Schema({
 });
 
 const videoSchema = new Schema({
-    // fileName: {
-    //     type: String,
-    //     required: true,
-    //     trim: true
-    // },
     fileURL:{
         type: String,
         required: false,
