@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Card, CardImg, CardText, CardBody, CardLink, CardTitle, CardSubtitle, CarouselIndicators, CarouselControl, CarouselItem, CarouselCaption }  from 'reactstrap';
 import {Row, Col} from 'reactstrap';
 
+
 // import CardBody from 'react-bootstrap/CardBody';
 import Carousel from "react-bootstrap/Carousel";
 // import cook from '../../public/cook.jpg';

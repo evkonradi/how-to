@@ -2,12 +2,9 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
-<<<<<<< HEAD
-// import ApolloClient from 'apollo-boost';
-import './App.scss';
-=======
 import ApolloClient from 'apollo-boost';
->>>>>>> cf28f710e1bfb5fc833ea87d4aba3e4b7b5da703
+import './App.scss';
+
 
 import Home from './pages/Home';
 import Header from './components/Header';
@@ -29,27 +26,6 @@ const client = new ApolloClient({
 
 function App() {
   return (
-<<<<<<< HEAD
-  //  <ApolloProvider>
-  //    <Router>
-       <div>
-         {/* <Header>
-         <Nav />
-         </Header> */}
-         <Home></Home>
-         {/* <StoreProvider> */}
-           
-           {/* <Switch>
-             <Route exact path="/" component={Home} /> */}
-             {/* <Route component={NoMatch} /> */}
-           {/* </Switch> */}
-         {/* </StoreProvider> */}
-       
-       <Footer></Footer>
-       </div>
-    //  </Router>
-    // </ApolloProvider>
-=======
     <ApolloProvider client={client}>
       <Router>
         <div>
@@ -65,7 +41,6 @@ function App() {
         </div>
       </Router>
     </ApolloProvider>
->>>>>>> cf28f710e1bfb5fc833ea87d4aba3e4b7b5da703
   );
 }
 
