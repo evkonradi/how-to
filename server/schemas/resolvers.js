@@ -1,4 +1,5 @@
 const { User, Resource } = require('../models');
+const ObjectId = require('mongoose').Types.ObjectId;
 
 const resolvers = {
     Query: {
@@ -33,14 +34,14 @@ const resolvers = {
         },
         updateResource: async (parent, args) => {
             return await Resource.findByIdAndUpdate(args._id, {...args}, { new: true } );
-            // return await Resource.findByIdAndUpdate(args._id, 
-            //     {
-            //         name: args.name, 
-            //         shortDescription: args.shortDescription,
-            //         resourceBody: args.resourceBody,
-            //         images: args.images
-            //     }
-            // );
+        },
+        deleteResource: async(parent, {_id})=>{
+            try{
+                return await Resource.findByIdAndRemove({_id});
+            }
+            catch (err) {
+                console.log(err);
+            }
         }
     }
 }

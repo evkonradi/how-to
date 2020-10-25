@@ -50,11 +50,16 @@ const typeDefs = gql`
     resource(_id: ID!): Resource
   }
 
+  type type_affected_rows{
+    affected_rows: Int!
+  }
+
   type Mutation {
    
     addUser(username: String!, email: String!, password: String!): User
     addResource(name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput]): Resource
     updateResource(_id: ID!, name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput]): Resource
+    deleteResource(_id: ID!): Resource
   }
   `;
 
