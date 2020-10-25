@@ -5,7 +5,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 
 import Home from './pages/Home';
-import Nav from './components/Nav';
+import Header from './components/Header';
 import Footer from './components/Footer';
 import Resource from './pages/Resource';
 
@@ -26,7 +26,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <Nav />
+          <Header />
 
           <Switch>
             <Route exact path="/" component={Home} />
