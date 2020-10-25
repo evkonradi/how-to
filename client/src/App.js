@@ -31,7 +31,7 @@ function App() {
       <Router>
         <div>
           <Nav />
-          <Home/>
+
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/resource/:id?" component={ResourceAddEdit} />
