@@ -50,8 +50,21 @@ const resourceSchema = new Schema({
     images: [imageSchema],
     videos: [videoSchema]
   });
+
+//   const getResourceSchema = new Schema({
+//     name: {
+//         type: String,
+//         required: true,
+//         trim: true
+//       },
+//       shortDescription: {
+//         type: String,
+//         required: true
+//       },
+//       images: [imageSchema],
+//   })
   
   const Resource = mongoose.model('Resource', resourceSchema);
-  
+//   const Resource = mongoose.model('Resource', resourceSchema, getResourceSchema);
   module.exports = Resource;
   

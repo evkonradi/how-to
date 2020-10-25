@@ -1,4 +1,4 @@
-const { User, Resource } = require('../models');
+const { User, Resource, getResource } = require('../models');
 
 const resolvers = {
     Query: {
@@ -8,6 +8,9 @@ const resolvers = {
         resource: async (parent, { _id }) => {
             return await Resource.findById(_id);
         },
+        // resource: () => {
+        //     return GetResource.find();
+        // },
         users: async () => {
             return await User.find()
             .populate('resources');
