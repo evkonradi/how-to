@@ -16,7 +16,15 @@ const resolvers = {
             return resource;
         },
         updateResource: async (parent, args) => {
-            return await Resource.findByIdAndUpdate(args._id, {...args});
+            return await Resource.findByIdAndUpdate(args._id, {...args}, { new: true } );
+            // return await Resource.findByIdAndUpdate(args._id, 
+            //     {
+            //         name: args.name, 
+            //         shortDescription: args.shortDescription,
+            //         resourceBody: args.resourceBody,
+            //         images: args.images
+            //     }
+            // );
         }
     }
 }
