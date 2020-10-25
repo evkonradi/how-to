@@ -3,6 +3,8 @@ import { useMutation, useQuery } from '@apollo/react-hooks';
 import { ADD_RESOURCE, UPDATE_RESOURCE } from '../utils/mutations';
 import { QUERY_RESOURCE } from '../utils/queries';
 import { useParams } from 'react-router-dom';
+import { Col, Row, Container, InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
+// import { collection } from "../../../server/models/User";
 
 function ResourceAddEdit(){
 
@@ -126,17 +128,21 @@ function ResourceAddEdit(){
 
     return(
         <div>
+            <Container fluid>
+            <Row>
             <h2>{id ? "Edit Article" : "New Article"}</h2>
-            <form onSubmit={handleFormSubmit}>
-                <div>
-                    <input id ="articleName" placeholder="Article Name" name="articleName" onChange={handleChange} value={formState.articleName}></input><br /><br />
-                    <input id ="articleShortDesc" placeholder="Article Short Description" name="articleShortDesc" value={formState.articleShortDesc} onChange={handleChange}></input><br /><br />
+            <form onSubmit={handleFormSubmit}></form>
+            </Row>
+                    <Col xs={6}>
+                    <Input id ="articleName" placeholder="Article Name" name="articleName" onChange={handleChange} value={formState.articleName}></Input><br /><br />
+                    <Input id ="articleShortDesc" placeholder="Article Short Description" name="articleShortDesc" value={formState.articleShortDesc} onChange={handleChange}></Input><br /><br />
                     <textarea id ="articleText" rows="20" cols="100" name="articleText" value={formState.articleText} onChange={handleChange}>
                         Please enter your article text here.
                     </textarea><br /><br />
-                </div>
+                    </Col>
+               
 
-                <div>
+               <Col xs={6}>
                     {formState.imageList.map(image => (
                         <div key ={`div-image-${formState.imageList.indexOf(image)}`} onClick={handleDelete}>
                             <img src={`${image.fileURL}`} alt={`${image.imageCaption}`} width="300" ></img>
@@ -144,15 +150,19 @@ function ResourceAddEdit(){
                             <img src="/images/icondelete.png" alt="delete" width="50" data-number={`image-${formState.imageList.indexOf(image)}`} ></img><br /><br />
                         </div>
                     ))}<br /><br />
-                </div>
+                </Col>
 
-                <div>
-                    <input id ="imageLinkInput" placeholder="Link to an image" name="imageLinkInput" value={formState.imageLinkInput} onChange={handleChange}></input><br /><br />
-                    <input id ="imageCaption" placeholder="Image Caption" name="imageCaption" value={formState.imageCaption} onChange={handleChange}></input><br /><br />
-                    <button id="btnAddImage" onClick={handleImageAdd}>Add Image</button><br /><br />
-                </div>
+                <Col xs={6}>
+                    <InputGroup>
+                    <InputGroupAddon addonType="append">
+                    <Input id ="imageLinkInput" placeholder="Link to an image" name="imageLinkInput" value={formState.imageLinkInput} onChange={handleChange}></Input>
+                    <Input id ="imageCaption" placeholder="Image Caption" name="imageCaption" value={formState.imageCaption} onChange={handleChange}></Input>
+                    <Button id="btnAddImage" onClick={handleImageAdd}>Add Image</Button>
+                    </InputGroupAddon>
+                    </InputGroup>
+                </Col>
 
-                <div>
+                <Col xs={6}>
                     {formState.videoList.map(video => (
                         <div key ={`div-video-${formState.videoList.indexOf(video)}`} onClick={handleDelete}>
                             <iframe width="300" src={`${video.fileURL}`} frameBorder="0" title={video.videoCaption}
@@ -162,18 +172,24 @@ function ResourceAddEdit(){
                             <br /><br />
                         </div>
                     ))}<br /><br />
-                </div>
+                </Col>
+                
 
-                <div>
-                    <input id ="videoLinkInput" placeholder="Link to a video" name="videoLinkInput" value={formState.videoLinkInput} onChange={handleChange}></input><br /><br />
-                    <input id ="videoCaption" placeholder="Video Caption" name="videoCaption" value={formState.videoCaption} onChange={handleChange}></input><br /><br />
-                    <button id="btnAddVideo" onClick={handleVideoAdd}>Add Video</button><br /><br />
-                </div>
-
-
-                <button id = "btnSubmit" type="submit">Submit</button><br /><br />
-            </form>
-        </div>
+                <Col xs={6}>
+                    <InputGroup>
+                    <InputGroupAddon addonType="append"
+>                    <Input id ="videoLinkInput" placeholder="Link to a video" name="videoLinkInput" value={formState.videoLinkInput} onChange={handleChange}></Input>
+                    <Input id ="videoCaption" placeholder="Video Caption" name="videoCaption" value={formState.videoCaption} onChange={handleChange}></Input>
+                    <Button id="btnAddVideo" onClick={handleVideoAdd}>Add Video</Button>
+                    </InputGroupAddon>
+                    </InputGroup>
+                </Col>
+                <Col xs={6}>
+                <Button id = "btnSubmit" type="submit">Submit</Button>
+                </Col>
+                </Container>
+ </div>
+        
     );
 
 }
