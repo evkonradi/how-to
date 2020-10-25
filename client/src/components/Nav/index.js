@@ -1,11 +1,11 @@
 //comment
+import { Navbar } from 'react-bootstrap';
 import React from 'react';
-
+import './Nav.css';
+import '.Bootstrap'
 const Nav = () => {
     return(
-        <div>
-            <h5>this is where the nav goes</h5>
-        </div>
+        <Navbar bg="light"></Navbar>
     )
 };
 

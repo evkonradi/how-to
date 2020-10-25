@@ -1,13 +1,17 @@
 import React from 'react';
 import './App.css';
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 
 import Home from './pages/Home';
-import Nav from './components/Nav';
+// import Login from "./pages/Login";
+import Header from "./components/Header";
 import Footer from './components/Footer';
 import Resource from './pages/Resource';
+{/* The following line can be included in your src/index.js or App.js file*/}
+
 
 const client = new ApolloClient({
   // request: (operation) => {
@@ -24,13 +28,18 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+
       <Router>
         <div>
-          <Nav />
-
+          <Header>
+            {/* <Switch>
+              <Route exact path="/login" component={Login} />
+            </Switch> */}
+          </Header>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/resource/:id?" component={Resource} />
+            
             {/* <Route component={NoMatch} /> */}
           </Switch>
 

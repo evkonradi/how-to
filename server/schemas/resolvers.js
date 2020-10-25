@@ -24,9 +24,9 @@ const resolvers = {
 
             return user;
         },
-        // login: async () => {
+        login: async () => {
 
-        // },
+        },
         addResource: async (parent, args) => {
             const resource = await Resource.create(args);
             return resource;

@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/evkonradi/teach-me-to#readme",
   "dependencies": {
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "react-bootstrap": "^1.4.0"
   },
   "devDependencies": {
     "concurrently": "^5.3.0"

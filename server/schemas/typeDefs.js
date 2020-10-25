@@ -55,7 +55,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-   
+    login(email: String!, password: String!): User
     addUser(username: String!, email: String!, password: String!): User
     addResource(name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput]): Resource
     updateResource(_id: ID!, name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput]): Resource
