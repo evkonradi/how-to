@@ -163,7 +163,7 @@ function ResourceAddEdit(){
                     {/* </InputGroupAddon> */}
                     </InputGroup>
                 </Col>
-
+                <Row>
                 <Col xs={12}>
                     {formState.videoList.map(video => (
                         <div key ={`div-video-${formState.videoList.indexOf(video)}`} onClick={handleDelete}>
@@ -175,6 +175,7 @@ function ResourceAddEdit(){
                         </div>
                     ))}<br /><br />
                 </Col>
+                </Row>
                 
 
                 <Col xs={12}>
