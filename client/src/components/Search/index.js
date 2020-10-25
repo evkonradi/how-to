@@ -7,7 +7,7 @@ const Search = () => {
       <InputGroup>
         <Input />
         <InputGroupAddon addonType="append">
-          <InputGroupText>🔍</InputGroupText>
+          <InputGroupText><span img="search">🔍</span></InputGroupText>
         </InputGroupAddon>
       </InputGroup>
     </div>

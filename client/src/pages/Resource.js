@@ -9,6 +9,7 @@ function Resource(){
     return(
         <>
             <div>
+                <h1>this is a test</h1>
                 <h2>{id ? "Edit Article" : "New Article"}</h2>
                 <ResourceAddEdit />
             </div>

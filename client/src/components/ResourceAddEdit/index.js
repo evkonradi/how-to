@@ -1,6 +1,7 @@
 import React,  { useState } from "react";
 import { useMutation } from '@apollo/react-hooks';
 import { ADD_RESOURCE } from '../../utils/mutations';
+import { InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
 
 function ResourceAddEdit(){
 
@@ -84,9 +85,13 @@ function ResourceAddEdit(){
                 </div>
 
                 <div>
-                    <input id ="imageLinkInput" placeholder="Link to an image" name="imageLinkInput" value={formState.imageLinkInput} onChange={handleChange}></input>
-                    <input id ="imageCaption" placeholder="Image Caption" name="imageCaption" value={formState.imageCaption} onChange={handleChange}></input>
-                    <button id="btnAddImage" onClick={handleImageAdd}>Add Image</button>
+                    <InputGroup>
+                    <InputGroupAddon addonType="append">
+                    <Input id ="imageLinkInput" placeholder="Link to an image" name="imageLinkInput" value={formState.imageLinkInput} onChange={handleChange}></Input>
+                    <Input id ="imageCaption" placeholder="Image Caption" name="imageCaption" value={formState.imageCaption} onChange={handleChange}></Input>
+                    <Button id="btnAddImage" onClick={handleImageAdd}>Add Image</Button>
+                    </InputGroupAddon>
+                    </InputGroup>
                 </div>
 
                 <div>
