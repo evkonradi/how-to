@@ -36,7 +36,7 @@ function App() {
             <Route exact path="/resource/:id?" component={ResourceAddEdit} />
             {/* <Route component={NoMatch} /> */}
           </Switch>
-
+          
           <Footer />
         </div>
       </Router>

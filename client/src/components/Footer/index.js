@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const Footer = () => {
-    return(
-        <div>
-            <h5>this is the footer</h5>
-        </div>
-    )
-};
+const Footer = () => (
+  <div className="footer">
+    <p>This is some content in sticky footer</p>
+  </div>
+);
 
 export default Footer;
