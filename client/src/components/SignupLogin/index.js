@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import './index.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import {FacebookLoginButton} from 'react-social-login-buttons'
+import {FacebookLoginButton, GoogleLoginButton} from 'react-social-login-buttons'
 
 class SignupLogin extends Component {
     render(){
@@ -24,6 +24,7 @@ class SignupLogin extends Component {
                 Or continue with your social account
             </div>
             <FacebookLoginButton className="mt-3 mb-3"/>
+            <GoogleLoginButton className="mt-3 mb-3"/>
             <div className="text-center">
                 <a href="/sign-up">Sign Up</a>
                 <span className="p-2">|</span>
