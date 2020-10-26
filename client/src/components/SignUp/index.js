@@ -1,13 +1,10 @@
+import React from 'react';
 import React, { Component} from 'react';
 import './index.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import {FacebookLoginButton, GoogleLoginButton} from 'react-social-login-buttons'
-import GoogleLogin from 'react-google-login'
-class SignupLogin extends Component {
-    responseGoogle=(response)=>{
-        console.log(response);
-        console.log(response.profileObj)
-    }
+
+class Signup extends Component {
     render(){
     return (
         <Form className="login-form">
@@ -28,37 +25,18 @@ class SignupLogin extends Component {
                 Or continue with your social account
             </div>
             <FacebookLoginButton className="mt-3 mb-3"/>
-            <GoogleLoginButton 
-                className="mt-3 mb-3" 
-                />
-            <GoogleLogin 
-            clientId="212266341985-bfblloh84d96u203r5i5b80l745ea911.apps.googleusercontent.com"
-            onSuccess={this.responseGoogle}
-            onFailure={this.responseGoogle}
-            cookiePolicy={'single_host_origin'}
-            />
-
+            <GoogleLoginButton className="mt-3 mb-3"/>
             <div className="text-center">
                 <a href="/sign-up">Sign Up</a>
                 <span className="p-2">|</span>
-                <a href="/sign-up">Forgot Password</a>
-                    
-                    
             </div>
         </Form>
-        
+     )
+  }  
+}
+export default Signup;
 
-
-
-
-
-
-
-
-
-
-
-        // <div class="container" id="container">
+// <div class="container" id="container">
         //     <div class="form-container sign-up-container">
         //         <form action="#">
         //             <h1>Create Account</h1>
@@ -104,12 +82,3 @@ class SignupLogin extends Component {
         //         </div>
         //     </div>
         // </div>
-
-
-
-
-    )
-  }  
-}
-export default SignupLogin;
-
