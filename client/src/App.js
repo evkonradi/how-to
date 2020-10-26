@@ -10,7 +10,9 @@ import Header from './components/Header';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import ResourceAddEdit from './pages/ResourceAddEdit';
+import { ThemeProvider } from "@chakra-ui/core";
 
+{/* <ThemeProvider theme={customTheme}>{props.children}</ThemeProvider>; */}
 
 const client = new ApolloClient({
   // request: (operation) => {
@@ -28,6 +30,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
+        <ThemeProvider>
         <div>
           <Nav />
 
@@ -39,6 +42,7 @@ function App() {
 
           <Footer />
         </div>
+        </ThemeProvider>
       </Router>
     </ApolloProvider>
   );

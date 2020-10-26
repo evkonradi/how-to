@@ -5,6 +5,7 @@ import { QUERY_RESOURCE } from '../utils/queries';
 import { useParams } from 'react-router-dom';
 import { Col, Row, Container, InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
 // import { WhiteSpace } from 'antd-mobile';
+import { Box } from "@chakra-ui/core";
 
 function ResourceAddEdit(){
 
@@ -130,11 +131,11 @@ function ResourceAddEdit(){
         <div>
             <Container fluid>
                 <Col xs={12}>
-            <Row>
+            <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
             <h2>{id ? "Edit Article" : "New Article"}</h2>
             <form onSubmit={handleFormSubmit}></form>
-            </Row>
-            </Col>
+            </Box>
+            </Col> <br />
                     <Col xs={12}>
                     <Input id ="articleName" placeholder="Article Name" name="articleName" onChange={handleChange} value={formState.articleName}></Input><br />
                     <Input id ="articleShortDesc" placeholder="Article Short Description" name="articleShortDesc" value={formState.articleShortDesc} onChange={handleChange}></Input><br />
