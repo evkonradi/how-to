@@ -1,7 +1,5 @@
 import React, { Component} from 'react';
-import '../SignupLogin/index.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import {FacebookLoginButton, GoogleLoginButton} from 'react-social-login-buttons'
 import GoogleLogin from 'react-google-login'
 class Signup extends Component {
     render(){
@@ -27,10 +25,7 @@ class Signup extends Component {
             <div className="text-center pt-3">
                 Or continue with your social account
             </div>
-            <FacebookLoginButton className="mt-3 mb-3"/>
-            <GoogleLoginButton 
-                className="mt-3 mb-3" 
-                />
+           
             <GoogleLogin 
             clientId="212266341985-bfblloh84d96u203r5i5b80l745ea911.apps.googleusercontent.com"
             onSuccess={this.responseGoogle}

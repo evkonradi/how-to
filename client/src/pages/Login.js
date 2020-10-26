@@ -1,28 +1,24 @@
 import React, { Component} from 'react';
-import './index.css';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import {FacebookLoginButton, GoogleLoginButton} from 'react-social-login-buttons';
-import GoogleLogin from 'react-google-login';
-import FacebookLogin from 'react-facebook-login'
-import { PostData} from "../../"
-class SignupLogin extends Component {
-    constructor(props){
-        SVGPathSegCurvetoQuadraticAbs(props);
-        this.stats={
-            redirect: false
-        }
-        this.signup = this.signup.bind(this);
-    }
-    signup(res, type){
 
-    }
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import GoogleLogin from 'react-google-login';
+
+
+class SignupLogin extends Component {
+    // constructor(props){
+    //     SVGPathSegCurvetoQuadraticAbs(props);
+    //     this.stats={
+    //         redirect: false
+    //     }
+    //     this.signup = this.signup.bind(this);
+    // }
+    // signup(res, type){
+
+    // }
     
     
     render(){
-        const responseFacebook = (response) => {
-            console.log(response);
-            this.signup(response, "facebook");
-        }
+        
         const responseGoogle=(response)=>{
             console.log(response);
             this.signup(response, "google");
@@ -45,18 +41,11 @@ class SignupLogin extends Component {
             <div className="text-center pt-3">
                 Or continue with your social account
             </div>
-            <FacebookLoginButton className="mt-3 mb-3"/>
-            <FacebookLogin
-            appId="481100262806250"
-            autoLoad={true}
-            fields="name,email,picture"
-            onclick={componentClicked}
-            callback={responseFacebook} />
-            <GoogleLoginButton 
-                className="mt-3 mb-3" 
-                />
+            
             <GoogleLogin 
+            className="mt-3 mb-3"
             clientId="212266341985-bfblloh84d96u203r5i5b80l745ea911.apps.googleusercontent.com"
+            buttonText="Login"
             onSuccess={this.responseGoogle}
             onFailure={this.responseGoogle}
             cookiePolicy={'single_host_origin'}
@@ -66,8 +55,6 @@ class SignupLogin extends Component {
                 <a href="/signup">Sign Up</a>
                 <span className="p-2">|</span>
                 <a href="/signup">Forgot Password</a>
-                    
-                    
             </div>
         </Form>
     )
