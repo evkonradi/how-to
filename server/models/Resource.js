@@ -4,14 +4,9 @@ const moment = require('moment');
 const { Schema } = mongoose;
 
 const imageSchema = new Schema({
-    fileName: {
-        type: String,
-        required: true,
-        trim: true
-    },
     fileURL:{
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     imageCaption: {
@@ -22,14 +17,9 @@ const imageSchema = new Schema({
 });
 
 const videoSchema = new Schema({
-    fileName: {
-        type: String,
-        required: true,
-        trim: true
-    },
     fileURL:{
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     videoCaption: {
@@ -64,4 +54,3 @@ const resourceSchema = new Schema({
   const Resource = mongoose.model('Resource', resourceSchema);
   
   module.exports = Resource;
-  
