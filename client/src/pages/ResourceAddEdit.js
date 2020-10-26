@@ -157,18 +157,16 @@ function ResourceAddEdit(){
 
                 <Col xs={12}>
                     <InputGroup>
-                    {/* <InputGroupAddon addonType="append"> */}
+                    
                     <Input id ="imageLinkInput" placeholder="Link to an image" name="imageLinkInput" value={formState.imageLinkInput} onChange={handleChange}></Input><br /><br />
                     </InputGroup>
                     </Col>
                     <Col xs={12}>
                         <InputGroup>
                     <Input id ="imageCaption" placeholder="Image Caption" name="imageCaption" value={formState.imageCaption} onChange={handleChange}></Input><br /><br />
-                    </InputGroup>
-                    <Col xs={{ span:6, offset:4 }}>
                     <Button id="btnAddImage" onClick={handleImageAdd}>Add Image</Button>
-                    {/* </InputGroupAddon> */}
-                    </Col>
+                    </InputGroup>
+                    
                 </Col>
                 <Row>
                 <Col xs={12}>
