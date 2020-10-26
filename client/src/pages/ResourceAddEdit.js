@@ -4,7 +4,7 @@ import { ADD_RESOURCE, UPDATE_RESOURCE } from '../utils/mutations';
 import { QUERY_RESOURCE } from '../utils/queries';
 import { useParams } from 'react-router-dom';
 import { Col, Row, Container, InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
-// import { collection } from "../../../server/models/User";
+// import { WhiteSpace } from 'antd-mobile';
 
 function ResourceAddEdit(){
 
@@ -151,17 +151,23 @@ function ResourceAddEdit(){
                             <span>{image.imageCaption}</span>
                             <img src="/images/icondelete.png" alt="delete" width="50" data-number={`image-${formState.imageList.indexOf(image)}`} ></img><br /><br />
                         </div>
-                    ))}<br /><br />
+                    ))}
                 </Col>
 
                 <Col xs={12}>
                     <InputGroup>
                     {/* <InputGroupAddon addonType="append"> */}
-                    <Input id ="imageLinkInput" placeholder="Link to an image" name="imageLinkInput" value={formState.imageLinkInput} onChange={handleChange}></Input>
-                    <Input id ="imageCaption" placeholder="Image Caption" name="imageCaption" value={formState.imageCaption} onChange={handleChange}></Input>
+                    <Input id ="imageLinkInput" placeholder="Link to an image" name="imageLinkInput" value={formState.imageLinkInput} onChange={handleChange}></Input><br /><br />
+                    </InputGroup>
+                    </Col>
+                    <Col xs={12}>
+                        <InputGroup>
+                    <Input id ="imageCaption" placeholder="Image Caption" name="imageCaption" value={formState.imageCaption} onChange={handleChange}></Input><br /><br />
+                    </InputGroup>
+                    <Col xs={{ span:6, offset:4 }}>
                     <Button id="btnAddImage" onClick={handleImageAdd}>Add Image</Button>
                     {/* </InputGroupAddon> */}
-                    </InputGroup>
+                    </Col>
                 </Col>
                 <Row>
                 <Col xs={12}>
@@ -173,7 +179,7 @@ function ResourceAddEdit(){
                             <img src="/images/icondelete.png" alt="delete" width="50" data-number={`video-${formState.videoList.indexOf(video)}`} ></img>
                             <br /><br />
                         </div>
-                    ))}<br /><br />
+                    ))}<br />
                 </Col>
                 </Row>
                 
@@ -181,13 +187,21 @@ function ResourceAddEdit(){
                 <Col xs={12}>
                     <InputGroup>
                     {/* <InputGroupAddon addonType="append" */}
-                    <Input id ="videoLinkInput" placeholder="Link to a video" name="videoLinkInput" value={formState.videoLinkInput} onChange={handleChange}></Input>
-                    <Input id ="videoCaption" placeholder="Video Caption" name="videoCaption" value={formState.videoCaption} onChange={handleChange}></Input>
+                    <Input id ="videoLinkInput" placeholder="Link to a video" name="videoLinkInput" value={formState.videoLinkInput} onChange={handleChange}></Input><br /><br />
+                    {/* <WhiteSpace size="xs"></WhiteSpace> */}
+                   </InputGroup>
+                   </Col>
+                    <Col xs={12}>
+                        <InputGroup>
+                    <Input id ="videoCaption" placeholder="Video Caption" name="videoCaption" value={formState.videoCaption} onChange={handleChange}></Input><br /><br />
+                    </InputGroup>
+                    <Col xs={{ span:6, offset:4 }}>
                     <Button id="btnAddVideo" onClick={handleVideoAdd}>Add Video</Button>
                     {/* </InputGroupAddon> */}
-                    </InputGroup>
+                    </Col><br />
+                    
                 </Col>
-                <Col xs={{ span:6, offset:4 }}>
+                <Col xs={{ span:6, offset:5 }}>
                 <Button id = "btnSubmit" type="submit">Submit</Button>
                 </Col>
                 </Container>
