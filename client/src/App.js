@@ -5,7 +5,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 // import ApolloClient from 'apollo-boost';
 import './App.scss';
 import ApolloClient from 'apollo-boost';
-
+import SignupLogin from './components/SignupLogin'
 import Home from './pages/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -34,6 +34,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/resource/:id?" component={ResourceAddEdit} />
+            <Route exact path="/welcome" component={SignupLogin} />
             {/* <Route component={NoMatch} /> */}
           </Switch>
           

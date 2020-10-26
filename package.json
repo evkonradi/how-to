@@ -25,6 +25,7 @@
     "if-env": "^1.0.4",
     "moment": "^2.29.1",
     "node-sass": "^4.14.1",
+    "nodemon": "^2.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "reactstrap": "^8.6.0"
