@@ -6,12 +6,8 @@ import { QUERY_RESOURCE } from '../../utils/queries';
 import Carousel from "react-bootstrap/Carousel";
 // import cook from '../../public/cook.jpg';
 import CardList from '../ResourceCard';
-// import Carousel,
-//       CarouselItem,
-//       CarouselControl,
-//       CarouselIndicators,
-//       CarouselCaption from "reactstrap";
 
+// this code was me just trying to get anything to populate
 const Resource = () => {
   const { loading, data } = useQuery(QUERY_RESOURCE);
   const resources = data?.resources || [];
@@ -23,6 +19,11 @@ const Resource = () => {
   );
 };
 
+// import Carousel,
+//       CarouselItem,
+//       CarouselControl,
+//       CarouselIndicators,
+//       CarouselCaption from "reactstrap";
 // body inverse style={{ backgroundColor: '#9DB4C0', borderColor: '#333' }}>
 // key={image.id} use with Carousel.Item once db established
 
