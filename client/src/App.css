@@ -17,6 +17,7 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
+  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -28,20 +29,21 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  align-content: space-between;
 }
 
 li {
@@ -54,6 +56,7 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: large;
 }
 
 /* Change the link color to #111 (black) on hover */
@@ -70,8 +73,24 @@ float: right;
   margin-top: 1rem;
   padding: 1rem;
   background-color:#4CAF80;
-  position: fixed;
+  
   bottom: 0;
   left: 0;
   width: 100%;
+}
+.logoText {
+  font-size: large;
+  display: block;
+  color: #333333;
+  background: #FFFFFF;
+  text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15);
+  display: flex;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: serif;
+
+}
+.meGreen {
+  color: #4CAF80;
 }
