@@ -39,26 +39,19 @@ class SignupLogin extends Component {
             />
 
             <div className="text-center">
-                <a href="/sign-up">Sign Up</a>
+                <a href="/signup">Sign Up</a>
                 <span className="p-2">|</span>
-                <a href="/sign-up">Forgot Password</a>
+                <a href="/signup">Forgot Password</a>
                     
                     
             </div>
         </Form>
-        
+    )
+  }  
+}
+export default SignupLogin;
 
-
-
-
-
-
-
-
-
-
-
-        // <div class="container" id="container">
+ // <div class="container" id="container">
         //     <div class="form-container sign-up-container">
         //         <form action="#">
         //             <h1>Create Account</h1>
@@ -104,12 +97,3 @@ class SignupLogin extends Component {
         //         </div>
         //     </div>
         // </div>
-
-
-
-
-    )
-  }  
-}
-export default SignupLogin;
-

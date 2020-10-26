@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ResourceAddEdit from './pages/ResourceAddEdit';
+import Signup from "./components/SignUp"
 
 
 const client = new ApolloClient({
@@ -35,6 +36,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/resource/:id?" component={ResourceAddEdit} />
             <Route exact path="/welcome" component={SignupLogin} />
+            <Route exact path="/signup" component={Signup} />
             {/* <Route component={NoMatch} /> */}
           </Switch>
           
