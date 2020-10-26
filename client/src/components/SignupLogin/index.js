@@ -1,14 +1,32 @@
 import React, { Component} from 'react';
 import './index.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import {FacebookLoginButton, GoogleLoginButton} from 'react-social-login-buttons'
-import GoogleLogin from 'react-google-login'
+import {FacebookLoginButton, GoogleLoginButton} from 'react-social-login-buttons';
+import GoogleLogin from 'react-google-login';
+import FacebookLogin from 'react-facebook-login'
+import { PostData} from "../../"
 class SignupLogin extends Component {
-    responseGoogle=(response)=>{
-        console.log(response);
-        console.log(response.profileObj)
+    constructor(props){
+        SVGPathSegCurvetoQuadraticAbs(props);
+        this.stats={
+            redirect: false
+        }
+        this.signup = this.signup.bind(this);
     }
+    signup(res, type){
+
+    }
+    
+    
     render(){
+        const responseFacebook = (response) => {
+            console.log(response);
+            this.signup(response, "facebook");
+        }
+        const responseGoogle=(response)=>{
+            console.log(response);
+            this.signup(response, "google");
+        }
     return (
         <Form className="login-form">
             <h1>
@@ -28,6 +46,12 @@ class SignupLogin extends Component {
                 Or continue with your social account
             </div>
             <FacebookLoginButton className="mt-3 mb-3"/>
+            <FacebookLogin
+            appId="481100262806250"
+            autoLoad={true}
+            fields="name,email,picture"
+            onclick={componentClicked}
+            callback={responseFacebook} />
             <GoogleLoginButton 
                 className="mt-3 mb-3" 
                 />
