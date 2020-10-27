@@ -25,6 +25,7 @@ const Login = (props, Component) => {
 
     const handleFormSubmit = async event => {
         event.preventDefault();
+        console.log("Form submitted");
         try {
             const { data } = await login({
                 variable: { ...formState }
@@ -52,18 +53,18 @@ const Login = (props, Component) => {
                 <div>
                     <Form className="login-form" onSubmit={handleFormSubmit}>
                         <h1>
-                            <span className="font-weight-bold">TeachMeTo.com</span>
+                            <span className="font-weight-bold">Welcome Back!</span>
                         </h1>
-                        <h2 className="text-center">WELCOME</h2>
+                        <h2 className="text-center">Login</h2>
                         <FormGroup>
-                            <Label>Email</Label>
+                            {/* <Label>Email</Label> */}
                             <Input type="email" placeholder="Email" name="email" id="email" value={formState.email} onChange={handleChange} />
                         </FormGroup>
                         <FormGroup>
-                            <Label>Password</Label>
+                            {/* <Label>Password</Label> */}
                             <Input type="password" placeholder="Password" name="password" id="password" value={formState.password} onChange={handleChange}/>
                         </FormGroup>
-                        <Button className="btn-lg btn-dark btn-block">LOGIN</Button>
+                        <Button className="btn-lg btn-dark btn-block">Submit</Button>
                         <div className="text-center pt-3">
                             Or continue with your social account
                         </div>
