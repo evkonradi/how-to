@@ -30,6 +30,7 @@ const Home = () => {
                 {/* </Row> */}
                 </Col> 
                 </Container>
+                <br />
         </div>
     );
 };

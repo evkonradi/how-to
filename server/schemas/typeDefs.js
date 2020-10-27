@@ -15,7 +15,9 @@ const typeDefs = gql`
   type User {
     _id: ID
     username: String
-    
+    firstName: String
+    lastName: String
+    displayName: String
     email: String
     resourceCount: Int
     resource: [Resource]
@@ -57,8 +59,8 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    
-    addUser(username: String!, email: String!, password: String!): User
+   
+    addUser(username: String!, firstName: String!, lastName: String!, displayName: String!, email: String!, password: String!): User
     addResource(name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput]): Resource
     updateResource(_id: ID!, name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput]): Resource
     deleteResource(_id: ID!): Resource
