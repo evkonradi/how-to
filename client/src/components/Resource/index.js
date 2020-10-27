@@ -1,19 +1,12 @@
 import React from 'react';
-import { Col, Card, CardImg, CardText, CardBody, CardLink, CardHeader, CardTitle, CardSubtitle, CarouselIndicators, CarouselControl, CarouselItem, CarouselCaption }  from 'reactstrap';
+import { Card, CardText, CardBody, CardHeader }  from 'reactstrap';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_RESOURCES_HOMEPAGE } from '../../utils/queries';
-import { idbPromise } from "../../utils/helpers";
-import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+//import { idbPromise } from "../../utils/helpers";
+//import { useParams } from "react-router-dom";
 
-// import CardBody from 'react-bootstrap/CardBody';
 import Carousel from "react-bootstrap/Carousel";
-// import cook from '../../public/cook.jpg';
-
-// import Carousel,
-//       CarouselItem,
-//       CarouselControl,
-//       CarouselIndicators,
-//       CarouselCaption from "reactstrap";
 
 const Resource = () => {
   const { loading, data } = useQuery(QUERY_RESOURCES_HOMEPAGE);
@@ -27,15 +20,17 @@ const Resource = () => {
               {
                 resources.map((resource) => (
                   <Carousel.Item key={resource._id}>
-                    <Card  outline color='secondary' >
-                      <CardHeader>{resource.name}</CardHeader>
-                      <CardBody style={{ backgroundColor: "#9DB4C0"}}>
-                        {/* <CardImg>{resource.imgUrl}</CardImg> */}
-                        <img src="./images/stars.jpg" width="100%"></img>
-                        <CardText>{resource.shortDescription}</CardText>
-                        <CardText>Created at: {resource.dateCreated}</CardText>
-                      </CardBody>
-                    </Card>
+                    <Link to={`/articles/${resource._id}`} key={resource._id}>
+                      <Card  outline color='secondary' >
+                        <CardHeader>{resource.name}</CardHeader>
+                        <CardBody style={{ backgroundColor: "#9DB4C0"}}>
+                          {/* <CardImg>{resource.imgUrl}</CardImg> */}
+                          <img src="./images/stars.jpg" width="100%"></img>
+                          <CardText>{resource.shortDescription}</CardText>
+                          <CardText>Created at: {resource.dateCreated}</CardText>
+                        </CardBody>
+                      </Card>
+                    </Link>
                   </Carousel.Item>
                 ))
               }

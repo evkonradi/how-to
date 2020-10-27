@@ -7,7 +7,7 @@ import { ADD_USER } from '../utils/mutations';
 // Import Auth
 
 const Signup = () => {
-    const [formState, setFormState] = useState({ username: '', email: '', password: '' })
+    const [formState, setFormState] = useState({ username: '', email: '', password: '' });
     const [addUser, { error }] = useMutation(ADD_USER);
 
     const handleChange = event => {
@@ -21,7 +21,7 @@ const Signup = () => {
 
     const handleFormSubmit = async event => {
         event.preventDefault();
-
+        console.log(formState.username + " has signed up using email " + formState.email)
         try {
             const { data } = await addUser({
                 variables: { ...formState }
@@ -34,26 +34,30 @@ const Signup = () => {
     };
    
     return (
-        <Form className="login-form" onSubmit={handleFormSubmit}>
-            <h1>
-                <span className="font-weight-bold">TeachMeTo.com</span>
-            </h1>
-            <h2 className="text-center">Welcome</h2>
-            <FormGroup>
-                <Label>User Name</Label>
-                <Input type="username" placeholder="User Name" name="username" id="username" value={formState.username} onChange={handleChange} />
-            </FormGroup>
-            <FormGroup>
-                <Label>Email</Label>
-                <Input type="email" placeholder="Email" name="email" id="email" value={formState.email} onChange={handleChange} />
-            </FormGroup>
-            <FormGroup>
-                <Label>Password</Label>
-                <Input type="password" placeholder="Password" name="password" id="password" value={formState.password} onChange={handleChange} />
-            </FormGroup>
-            <Button className="btn-lg btn-dark btn-block" type="submit">Sign Up</Button>
-           
-        </Form>
+        <main>
+            <div>
+                <Form className="login-form" onSubmit={handleFormSubmit}>
+                    <h1>
+                        <span className="font-weight-bold text-center">Welcome!</span>
+                    </h1>
+                    <h4>Sign up</h4>
+                    <FormGroup>
+                        {/* <Label>User Name</Label> */}
+                        <Input type="username" placeholder="User Name" name="username" id="username" value={formState.username} onChange={handleChange} />
+                    </FormGroup>
+                    <FormGroup>
+                        {/* <Label>Email</Label> */}
+                        <Input type="email" placeholder="Email" name="email" id="email" value={formState.email} onChange={handleChange} />
+                    </FormGroup>
+                    <FormGroup>
+                        {/* <Label>Password</Label> */}
+                        <Input type="password" placeholder="Password" name="password" id="password" value={formState.password} onChange={handleChange} />
+                    </FormGroup>
+                    <Button className="btn-lg btn-dark btn-block" type="submit">Join</Button>
+                
+                </Form>
+            </div>
+        </main>
     )
   
 }

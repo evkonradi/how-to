@@ -45,17 +45,20 @@ const typeDefs = gql`
     videos: [Video]
   }
 
-  
+  type ResourceShort{
+    _id: ID,
+    name: String,
+    shortDescription: String,
+    resourceBody: String,
+    dateCreated: String
+  }
 
   type Query {
     users: [User]
     user(username: String!): User
     resources: [Resource]
     resource(_id: ID!): Resource
-  }
-
-  type type_affected_rows{
-    affected_rows: Int!
+    resources_search(text: String!): [ResourceShort]
   }
 
   type Mutation {
