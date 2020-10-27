@@ -90,6 +90,10 @@ a:hover {
   text-decoration: none;
 }
 
+p {
+  text-align: center;
+}
+
 img {
   width: 100%;
   max-width: 500px;
@@ -108,8 +112,8 @@ li a:hover {
 float: right;
 }
 .footer{
-  margin-top: .5rem;
-  padding: 1rem;
+  margin-top: .2rem;
+  padding: .3rem;
   background-color:#9DB4C0;
   bottom: 0;
   left: 0;
