@@ -16,6 +16,10 @@ const resolvers = {
         user: async (parent, { username }) => {
             return await User.findOne({ username })
             .populate('resources');
+        },
+        resources_search: async (parent, { text }) => {
+            return await Resource.find( {$or: [{ resourceBody: {$regex: text, $options: 'i'}}, {name: {$regex: text, $options: 'i'}},
+                {shortDescription: {$regex: text, $options: 'i'}}] } );
         }
     },
 
