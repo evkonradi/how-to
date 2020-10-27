@@ -2,8 +2,6 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
-// import ApolloClient from 'apollo-boost';
-import './App.scss';
 import ApolloClient from 'apollo-boost';
 import Login from './pages/Login'
 import Home from './pages/Home';
@@ -11,7 +9,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ResourceAddEdit from './pages/ResourceAddEdit';
 import Signup from "./pages/Signup"
+import { ThemeProvider } from "@chakra-ui/core";
 
+{/* <ThemeProvider theme={customTheme}>{props.children}</ThemeProvider>; */}
 
 const client = new ApolloClient({
   // request: (operation) => {
@@ -29,6 +29,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
+        <ThemeProvider>
         <div>
           <Header />
 
@@ -42,6 +43,7 @@ function App() {
           
           <Footer />
         </div>
+        </ThemeProvider>
       </Router>
     </ApolloProvider>
   );

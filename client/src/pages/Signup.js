@@ -22,15 +22,7 @@ class Signup extends Component {
                 <Input type="password" placeholder="Password"/>
             </FormGroup>
             <Button className="btn-lg btn-dark btn-block">Sign Up</Button>
-            
-
-            <div className="text-center">
-                <a href="/signup">Sign Up</a>
-                <span className="p-2">|</span>
-                <a href="/signup">Forgot Password</a>
-                    
-                    
-            </div>
+           
         </Form>
      )
   }  

@@ -14,8 +14,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #253237;
+  min-height: 80vh;
   display: flex;
   
   flex-direction: column;
@@ -26,7 +26,29 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #D99748;
+}
+
+h1 {
+  animation: type 3s steps(35);
+  overflow:hidden;
+  white-space:nowrap;
+  font-family:'Courier New', Courier, monospace;
+  border-right:4px solid black;
+  width:35ch;
+  
+}
+
+h1.class {
+  color: #D99748;
+}
+@keyframes type {
+  0% {
+    width:0ch;
+  }
+  100% {
+    width:35ch;
+  }
 }
 
 /* @keyframes App-logo-spin {
@@ -40,9 +62,8 @@
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #253237;
   align-content: space-between;
 }
 
@@ -61,7 +82,8 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: #111;
+  color: #D99748;
+  text-decoration: none;
 }
 .actived {
   background-color:#D99748;
@@ -70,30 +92,25 @@ li a:hover {
 float: right;
 }
 .footer{
-  margin-top: 1rem;
+  margin-top: .5rem;
   padding: 1rem;
-  background-color:#4CAF80;
-  position: fixed;
+  background-color:#9DB4C0;
   bottom: 0;
   left: 0;
   width: 100%;
 }
 .logoText {
-  font-size: large;
+  font-size: 1.3rem;
   display: block;
-  color: #333333;
-  background: #E0FBFC;
-  text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15);
+  color: #E0FBFC;
+  background: #5C6B73;
+  /* text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15); */
   display: flex;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-family: serif;
+}
 
-}
-.meGreen {
-  color: #4CAF80;
-}
 .login-form {
   width:100%;
   max-width: 330px;

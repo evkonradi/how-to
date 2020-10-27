@@ -39,9 +39,9 @@ class Login extends Component {
             />
         </div>
             <div className="text-center">
-                <a href="/sign-up">Sign Up</a>
+                <a href="/signup">Sign Up</a>
                 <span className="p-2">|</span>
-                <a href="/sign-up">Forgot Password</a>        
+                <a href="/signup">Forgot Password</a>        
             </div>
         </Form>
      )
