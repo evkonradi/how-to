@@ -11,6 +11,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ResourceAddEdit from './pages/ResourceAddEdit';
 import Signup from "./components/SignUp"
+import ResourcePage from "./pages/ResourcePage";
 import { ThemeProvider } from "@chakra-ui/core";
 
 {/* <ThemeProvider theme={customTheme}>{props.children}</ThemeProvider>; */}
@@ -40,6 +41,7 @@ function App() {
             <Route exact path="/resource/:id?" component={ResourceAddEdit} />
             <Route exact path="/welcome" component={SignupLogin} />
             <Route exact path="/signup" component={Signup} />
+            <Route exact path="/page" component={ResourcePage} />
             {/* <Route component={NoMatch} /> */}
           </Switch>
           
