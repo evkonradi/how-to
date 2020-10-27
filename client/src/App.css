@@ -101,6 +101,10 @@ float: right;
   left: 0;
   width: 100%;
 }
+.footer,
+.push {
+  height: 50px;
+}
 .logoText {
   font-size: 1.3rem;
   display: block;
