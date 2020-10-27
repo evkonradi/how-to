@@ -1,7 +1,7 @@
 const { User, Resource } = require('../models');
 
 const ObjectId = require('mongoose').Types.ObjectId;
-// const { AuthenticationError } = require('apollo-server-express');
+const { AuthenticationError } = require('apollo-server-express');
 
 const resolvers = {
     Query: {
