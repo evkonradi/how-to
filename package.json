@@ -32,7 +32,8 @@
     "nodemon": "^2.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "reactstrap": "^8.6.0"
+    "reactstrap": "^8.6.0",
+    "sass": "^1.27.0"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.13.1",

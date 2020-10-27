@@ -38,7 +38,7 @@ $light:#E0FBFC;
 $dark: #253237;
 
 h3 {
-    color: $info;
+    color: $success;
     margin-left: 1rem;
 }
 h4 {
@@ -80,7 +80,7 @@ p {
 }
 
 .jumbotron.hometron{
-    background-color: #5C6B73;
+    background-color: $primary;
     border-radius: 0 0 15px 15px;
     padding: 1rem .5 rem;
     // width: 100%;

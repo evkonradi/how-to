@@ -191,9 +191,9 @@ function ResourceAddEdit(){
                     </Col>
 
                     <Col xs={12}>
-                        {/* <InputGroup> */}
+                        <InputGroup>
                                 <Input id ="videoCaption" placeholder="Video Caption" name="videoCaption" value={formState.videoCaption} onChange={handleChange}></Input><br /><br />
-                        {/* </InputGroup> */}
+                        </InputGroup>
                         <Col xs={{ span:6, offset:7 }} lg={{ span:6, offset: 5 }}>
                                 <Button id="btnAddVideo" onClick={handleVideoAdd}>Add Video</Button>
                             {/* </InputGroupAddon> */}

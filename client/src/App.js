@@ -12,6 +12,7 @@ import ResourcePage from "./pages/ResourcePage";
 import ProfilePage from "./pages/ProfilePage";
 import ArticleView from './pages/ArticleView';
 import Signup from "./pages/Signup"
+import NoMatch from "./pages/NoMatch"
 import { ThemeProvider } from "@chakra-ui/core";
 
 {/* <ThemeProvider theme={customTheme}>{props.children}</ThemeProvider>; */}
@@ -44,7 +45,7 @@ function App() {
             <Route exact path="/page" component={ResourcePage} />
             <Route exact path="/profile" component={ProfilePage} />
             <Route exact path="/articles/:id" component={ArticleView} />
-            {/* <Route component={NoMatch} /> */}
+            <Route exact path="/nomatch" component={NoMatch} />
           </Switch>
           
           <Footer />
