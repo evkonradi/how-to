@@ -8,12 +8,8 @@ import Home from './pages/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ResourceAddEdit from './pages/ResourceAddEdit';
-<<<<<<< HEAD
-import Signup from "./components/SignUp"
 import ResourcePage from "./pages/ResourcePage";
-=======
 import Signup from "./pages/Signup"
->>>>>>> 134f29282b97142414f2ee594ecfaa626117e599
 import { ThemeProvider } from "@chakra-ui/core";
 
 {/* <ThemeProvider theme={customTheme}>{props.children}</ThemeProvider>; */}

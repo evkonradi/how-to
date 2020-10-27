@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
 .App-link {
@@ -78,6 +78,16 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
   font-size: large;
+}
+
+a {
+  color: #E0FBFC;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #D99748;
+  text-decoration: none;
 }
 
 /* Change the link color to #111 (black) on hover */

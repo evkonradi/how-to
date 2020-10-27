@@ -48,6 +48,16 @@ h5 {
     color: $primary;
 }
 
+a {
+    color: #E0FBFC;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #D99748;
+    text-decoration: none;
+  }
+
 .container {
     background-color: #5C6B73;
     width: 100%;
@@ -73,10 +83,6 @@ h5 {
 .Col.homesearch {
     position: center;
     background-color: $success;
-}
-
-a {
-    color: $info
 }
 
 Header {
