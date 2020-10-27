@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from 'react-router-dom';
-import ResourceAddEdit from '../components/ResourceAddEdit';
+import ResourceAddEdit from '../pages/ResourceAddEdit';
 
 function Resource(){
 
