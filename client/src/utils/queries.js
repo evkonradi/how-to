@@ -19,3 +19,14 @@ query resource($_id: ID!) {
     }
   }
 `;
+
+export const QUERY_RESOURCES_HOMEPAGE = gql`
+{
+  resources {
+      _id
+      name
+      shortDescription
+      dateCreated
+  }
+}
+`;
