@@ -90,6 +90,12 @@ a:hover {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
 /* Change the link color to #111 (black) on hover */
 li a:hover {
   color: #D99748;

@@ -16,6 +16,7 @@ const ResourcePage = () => {
       <div>
         
             <Container>
+              <Col sm="12" md="6" lg="8" offset="3">
               <Row>
                 <h2>Title of Article</h2>
               </Row>
@@ -25,8 +26,12 @@ const ResourcePage = () => {
               <Row>
               <h5>Author's Name</h5>
               </Row>
+              
               <Row>
-                <img src="client/public/images/lemons.jpeg"></img>
+                <img src="./images/lemons.jpeg"></img>
+              </Row>
+              <Row>
+                <p>image caption goes here</p>
               </Row>
               <Row>
                 <p>this is where the body of the resource will go</p>
@@ -34,6 +39,7 @@ const ResourcePage = () => {
               <Row>
                 <h4>this is where a video will go</h4>
               </Row>
+              </Col>
             </Container>
         
       </div>
