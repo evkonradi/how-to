@@ -4,7 +4,7 @@ const ObjectId = require('mongoose').Types.ObjectId;
 const resolvers = {
     Query: {
         resources: async () => {
-            return await Resource.find();
+            return await Resource.find().sort({'dateCreated': -1});
         },
         resource: async (parent, { _id }) => {
             return await Resource.findById(_id);
