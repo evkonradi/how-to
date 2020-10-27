@@ -24,7 +24,7 @@ class Login extends Component {
                 <Label>Password</Label>
                 <Input type="password" placeholder="Password"/>
             </FormGroup>
-            <Button className="btn-lg btn-dark btn-block">Sign Up</Button>
+            <Button className="btn-lg btn-dark btn-block">LOGIN</Button>
             <div className="text-center pt-3">
                 Or continue with your social account
             </div>
