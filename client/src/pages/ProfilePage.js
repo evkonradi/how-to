@@ -23,19 +23,19 @@ const ProfilePage = () => {
                 <h2>Welcome Back, UserName</h2>
               </Row>
               <Row>
-                <a href="/resource/:id?">Make a New Post</a><br /><br />
+                <a href="/resource/:id?"><h5>Make a New Post</h5></a><br /><br />
               </Row>
-              <Switch>
+              {/* <Switch>
               <Route exact path="/resource/:id?" component={ResourceAddEdit} />
-                </Switch>
+                </Switch> */}
               <Row>
-                <p>image caption goes here</p>
+                <p>User Stats</p>
               </Row>
               <Row>
-                <p>this is where the body of the resource will go</p>
+                <p>Payment</p>
               </Row>
               <Row>
-                <h4>this is where a video will go</h4>
+                <h4>Edit User Info</h4>
               </Row>
               </Col>
             </Container>
