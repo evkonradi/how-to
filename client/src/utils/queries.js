@@ -30,3 +30,15 @@ export const QUERY_RESOURCES_HOMEPAGE = gql`
   }
 }
 `;
+
+export const QUERY_RESOURCES_SEARCH = gql`
+query resource_search($text: String!) {
+  resources_search(text: $text) {
+    _id
+    name
+    shortDescription
+    resourceBody
+    dateCreated
+  }
+}
+`;

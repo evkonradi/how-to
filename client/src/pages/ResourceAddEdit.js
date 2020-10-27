@@ -4,7 +4,6 @@ import { ADD_RESOURCE, UPDATE_RESOURCE } from '../utils/mutations';
 import { QUERY_RESOURCE } from '../utils/queries';
 import { useParams } from 'react-router-dom';
 import { Col, Row, Container, InputGroup, Button, Input } from 'reactstrap';
-// import { WhiteSpace } from 'antd-mobile';
 import { Box } from "@chakra-ui/core";
 
 function ResourceAddEdit(){
@@ -19,7 +18,7 @@ function ResourceAddEdit(){
 
     const { loading, data } = useQuery(QUERY_RESOURCE, {
             variables: { _id: id },
-            skip : !id
+            skip : !id // do not run this when id parameter is null (new resource page)
     });
 
     //in the edit mode populate state with the data from the database
