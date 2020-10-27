@@ -1,10 +1,22 @@
 const { User, Resource } = require('../models');
 
 const ObjectId = require('mongoose').Types.ObjectId;
-// const { AuthenticationError } = require('apollo-server-express');
+const { AuthenticationError } = require('apollo-server-express');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
+        me: async (parent, args, context) => {
+            if (context.user) {
+                const userData = await User.findOne({ _id: context.user._id })
+                    .select('-__v -password')
+                    .populate('resources');
+
+                return userData;
+            }
+            throw new AuthenticationError('Not logged in');
+        },
+
         resources: async () => {
             return Resource.find().sort({ "dateCreated": -1 });
         },
@@ -16,10 +28,12 @@ const resolvers = {
         // },
         users: async () => {
             return await User.find()
+            .select('-__v -password')
             .populate('resources');
         },
         user: async (parent, { username }) => {
             return await User.findOne({ username })
+            .select('-__v -password')
             .populate('resources');
         },
         resources_search: async (parent, { text }) => {
@@ -31,21 +45,23 @@ const resolvers = {
     Mutation: {
         addUser: async (parent, args) => {
             const user = await User.create(args);
+            const token = signToken(user);
 
-            return user;
+            return { token, user };
         },
-        // login: async (parent, { email, password }) => {
-        //     const user = await User.findOne({ email });
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
 
-        //     if (!user) {
-        //         throw new AuthenticationError('Invalid credentials');
-        //     }
-        //     const correctPw = await user.isCorrectPassword(password);
-        //     if (!correctPw) {
-        //         throw new AuthenticationError('Invalid credentials');
-        //     }
-        //     return user;
-        // },
+            if (!user) {
+                throw new AuthenticationError('Invalid credentials');
+            }
+            const correctPw = await user.isCorrectPassword(password);
+            if (!correctPw) {
+                throw new AuthenticationError('Invalid credentials');
+            }
+            const token = signToken(user);
+            return { token, user };
+        },
         addResource: async (parent, args) => {
             const resource = await Resource.create(args);
             return resource;
