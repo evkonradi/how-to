@@ -2,14 +2,13 @@ import React, { Component} from 'react';
 import '../SignupLogin/index.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import {FacebookLoginButton, GoogleLoginButton} from 'react-social-login-buttons'
-import GoogleLogin from 'react-google-login'
+import GoogleLogin from 'react-google-login';
+
 class Signup extends Component {
     render(){
     return (
         <Form className="login-form">
-            <h1>
-                <span className="font-weight-bold">TeachMeTo.com</span>
-            </h1>
+
             <h2 className="text-center">Welcome</h2>
             <FormGroup>
                 <Label>User Name</Label>
