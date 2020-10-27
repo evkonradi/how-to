@@ -11,9 +11,7 @@ class SignupLogin extends Component {
     render(){
     return (
         <Form className="login-form">
-            <h1>
-                <span className="font-weight-bold">TeachMeTo.com</span>
-            </h1>
+        
             <h2 className="text-center">Welcome</h2>
             <FormGroup>
                 <Label>Email</Label>

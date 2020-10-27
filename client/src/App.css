@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #253237;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   
   flex-direction: column;
@@ -26,7 +26,29 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #D99748;
+}
+
+h1 {
+  animation: type 3s steps(35);
+  overflow:hidden;
+  white-space:nowrap;
+  font-family:'Courier New', Courier, monospace;
+  border-right:4px solid black;
+  width:35ch;
+  font-size: 2em;
+}
+
+h1.class {
+  color: #D99748;
+}
+@keyframes type {
+  0% {
+    width:0ch;
+  }
+  100% {
+    width:35ch;
+  }
 }
 
 /* @keyframes App-logo-spin {
@@ -40,7 +62,6 @@
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
   overflow: hidden;
   background-color: #253237;
   align-content: space-between;
@@ -79,17 +100,15 @@ float: right;
   width: 100%;
 }
 .logoText {
-  font-size: large;
+  font-size: 1.3rem;
   display: block;
-  color: #333333;
-  background: #FFFFFF;
-  text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15);
+  color: #E0FBFC;
+  background: #5C6B73;
+  /* text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15); */
   display: flex;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-family: serif;
-
 }
 /* .meGreen {
   color: #4CAF80;
