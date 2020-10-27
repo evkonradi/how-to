@@ -1,10 +1,20 @@
 import React from 'react';
+import { Col, Card, CardImg, CardText, CardBody, CardLink, CardHeader, CardTitle, CardSubtitle, CarouselIndicators, CarouselControl, CarouselItem, CarouselCaption }  from 'reactstrap';
 import { useQuery } from '@apollo/react-hooks';
-import { Card, CardText, CardBody, CardHeader }  from 'reactstrap';
 import { QUERY_RESOURCES_HOMEPAGE } from '../../utils/queries';
-import Carousel from "react-bootstrap/Carousel";
+import { idbPromise } from "../../utils/helpers";
+import { useParams } from "react-router-dom";
 
-// this code was me just trying to get anything to populate
+// import CardBody from 'react-bootstrap/CardBody';
+import Carousel from "react-bootstrap/Carousel";
+// import cook from '../../public/cook.jpg';
+
+// import Carousel,
+//       CarouselItem,
+//       CarouselControl,
+//       CarouselIndicators,
+//       CarouselCaption from "reactstrap";
+
 const Resource = () => {
   const { loading, data } = useQuery(QUERY_RESOURCES_HOMEPAGE);
   const resources = data?.resources || [];
@@ -13,7 +23,6 @@ const Resource = () => {
     <main>
       <div>
         {loading ? <div>Loading...</div> : 
-          <div>
             <Carousel>
               {
                 resources.map((resource) => (
@@ -21,6 +30,8 @@ const Resource = () => {
                     <Card  outline color='secondary' >
                       <CardHeader>{resource.name}</CardHeader>
                       <CardBody style={{ backgroundColor: "#9DB4C0"}}>
+                        {/* <CardImg>{resource.imgUrl}</CardImg> */}
+                        <img src="./images/stars.jpg" width="100%"></img>
                         <CardText>{resource.shortDescription}</CardText>
                         <CardText>Created at: {resource.dateCreated}</CardText>
                       </CardBody>
@@ -29,7 +40,6 @@ const Resource = () => {
                 ))
               }
             </Carousel>
-          </div>
         }
       </div>
     </main>
