@@ -29,6 +29,7 @@ const ResourcePage = () => {
               
               <Row>
                 <img src="./images/lemons.jpeg"></img>
+                {/* carousel of images */}
               </Row>
               <Row>
                 <p class="caption">
