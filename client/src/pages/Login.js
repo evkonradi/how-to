@@ -1,9 +1,14 @@
 import React, { Component} from 'react';
-import '../SignupLogin/index.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import {FacebookLoginButton, GoogleLoginButton} from 'react-social-login-buttons'
-import GoogleLogin from 'react-google-login'
-class Signup extends Component {
+import GoogleLogin from 'react-google-login';
+class Login extends Component {
+    
+    responseGoogle=(response)=>{
+        console.log(response);
+        console.log(response.profileObj);
+        // this.signup(response, "google");
+    };
+
     render(){
     return (
         <Form className="login-form">
@@ -11,10 +16,6 @@ class Signup extends Component {
                 <span className="font-weight-bold">TeachMeTo.com</span>
             </h1>
             <h2 className="text-center">WELCOME</h2>
-            <FormGroup>
-                <Label>User Name</Label>
-                <Input type="userName" placeholder="User Name"/>
-            </FormGroup>
             <FormGroup>
                 <Label>Email</Label>
                 <Input type="email" placeholder="Email"/>
@@ -27,27 +28,23 @@ class Signup extends Component {
             <div className="text-center pt-3">
                 Or continue with your social account
             </div>
-            <FacebookLoginButton className="mt-3 mb-3"/>
-            <GoogleLoginButton 
-                className="mt-3 mb-3" 
-                />
+           
+            <div className="text-center">
             <GoogleLogin 
             clientId="212266341985-bfblloh84d96u203r5i5b80l745ea911.apps.googleusercontent.com"
+            
             onSuccess={this.responseGoogle}
             onFailure={this.responseGoogle}
             cookiePolicy={'single_host_origin'}
             />
-
+        </div>
             <div className="text-center">
-                <a href="/sign-up">Sign Up</a>
+                <a href="/signup">Sign Up</a>
                 <span className="p-2">|</span>
-                <a href="/sign-up">Forgot Password</a>
-                    
-                    
+                <a href="/signup">Forgot Password</a>        
             </div>
         </Form>
      )
   }  
 }
-export default Signup;
-
+export default Login;

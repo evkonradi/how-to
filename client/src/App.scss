@@ -53,6 +53,10 @@ h5 {
     width: 100%;
 }
 
+.container.carousel {
+    background-color: white;
+}
+
 .resource {
     position: absolute;
     padding-top: 10px;
@@ -62,6 +66,7 @@ h5 {
 .jumbotron.hometron{
     background-color: #5C6B73;
     border-radius: 0 0 15px 15px;
+    padding: 1rem .5 rem;
     // width: 100%;
 }
 

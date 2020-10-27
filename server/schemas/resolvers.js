@@ -6,11 +6,14 @@ const ObjectId = require('mongoose').Types.ObjectId;
 const resolvers = {
     Query: {
         resources: async () => {
-            return await Resource.find();
+            return Resource.find().sort({ createdAt: -1 });
         },
         resource: async (parent, { _id }) => {
             return await Resource.findById(_id);
         },
+        // resource: () => {
+        //     return GetResource.find();
+        // },
         users: async () => {
             return await User.find()
             .populate('resources');

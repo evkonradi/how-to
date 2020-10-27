@@ -45,6 +45,8 @@ const typeDefs = gql`
     videos: [Video]
   }
 
+  
+
   type Query {
     users: [User]
     user(username: String!): User

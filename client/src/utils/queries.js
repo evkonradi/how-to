@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 export const QUERY_RESOURCE = gql`
-query resource($_id: ID!) {
+query resource($_id: ID) {
     resource(_id: $_id) {
       _id
       name
