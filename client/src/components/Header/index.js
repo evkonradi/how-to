@@ -7,7 +7,8 @@ class Header extends Component {
     <div className="Header">
         <ul>            
             <li className="logoText">Teach <span className="meGreen ">Me</span>To</li>
-            <li className="float-right"><a className="actived" href="login">Sign Up / Log In</a></li>
+            <li className="float-right"><a className="active" href="welcome">Log In</a></li>
+            
         </ul>
     </div>
   );
