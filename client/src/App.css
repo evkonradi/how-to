@@ -29,6 +29,8 @@
   color: #D99748;
 }
 
+
+
 h1 {
   animation: type 3s steps(35);
   overflow:hidden;
@@ -107,8 +109,10 @@ float: right;
   /* text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15); */
   display: flex;
   text-align: center;
+  flex-direction: row;
   padding: 14px 16px;
   text-decoration: none;
+  font-family: 'Saira Stencil One', cursive;
 }
 
 .login-form {
