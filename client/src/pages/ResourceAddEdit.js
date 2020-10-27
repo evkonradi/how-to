@@ -164,7 +164,7 @@ function ResourceAddEdit(){
                     <Input id ="imageCaption" placeholder="Image Caption" name="imageCaption" value={formState.imageCaption} onChange={handleChange}></Input><br /><br />
                     </InputGroup>
                     </Col>
-                    <Col xs={{ span:6, offset:4 }}>
+                    <Col xs={{ span:6, offset: 4 }} lg={{ span:6, offset: 5 }}>
                     <Button id="btnAddImage" onClick={handleImageAdd}>Add Image</Button>
                     </Col>
                 <Row>
@@ -193,13 +193,13 @@ function ResourceAddEdit(){
                         <InputGroup>
                     <Input id ="videoCaption" placeholder="Video Caption" name="videoCaption" value={formState.videoCaption} onChange={handleChange}></Input><br /><br />
                     </InputGroup>
-                    <Col xs={{ span:6, offset:4 }}>
+                    <Col xs={{ span:6, offset:4 }} lg={{ span:6, offset: 5 }}>
                     <Button id="btnAddVideo" onClick={handleVideoAdd}>Add Video</Button>
                     {/* </InputGroupAddon> */}
                     </Col><br />
                     
                 </Col>
-                <Col xs={{ span:6, offset:5 }}>
+                <Col xs={{ span:6, offset:5 }} lg={{ span:6, offset: 5 }}>
                 <Button id = "btnSubmit" type="submit">Submit</Button>
                 </Col>
                 </Container>
