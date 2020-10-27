@@ -3,7 +3,13 @@ import './index.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import {FacebookLoginButton, GoogleLoginButton} from 'react-social-login-buttons'
 import GoogleLogin from 'react-google-login'
+
+import { useMutation } from '@apollo/react-hooks';
+import { ADD_USER } from '../../utils/mutations';
+
 class SignupLogin extends Component {
+
+    
     responseGoogle=(response)=>{
         console.log(response);
         console.log(response.profileObj)

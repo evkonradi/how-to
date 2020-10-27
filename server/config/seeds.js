@@ -250,17 +250,19 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
   await User.deleteMany();
 
   await User.create({
-    // firstName: "Frank",
-    // lastName: "Furter",
+    firstName: "Frank",
+    lastName: "Furter",
     username: "ffurter",
+    displayName: "HotDogMan",
     email: "frankf@testmail.com",
     password: "password12345",
   });
 
   await User.create({
-    // firstName: "Hans",
-    // lastName: "Solo",
+    firstName: "Hans",
+    lastName: "Solo",
     username: "hsolo",
+    displayName: "StarWarsMan",
     email: "hansyboy@testmail.com",
     password: "theforce123",
   });

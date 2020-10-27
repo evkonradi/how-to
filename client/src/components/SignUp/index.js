@@ -10,7 +10,7 @@ class Signup extends Component {
             <h1>
                 <span className="font-weight-bold">TeachMeTo.com</span>
             </h1>
-            <h2 className="text-center">Welcome</h2>
+            <h2 className="text-center">WELCOME</h2>
             <FormGroup>
                 <Label>User Name</Label>
                 <Input type="userName" placeholder="User Name"/>
