@@ -15,7 +15,7 @@ const Home = () => {
             <Jumbotron className="hometron">
                 <Row xs={1} md={2}>
                     <Col xs={{ size: 12 }} sm={{ size: 6, order: 2, offset: 1}}>
-                    <h1>What would you like to <h1 className="learn">learn</h1> today?</h1>
+                    <h3>What would you like to learn today?</h3>
                     </Col>
                 </Row>
             </Jumbotron>
@@ -23,8 +23,8 @@ const Home = () => {
             <Col className="homesearch" xs={{ size: 8, offset:2 }} sm="4" md={{ size: 6, offset: 3 }}>
                 <Search></Search>
             </Col><br />
-            <Container>
-                <Col xs="12" sm="10" md={{ size: 6, offset: 4 }}>
+            <Container className="carousel">
+                <Col xs="12" sm="10" md={{ size: 6, offset: 3 }}>
                 {/* <Row className="resource"> */}
                     <Resource></Resource>
                 {/* </Row> */}
