@@ -1,5 +1,7 @@
 const { User, Resource } = require('../models');
+
 const ObjectId = require('mongoose').Types.ObjectId;
+// const { AuthenticationError } = require('apollo-server-express');
 
 const resolvers = {
     Query: {
@@ -28,8 +30,17 @@ const resolvers = {
 
             return user;
         },
-        // login: async () => {
+        // login: async (parent, { email, password }) => {
+        //     const user = await User.findOne({ email });
 
+        //     if (!user) {
+        //         throw new AuthenticationError('Invalid credentials');
+        //     }
+        //     const correctPw = await user.isCorrectPassword(password);
+        //     if (!correctPw) {
+        //         throw new AuthenticationError('Invalid credentials');
+        //     }
+        //     return user;
         // },
         addResource: async (parent, args) => {
             const resource = await Resource.create(args);
