@@ -167,7 +167,7 @@ function ResourceAddEdit(){
                         <Button id="btnAddImage" onClick={handleImageAdd}>Add Image</Button>
                     </Col>
 
-                    <Row>
+                    
                         <Col xs={12}>
                             {formState.videoList.map(video => (
                                 <div key ={`div-video-${formState.videoList.indexOf(video)}`} onClick={handleDelete}>
@@ -179,7 +179,7 @@ function ResourceAddEdit(){
                                 </div>
                             ))}<br />
                         </Col>
-                    </Row>
+                   
                     
 
                     <Col xs={12}>
@@ -191,24 +191,9 @@ function ResourceAddEdit(){
                     </Col>
 
                     <Col xs={12}>
-                        <InputGroup>
-<<<<<<< HEAD
-                    <Input id ="videoCaption" placeholder="Video Caption" name="videoCaption" value={formState.videoCaption} onChange={handleChange}></Input><br /><br />
-                    </InputGroup>
-                    <Col xs={{ span:6, offset:7 }} lg={{ span:6, offset: 5 }}>
-                    <Button id="btnAddVideo" onClick={handleVideoAdd}>Add Video</Button>
-                    {/* </InputGroupAddon> */}
-                    </Col><br />
-                    
-                </Col>
-                <Col xs={{ span:6, offset:4 }} lg={{ span:6, offset: 5 }}>
-                <Button id ="btnSubmit" type="submit">Submit</Button>
-                </Col>
-                </Container>
- </div>
-=======
+                        {/* <InputGroup> */}
                                 <Input id ="videoCaption" placeholder="Video Caption" name="videoCaption" value={formState.videoCaption} onChange={handleChange}></Input><br /><br />
-                        </InputGroup>
+                        {/* </InputGroup> */}
                         <Col xs={{ span:6, offset:7 }} lg={{ span:6, offset: 5 }}>
                                 <Button id="btnAddVideo" onClick={handleVideoAdd}>Add Video</Button>
                             {/* </InputGroupAddon> */}
@@ -222,7 +207,6 @@ function ResourceAddEdit(){
                 </form>
             </Container>
         </div>
->>>>>>> 686305c8177e22a029a5ae22c96cef4b1624eb1d
         
     );
 

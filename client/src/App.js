@@ -8,12 +8,9 @@ import Home from './pages/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ResourceAddEdit from './pages/ResourceAddEdit';
-<<<<<<< HEAD
 import ResourcePage from "./pages/ResourcePage";
 import ProfilePage from "./pages/ProfilePage";
-=======
 import ArticleView from './pages/ArticleView';
->>>>>>> 686305c8177e22a029a5ae22c96cef4b1624eb1d
 import Signup from "./pages/Signup"
 import { ThemeProvider } from "@chakra-ui/core";
 
@@ -44,12 +41,9 @@ function App() {
             <Route exact path="/resource/:id?" component={ResourceAddEdit} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
-<<<<<<< HEAD
             <Route exact path="/page" component={ResourcePage} />
             <Route exact path="/profile" component={ProfilePage} />
-=======
             <Route exact path="/articles/:id" component={ArticleView} />
->>>>>>> 686305c8177e22a029a5ae22c96cef4b1624eb1d
             {/* <Route component={NoMatch} /> */}
           </Switch>
           
