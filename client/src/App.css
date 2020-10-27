@@ -42,6 +42,7 @@ h1 {
 h1.class {
   color: #D99748;
 }
+
 @keyframes type {
   0% {
     width:0ch;
@@ -92,6 +93,12 @@ a:hover {
 
 p {
   text-align: center;
+}
+
+p.caption {
+  font-style: italic;
+  color: #9DB4C0;
+  font-size: x-small;
 }
 
 img {

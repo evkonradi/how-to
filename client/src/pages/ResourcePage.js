@@ -31,7 +31,9 @@ const ResourcePage = () => {
                 <img src="./images/lemons.jpeg"></img>
               </Row>
               <Row>
-                <p>image caption goes here</p>
+                <p class="caption">
+                  image caption goes here
+                  </p>
               </Row>
               <Row>
                 <p>this is where the body of the resource will go</p>
