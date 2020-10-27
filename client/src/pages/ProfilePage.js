@@ -19,20 +19,20 @@ const ProfilePage = () => {
       <div>
         
             <Container>
-              {/* <Col sm="12" md="6" lg="8" offset="3"> */}
+              <Col sm="12" md="6" lg="8" offset="3">
               <Row>
                 <h2>Welcome Back, UserName</h2>
               </Row>
               <Row xs="2">
               <Col xs="4">
               
-                <a href="/resource/:id?"><h5>Make a New Post</h5></a><br /><br />
+                <a href="/resource/:id?">New Post</a><br /><br />
               
                 <p>User Stats</p>
             
                 <p>Payment</p>
            
-                <p>Edit User Info</p>
+                <p>User Info</p>
            
                 </Col>
               
@@ -40,14 +40,14 @@ const ProfilePage = () => {
             
              
               
-              <Col xs="8">
+              {/* <Col xs="8">
     
                       <p>lets test the divider</p>
                       
-              </Col>
+              </Col> */}
               </Row>
               
-              {/* </Col> */}
+              </Col>
             </Container>
         
       </div>
