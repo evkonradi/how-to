@@ -43,6 +43,8 @@ const typeDefs = gql`
     videos: [Video]
   }
 
+  
+
   type Query {
     users: [User]
     user(username: String!): User
@@ -55,7 +57,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-   
+    
     addUser(username: String!, email: String!, password: String!): User
     addResource(name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput]): Resource
     updateResource(_id: ID!, name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput]): Resource
