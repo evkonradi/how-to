@@ -37,8 +37,12 @@ $info: #C2DFE3;
 $light:#E0FBFC;
 $dark: #253237;
 
+h2 {
+    color: $success;
+}
+
 h3 {
-    color: $info;
+    color: $secondary;
     margin-left: 1rem;
 }
 h4 {
@@ -48,10 +52,10 @@ h5 {
     color: $primary;
 }
 
-.container {
-    background-color: #5C6B73;
-    width: 100%;
-}
+// .container {
+//     background-color: #5C6B73;
+//     width: 100%;
+// }
 
 .container.carousel {
     background-color: white;
@@ -64,9 +68,9 @@ h5 {
 }
 
 .jumbotron.hometron{
-    background-color: #5C6B73;
+    background-color: $primary;
     border-radius: 0 0 15px 15px;
-    padding: 1rem .5 rem;
+    // padding: 1rem .5 rem;
     // width: 100%;
 }
 
@@ -81,9 +85,13 @@ a {
 }
 
 Header {
-    background-color: $primary;
+    background-color: $dark;
 }
 
 p {
-    color: $dark;
+    color: $secondary;
+}
+
+.footer.p {
+    color: $secondary;
 }

@@ -34,9 +34,23 @@ const Search = () => {
 
   return (
     <div>
-      <Input name ="searchText" onChange={handleChange} />
-      <Button size="lg" height="46px" width="200px" border="2px" color="white" bg="#5C6B73" _hover={{ bg:"#D99748" }} type="submit"
-          onClick={doSearch}>Search</Button>
+        <Input name ="searchText" onChange={handleChange} />
+        <Button
+  size="lg"
+  height="46px"
+  width="200px"
+  border="2px"
+  color="white"
+  bg="#253237"
+  _hover={{ bg:"#D99748" }}
+  type="submit"
+ onClick={doSearch}>Search</Button>
+
+      {/* <InputGroup>
+        <InputGroupAddon addonType="append">
+          <InputGroupText><span role = "img" aria-label="magnifyingglass" onclick={doSearch} >🔍</span></InputGroupText>
+        </InputGroupAddon>
+      </InputGroup> */}
 
       <div>
         {data ? (

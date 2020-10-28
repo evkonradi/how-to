@@ -1,11 +1,11 @@
 import React, { Component, useState } from "react";
-import { Form, FormGroup, Label, Input, Container } from "reactstrap";
+import { Form, FormGroup, Label, Input, Container, Col } from "reactstrap";
 import { Button } from "@chakra-ui/core";
 
 import { useMutation } from "@apollo/react-hooks";
 import { ADD_USER } from "../utils/mutations";
 
-// Import Auth
+import Auth from '../utils/auth';
 
 const Signup = () => {
     const [formState, setFormState] = useState({ username: '', firstName: '', lastName: '', displayName: '', email: '', password: '' });
@@ -30,7 +30,7 @@ const Signup = () => {
         variables: { ...formState },
       });
 
-      // Auth login
+      Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
     }
@@ -40,10 +40,14 @@ const Signup = () => {
     <main>
       <div>
         <Container>
+          <br />
+          <br />
+          <Col>
           <Form className="login-form" onSubmit={handleFormSubmit}>
             <h1>
               <span className="font-weight-bold text-center">Sign Up Here.</span>
             </h1>
+            <br />
             <FormGroup>
               {/* <Label>User Name</Label> */}
               <Input
@@ -52,6 +56,36 @@ const Signup = () => {
                 name="username"
                 id="username"
                 value={formState.username}
+                onChange={handleChange}
+              />
+            </FormGroup>
+            <FormGroup>
+            <Input
+                type="firstName"
+                placeholder="First Name"
+                name="firstName"
+                id="firstName"
+                value={formState.firstName}
+                onChange={handleChange}
+              />
+            </FormGroup>
+            <FormGroup>
+            <Input
+                type="lastName"
+                placeholder="Last Name"
+                name="lastName"
+                id="lastName"
+                value={formState.lastName}
+                onChange={handleChange}
+              />
+            </FormGroup>
+            <FormGroup>
+            <Input
+                type="displayName"
+                placeholder="Display Name"
+                name="displayName"
+                id="displayName"
+                value={formState.displayName}
                 onChange={handleChange}
               />
             </FormGroup>
@@ -77,6 +111,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
             </FormGroup>
+            <br />
             <Button
               size="lg"
               height="46px"
@@ -90,7 +125,10 @@ const Signup = () => {
             >
               Join
             </Button>
+            <br />
+            <br />
           </Form>
+          </Col>
         </Container>
       </div>
     </main>
