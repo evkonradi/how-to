@@ -55,7 +55,13 @@ const typeDefs = gql`
     dateCreated: String
   }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Query {
+    me: User
     users: [User]
     user(username: String!): User
     resources: [Resource]
@@ -64,8 +70,8 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    login(email: String!, password: String!): User
-    addUser(username: String!, firstName: String!, lastName: String!, displayName: String!, email: String!, password: String!): User
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, firstName: String!, lastName: String!, displayName: String!, email: String!, password: String!): Auth
     addResource(name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput], displayName: String): Resource
     updateResource(_id: ID!, name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput], displayName: String): Resource
     deleteResource(_id: ID!): Resource

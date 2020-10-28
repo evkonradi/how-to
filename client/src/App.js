@@ -9,7 +9,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ResourceAddEdit from './pages/ResourceAddEdit';
 import ResourceView from './pages/ResourceView';
-import Signup from "./pages/Signup"
+import ProfilePage from "./pages/ProfilePage";
+import Signup from "./pages/Signup";
+import NoMatch from "./pages/NoMatch"
 import { ThemeProvider } from "@chakra-ui/core";
 
 {/* <ThemeProvider theme={customTheme}>{props.children}</ThemeProvider>; */}
@@ -40,7 +42,9 @@ function App() {
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/articles/:id" component={ResourceView} />
-            {/* <Route component={NoMatch} /> */}
+            <Route exact path="/profile" component={ProfilePage} />
+            <Route exact path="/nomatch" component={NoMatch} />
+            <Route component={NoMatch} /> 
           </Switch>
           
           <Footer />
