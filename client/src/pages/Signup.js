@@ -60,6 +60,36 @@ const Signup = () => {
               />
             </FormGroup>
             <FormGroup>
+            <Input
+                type="firstName"
+                placeholder="First Name"
+                name="firstName"
+                id="firstName"
+                value={formState.firstName}
+                onChange={handleChange}
+              />
+            </FormGroup>
+            <FormGroup>
+            <Input
+                type="lastName"
+                placeholder="Last Name"
+                name="lastName"
+                id="lastName"
+                value={formState.lastName}
+                onChange={handleChange}
+              />
+            </FormGroup>
+            <FormGroup>
+            <Input
+                type="displayName"
+                placeholder="Display Name"
+                name="displayName"
+                id="displayName"
+                value={formState.displayName}
+                onChange={handleChange}
+              />
+            </FormGroup>
+            <FormGroup>
               {/* <Label>Email</Label> */}
               <Input
                 type="email"
