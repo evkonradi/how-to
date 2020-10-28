@@ -39,9 +39,8 @@ const Search = () => {
   height="46px"
   width="200px"
   border="2px"
-//   borderColor="green.500"
   color="white"
-  bg="#5C6B73"
+  bg="#253237"
   _hover={{ bg:"#D99748" }}
   type="submit"
  onClick={doSearch}>Search</Button>
