@@ -165,6 +165,7 @@ float: right;
 .nullA {
   text-decoration: none;
   color: #9DB4C0;
+  font-size: 80%;
 }
 
 .nullA:hover {

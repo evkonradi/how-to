@@ -80,11 +80,13 @@ const ProfilePage = props => {
             <Row>
               <Col xs={3} md="3" lg="3">
               <p className="small">User Details</p>
-                <a href="/resource" className="small">
+              <br />
+              <p className="small">Wallet</p>
+              <br />
+                <a href="/resource" className="small" className="nullA">
                   New Post
                 </a>
-                <br />
-                <p className="small">Wallet</p>
+                
               </Col>
               <Divider color="black" orientation="vertical" />
               <Col xs={6}>

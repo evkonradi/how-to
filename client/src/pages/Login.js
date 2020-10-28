@@ -82,8 +82,7 @@ const Login = (props, Component) => {
             />
           </FormGroup>
           <br />
-          <br />
-          <br />
+
           <Col xs={10} md={10} lg={10} offset={6}>
             <Row>
           <Button
@@ -91,7 +90,6 @@ const Login = (props, Component) => {
             height="46px"
             width="200px"
             border="2px"
-            //   borderColor="green.500"
             color="white"
             bg="#5C6B73"
             _hover={{ bg: "#D99748" }}
@@ -111,7 +109,7 @@ const Login = (props, Component) => {
             </Row>
           </Col>
           <div className="text-center pt-3">
-            <a href="/signup" class="nullA">Need an Account? Sign Up.</a>
+            <a href="/signup" class="nullA" size="x-small">Need an Account? Sign Up.</a>
             {/* <span className="p-2">|</span>
             <a href="/signup">Forgot Password</a> */}
           </div>
