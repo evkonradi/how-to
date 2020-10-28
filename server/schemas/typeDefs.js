@@ -41,6 +41,7 @@ const typeDefs = gql`
     shortDescription: String,
     resourceBody: String,
     dateCreated: String,
+    displayName: String,
     images: [Image]
     videos: [Video]
   }
@@ -49,6 +50,7 @@ const typeDefs = gql`
     _id: ID,
     name: String,
     shortDescription: String,
+    displayName: String,
     resourceBody: String,
     dateCreated: String
   }

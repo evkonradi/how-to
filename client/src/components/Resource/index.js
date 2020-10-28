@@ -27,7 +27,7 @@ const Resource = () => {
                           {/* <CardImg>{resource.imgUrl}</CardImg> */}
                           <img src="./images/stars.jpg" width="100%"></img>
                           <CardText>{resource.shortDescription}</CardText>
-                          <CardText>Created at: {resource.dateCreated}</CardText>
+                          <CardText>Created at: {resource.dateCreated} by {resource.displayName}</CardText>
                         </CardBody>
                       </Card>
                     </Link>

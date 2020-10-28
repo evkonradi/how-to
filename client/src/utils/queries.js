@@ -5,7 +5,8 @@ query resource($_id: ID!) {
     resource(_id: $_id) {
       _id
       name
-      shortDescription
+      shortDescription,
+      displayName,
       resourceBody
       dateCreated
       images{
@@ -25,7 +26,8 @@ export const QUERY_RESOURCES_HOMEPAGE = gql`
   resources {
       _id
       name
-      shortDescription
+      shortDescription, 
+      displayName,
       dateCreated
   }
 }
@@ -36,7 +38,8 @@ query resource_search($text: String!) {
   resources_search(text: $text) {
     _id
     name
-    shortDescription
+    shortDescription,
+    displayName
     resourceBody
     dateCreated
   }
