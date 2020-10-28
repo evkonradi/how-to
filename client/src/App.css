@@ -161,3 +161,22 @@ float: right;
 .user {
   float: right;
 }
+
+.nullA {
+  text-decoration: none;
+  color: #9DB4C0;
+}
+
+.nullA:hover {
+  text-decoration: none;
+  color: #D99748;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

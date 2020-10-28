@@ -103,7 +103,7 @@ const Login = (props, Component) => {
             />
           </Col>
           <div className="text-center pt-3">
-            <a href="/signup">Need an Account? Sign Up.</a>
+            <a href="/signup" class="nullA">Need an Account? Sign Up.</a>
             {/* <span className="p-2">|</span>
             <a href="/signup">Forgot Password</a> */}
           </div>

@@ -16,19 +16,20 @@ function ResourceView(){
             {loading ? <div>Loading...</div> : 
             <div>
                 <Container>
-                <Col sm="12" md="6" lg="8" offset="3">
+                    <br />
+                <Col xs={12} md={10} lg={10} offset={3}>
                 <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
                     <Row>
-                        <h2>{data.resource.name}</h2>
+                        <h3>{data.resource.name}</h3>
                     </Row>
                     </Box>
 
                     <Row>
-                        <h4>{data.resource.shortDescription}</h4><br /><br />
+                        <h5>{data.resource.shortDescription}</h5><br /><br />
                     </Row>
 
                     <Row>
-                    <h5>Author: {data.resource.displayName}</h5>
+                    <h5 class="italic">Written by: {data.resource.displayName}</h5>
                     </Row>
                     
                     {data.resource.images.map(image => (
@@ -49,17 +50,21 @@ function ResourceView(){
                     </Row>
                     
                     {data.resource.videos.map(video => (
+                        <Col xs={12}>
                         <Row key ={`video-${data.resource.videos.indexOf(video)}`}>
                             <Row>
                             <iframe width="300" src={`${video.fileURL}`} frameBorder="0" title={video.videoCaption}
                                         allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>
                             </Row>
+                            <br /> <br />
                             <Row>
-                                <p class="caption">
+                                <p class="caption"> <br /> <br />
                                     <span>{video.videoCaption}</span>
                                 </p>
                             </Row>
+                            <br />
                         </Row>
+                        </Col>
                     ))}
 
                 </Col>

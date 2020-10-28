@@ -204,7 +204,7 @@ function ResourceAddEdit(){
                     </Col>
 
                     <Col xs={{ span:6, offset:4 }} lg={{ span:6, offset: 5 }}>
-                        <Button id = "btnSubmit" type="submit">Submit</Button>
+                        <Button size="lg" id = "btnSubmit" type="submit">Submit</Button>
                     </Col>
 
                 </form>
