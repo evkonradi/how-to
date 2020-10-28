@@ -1,5 +1,6 @@
 import React, { Component, useState } from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button } from "@chakra-ui/core";
 
 import { useMutation } from '@apollo/react-hooks';
 import { ADD_USER } from '../utils/mutations';
@@ -53,7 +54,20 @@ const Signup = () => {
                         {/* <Label>Password</Label> */}
                         <Input type="password" placeholder="Password" name="password" id="password" value={formState.password} onChange={handleChange} />
                     </FormGroup>
-                    <Button className="btn-lg btn-dark btn-block" type="submit">Join</Button>
+                    <Button
+  size="lg"
+  height="46px"
+  width="200px"
+  border="2px"
+//   borderColor="green.500"
+  color="white"
+  bg="#5C6B73"
+  _hover={{ bg:"#D99748" }}
+  type="submit"
+>
+  Join
+</Button>
+                    
                 
                 </Form>
             </div>

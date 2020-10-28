@@ -11,6 +11,8 @@ import { Divider, Box, BoxProps } from "@chakra-ui/core";
 // import { idbPromise } from "../../utils/helpers";
 // import { useParams } from "react-router-dom";
 
+import { Button } from "@chakra-ui/core";
+
 
 
 const ProfilePage = () => {
@@ -26,11 +28,9 @@ const ProfilePage = () => {
               </Row>
               <Row xs="2">
                 <Col xs="4">
-                <a href="/resource/:id?">New Post</a><br /><br />
-              
-                <p>User Stats</p>
+                <a href="/resource">New Post</a><br /><br />
             
-                <p>Payment</p>
+                <p>Wallet</p>
            
                 <p>User Info</p>
                 </Col> 
