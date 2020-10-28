@@ -52,6 +52,7 @@ const Login = (props, Component) => {
   return (
     <main>
       <div>
+        <br /><br />
         <Form className="login-form" onSubmit={handleFormSubmit}>
           <h1>
             <span className="font-weight-bold">Welcome Back!</span>
@@ -92,7 +93,7 @@ const Login = (props, Component) => {
           >
             Join
           </Button>
-          <br />
+          <br /><br />
             <GoogleLogin
               clientId="212266341985-bfblloh84d96u203r5i5b80l745ea911.apps.googleusercontent.com"
               onSuccess={responseGoogle}
@@ -101,9 +102,9 @@ const Login = (props, Component) => {
             />
           </Col>
           <div className="text-center pt-3">
-            <a href="/signup">Sign Up</a>
-            <span className="p-2">|</span>
-            <a href="/signup">Forgot Password</a>
+            <a href="/signup">Need an Account? Sign Up.</a>
+            {/* <span className="p-2">|</span>
+            <a href="/signup">Forgot Password</a> */}
           </div>
         </Form>
         {error && <div>Login failed</div>}

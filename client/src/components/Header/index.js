@@ -4,7 +4,7 @@ export default
 class Header extends Component {
   render(){
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="light">
     <Navbar.Brand href="/">TeachMeTo</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
