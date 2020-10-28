@@ -4,6 +4,7 @@ import { useLazyQuery } from '@apollo/react-hooks';
 import { Link } from "react-router-dom";
 import { QUERY_RESOURCES_SEARCH } from '../../utils/queries';
 import { Button } from '@chakra-ui/core';
+import CardResource from "../CardResource";
 
 const Search = () => {
 
@@ -56,12 +57,10 @@ const Search = () => {
           <div>
             <br></br>
             {data.resources_search.map(article =>(
-              <Link to={`/articles/${article._id}`} key={article._id}>
-                  <div>{article.name}</div>
-                  <div>{article.shortDescription}</div>
-                  <div>{article.dateCreated} by {article.displayName}</div>
-                  <br></br>
-              </Link>
+              <div key={article._id}>
+                <CardResource resource={article} imgWidth="50%"></CardResource>
+                <br></br>
+              </div>
             )) }
           </div>
         ) 

@@ -15,19 +15,17 @@ import Signup from "./pages/Signup";
 import NoMatch from "./pages/NoMatch"
 import { ThemeProvider } from "@chakra-ui/core";
 
-{/* <ThemeProvider theme={customTheme}>{props.children}</ThemeProvider>; */}
-
 const client = new ApolloClient({
-  // request: (operation) => {
-  //   const token = localStorage.getItme('id_token')
-  //   operations.setContext({
-  //     headers: {
-  //       authorization: token? `Bearer ${token}` : ''
-  //     }
-  //   })
-  // },
+  request: operation => {
+    const token = localStorage.getItem('id_token')
+    operation.setContext({
+      headers: {
+        authorization: token ? `Bearer ${token}` : ''
+      }
+    });
+  },
   uri: '/graphql'
-})
+});
 
 function App() {
   return (

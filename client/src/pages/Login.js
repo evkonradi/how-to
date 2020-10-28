@@ -9,13 +9,13 @@ import { Button } from "@chakra-ui/core";
 
 // import { render } from 'node-sass';
 
-// Import Auth
+import Auth from '../utils/auth';
 
 const Login = (props, Component) => {
-  const [formState, setFormState] = useState({ email: "", password: "" });
+  const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN_USER);
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     const { name, value } = event.target;
 
     setFormState({
@@ -29,16 +29,17 @@ const Login = (props, Component) => {
     console.log("Form submitted");
     try {
       const { data } = await login({
-        variable: { ...formState },
+        variables: { ...formState }
       });
-      // (Auth Login goes here)
+
+      Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
     }
     // Clear form:
     setFormState({
       email: "",
-      password: "",
+      password: ""
     });
   };
 
