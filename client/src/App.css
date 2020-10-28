@@ -51,10 +51,7 @@ h1.class {
   }
 }
 
-a {
-  color:#5C6B73;
-  text-decoration: none;
-}
+
 
 a:hover {
   color: #D99748;
@@ -86,7 +83,7 @@ img {
 } */
 ul {
   list-style-type: none;
-  margin: 0;
+  margin-bottom: 0px;
   overflow: hidden;
   background-color: #253237;
   align-content: space-between;
@@ -97,12 +94,12 @@ li {
 }
 
 li a {
-  display: block;
+  /* display: block; */
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: .35rem;
   text-decoration: none;
-  font-size: large;
+  font-size: x-small;
 }
 
 /* Change the link color to #111 (black) on hover */
@@ -143,4 +140,17 @@ float: right;
   padding: 15px;
   margin: auto;
   height: 100%;
+}
+
+.jumbotron.hometron {
+  background-color: #9DB4C0;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.footer {
+  font-size: x-small;
+}
+
+.footer.a{
+  color: red; 
 }

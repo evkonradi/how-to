@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
-import {Navbar, Nav, Search} from 'reactstrap'
+import {Navbar, Nav, NavDropdown, NavDropdownProps, NavItem, NavItemProps, NavLink, NavLinkProps} from 'react-bootstrap'
 export default
 class Header extends Component {
   render(){
   return (
-    <div className="Header">
-        <ul>
-            <li><a href="/">TeachMeTo</a></li>
-            <li className="float-right"><a className="active" href="login">Sign Up | Log In</a></li>
-            
-        </ul>
-    </div>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar.Brand href="/">TeachMeTo</Navbar.Brand>
+    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="mr-auto">
+      {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown"> */}
+      <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+      <NavDropdown.Item href="/signup">Signup</NavDropdown.Item>
+      <NavDropdown.Divider />
+    {/* </NavDropdown> */}
+    </Nav>
+    </Navbar.Collapse>
+</Navbar>
   );
 }
 }

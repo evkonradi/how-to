@@ -14,8 +14,8 @@ const Home = () => {
             
             <Jumbotron className="hometron">
                 <Row xs={1} md={2}>
-                    <Col xs={{ size: 12 }} sm={{ size: 6, order: 2, offset: 1}}>
-                    <h3>What would you like to learn today?</h3>
+                    <Col xs={{ size: 12 }} sm={{ size: 6, order: 2, offset: 1}} text="center">
+                    <h2>What would you like to learn today?</h2>
                     </Col>
                 </Row>
             </Jumbotron>

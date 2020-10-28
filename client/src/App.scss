@@ -76,7 +76,8 @@ h5 {
 }
 
 a {
-    color: $info
+    color: $success;
+    text-decoration: none;
 }
 
 Header {
@@ -84,5 +85,5 @@ Header {
 }
 
 p {
-    color: $success;
+    color: $dark;
 }
