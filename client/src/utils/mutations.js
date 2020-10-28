@@ -22,9 +22,9 @@ mutation addUser($username: String!, $firstName: String!, $lastName: String!, $d
     user {
       _id
       username
-      firstName
-      lastName
-      displayName
+      
+
+      
     }
   }
 }

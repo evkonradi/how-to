@@ -56,7 +56,7 @@ query user($username: String!) {
     displayName
     email
     resourceCount
-    resource {
+    resources {
       _id
       name
       shortDescription
@@ -78,7 +78,7 @@ export const QUERY_ME = gql`
     displayName
     email
     resourceCount
-    resource {
+    resources {
       _id
       name
       shortDescription
