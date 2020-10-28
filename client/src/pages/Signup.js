@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import { Form, FormGroup, Label, Input, Container } from "reactstrap";
+import { Form, FormGroup, Label, Input, Container, Col } from "reactstrap";
 import { Button } from "@chakra-ui/core";
 
 import { useMutation } from "@apollo/react-hooks";
@@ -40,10 +40,14 @@ const Signup = () => {
     <main>
       <div>
         <Container>
+          <br />
+          <br />
+          <Col>
           <Form className="login-form" onSubmit={handleFormSubmit}>
             <h1>
               <span className="font-weight-bold text-center">Sign Up Here.</span>
             </h1>
+            <br />
             <FormGroup>
               {/* <Label>User Name</Label> */}
               <Input
@@ -77,6 +81,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
             </FormGroup>
+            <br />
             <Button
               size="lg"
               height="46px"
@@ -90,7 +95,10 @@ const Signup = () => {
             >
               Join
             </Button>
+            <br />
+            <br />
           </Form>
+          </Col>
         </Container>
       </div>
     </main>
