@@ -128,7 +128,8 @@ function ResourceAddEdit(){
 
     return(
         <div>
-            <Container fluid>
+            <br />
+            <Container>
                 <form onSubmit={handleFormSubmit}>
                     <Col xs={12}>
                         <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
