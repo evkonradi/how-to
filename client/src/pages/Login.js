@@ -1,10 +1,11 @@
 import React, { Component, useState } from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, FormGroup, Label, Input } from 'reactstrap';
 import GoogleLogin from 'react-google-login';
 
 import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_USER } from '../utils/mutations';
 import { valueFromAST } from 'graphql';
+import { Button } from '@chakra-ui/core';
 
 // import { render } from 'node-sass';
 
@@ -64,7 +65,19 @@ const Login = (props, Component) => {
                             {/* <Label>Password</Label> */}
                             <Input type="password" placeholder="Password" name="password" id="password" value={formState.password} onChange={handleChange}/>
                         </FormGroup>
-                        <Button className="btn-lg btn-dark btn-block">Submit</Button>
+                        <Button
+  size="lg"
+  height="46px"
+  width="200px"
+  border="2px"
+//   borderColor="green.500"
+  color="white"
+  bg="#5C6B73"
+  _hover={{ bg:"#D99748" }}
+  type="submit"
+>
+  Join
+</Button>
                         <div className="text-center pt-3">
                             Or continue with your social account
                         </div>

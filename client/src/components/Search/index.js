@@ -1,8 +1,9 @@
 import React, {useState} from "react";
-import { Input, Button } from "reactstrap";
+import { Input } from "reactstrap";
 import { useLazyQuery } from '@apollo/react-hooks';
 import { Link } from "react-router-dom";
 import { QUERY_RESOURCES_SEARCH } from '../../utils/queries';
+import { Button } from '@chakra-ui/core';
 
 const Search = () => {
 
@@ -33,7 +34,17 @@ const Search = () => {
   return (
     <div>
         <Input name ="searchText" onChange={handleChange} />
-        <Button id="btnAddImage" onClick={doSearch}>Search</Button>
+        <Button
+  size="lg"
+  height="46px"
+  width="200px"
+  border="2px"
+//   borderColor="green.500"
+  color="white"
+  bg="#5C6B73"
+  _hover={{ bg:"#D99748" }}
+  type="submit"
+ onClick={doSearch}>Search</Button>
 
       {/* <InputGroup>
         <InputGroupAddon addonType="append">
