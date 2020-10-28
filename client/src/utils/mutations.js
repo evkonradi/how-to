@@ -16,8 +16,8 @@ mutation login($email: String!, $password: String!) {
 `;
 
 export const ADD_USER = gql`
-mutation addUser($username: String!, $email: String!, $password: String!) {
-  addUser(username: $username, email: $email, password: $password) {
+mutation addUser($username: String!, $firstName: String!, $lastName: String!, $displayName: String!, $email: String!, $password: String!) {
+  addUser(username: $username, firstName: $firstName, lastName: $lastName, displayName: $displayName, email: $email, password: $password) {
     token
     user {
       _id
@@ -32,12 +32,13 @@ mutation addUser($username: String!, $email: String!, $password: String!) {
 
 export const ADD_RESOURCE = gql`
 mutation addResource($articleName: String!, $articleShortDesc : String!, $articleText: String,
-    $imageList: [ImageInput], $videoList: [VideoInput]) {
+    $imageList: [ImageInput], $videoList: [VideoInput], $displayName: String) {
       addResource(name: $articleName, shortDescription: $articleShortDesc, resourceBody: $articleText,
-      images:$imageList, videos: $videoList) {
+      images:$imageList, videos: $videoList, displayName : $displayName) {
         _id
         name
         shortDescription
+        displayName
         resourceBody
         dateCreated
         images{
@@ -54,12 +55,13 @@ mutation addResource($articleName: String!, $articleShortDesc : String!, $articl
 
 export const UPDATE_RESOURCE = gql`
 mutation updateResource($id: ID!, $articleName: String!, $articleShortDesc : String!, $articleText: String,
-  $imageList: [ImageInput], $videoList: [VideoInput]) {
+  $imageList: [ImageInput], $videoList: [VideoInput], $displayName: String) {
     updateResource(_id: $id, name: $articleName, shortDescription: $articleShortDesc, resourceBody: $articleText,
-      images:$imageList, videos: $videoList) {
+      images:$imageList, videos: $videoList, displayName: $displayName) {
       _id
       name
       shortDescription
+      displayName
       resourceBody
       dateCreated
       images{

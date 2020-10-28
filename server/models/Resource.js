@@ -47,6 +47,10 @@ const resourceSchema = new Schema({
         default: Date.now ,
         get: timestamp => moment(timestamp).format('MMM DD, YYYY')
     },
+    displayName: {
+      type: String,
+      required: true
+    },
     images: [imageSchema],
     videos: [videoSchema]
   });

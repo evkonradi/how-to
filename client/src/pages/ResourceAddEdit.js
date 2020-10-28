@@ -88,13 +88,15 @@ function ResourceAddEdit(){
     //submit form and save data to the database
     const handleFormSubmit = async event => {
         event.preventDefault();
+
+        let displayName = "HotDogMan";
       
         try {
             if (!id){
-                await addResource({ variables: { ...formState } })
+                await addResource({ variables: { ...formState, displayName } })
             }
             else{
-                await updateResource({ variables: { id, ...formState } })
+                await updateResource({ variables: { id, ...formState, displayName } })
             }
 
             window.location.assign('/resource');

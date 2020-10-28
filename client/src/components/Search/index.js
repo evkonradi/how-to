@@ -60,7 +60,7 @@ const Search = () => {
               <Link to={`/articles/${article._id}`} key={article._id}>
                   <div>{article.name}</div>
                   <div>{article.shortDescription}</div>
-                  <div>{article.dateCreated}</div>
+                  <div>{article.dateCreated} by {article.displayName}</div>
                   <br></br>
               </Link>
             )) }
