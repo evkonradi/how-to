@@ -30,12 +30,12 @@
 }
 
 h1 {
-  animation: type 3s steps(35);
+  animation: type 3s steps(13);
   overflow:hidden;
   white-space:nowrap;
   font-family:'Courier New', Courier, monospace;
   border-right:4px solid black;
-  width:35ch;
+  width:13ch;
   
 }
 
@@ -47,7 +47,7 @@ h1.class {
     width:0ch;
   }
   100% {
-    width:35ch;
+    width:13ch;
   }
 }
 
