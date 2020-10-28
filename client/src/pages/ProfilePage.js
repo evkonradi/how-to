@@ -1,7 +1,7 @@
 import React from "react";
 // import { Col, Row, Image, Container }  from 'reactstrap';
-import { useQuery } from "@apollo/react-hooks";
-import { QUERY_RESOURCE } from "../utils/queries";
+import { useQuery, useMutation } from "@apollo/react-hooks";
+import { QUERY_RESOURCE, QUERY_USER, QUERY_ME } from "../utils/queries";
 import {
   Col,
   Row,
@@ -15,7 +15,7 @@ import {
   CardTitle,
   CardSubtitle,
 } from "reactstrap";
-import { useParams } from "react-router-dom";
+import { Redirect, useParams } from "react-router-dom";
 // import ResourceAddEdit from './ResourceAddEdit';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Divider, Box, BoxProps } from "@chakra-ui/core";
@@ -24,8 +24,45 @@ import { Divider, Box, BoxProps } from "@chakra-ui/core";
 // import { useParams } from "react-router-dom";
 
 import { Button } from "@chakra-ui/core";
+import { ADD_RESOURCE } from '../utils/mutations';
+import Auth from '../utils/auth';
 
-const ProfilePage = () => {
+const ProfilePage = props => {
+  const { username: userParam } = useParams();
+
+  const [addResource] = useMutation(ADD_RESOURCE);
+  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+    variables: { username: userParam }
+  });
+
+  const user = data?.me || data?.user || {};
+
+  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+    return <Redirect to="/profile" />;
+  }
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!user?.username) {
+    return (
+      <h4>
+        You need to be logged in. Please sign up or log in!
+      </h4>
+    );
+  }
+
+  const handleClick = async () => {
+    try {
+      await addResource({
+        variables: { id: user._id }
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   return (
     <main>
       <div>
@@ -34,7 +71,7 @@ const ProfilePage = () => {
           <Col sm="12" md="6" lg="12" offset="3">
             <Row>
               <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
-                <h3>Welcome Back, UserName</h3>
+                <h3>Welcome Back, {userParam ? `${user.username}!` : 'User!'}</h3>
               </Box>
             </Row>
             <br />
