@@ -20,7 +20,7 @@ const typeDefs = gql`
     displayName: String
     email: String
     resourceCount: Int
-    resource: [Resource]
+    resources: [Resource]
   }
 
   type Image{

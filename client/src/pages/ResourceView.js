@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_RESOURCE } from '../utils/queries';
 import { Col, Row, Container }  from 'reactstrap';
+import { Box } from '@chakra-ui/core';
 
 import { useParams } from 'react-router-dom';
 
@@ -16,9 +17,11 @@ function ResourceView(){
             <div>
                 <Container>
                 <Col sm="12" md="6" lg="8" offset="3">
+                <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
                     <Row>
                         <h2>{data.resource.name}</h2>
                     </Row>
+                    </Box>
 
                     <Row>
                         <h4>{data.resource.shortDescription}</h4><br /><br />

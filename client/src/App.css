@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
 .App-link {
@@ -30,12 +30,12 @@
 }
 
 h1 {
-  animation: type 3s steps(35);
+  animation: type 3s steps(13);
   overflow:hidden;
   white-space:nowrap;
   font-family:'Courier New', Courier, monospace;
   border-right:4px solid black;
-  width:35ch;
+  width:13ch;
   
 }
 
@@ -47,10 +47,33 @@ h1.class {
     width:0ch;
   }
   100% {
-    width:35ch;
+    width:13ch;
   }
 }
+.Navbar.bg{
+  color: #253237;
+}
 
+a:hover {
+  color: #D99748;
+  text-decoration: none;
+}
+
+p {
+  text-align: center;
+}
+
+p.caption {
+  font-style: italic;
+  color: #9DB4C0;
+  font-size: x-small;
+}
+
+img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
 /* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -61,7 +84,7 @@ h1.class {
 } */
 ul {
   list-style-type: none;
-  margin: 0;
+  margin-bottom: 0px;
   overflow: hidden;
   background-color: #253237;
   align-content: space-between;
@@ -72,12 +95,12 @@ li {
 }
 
 li a {
-  display: block;
+  /* display: block; */
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: .35rem;
   text-decoration: none;
-  font-size: large;
+  font-size: x-small;
 }
 
 /* Change the link color to #111 (black) on hover */
@@ -92,9 +115,10 @@ li a:hover {
 float: right;
 }
 .footer{
-  margin-top: .5rem;
-  padding: 1rem;
-  background-color:#9DB4C0;
+  margin-top: .1rem;
+  padding: .3rem;
+  position: static;
+  background-color:#253237;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -117,4 +141,23 @@ float: right;
   padding: 15px;
   margin: auto;
   height: 100%;
+}
+
+.jumbotron.hometron {
+  background-color: #9DB4C0;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.footer {
+  font-size: x-small;
+  text-align: center;
+}
+
+.footer.p {
+  color: #9DB4C0;
+  text-align: center;
+}
+
+.user {
+  float: right;
 }

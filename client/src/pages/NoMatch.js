@@ -1,12 +1,20 @@
 import React from 'react';
-import { Container } from 'reactstrap';
+import { Container, Col } from 'reactstrap';
+import { Box } from '@chakra-ui/core';
 
 
 const NoMatch = () => { 
     return (
         <Container>
         <main>
-        <h1>sorry, nothing matches 😿 </h1>
+          <br />
+        <Col xs={6}>
+          <Box xs={12}>
+            <br />
+        <h1>no match 😿 </h1>
+        <br />
+        </Box>
+        </Col>
         </main>
         </Container>
      );

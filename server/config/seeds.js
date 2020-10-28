@@ -76,7 +76,7 @@ db.once("open", async () => {
       ],
       videos: [
         {
-          fileURL: "https://v.ftcdn.net/01/98/10/59/240_F_198105905_bdZOHJrgMMZsvC8vGAo93SNaxv3kozvF_ST.mp4",
+          fileURL: "https://player.vimeo.com/external/318309149.sd.mp4?s=dd9b8029ebc8f063a7467587bf13755879029ffa&profile_id=164&oauth2_token_id=57447761",
           videoCaption: "introduction to stargazing"
         }
       ]
@@ -104,7 +104,7 @@ db.once("open", async () => {
       ],
       videos: [
         {
-          fileURL: "https://www.youtube.com/watch?v=szX6slq2Q8Y",
+          fileURL: "https://player.vimeo.com/external/397929307.sd.mp4?s=9fde50e7b68ff56f680037d34d8a5a5f460cefcd&profile_id=139&oauth2_token_id=57447761",
           videoCaption: "initial knitting techniques"
         }
       ]
@@ -128,7 +128,7 @@ db.once("open", async () => {
       ],
       videos: [
         {
-          fileURL: "https://www.youtube.com/watch?v=N1d9SH-2usw",
+          fileURL: "https://player.vimeo.com/external/338097672.sd.mp4?s=516d04c46f9ffb029e8b30cdb4cd66a1dd0f3af3&profile_id=139&oauth2_token_id=57447761",
           videoCaption: "making your own fresh soda"
         }
       ]
@@ -153,7 +153,7 @@ Need a little inspiration? These DIY shelves are nothing short of genius.\n\ Bes
       ],
       videos: [
         {
-          fileURL: "https://www.youtube.com/watch?v=BfPOl4Rzdbw",
+          fileURL: "https://player.vimeo.com/external/189497364.sd.mp4?s=641faa939c98a87054444b864a36849b08305409&profile_id=164&oauth2_token_id=57447761",
           videoCaption: "learn to build a childrens bookshelf"
         }
       ]
@@ -178,7 +178,7 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
       ],
       videos: [
         {
-          fileURL: "https://www.youtube.com/watch?v=IM7aeVa7Dpc",
+          fileURL: "https://v.ftcdn.net/02/83/85/17/240_F_283851700_SJB4arwUidZjgARnY5x1DXzxzvn0jNC1_ST.mp4",
           videoCaption: "craft your own spaceship"
         }
       ]
@@ -201,7 +201,7 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
       ],
       videos: [
         {
-          fileURL: "https://www.youtube.com/watch?v=0nFqrBIc8eg",
+          fileURL: "https://v.ftcdn.net/01/93/37/74/240_F_193377424_EHEYNmnC5t7EJvituj1iuFSykFSZt7Wx_ST.mp4",
           videoCaption: "learn to make fresh baby food at home"
         }
       ]
@@ -224,7 +224,7 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
       ],
       videos: [
         {
-          fileURL: "https://www.youtube.com/watch?v=MyRWQpXk8po",
+          fileURL: "https://v.ftcdn.net/02/57/29/51/240_F_257295109_qDwsJDj2YElm7FBxCCxBFcHFdc4fMcf2_ST.mp4",
           videoCaption: "introduction to uklele song"
         }
       ]
@@ -248,7 +248,7 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
       ],
       videos: [
         {
-          fileURL: "https://www.youtube.com/watch?v=mio-_RyxOyQ",
+          fileURL: "https://v.ftcdn.net/03/51/68/76/240_F_351687663_7JljPIOJAbJRedBHhbU2tTe9927joMHm_ST.mp4",
           videoCaption: "drawing techniques for beginners"
         }
       ]
@@ -266,6 +266,7 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
     displayName: "HotDogMan",
     email: "frankf@testmail.com",
     password: "password12345",
+    resources: [resources[0]._id, resources[1]._id, resources[2]._id, resources[3]._id, resources[4]._id]
   });
 
   await User.create({
@@ -275,6 +276,7 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
     displayName: "StarWarsMan",
     email: "hansyboy@testmail.com",
     password: "theforce123",
+    resources: [resources[5]._id, resources[6]._id, resources[7]._id, resources[8]._id, resources[9]._id]
   });
 
   console.log("users seeded");
