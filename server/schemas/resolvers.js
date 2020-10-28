@@ -62,11 +62,24 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        addResource: async (parent, args) => {
+        addResource: async (parent, args, context) => {
             const resource = await Resource.create(args);
+
+            console.log(context);
+            console.log(context.user);
+            console.log(resource._id);
+
+            await User.findByIdAndUpdate(
+                { _id: context.user._id },
+                { $push: { resources: resource._id } },
+                { new: true }
+            );
+          
             return resource;
         },
         updateResource: async (parent, args) => {
+
+            console.log(context.user);
             return await Resource.findByIdAndUpdate(args._id, {...args}, { new: true } );
         },
         deleteResource: async(parent, {_id})=>{
