@@ -1,7 +1,7 @@
 import React from "react";
 // import { Col, Row, Image, Container }  from 'reactstrap';
 import { useQuery, useMutation } from "@apollo/react-hooks";
-import { QUERY_RESOURCE, QUERY_USER, QUERY_ME } from "../utils/queries";
+import { QUERY_RESOURCE, QUERY_USER } from "../utils/queries";
 import {
   Col,
   Row,
@@ -28,40 +28,40 @@ import { ADD_RESOURCE } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const ProfilePage = props => {
-  const { username: userParam } = useParams();
+  // const { username: userParam } = useParams();
 
-  const [addResource] = useMutation(ADD_RESOURCE);
-  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-    variables: { username: userParam }
-  });
+  // const [addResource] = useMutation(ADD_RESOURCE);
+  // const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+  //   variables: { username: userParam }
+  // });
 
-  const user = data?.me || data?.user || {};
+  // const user = data?.me || data?.user || {};
 
-  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-    return <Redirect to="/profile" />;
-  }
+  // if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+  //   return <Redirect to="/profile" />;
+  // }
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  if (!user?.username) {
-    return (
-      <h4>
-        You need to be logged in. Please sign up or log in!
-      </h4>
-    );
-  }
+  // if (!user?.username) {
+  //   return (
+  //     <h4>
+  //       You need to be logged in. Please sign up or log in!
+  //     </h4>
+  //   );
+  // }
 
-  const handleClick = async () => {
-    try {
-      await addResource({
-        variables: { id: user._id }
-      });
-    } catch (e) {
-      console.error(e);
-    }
-  };
+  // const handleClick = async () => {
+  //   try {
+  //     await addResource({
+  //       variables: { id: user._id }
+  //     });
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // };
 
   return (
     <main>
@@ -71,7 +71,7 @@ const ProfilePage = props => {
           <Col sm="12" md="6" lg="12" offset="3">
             <Row>
               <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
-                <h3>Welcome Back, {userParam ? `${user.username}!` : 'User!'}</h3>
+                <h3>Welcome Back, User!</h3>
               </Box>
             </Row>
             <br />
