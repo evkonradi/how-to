@@ -27,10 +27,8 @@ const ProfilePage = () => {
               <Row xs="2">
                 <Col xs="4">
                 <a href="/resource/:id?">New Post</a><br /><br />
-              
-                <p>User Stats</p>
             
-                <p>Payment</p>
+                <p>Wallet</p>
            
                 <p>User Info</p>
                 </Col> 
