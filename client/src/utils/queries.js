@@ -45,3 +45,61 @@ query resource_search($text: String!) {
   }
 }
 `;
+
+export const QUERY_USER = gql`
+query user($username: String!) {
+  user(username: $username) {
+    _id
+    username
+    firstName
+    lastName
+    displayName
+    email
+    resourceCount
+    resources {
+      _id
+      name
+      shortDescription
+      resourceBody
+      dateCreated
+      displayName
+    }
+  }
+}
+`;
+
+export const QUERY_ME = gql`
+{
+  me {
+    _id
+    username
+    firstName
+    lastName
+    displayName
+    email
+    resourceCount
+    resources {
+      _id
+      name
+      shortDescription
+      resourceBody
+      dateCreated
+      displayName
+    }
+  }
+}
+`;
+
+export const QUERY_ME_BASIC = gql`
+{
+  me {
+    _id
+    username
+    firstName
+    lastName
+    displayName
+    email
+    resourceCount
+  }
+}
+`;
