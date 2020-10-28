@@ -29,6 +29,10 @@ export const QUERY_RESOURCES_HOMEPAGE = gql`
       shortDescription 
       displayName
       dateCreated
+      images{
+        fileURL
+        imageCaption
+      }
   }
 }
 `;
@@ -40,8 +44,11 @@ query resource_search($text: String!) {
     name
     shortDescription
     displayName
-    resourceBody
     dateCreated
+    images{
+      fileURL
+      imageCaption
+    }
   }
 }
 `;

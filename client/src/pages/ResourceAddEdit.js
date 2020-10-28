@@ -99,7 +99,7 @@ function ResourceAddEdit(){
                 await updateResource({ variables: { id, ...formState, displayName } })
             }
 
-            window.location.assign('/resource');
+            window.location.assign('/profile');
         } catch (e) {
           console.error(e);
         }
