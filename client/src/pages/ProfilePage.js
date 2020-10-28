@@ -22,17 +22,21 @@ const ProfilePage = () => {
       <div>
         
             <Container>
-              <Col sm="12" md="6" lg="8" offset="3">
+            <br />
+              <Col sm="12" md="6" lg="12" offset="3">
               <Row>
-                <h2>Welcome Back, UserName</h2>
-              </Row>
-              <Row xs="2">
-                <Col xs="4">
-                <a href="/resource">New Post</a><br /><br />
-            
-                <p>Wallet</p>
-           
-                <p>User Info</p>
+              <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
+                <h3>Welcome Back, UserName</h3>
+                </Box>
+                </Row>
+                <br />
+                <Row className="user" xs="4">
+                <p className="small">User Details</p>
+                </Row>
+              <Row xs="3">
+                <Col xs="3" md="3" lg="3">
+                <a href="/resource" className="small">New Post</a><br />
+                <p className="small">Wallet</p>
                 </Col> 
               <Divider color="black" orientation="vertical" />
               </Row>
