@@ -38,11 +38,9 @@ const ProfilePage = () => {
               </Box>
             </Row>
             <br />
-            <Row className="user" xs="4">
-              <p className="small">User Details</p>
-            </Row>
             <Row>
               <Col xs={3} md="3" lg="3">
+              <p className="small">User Details</p>
                 <a href="/resource" className="small">
                   New Post
                 </a>
@@ -62,10 +60,9 @@ const ProfilePage = () => {
                 </Card>
               </Col>
               </Row>
-
-             
           </Col>
         </Container>
+        <br />
       </div>
     </main>
   );
