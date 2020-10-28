@@ -1,9 +1,9 @@
 import React from 'react';
-// import { Col, Row, Image, Container }  from 'reactstrap';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_RESOURCE } from '../utils/queries';
-import { Col, Row, Container, Card, CardImg, CardText, CardBody, CardLink, CardHeader, CardTitle, CardSubtitle, Carousel, CarouselIndicators, CarouselControl, CarouselItem, CarouselCaption }  from 'reactstrap';
+import { Col, Row, Container, }  from 'reactstrap';
 import { useParams } from 'react-router-dom';
+
 // import { idbPromise } from "../../utils/helpers";
 // import { useParams } from "react-router-dom";
 
@@ -28,7 +28,9 @@ const ResourcePage = () => {
               </Row>
               
               <Row>
+                <Col xs={12}>
                 <img src="./images/lemons.jpeg"></img>
+                </Col>
                 {/* carousel of images */}
               </Row>
               <Row>

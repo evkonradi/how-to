@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
 .App-link {
@@ -51,6 +51,31 @@ h1.class {
   }
 }
 
+a {
+  color:#5C6B73;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #D99748;
+  text-decoration: none;
+}
+
+p {
+  text-align: center;
+}
+
+p.caption {
+  font-style: italic;
+  color: #9DB4C0;
+  font-size: x-small;
+}
+
+img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
 /* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
