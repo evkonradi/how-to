@@ -12,8 +12,8 @@ const CardResource = ({resource, imgWidth}) =>{
           {/* <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Img variant="top" src="./images/stars.jpg" width="100px" /> */}
           <img src="./images/stars.jpg" style={{width:imgWidth}} alt = {resource.name}></img>
-          <CardText>{resource.shortDescription}</CardText>
-          <CardText>Created at: {resource.dateCreated} by {resource.displayName}</CardText>
+          <CardText style={{ color: '#FFFFFF'}}>{resource.shortDescription}</CardText>
+          <CardText style={{ color: '#FFFFFF'}}>Created at: {resource.dateCreated} by {resource.displayName}</CardText>
           <br></br>
         </CardBody>
       </Card>

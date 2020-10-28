@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import { Input } from "reactstrap";
 import { useLazyQuery } from '@apollo/react-hooks';
-import { Link } from "react-router-dom";
 import { QUERY_RESOURCES_SEARCH } from '../../utils/queries';
 import { Button } from '@chakra-ui/core';
 import CardResource from "../CardResource";
