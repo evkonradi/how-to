@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import { Form, FormGroup, Label, Input, Col } from "reactstrap";
+import { Form, FormGroup, Label, Input, Col, Container, Row } from "reactstrap";
 import GoogleLogin from "react-google-login";
 
 import { useMutation } from "@apollo/react-hooks";
@@ -52,12 +52,13 @@ const Login = (props, Component) => {
   // render(){
   return (
     <main>
-      <div>
         <br /><br />
+        <Container>
         <Form className="login-form" onSubmit={handleFormSubmit}>
-          <h1>
-            <span className="font-weight-bold">Welcome Back!</span>
-          </h1>
+            <Row>
+          <h1 className="font-weight-bold">Welcome Back!</h1>
+          </Row>
+          <br />
           <FormGroup>
             {/* <Label>Email</Label> */}
             <Input
@@ -80,7 +81,11 @@ const Login = (props, Component) => {
               onChange={handleChange}
             />
           </FormGroup>
-          <Col>
+          <br />
+          <br />
+          <br />
+          <Col xs={10} md={10} lg={10} offset={6}>
+            <Row>
           <Button
             size="lg"
             height="46px"
@@ -94,13 +99,16 @@ const Login = (props, Component) => {
           >
             Join
           </Button>
-          <br /><br />
+          </Row>
+          <br />
+          <Row>
             <GoogleLogin
               clientId="212266341985-bfblloh84d96u203r5i5b80l745ea911.apps.googleusercontent.com"
               onSuccess={responseGoogle}
               onFailure={responseGoogle}
               cookiePolicy={"single_host_origin"}
             />
+            </Row>
           </Col>
           <div className="text-center pt-3">
             <a href="/signup" class="nullA">Need an Account? Sign Up.</a>
@@ -109,7 +117,7 @@ const Login = (props, Component) => {
           </div>
         </Form>
         {error && <div>Login failed</div>}
-      </div>
+        </Container>
     </main>
   );
   // };
