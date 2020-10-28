@@ -15,8 +15,6 @@ import Signup from "./pages/Signup";
 import NoMatch from "./pages/NoMatch"
 import { ThemeProvider } from "@chakra-ui/core";
 
-{/* <ThemeProvider theme={customTheme}>{props.children}</ThemeProvider>; */}
-
 const client = new ApolloClient({
   // request: (operation) => {
   //   const token = localStorage.getItme('id_token')

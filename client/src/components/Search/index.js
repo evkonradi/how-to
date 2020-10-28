@@ -4,6 +4,7 @@ import { useLazyQuery } from '@apollo/react-hooks';
 import { Link } from "react-router-dom";
 import { QUERY_RESOURCES_SEARCH } from '../../utils/queries';
 import { Button } from '@chakra-ui/core';
+import CardResource from "../CardResource";
 
 const Search = () => {
 
@@ -33,36 +34,19 @@ const Search = () => {
 
   return (
     <div>
-        <Input name ="searchText" onChange={handleChange} />
-        <Button
-  size="lg"
-  height="46px"
-  width="200px"
-  border="2px"
-//   borderColor="green.500"
-  color="white"
-  bg="#5C6B73"
-  _hover={{ bg:"#D99748" }}
-  type="submit"
- onClick={doSearch}>Search</Button>
-
-      {/* <InputGroup>
-        <InputGroupAddon addonType="append">
-          <InputGroupText><span role = "img" aria-label="magnifyingglass" onclick={doSearch} >🔍</span></InputGroupText>
-        </InputGroupAddon>
-      </InputGroup> */}
+      <Input name ="searchText" onChange={handleChange} />
+      <Button size="lg" height="46px" width="200px" border="2px" color="white" bg="#5C6B73" _hover={{ bg:"#D99748" }} type="submit"
+          onClick={doSearch}>Search</Button>
 
       <div>
         {data ? (
           <div>
             <br></br>
             {data.resources_search.map(article =>(
-              <Link to={`/articles/${article._id}`} key={article._id}>
-                  <div>{article.name}</div>
-                  <div>{article.shortDescription}</div>
-                  <div>{article.dateCreated} by {article.displayName}</div>
-                  <br></br>
-              </Link>
+              <div key={article._id}>
+                <CardResource resource={article} imgWidth="50%"></CardResource>
+                <br></br>
+              </div>
             )) }
           </div>
         ) 
