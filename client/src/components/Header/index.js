@@ -20,11 +20,13 @@ const Header = (Component) => {
     <Nav className="mr-auto">
       {Auth.loggedIn() ? (
         <>
-          <NavDropdown.Item id="dropdown" href="/profile">My Page</NavDropdown.Item>
+          <NavDropdown.Item id="dropdown" href="/">Home</NavDropdown.Item>
+          <NavDropdown.Item id="dropdown" href="/profile">Profile</NavDropdown.Item>
           <NavDropdown.Item id="dropdown" href="/" onClick={logout}>Logout</NavDropdown.Item>
         </>
       ) : (
         <>
+        <NavDropdown.Item id="dropdown" href="/">Home</NavDropdown.Item>
           <NavDropdown.Item id="dropdown" href="/login">Login</NavDropdown.Item>
           <NavDropdown.Item id="dropdown" href="/signup">Signup</NavDropdown.Item>
           <NavDropdown.Divider />
