@@ -1,12 +1,13 @@
 //comments
 import React from 'react';
 import { Jumbotron, Row, Col, Container} from 'reactstrap';
-import Header  from "../components/Header";
-import Nav from "../components/Nav";
+// import Header  from "../components/Header";
+// import Nav from "../components/Nav";
 import Resource from "../components/Resource";
 import Search from '../components/Search';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 
+import Cart from '../components/Cart';
 
 const Home = () => {
     return (
@@ -29,8 +30,9 @@ const Home = () => {
                     <Resource></Resource>
                 {/* </Row> */}
                 </Col> 
-                </Container>
-                <br />
+            </Container>
+            <br />
+            <Cart />
         </div>
     );
 };

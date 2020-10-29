@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 
 const CardResource = ({resource, imgWidth}) =>{
 
-  console.log(resource.images);
-
   return (
     <Link to={`/articles/${resource._id}`} key={resource._id}>
       <Card outline color='secondary'>

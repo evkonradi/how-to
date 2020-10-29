@@ -5,6 +5,7 @@ import { Col, Row, Container }  from 'reactstrap';
 import { Box } from '@chakra-ui/core';
 
 import { useParams } from 'react-router-dom';
+import DonateButton from "../components/DonateButton";
 
 function ResourceView(){
 
@@ -61,6 +62,10 @@ function ResourceView(){
                             </Row>
                         </Row>
                     ))}
+
+                    <Row>
+                        <DonateButton resource={data.resource}></DonateButton>
+                    </Row>
 
                 </Col>
                 </Container>
