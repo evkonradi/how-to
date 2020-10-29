@@ -24,6 +24,7 @@ import { Button } from "@chakra-ui/core";
 
 import { ADD_RESOURCE } from '../utils/mutations';
 import Auth from '../utils/auth';
+import Search from "../components/Search";
 // import { idbPromise } from "../../utils/helpers";
 // import { useParams } from "react-router-dom";
 // import { Resource } from "../../../server/models";
@@ -109,6 +110,9 @@ const ProfilePage = props => {
           <br />
           <br />
           <h2>see what others are contributing</h2>
+          <br />
+          <br />
+          <Search></Search>
           <Resource></Resource>
           <Jumbotron className="whitespace" />
         </Container>
