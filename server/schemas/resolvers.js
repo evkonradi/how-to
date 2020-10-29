@@ -23,9 +23,6 @@ const resolvers = {
         resource: async (parent, { _id }) => {
             return await Resource.findById(_id);
         },
-        // resource: () => {
-        //     return GetResource.find();
-        // },
         users: async () => {
             return await User.find()
             .select('-__v -password')
