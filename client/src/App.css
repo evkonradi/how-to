@@ -264,3 +264,15 @@ a.mainCard:hover {
   color: #D99748;
   text-decoration: none;
 }
+
+#dropdown {
+  color: #9DB4C0;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#dropdown:hover {
+  color: #253237;
+  background-color: #E0FBFC;
+  text-decoration: none;
+}
