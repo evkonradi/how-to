@@ -6,6 +6,7 @@ import { Box } from "@chakra-ui/core";
 
 import { useParams } from "react-router-dom";
 import DonateButton from "../components/DonateButton";
+import Cart from '../components/Cart';
 
 function ResourceView() {
   const { id } = useParams();
@@ -89,6 +90,7 @@ function ResourceView() {
               </Row>
             </Col>
           </Container>
+          <Cart />
         </div>
       )}
     </main>

@@ -1,20 +1,20 @@
 import React from 'react';
 
-import { useResourceContext } from '../../utils/GlobalState';
+import { useStoreContext } from '../../utils/GlobalState';
 import { REMOVE_FROM_CART, UPDATE_CART_DONATION } from '../../utils/actions';
 
-//import { idbPromise } from "../../utils/helpers";
+import { idbPromise } from "../../utils/helpers";
 
 const CartItem = ({ item }) => {
 
-  const [, dispatch] = useResourceContext();
+  const [, dispatch] = useStoreContext();
 
   const removeFromCart = item => {
     dispatch({
       type: REMOVE_FROM_CART,
       _id: item._id
     });
-    //idbPromise('cart', 'delete', { ...item });
+    idbPromise('cart', 'delete', { ...item });
   };
 
   const onChange = (e) => {
@@ -25,14 +25,14 @@ const CartItem = ({ item }) => {
         type: REMOVE_FROM_CART,
         _id: item._id
       });
-      //idbPromise('cart', 'delete', { ...item });
+      idbPromise('cart', 'delete', { ...item });
     } else {
       dispatch({
         type: UPDATE_CART_DONATION,
         _id: item._id,
         donation: parseInt(value)
       });
-      //idbPromise('cart', 'put', { ...item, purchaseQuantity: parseInt(value) });
+      idbPromise('cart', 'put', { ...item, donation: parseInt(value) });
     }
   };
 

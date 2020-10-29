@@ -1,12 +1,14 @@
 import React from "react";
 
-import { useResourceContext } from '../../utils/GlobalState';
+import { useStoreContext } from '../../utils/GlobalState';
 import { ADD_TO_CART } from '../../utils/actions';
 import { Button } from "reactstrap";
 
+import { idbPromise } from "../../utils/helpers";
+
 function DonateButton({resource}){
 
-    const [state, dispatch] = useResourceContext();
+    const [state, dispatch] = useStoreContext();
     const { cart } = state;
 
     const addToCart = () => {
@@ -20,7 +22,7 @@ function DonateButton({resource}){
                 type: ADD_TO_CART,
                 product: { _id: resource._id, name: resource.name, shortDescription: resource.shortDescription, donation: 5 }
             });
-            //idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
+            idbPromise('cart', 'put', { ...resource, donation: 5 });
         }
         
     };

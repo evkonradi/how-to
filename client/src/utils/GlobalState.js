@@ -1,23 +1,25 @@
-import React, {createContext, useContext } from "react";
-import { useResourceReducer } from './reducers';
+import React, { createContext, useContext } from "react";
+import { useProductReducer } from './reducers';
 
-const ResourceContext = createContext();
-const { Provider } = ResourceContext;
+const StoreContext = createContext();
+const { Provider } = StoreContext;
 
-const ResourceProvider = ({ value = [], ...props }) => {
-    const [state, dispatch] = useResourceReducer({
-        cart: [],
-        cartOpen: false
+const StoreProvider = ({ value = [], ...props }) => {
+    const [state, dispatch] = useProductReducer({
+      products: [],
+      cart: [],
+      cartOpen: false
     });
-
+    
+    // use this to confirm it works!
     console.log("Global State:");    
     console.log(state);
 
     return <Provider value={[state, dispatch]} {...props} />;
-};
+  };
 
-const useResourceContext = () => {
-    return useContext(ResourceContext);
-};
+  const useStoreContext = () => {
+    return useContext(StoreContext);
+  };
 
-export { ResourceProvider, useResourceContext };
+  export { StoreProvider, useStoreContext };

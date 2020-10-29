@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CartItem from '../CartItem';
 import './style.css';
 
-import { useResourceContext } from '../../utils/GlobalState';
-import { TOGGLE_CART } from '../../utils/actions';
-//import { idbPromise } from "../../utils/helpers";
+import { useStoreContext } from '../../utils/GlobalState';
+import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import { idbPromise } from "../../utils/helpers";
 
 //import { QUERY_CHECKOUT } from '../../utils/queries';
 //import { loadStripe } from '@stripe/stripe-js';
@@ -14,19 +14,22 @@ import { TOGGLE_CART } from '../../utils/actions';
 
 const Cart = () => {
 
-    const [state, dispatch] = useResourceContext();
+    const [state, dispatch] = useStoreContext();
   //  const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
-    // useEffect(() => {
-    //     async function getCart() {
-    //       const cart = await idbPromise('cart', 'get');
-    //       dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
-    //     };
+    useEffect(() => {
+        async function getCart() {
+          console.log("inside useEffect - getCart, befoe call to idbPromise");
+          const cart = await idbPromise('cart', 'get');
+          console.log("inside useEffect - getCart:");
+          console.log(cart);
+          dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
+        };
       
-    //     if (!state.cart.length) {
-    //       getCart();
-    //     }
-    // }, [state.cart.length, dispatch]);
+        if (!state.cart.length) {
+          getCart();
+        }
+    }, [state.cart.length, dispatch]);
 
     //this hook is for stripe
     // useEffect(() => {

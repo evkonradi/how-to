@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { ADD_TO_CART, REMOVE_FROM_CART, UPDATE_CART_DONATION, CLEAR_CART, TOGGLE_CART} from "./actions";
+import { ADD_TO_CART, ADD_MULTIPLE_TO_CART, REMOVE_FROM_CART, UPDATE_CART_DONATION, CLEAR_CART, TOGGLE_CART} from "./actions";
 
 export const reducer = (state, action) => {
     switch (action.type) {
@@ -8,6 +8,11 @@ export const reducer = (state, action) => {
                 ...state,
                 cartOpen: true,
                 cart: [...state.cart, action.product]
+            };   
+        case ADD_MULTIPLE_TO_CART:
+            return {
+                ...state,
+                cart: [...state.cart, ...action.products],
             };   
         case REMOVE_FROM_CART:
             let newState = state.cart.filter(product => {
@@ -46,6 +51,6 @@ export const reducer = (state, action) => {
     }
 };
 
-export function useResourceReducer(initialState) {
-    return useReducer(reducer, initialState)
-}
+export function useProductReducer(initialState) {
+    return useReducer(reducer, initialState);
+  }
