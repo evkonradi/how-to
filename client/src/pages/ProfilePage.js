@@ -79,7 +79,7 @@ const ProfilePage = props => {
             <br />
             <Row>
               <Col xs={3} md="3" lg="3">
-              <p className="small">User Details</p>
+              <p className="small">Info</p>
               <br />
               <p className="small">Wallet</p>
               <br />

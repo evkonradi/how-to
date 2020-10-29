@@ -15,14 +15,15 @@ const NoMatch = () => {
         <Col xs={6}>
           <Box xs={12} offset={2}>
             <br />
-        <h1>no match 😿 </h1>
+        <h1 className="horizon-center">no match 😿 </h1>
         <br />
         </Box>
         </Col>
         <Card border="secondary">
           <Card.Body>
             <br />
-        <Row>
+            <h5>that hasn't been created yet.</h5><br /><br/>
+        <Row>    
         <h3 className="center">Want to contribute?</h3>
         </Row> 
         <Row>

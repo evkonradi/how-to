@@ -33,9 +33,14 @@ const Search = () => {
   }
 
   return (
-    <div>
-        <Input name ="searchText" onChange={handleChange} />
-        <Button
+    <main>
+        <Input className="center" name ="searchText" onChange={handleChange} />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <Button className="center"
   size="lg"
   height="46px"
   width="200px"
@@ -66,7 +71,7 @@ const Search = () => {
         ) 
         : null}
       </div>
-    </div>
+    </main>
   );
 };
 
