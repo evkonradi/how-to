@@ -113,6 +113,7 @@ const Signup = () => {
             </FormGroup>
             <br />
             <Button
+              className="center"
               size="lg"
               height="46px"
               width="200px"

@@ -83,9 +83,10 @@ const Login = (props, Component) => {
           </FormGroup>
           <br />
 
-          <Col xs={10} md={10} lg={10} offset={6}>
+          <Col xs={12} md={12} lg={12} offset={6}>
             <Row>
           <Button
+            className="center"
             size="lg"
             height="46px"
             width="200px"
@@ -99,8 +100,12 @@ const Login = (props, Component) => {
           </Button>
           </Row>
           <br />
+          <br />
+          <br />
+          <br />
           <Row>
             <GoogleLogin
+              className="center"
               clientId="212266341985-bfblloh84d96u203r5i5b80l745ea911.apps.googleusercontent.com"
               onSuccess={responseGoogle}
               onFailure={responseGoogle}

@@ -3,8 +3,8 @@ import { useMutation, useQuery } from '@apollo/react-hooks';
 import { ADD_RESOURCE, UPDATE_RESOURCE } from '../utils/mutations';
 import { QUERY_RESOURCE } from '../utils/queries';
 import { useParams } from 'react-router-dom';
-import { Col, Row, Container, InputGroup, Button, Input } from 'reactstrap';
-import { Box } from "@chakra-ui/core";
+import { Col, Row, Container, InputGroup,  Input } from 'reactstrap';
+import { Box, Button } from "@chakra-ui/core";
 
 function ResourceAddEdit(){
 
@@ -204,7 +204,18 @@ function ResourceAddEdit(){
                     </Col>
 
                     <Col xs={{ span:6, offset:4 }} lg={{ span:6, offset: 5 }}>
-                        <Button size="lg" id = "btnSubmit" type="submit">Submit</Button>
+                        <Button
+              size="lg"
+              height="46px"
+              width="200px"
+              border="2px"
+              
+              color="white"
+              bg="#5C6B73"
+              _hover={{ bg: "#D99748" }}
+              type="submit"
+                 id = "btnSubmit" 
+                 type="submit">Submit</Button>
                     </Col>
 
                 </form>
