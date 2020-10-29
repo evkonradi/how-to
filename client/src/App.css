@@ -53,13 +53,17 @@ h1.class {
 .Navbar.bg{
   color: #253237;
 }
-
-.NavbarBrand {
-  font-style: italic;
-}
-
-.navbar {
+.mainNav {
+  display: flex;
   flex-wrap: nowrap;
+}
+a.nav.mainNav {
+  color: #5C6B73;
+  text-decoration: none;
+}
+a.nav.mainNav:hover {
+  color: #D99748;
+  text-decoration: none;
 }
 
 a:hover {
@@ -84,8 +88,8 @@ img {
 }
 
 .small {
-  width: 10%;
-  height: 10%;
+  width: 8%;
+  height: 8%;
 }
 
 Card.link {
