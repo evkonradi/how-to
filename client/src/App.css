@@ -87,6 +87,11 @@ img {
   width: 10%;
   height: 10%;
 }
+
+Card.link {
+  color: #D99748;
+  text-decoration: none;
+}
 /* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -168,6 +173,10 @@ float: right;
   border-radius: 0px 0px 8px 8px;
 }
 
+.Col {
+  min-height: max-content;
+}
+
 .footer {
   font-size: x-small;
   text-align: center;
@@ -193,6 +202,16 @@ float: right;
   color: #D99748;
 }
 
+.signup {
+  text-decoration: none;
+  color: #D99748;
+}
+
+.signup:hover {
+  text-decoration: none;
+  color: #5C6B73;
+}
+
 .center {
   margin: 0;
   position: absolute;
@@ -200,4 +219,14 @@ float: right;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+a.center {
+  color: #253237;
+  text-decoration: none;
+}
+
+a.center:hover{
+  color: #D99748;
+  text-decoration: none;
 }

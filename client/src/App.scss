@@ -97,6 +97,7 @@ p {
     color: $secondary;
 }
 
-.navbar {
-    flex-wrap: nowrap;
+.Card.Link {
+    color: $success;
+    text-decoration: none;
 }

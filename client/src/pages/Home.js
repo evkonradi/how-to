@@ -1,11 +1,9 @@
-//comments
 import React from 'react';
 import { Jumbotron, Row, Col, Container} from 'reactstrap';
-import Header  from "../components/Header";
-import Nav from "../components/Nav";
+
 import Resource from "../components/Resource";
 import Search from '../components/Search';
-import Footer from '../components/Footer';
+
 
 
 const Home = () => {
