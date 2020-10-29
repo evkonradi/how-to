@@ -32,7 +32,8 @@ function ResourceView() {
                 <br />
                 <br />
                 <h4 class="italic">Contibutor {data.resource.displayName}</h4>
-            
+                </Col>
+            <Col xs={12}>
               {data.resource.images.map((image) => (
                 <Row key={`image-${data.resource.images.indexOf(image)}`}>
                   <Row>
@@ -71,6 +72,7 @@ function ResourceView() {
                     </Row>
                     <br /> <br />
                     <Row>
+                      <br />
                       <p class="caption">
                         {" "}
                         <br />
@@ -82,10 +84,12 @@ function ResourceView() {
                 </Col>
               ))}
             <Col xs={12}>
+              <br />
             <br />
-              <Row>
-                <DonateButton className="center" resource={data.resource}></DonateButton>
+              <Row className="center">
+                <DonateButton resource={data.resource}></DonateButton>
               </Row>
+              <br />
               <br />
               </Col>
           </Container>

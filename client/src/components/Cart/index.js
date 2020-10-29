@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import CartItem from '../CartItem';
 import './style.css';
+import { Button } from "@chakra-ui/core";
+
 
 import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
@@ -86,11 +88,11 @@ const Cart = () => {
                         <CartItem key={item._id} item={item} />
                     ))}
                     <div className="flex-row space-between">
-                        <strong>Total: ${calculateTotal()}</strong>
+                        <strong>Total: ${calculateTotal()}</strong><br />
                         {/* <button onClick={submitCheckout}> */}
-                        <button>
+                        <Button>
                               Checkout
-                        </button>
+                        </Button>
                     </div>
                 </div>
             ) : (
