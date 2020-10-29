@@ -6,7 +6,7 @@ import { Card, CardBody, CardImg, CardTitle } from "react-bootstrap"
 const CardResource = ({resource, imgWidth}) =>{
 
   return (
-    <Link to={`/articles/${resource._id}`} key={resource._id}>
+    <Link className="mainCard" to={`/articles/${resource._id}`} key={resource._id}>
       <Card outline color='dark'>
         <Card.Body>
         <Card.Title>{resource.name}</Card.Title>

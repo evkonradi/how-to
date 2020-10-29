@@ -173,6 +173,10 @@ float: right;
   border-radius: 0px 0px 8px 8px;
 }
 
+/* .main {
+  background-color: #5C6B73;
+} */
+
 .Col {
   min-height: max-content;
 }
@@ -227,6 +231,16 @@ a.center {
 }
 
 a.center:hover{
+  color: #D99748;
+  text-decoration: none;
+}
+
+a.mainCard {
+  color: #253237;
+  text-decoration: none;
+}
+
+a.mainCard:hover {
   color: #D99748;
   text-decoration: none;
 }
