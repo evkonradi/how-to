@@ -1,22 +1,40 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Row, Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import Auth from '../../utils/auth';
 
-export default
-class Header extends Component {
-  render(){
+// export default
+const Header = (Component) => {
+  const logout = event => {
+    event.preventDefault();
+    Auth.logout();
+  };
+
+  // render(){
   return (
     <Navbar className="mainNav" collapseOnSelect expand="lg" bg="dark" variant="light">
     <Navbar.Brand href="/"><img className="small" src="./images/teach_me_to_logo-01.png"/></Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
-      <NavDropdown.Item href="/login">Login</NavDropdown.Item>
-      <NavDropdown.Item href="/signup">Signup</NavDropdown.Item>
-      <NavDropdown.Divider />
+      {Auth.loggedIn() ? (
+        <>
+          <NavDropdown.Item id="dropdown" href="/profile">My Page</NavDropdown.Item>
+          <NavDropdown.Item id="dropdown" href="/" onClick={logout}>Logout</NavDropdown.Item>
+        </>
+      ) : (
+        <>
+          <NavDropdown.Item id="dropdown" href="/login">Login</NavDropdown.Item>
+          <NavDropdown.Item id="dropdown" href="/signup">Signup</NavDropdown.Item>
+          <NavDropdown.Divider />
+        </>
+      )}
     </Nav>
     </Navbar.Collapse>
-</Navbar>
+    </Navbar>
   );
+// }
 }
-}
+
+export default Header;
