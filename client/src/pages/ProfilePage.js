@@ -16,6 +16,7 @@ import {
   CardSubtitle,
   Jumbotron,
 } from "reactstrap";
+import Resource from "../components/Resource";
 import { Redirect, useParams } from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Divider, Box, BoxProps } from "@chakra-ui/core";
@@ -105,8 +106,10 @@ const ProfilePage = props => {
               </Col>
               </Row>
           </Col>
-          <Jumbotron className="whitespace" />
-          <Jumbotron className="whitespace" />
+          <br />
+          <br />
+          <h2>see what other are contributing.</h2>
+          <Resource></Resource>
           <Jumbotron className="whitespace" />
         </Container>
         <br />
