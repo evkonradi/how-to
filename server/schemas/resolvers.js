@@ -51,7 +51,7 @@ const resolvers = {
             for (let i = 0; i < products.length; i++) {
               // generate product id
               const product = await stripe.products.create({
-                name: products[i].name + " (Author: )" + products[i].author,
+                name: products[i].name + " (Author: " + products[i].author + ")",
                 description: products[i].shortDescription
                 //images: [`${url}/images/${products[i].image}`],
               });
