@@ -22,23 +22,17 @@ function ResourceView() {
         <div>
           <Container>
             <br />
-            <Col xs={12} md={10} lg={10} offset={3}>
+            <Col xs={12}>
               <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
                 <Row>
                   <h3>{data.resource.name}</h3>
                 </Row>
               </Box>
-
-              <Row>
-                <h5>{data.resource.shortDescription}</h5>
+                <h2>{data.resource.shortDescription}</h2>
                 <br />
                 <br />
-              </Row>
-
-              <Row>
-                <h5 class="italic">Written by: {data.resource.displayName}</h5>
-              </Row>
-
+                <h4 class="italic">Written by: {data.resource.displayName}</h4>
+            
               {data.resource.images.map((image) => (
                 <Row key={`image-${data.resource.images.indexOf(image)}`}>
                   <Row>
@@ -48,6 +42,7 @@ function ResourceView() {
                       width="300"
                     ></img>
                   </Row>
+                  <br /><br />
                   <Row>
                     <p class="caption">
                       <span>{image.imageCaption}</span>
@@ -59,6 +54,8 @@ function ResourceView() {
               <Row>
                 <p>{data.resource.resourceBody}</p>
               </Row>
+              </Col>
+              
 
               {data.resource.videos.map((video) => (
                 <Col xs={12}>
@@ -76,7 +73,7 @@ function ResourceView() {
                     <Row>
                       <p class="caption">
                         {" "}
-                        <br /> <br />
+                        <br />
                         <span>{video.videoCaption}</span>
                       </p>
                     </Row>
@@ -84,11 +81,13 @@ function ResourceView() {
                   </Row>
                 </Col>
               ))}
-
+            <Col xs={12}>
+            <br />
               <Row>
-                <DonateButton resource={data.resource}></DonateButton>
+                <DonateButton className="center" resource={data.resource}></DonateButton>
               </Row>
-            </Col>
+              <br />
+              </Col>
           </Container>
           <Cart />
         </div>
