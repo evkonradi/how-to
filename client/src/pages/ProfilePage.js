@@ -26,6 +26,7 @@ import { Divider, Box, BoxProps } from "@chakra-ui/core";
 import { Button } from "@chakra-ui/core";
 import { ADD_RESOURCE } from '../utils/mutations';
 import Auth from '../utils/auth';
+// import { Resource } from "../../../server/models";
 
 const ProfilePage = props => {
   const { username: userParam } = useParams();
@@ -73,7 +74,7 @@ const ProfilePage = props => {
           <Col sm="12" md="6" lg="12" offset="3">
             <Row>
               <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
-                <h3>Welcome Back, {userParam ? `${user.firstName}!` : 'User'}</h3>
+                <h3>Welcome Back, {`${user.firstName}`}!</h3>
               </Box>
             </Row>
             <br />

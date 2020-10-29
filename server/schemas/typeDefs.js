@@ -53,6 +53,7 @@ const typeDefs = gql`
     displayName: String,
     resourceBody: String,
     dateCreated: String
+    images: [Image]
   }
 
   type Auth {

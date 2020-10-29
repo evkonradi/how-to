@@ -62,20 +62,41 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        addResource: async (parent, args) => {
-            const resource = await Resource.create(args);
-            return resource;
-        },
-        updateResource: async (parent, args) => {
-            return await Resource.findByIdAndUpdate(args._id, {...args}, { new: true } );
-        },
-        deleteResource: async(parent, {_id})=>{
-            try{
-                return await Resource.findByIdAndRemove({_id});
+        addResource: async (parent, args, context) => {
+            if (context.user){
+                const resource = await Resource.create(args);
+
+                await User.findByIdAndUpdate(
+                    { _id: context.user._id },
+                    { $push: { resources: resource._id } },
+                    { new: true }
+                );
+    
+                return resource;
             }
-            catch (err) {
-                console.log(err);
+            throw new AuthenticationError('Not logged in');
+        },
+        updateResource: async (parent, args, context) => {
+            if (context.user){
+                return await Resource.findByIdAndUpdate(args._id, {...args}, { new: true } );
             }
+
+            throw new AuthenticationError('Not logged in');
+        },
+        deleteResource: async(parent, {_id}, context)=>{
+            if (context.user){
+                const resource = await Resource.findByIdAndRemove({_id});
+
+                await User.findByIdAndUpdate(
+                    { _id: context.user._id },
+                    { $pull: { resources: resource._id } },
+                    { new: true }
+                );
+
+                return resource;
+            }
+
+            throw new AuthenticationError('Not logged in');
         }
     }
 }

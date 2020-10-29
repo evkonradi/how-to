@@ -5,6 +5,7 @@ import Resource from "../components/Resource";
 import Search from '../components/Search';
 
 
+import Cart from '../components/Cart';
 
 const Home = () => {
     return (
@@ -28,8 +29,9 @@ const Home = () => {
                     <Resource></Resource>
                 {/* </Row> */}
                 </Col> 
-                </Container>
-                <br />
+            </Container>
+            <br />
+            <Cart />
         </div>
     );
 };

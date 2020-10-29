@@ -87,6 +87,91 @@ function ResourceAddEdit() {
   // add videos to the list of videos
   const handleVideoAdd = (event) => {
     event.preventDefault();
+    // update state based on form input changes
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+    
+        setFormState({
+          ...formState,
+          [name]: value
+        });
+    };
+
+    // add images to the list of images 
+    const handleImageAdd = (event) =>{
+        event.preventDefault();
+
+        let {imageList} = formState;
+        imageList.push({fileURL: formState.imageLinkInput, imageCaption: formState.imageCaption});
+
+        setFormState({
+            ...formState,
+            imageList: imageList,
+            imageLinkInput: "",
+            imageCaption:""
+        });
+
+    };
+
+    // add videos to the list of videos 
+    const handleVideoAdd = (event) =>{
+        event.preventDefault();
+
+        let {videoList} = formState;
+        videoList.push({fileURL: formState.videoLinkInput, videoCaption: formState.videoCaption});
+
+        setFormState({
+            ...formState,
+            videoList: videoList,
+            videoLinkInput: "",
+            videoCaption:""
+        });
+
+    };
+
+
+    //submit form and save data to the database
+    const handleFormSubmit = async event => {
+        event.preventDefault();
+
+        let displayName = "HotDogMan";
+      
+        try {
+            if (!id){
+                await addResource({ variables: { ...formState, displayName } })
+            }
+            else{
+                await updateResource({ variables: { id, ...formState, displayName } })
+            }
+
+            window.location.assign('/profile');
+        } catch (e) {
+          console.error(e);
+        }
+    };
+
+    //delete an image or video from the list
+    const handleDelete = async event =>{
+        event.preventDefault();
+
+        const targetEl = event.target;
+
+        if (targetEl.hasAttribute("data-number")){
+            const attrValue = targetEl.getAttribute("data-number");
+            const elPosition = parseInt(attrValue.replace("image-", "").replace("video-",""));
+
+            if (attrValue.indexOf("image") > -1){
+                let itemsList = formState.imageList;
+                itemsList.splice(elPosition, 1);
+                setFormState({ ...formState, imageList: itemsList });
+            }
+            else{
+                let itemsList = formState.videoList;
+                itemsList.splice(elPosition, 1);
+                setFormState({ ...formState, videoList: itemsList });
+            }
+        }
+    }
 
     let { videoList } = formState;
     videoList.push({

@@ -1,1 +1,5 @@
-export const UPDATE_RESOURCE = "UPDATE_RESOURCE";
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+export const UPDATE_CART_DONATION = 'UPDATE_CART_DONATION';
+export const CLEAR_CART = 'CLEAR_CART';
+export const TOGGLE_CART = 'TOGGLE_CART';
