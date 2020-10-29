@@ -38,18 +38,18 @@ $light:#E0FBFC;
 $dark: #253237;
 
 h2 {
-    color: $success;
+    color: $secondary;
 }
 
 h3 {
-    color: $secondary;
-    margin-left: 1rem;
+    color: $success;
+    font-style: italic;
 }
 h4 {
-    color: $success;
+    color: $secondary;
 }
 h5 {
-    color: $primary;
+    color: $dark;
 }
   
 

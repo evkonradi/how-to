@@ -54,6 +54,10 @@ h1.class {
   color: #253237;
 }
 
+.NavbarBrand {
+  font-style: italic;
+}
+
 a:hover {
   color: #D99748;
   text-decoration: none;

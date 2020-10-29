@@ -95,7 +95,7 @@ const Login = (props, Component) => {
             _hover={{ bg: "#D99748" }}
             type="submit"
           >
-            Join
+            Login
           </Button>
           </Row>
           <br />
