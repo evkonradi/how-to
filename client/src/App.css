@@ -236,6 +236,13 @@ float: right;
   transform: translate(-50%, -50%);
 }
 
+.form-control {
+  position: relative;
+}
+
+.button.search {
+  position: relative;
+}
 /* .horizon-center {
   margin: 0;
   position: absolute;

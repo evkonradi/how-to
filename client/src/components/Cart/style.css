@@ -10,6 +10,8 @@
     padding: .5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
     border-bottom-left-radius: .5rem;
+    border: 2px;
+    border-color: black;
   }
   
   .cart h2 {
@@ -32,16 +34,18 @@
   }
   
   .cart-closed {
-    position: fixed;
+    /* position: fixed; */
     top: 2%;
     right: 1%;
     font-size: 2rem;
     cursor: pointer;
     background-color: var(--secondary);
     border-radius: 50%;
-    padding: .25rem;
-    width: 50px;
-    height: 50px;
+    /* padding: .5rem; */
+    width: 52px;
+    height: 52px;
+    border: 2px;
+    border-color: black;
   }
   
   .cart-closed:hover {

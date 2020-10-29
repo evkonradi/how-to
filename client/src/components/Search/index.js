@@ -33,13 +33,9 @@ const Search = () => {
   return (
     <main>
       <Input className="center" name="searchText" onChange={handleChange} />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <Button
         className="center"
+        
         size="lg"
         height="46px"
         width="200px"
@@ -59,8 +55,8 @@ const Search = () => {
             <br></br>
             {data.resources_search.map((article) => (
               <div key={article._id}>
-                <CardResource resource={article} imgWidth="50%"></CardResource>
-                <DonateButton resource={article}></DonateButton>
+                <CardResource resource={article} imgWidth="100%"></CardResource>
+                {/* <DonateButton resource={article}></DonateButton> */}
                 <br></br>
               </div>
             ))}
