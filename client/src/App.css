@@ -58,6 +58,10 @@ h1.class {
   font-style: italic;
 }
 
+.navbar {
+  flex-wrap: nowrap;
+}
+
 a:hover {
   color: #D99748;
   text-decoration: none;
@@ -78,6 +82,11 @@ img {
   max-width: 500px;
   height: auto;
 }
+
+.small {
+  width: 10%;
+  height: 10%;
+}
 /* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -86,6 +95,13 @@ img {
     transform: rotate(360deg);
   }
 } */
+.dropdown-item {
+  color: #9DB4C0;
+  align-items: right;
+}
+.mr-auto {
+  color: #9DB4C0;
+}
 ul {
   list-style-type: none;
   margin-bottom: 0px;

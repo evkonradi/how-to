@@ -3,7 +3,8 @@ import { Row, Col } from "reactstrap";
 
 const Footer = () => (
   <div className="footer">
-    <Col xs={{ size: 12, offset: 1 }} sm={{ size: 6, offset: 4 }} lg={{ size: 3, offset: 5}}>
+    <Col xs={{ size: 12, offset: 3 }} sm={{ size: 6, offset: 4 }} lg={{ size: 3, offset: 5}}>
+    <br />
     <Row>
     <p>teachmeto© 2020</p> | 
       <a class="nullA" href="https://github.com/evkonradi/teach-me-to">Proudly made in Texas</a>
