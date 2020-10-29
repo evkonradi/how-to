@@ -3,7 +3,7 @@ import { useMutation, useQuery } from "@apollo/react-hooks";
 import { ADD_RESOURCE, UPDATE_RESOURCE } from "../utils/mutations";
 import { QUERY_RESOURCE } from "../utils/queries";
 import { useParams } from "react-router-dom";
-import { Col, Row, Container, InputGroup, Input } from "reactstrap";
+import { Col, Row, Container, InputGroup, Input, Jumbotron } from "reactstrap";
 import { Box, Button } from "@chakra-ui/core";
 
 function ResourceAddEdit() {
@@ -385,8 +385,11 @@ function ResourceAddEdit() {
             </Col>
             <br />
           </Col>
-          <Col xs={{ span: 6, offset: 4 }} lg={{ span: 6, offset: 5 }}>
+          
+          {/* <Col xs={{ span: 6, offset: 4 }} lg={{ span: 6, offset: 5 }}> */}
+          <Jumbotron className="whitespace">
             <Button
+                className="center"
               size="lg"
               height="46px"
               width="200px"
@@ -400,8 +403,10 @@ function ResourceAddEdit() {
             >
               Submit
             </Button>
-          </Col>
+            </Jumbotron>
+          {/* </Col> */}
         </form>
+        
       </Container>
     </div>
   );

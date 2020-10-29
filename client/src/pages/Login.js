@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import { Form, FormGroup, Label, Input, Col, Container, Row } from "reactstrap";
+import { Form, FormGroup, Label, Input, Col, Container, Row, Jumbotron } from "reactstrap";
 import GoogleLogin from "react-google-login";
 
 import { useMutation } from "@apollo/react-hooks";
@@ -120,6 +120,8 @@ const Login = (props, Component) => {
           </div>
         </Form>
         {error && <div>Login failed</div>}
+        <Jumbotron className="whitespace" />
+        <Jumbotron className="whitespace" />
         </Container>
     </main>
   );

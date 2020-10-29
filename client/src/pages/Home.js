@@ -25,9 +25,7 @@ const Home = () => {
             </Col><br />
             <Container className="carousel">
                 <Col xs="12" sm="10" md={{ size: 6, offset: 3 }} lg={{ size:8, offset:3}}>
-                {/* <Row className="resource"> */}
                     <Resource></Resource>
-                {/* </Row> */}
                 </Col> 
             </Container>
             <br />
