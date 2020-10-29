@@ -97,15 +97,3 @@ function ResourceView() {
 
 export default ResourceView;
 
-// this can wrap the video to size from @chakra
-
-{
-  /* <AspectRatioBox maxW="560px" ratio={1}>
-  <Box
-    as="iframe"
-    title="naruto"
-    src="https://www.youtube.com/embed/QhBnZ6NPOY0"
-    allowFullScreen
-  />
-</AspectRatioBox> */
-}
