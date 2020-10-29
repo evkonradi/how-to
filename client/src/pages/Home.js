@@ -28,6 +28,7 @@ const Home = () => {
                     <Resource></Resource>
                 </Col> 
             </Container>
+            <Jumbotron className="whitespace" />
             <br />
             {/* <Cart /> */}
         </div>

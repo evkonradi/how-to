@@ -15,6 +15,7 @@ import Signup from "./pages/Signup";
 import NoMatch from "./pages/NoMatch"
 import { ThemeProvider } from "@chakra-ui/core";
 
+
 import { StoreProvider } from "./utils/GlobalState";
 
 const client = new ApolloClient({
@@ -34,11 +35,12 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <ThemeProvider>
-        <div className="main">
+       
         
           <StoreProvider>
+          <div className="main">
             <Header />
-
+            
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/resource/:id?" component={ResourceAddEdit} />
@@ -51,8 +53,9 @@ function App() {
             </Switch>
             
             <Footer />
+            </div>
           </StoreProvider>
-        </div>
+        
         </ThemeProvider>
       </Router>
     </ApolloProvider>
