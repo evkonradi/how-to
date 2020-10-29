@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Col, Row } from 'reactstrap';
+import { Container, Col, Row, Jumbotron } from 'reactstrap';
 import { Box } from '@chakra-ui/core';
 import { Card, CardBody } from "react-bootstrap";
 
@@ -33,6 +33,8 @@ const NoMatch = () => {
         </Card.Body>
         </Card>
         <br /><br/>
+        <Jumbotron className="whitespace" />
+        <Jumbotron className="whitespace" />
         </Container>
         </div>
         </main>

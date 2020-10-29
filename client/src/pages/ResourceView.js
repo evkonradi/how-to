@@ -31,7 +31,7 @@ function ResourceView() {
                 <h2>{data.resource.shortDescription}</h2>
                 <br />
                 <br />
-                <h4 class="italic">Written by: {data.resource.displayName}</h4>
+                <h4 class="italic">Contibutor {data.resource.displayName}</h4>
             
               {data.resource.images.map((image) => (
                 <Row key={`image-${data.resource.images.indexOf(image)}`}>

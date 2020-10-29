@@ -98,6 +98,10 @@ img {
   height: 13%;
 }
 
+.italic {
+  font-style: italic;
+}
+
 Card.link {
   color: #D99748;
   text-decoration: none;
