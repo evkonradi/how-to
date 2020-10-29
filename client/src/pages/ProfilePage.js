@@ -108,7 +108,7 @@ const ProfilePage = props => {
           </Col>
           <br />
           <br />
-          <h2>see what other are contributing.</h2>
+          <h2>see what others are contributing</h2>
           <Resource></Resource>
           <Jumbotron className="whitespace" />
         </Container>
