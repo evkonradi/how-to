@@ -110,3 +110,11 @@ export const QUERY_ME_BASIC = gql`
   }
 }
 `;
+
+export const QUERY_CHECKOUT = gql`
+  query getCheckout($products: [CheckoutProductInput]!) {
+    checkout(products: $products) {
+      session
+    }
+  }
+`;

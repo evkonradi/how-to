@@ -61,6 +61,18 @@ const typeDefs = gql`
     user: User
   }
 
+  type Checkout {
+    session: ID
+  }
+
+  input CheckoutProductInput{
+    _id: ID,
+    name: String,
+    shortDescription: String,
+    author: String,
+    donation: Int
+  }
+
   type Query {
     me: User
     users: [User]
@@ -68,6 +80,7 @@ const typeDefs = gql`
     resources: [Resource]
     resource(_id: ID!): Resource
     resources_search(text: String!): [ResourceShort]
+    checkout(products: [CheckoutProductInput]!): Checkout
   }
 
   type Mutation {

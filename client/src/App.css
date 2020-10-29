@@ -82,7 +82,7 @@ p {
 
 p.caption {
   font-style: italic;
-  color: #9DB4C0;
+  color: #9e9fa0;
   font-size: x-small;
 }
 
@@ -118,6 +118,7 @@ Card.link {
   color: #9DB4C0;
   align-items: right;
 }
+
 .mr-auto {
   color: #9DB4C0;
 }
@@ -278,5 +279,17 @@ a.mainCard {
 
 a.mainCard:hover {
   color: #D99748;
+  text-decoration: none;
+}
+
+#dropdown {
+  color: #9DB4C0;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#dropdown:hover {
+  color: #253237;
+  background-color: #E0FBFC;
   text-decoration: none;
 }
