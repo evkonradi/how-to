@@ -112,6 +112,7 @@ const Signup = () => {
               />
             </FormGroup>
             <br />
+            <Jumbotron className="whitespace">
             <Button
               className="center"
               size="lg"
@@ -126,11 +127,11 @@ const Signup = () => {
             >
               Join
             </Button>
-            <br />
+            </Jumbotron>
             <br />
           </Form>
           </Col>
-          <Jumbotron className="whitespace" />
+       
         </Container>
       </div>
     </main>

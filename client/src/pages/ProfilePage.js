@@ -106,6 +106,8 @@ const ProfilePage = props => {
               </Row>
           </Col>
           <Jumbotron className="whitespace" />
+          <Jumbotron className="whitespace" />
+          <Jumbotron className="whitespace" />
         </Container>
         <br />
       </div>
