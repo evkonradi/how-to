@@ -17,12 +17,14 @@ import {
   Jumbotron,
 } from "reactstrap";
 import Resource from "../components/Resource";
+import UserCards from "../components/UserCards";
+// import CardResource from "../components/CardResource";
 import { Redirect, useParams } from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Divider, Box, BoxProps } from "@chakra-ui/core";
 import { Button } from "@chakra-ui/core";
 
-import { ADD_RESOURCE } from '../utils/mutations';
+// import { ADD_RESOURCE } from '../utils/mutations';
 import Auth from '../utils/auth';
 // import { idbPromise } from "../../utils/helpers";
 // import { useParams } from "react-router-dom";
@@ -31,21 +33,20 @@ import Auth from '../utils/auth';
 const ProfilePage = props => {
   const { username: userParam } = useParams();
 
-  const [addResource] = useMutation(ADD_RESOURCE);
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam }
   });
 
   const user = data?.me || data?.user || {};
+
+  // const { info } = useQuery(QUERY_RESOURCE);
+  // const resource = info?.resource || [];
+
   const loggedIn = Auth.loggedIn();
 
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
     console.log("Login failed");
     return <Redirect to="/" />;
-  }
-
-  if (loading) {
-    return <div>Loading...</div>;
   }
 
   if (!user?.username) {
@@ -55,16 +56,6 @@ const ProfilePage = props => {
       </h1>
     );
   }
-
-  const handleClick = async () => {
-    try {
-      await addResource({
-        variables: { id: user._id }
-      });
-    } catch (e) {
-      console.error(e);
-    }
-  };
 
   return (
     <main>
@@ -92,10 +83,14 @@ const ProfilePage = props => {
               </Col>
               <Divider color="black" orientation="vertical" />
               <Col xs={6}>
-{/* <CardResource></CardResource> */}
+              {/* <CardResource></CardResource> */}
 
                 <Card>
-                  <CardHeader>This is where a Card will Go</CardHeader>
+                  <CardHeader>This is where a Card will Go              
+
+                      <UserCards resources={user.resources} imgWidth="100%"></UserCards>
+                       
+                  </CardHeader>
                 </Card>
                 <Card>
                   <CardHeader>This is where a Card will Go</CardHeader>

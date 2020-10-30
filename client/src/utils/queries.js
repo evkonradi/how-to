@@ -110,3 +110,24 @@ export const QUERY_ME_BASIC = gql`
   }
 }
 `;
+
+export const QUERY_RESOURCES = gql`
+  query resources($username: String) {
+    resources(username: $username) {
+      _id
+      name
+      shortDescription
+      displayName
+      resourceBody
+      dateCreated
+      images {
+        fileURL
+        imageCaption
+      }
+      videos {
+        fileURL
+        videoCaption
+      }
+    }
+  }
+`;
