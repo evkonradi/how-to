@@ -25,6 +25,7 @@ import { Button } from "@chakra-ui/core";
 import { ADD_RESOURCE } from '../utils/mutations';
 import Auth from '../utils/auth';
 import Search from "../components/Search";
+import CardResource from "../components/CardResource";
 // import { idbPromise } from "../../utils/helpers";
 // import { useParams } from "react-router-dom";
 // import { Resource } from "../../../server/models";
@@ -33,9 +34,11 @@ const ProfilePage = props => {
   const { username: userParam } = useParams();
 
   const [addResource] = useMutation(ADD_RESOURCE);
-  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-    variables: { username: userParam }
-  });
+  const { loading, data } = useQuery(QUERY_ME, { variables: { username: userParam } });
+
+  // const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+  //   variables: { username: userParam }
+  // });
 
   const user = data?.me || data?.user || {};
   const loggedIn = Auth.loggedIn();
@@ -95,15 +98,15 @@ const ProfilePage = props => {
               <Col xs={6}>
 {/* <CardResource></CardResource> */}
 
-                <Card>
-                  <CardHeader>This is where a Card will Go</CardHeader>
-                </Card>
-                <Card>
-                  <CardHeader>This is where a Card will Go</CardHeader>
-                </Card>
-                <Card>
-                  <CardHeader>This is where a Card will Go</CardHeader>
-                </Card>
+                {user.resources.map((resource) =>(
+                  <Card>
+                    <CardHeader>This is where a Card will Go              
+                      {/* <UserCards resources={user.resources} imgWidth="100%"></UserCards> */}
+                      <CardResource resource={resource} imgWidth="100%"></CardResource>
+                    </CardHeader>
+                  </Card>
+                ))}
+
               </Col>
               </Row>
           </Col>
