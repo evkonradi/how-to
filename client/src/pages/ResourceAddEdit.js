@@ -198,10 +198,9 @@ function ResourceAddEdit() {
                   width="300"
                 ></img>
                 <span>{image.imageCaption}</span>
-                <img
+                <img className="small"
                   src="/images/icondelete.png"
                   alt="delete"
-                  width="50"
                   data-number={`image-${formState.imageList.indexOf(image)}`}
                 ></img>
                 <br />
@@ -253,10 +252,9 @@ function ResourceAddEdit() {
                     allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                   ></iframe>
                   <span>{video.videoCaption}</span>
-                  <img
+                  <img className="small"
                     src="/images/icondelete.png"
                     alt="delete"
-                    width="50"
                     data-number={`video-${formState.videoList.indexOf(video)}`}
                   ></img>
                   <br />
