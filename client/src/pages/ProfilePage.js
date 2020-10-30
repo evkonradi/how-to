@@ -96,10 +96,10 @@ const ProfilePage = props => {
                 {user.resources.map((resource) =>(
                   <Card>
                     <CardHeader>
-                         
+                     
                       <CardResource resource={resource} imgWidth="100%"></CardResource>
-                      <Button><Link to={`/resource/${resource._id}`}>Edit</Link></Button>
-                    
+                      <Link to={`/resource/${resource._id}`}><Button>Edit</Button></Link>
+                  
                     </CardHeader>
                   </Card>
                 ))}
