@@ -105,14 +105,12 @@ function ResourceAddEdit() {
   const handleFormSubmit = async event => {
       event.preventDefault();
 
-      let displayName = "HotDogMan";
-    
       try {
           if (!id){
-              await addResource({ variables: { ...formState, displayName } })
+              await addResource({ variables: { ...formState } })
           }
           else{
-              await updateResource({ variables: { id, ...formState, displayName } })
+              await updateResource({ variables: { id, ...formState } })
           }
 
           window.location.assign('/profile');
