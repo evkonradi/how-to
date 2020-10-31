@@ -17,7 +17,7 @@ import {
   Jumbotron,
 } from "reactstrap";
 import Resource from "../components/Resource";
-import { Redirect, useParams } from "react-router-dom";
+import { Redirect, useParams, Link } from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Divider, Box, BoxProps } from "@chakra-ui/core";
 import { Button } from "@chakra-ui/core";
@@ -35,10 +35,6 @@ const ProfilePage = props => {
 
   const [addResource] = useMutation(ADD_RESOURCE);
   const { loading, data } = useQuery(QUERY_ME, { variables: { username: userParam } });
-
-  // const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-  //   variables: { username: userParam }
-  // });
 
   const user = data?.me || data?.user || {};
   const loggedIn = Auth.loggedIn();
@@ -60,15 +56,15 @@ const ProfilePage = props => {
     );
   }
 
-  const handleClick = async () => {
-    try {
-      await addResource({
-        variables: { id: user._id }
-      });
-    } catch (e) {
-      console.error(e);
-    }
-  };
+  // const handleClick = async () => {
+  //   try {
+  //     await addResource({
+  //       variables: { id: user._id }
+  //     });
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // };
 
   return (
     <main>
@@ -96,13 +92,14 @@ const ProfilePage = props => {
               </Col>
               <Divider color="black" orientation="vertical" />
               <Col xs={6}>
-{/* <CardResource></CardResource> */}
 
                 {user.resources.map((resource) =>(
                   <Card>
-                    <CardHeader>This is where a Card will Go              
-                      {/* <UserCards resources={user.resources} imgWidth="100%"></UserCards> */}
+                    <CardHeader>
+                     
                       <CardResource resource={resource} imgWidth="100%"></CardResource>
+                      <Link to={`/resource/${resource._id}`}><Button>Edit</Button></Link>
+                  
                     </CardHeader>
                   </Card>
                 ))}
