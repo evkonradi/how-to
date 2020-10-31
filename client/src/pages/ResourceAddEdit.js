@@ -105,14 +105,12 @@ function ResourceAddEdit() {
   const handleFormSubmit = async event => {
       event.preventDefault();
 
-      let displayName = "HotDogMan";
-    
       try {
           if (!id){
-              await addResource({ variables: { ...formState, displayName } })
+              await addResource({ variables: { ...formState } })
           }
           else{
-              await updateResource({ variables: { id, ...formState, displayName } })
+              await updateResource({ variables: { id, ...formState } })
           }
 
           window.location.assign('/profile');
@@ -201,7 +199,10 @@ function ResourceAddEdit() {
                 <img className="small"
                   src="/images/icondelete.png"
                   alt="delete"
+<<<<<<< HEAD
                   width="10px"
+=======
+>>>>>>> 5ee3aabf46ea568ff4e406d4f47f15683d55da37
                   data-number={`image-${formState.imageList.indexOf(image)}`}
                 ></img>
                 <br />
@@ -256,7 +257,10 @@ function ResourceAddEdit() {
                   <img className="small"
                     src="/images/icondelete.png"
                     alt="delete"
+<<<<<<< HEAD
                     width="3px"
+=======
+>>>>>>> 5ee3aabf46ea568ff4e406d4f47f15683d55da37
                     data-number={`video-${formState.videoList.indexOf(video)}`}
                   ></img>
                   <br />
