@@ -1,28 +1,22 @@
 import React from "react";
 // import { Col, Row, Image, Container }  from 'reactstrap';
-import { useQuery, useMutation } from "@apollo/react-hooks";
-import { QUERY_RESOURCE, QUERY_USER, QUERY_ME } from "../utils/queries";
+import { useQuery } from "@apollo/react-hooks";
+import { QUERY_ME } from "../utils/queries";
 import {
   Col,
   Row,
   Container,
   Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardLink,
   CardHeader,
-  CardTitle,
-  CardSubtitle,
   Jumbotron,
 } from "reactstrap";
 import Resource from "../components/Resource";
 import { Redirect, useParams, Link } from "react-router-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Divider, Box, BoxProps } from "@chakra-ui/core";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Divider, Box } from "@chakra-ui/core";
 import { Button } from "@chakra-ui/core";
 
-import { ADD_RESOURCE } from '../utils/mutations';
+// import { ADD_RESOURCE } from '../utils/mutations';
 import Auth from '../utils/auth';
 import Search from "../components/Search";
 import CardResource from "../components/CardResource";
@@ -33,7 +27,7 @@ import CardResource from "../components/CardResource";
 const ProfilePage = props => {
   const { username: userParam } = useParams();
 
-  const [addResource] = useMutation(ADD_RESOURCE);
+  // const [addResource] = useMutation(ADD_RESOURCE);
   const { loading, data } = useQuery(QUERY_ME, { variables: { username: userParam } });
 
   const user = data?.me || data?.user || {};
