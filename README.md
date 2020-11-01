@@ -58,18 +58,18 @@
   
   ## Contributers
     Visit per GitHubs:
-[Elena](https://github.com/evkonradi),
-[Sarah](https://github.com/sidoniag),
-[Jennifer](https://github.com/jenlpac),
-[AlfonsoBarreto](https://github.com/pochobs)
+* [Elena Konradi](https://github.com/evkonradi)
+* [Sarah Garrett](https://github.com/sidoniag)
+* [Jennifer Paczkowski](https://github.com/jenlpac)
+* [Alfonso Barreto](https://github.com/pochobs)
 
   ## Questions
   If you have any additional questions not answered here or wish to contact us regarding developments, please email us at 
   
-  [evkonradi@gmail.com](mailto:evkonradi@gmail.com),
-  [@gmail.com](mailto:@gmail.com ),
-  [@gmail.com](mailto:@gmail.com),
-  [pochobs@gmail.com](mailto:pochobs@gmail.com)
+  * [evkonradi@gmail.com](mailto:evkonradi@gmail.com),
+  * [@gmail.com](mailto:@gmail.com),
+  * [@gmail.com](mailto:@gmail.com),
+  * [pochobs@gmail.com](mailto:pochobs@gmail.com)
 
   ## Page Preview
   Home Page Preview:
