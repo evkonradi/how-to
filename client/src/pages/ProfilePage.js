@@ -10,6 +10,13 @@ import {
   CardHeader,
   Jumbotron,
 } from "reactstrap";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionHeader,
+  AccordionPanel,
+  AccordionIcon,
+} from "@chakra-ui/core";
 import Resource from "../components/Resource";
 import { Redirect, useParams, Link } from "react-router-dom";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -45,7 +52,7 @@ const ProfilePage = props => {
   if (!user?.username) {
     return (
       <h1>
-        Sign up or log in 🙂
+        Sign up | log in 🙂
       </h1>
     );
   }
@@ -75,9 +82,18 @@ const ProfilePage = props => {
             <br />
             <Row>
               <Col xs={3} md="3" lg="3">
+                <Accordion allowToggle>
+                  <AccordionItem>
+                    <AccordionHeader>
+                      <Box flex="1" textAlign="left">
+                        Info
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionHeader>
+                  </AccordionItem>
+                </Accordion>
               <p className="small">Info</p>
               <br />
-              <p className="small">Wallet</p>
               <br />
                 <a href="/resource" className="small" className="nullA">
                   New Post

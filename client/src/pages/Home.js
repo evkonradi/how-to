@@ -30,6 +30,7 @@ const Home = () => {
             </Container>
             <Jumbotron className="whitespace" />
             <br />
+            
             {/* <Cart /> */}
         </div>
     );
