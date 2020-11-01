@@ -75,14 +75,15 @@ const ProfilePage = props => {
             <br />
             <Row>
               <Col xs={3} md="3" lg="3">
-              <p className="small">Info</p>
+              <h6>Username: {`${user.username}`}<br/>Name: {`${user.firstName}`} {`${user.lastName}`}<br/>Email: {`${user.email}`}</h6>
+              {/* <p className="small"></p> */}
               <br />
-              <p className="small">Wallet</p>
-              <br />
+              {/* <p className="small">Wallet</p> */}
+              {/* <br /> */}
                 <a href="/resource" className="small" className="nullA">
                   New Post
                 </a>
-                
+              
               </Col>
               <Divider color="black" orientation="vertical" />
               <Col xs={6}>

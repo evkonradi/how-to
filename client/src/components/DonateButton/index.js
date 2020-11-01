@@ -16,8 +16,6 @@ function DonateButton({resource}){
         const itemInCart = cart.find((cartItem) => cartItem._id === resource._id);
       
         if (!itemInCart) {
-            console.log("Resource:");
-            console.log(resource);
             dispatch({
                 type: ADD_TO_CART,
                 product: { _id: resource._id, name: resource.name, shortDescription: resource.shortDescription, donation: 5 }
