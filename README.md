@@ -9,7 +9,7 @@
   * [Usage](#usage)
   * [Technologies](#technologies)
   * [Contribution](#contribution)
-  * [Contributers](#contributers)
+  * [Contributors](#contributors)
   * [Questions](#questions) 
   
   ## Installation
@@ -20,6 +20,14 @@
   Users could search articles of interest, where they can find context, images, videos about what it was searched.
   Users could also register to be able to create this articles with any area of interest, and be availe to catch people interest.
   Users that have articles can also make that article to accept donations.
+
+  ### Presentation
+[Link](https://www.canva.com/design/DAELjSyWfPA/GurvMkKaZmnZNI9mvZS7uw/view?utm_content=DAELjSyWfPA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
+
+  ### Deployment
+[Link](https://floating-spire-39046.herokuapp.com)
+
+
 
   ## Technologies
 
@@ -50,16 +58,16 @@
   
   ## Contributers
     Visit per GitHubs:
-    [Elena](https://github.com/evkonradi),
-    [Sarah](https://github.com/sidoniag),
-    [Jennifer](https://github.com/jenlpac),
-    [AlfonsoBarreto](https://github.com/pochobs)
+[Elena](https://github.com/evkonradi),
+[Sarah](https://github.com/sidoniag),
+[Jennifer](https://github.com/jenlpac),
+[AlfonsoBarreto](https://github.com/pochobs)
 
   ## Questions
-  If you have any additional questions not answered here or wish to contact me regarding developments, please email us at 
+  If you have any additional questions not answered here or wish to contact us regarding developments, please email us at 
   
   [@gmail.com](mailto:@gmail.com),
-  [@gmail.com](mailto:@gmail.com ),
   [@gmail.com](mailto:@gmail.com),
-  [pochobs@gmail.com](mailto:pochobs@gmail.com),
+  [@gmail.com](mailto:@gmail.com),
+  [pochobs@gmail.com](mailto:pochobs@gmail.com)
 
