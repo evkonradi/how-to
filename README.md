@@ -54,7 +54,7 @@ JSON Web Token (JWT) that defines a compact and self-contained way for securely 
 * Set Up Pay-To-View Functionality
 * Create Payment Statement for Donations 
   
-## Contributers
+## Contributors
 Visit per GitHubs:
 * [Elena Konradi](https://github.com/evkonradi)
 * [Sarah Garrett](https://github.com/sidoniag)
