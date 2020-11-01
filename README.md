@@ -50,7 +50,7 @@
   
   ## Contributers
     Visit per GitHubs:
-    [Elena](https://github.com/),
+    [Elena](https://github.com/evkonradi),
     [Sarah](https://github.com/),
     [Jennifer](https://github.com/),
     [AlfonsoBarreto](https://github.com/pochobs)
@@ -58,8 +58,13 @@
   ## Questions
   If you have any additional questions not answered here or wish to contact me regarding developments, please email us at 
   
-  [@gmail.com](mailto:@gmail.com),
+  [evkonradi@gmail.com](mailto:evkonradi@gmail.com),
   [@gmail.com](mailto:@gmail.com ),
   [@gmail.com](mailto:@gmail.com),
-  [pochobs@gmail.com](mailto:pochobs@gmail.com),
+  [pochobs@gmail.com](mailto:pochobs@gmail.com)
+
+  ## Questions
+  Home Page Preview:
+
+  <img src="./TeachMeToPreview.jpg">
 
