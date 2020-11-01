@@ -9,7 +9,7 @@ import Carousel from "react-bootstrap/Carousel";
 
 const Resource = () => {
   const { loading, data } = useQuery(QUERY_RESOURCES_HOMEPAGE);
-  const resources = data?.resources || [];
+  let resources = data?.resources || [];
 
   useEffect(() => {
     if(resources.length) {
@@ -18,10 +18,17 @@ const Resource = () => {
       });
     } else if (!loading) {
       idbPromise('resourcesCarousel', 'get').then((resourcesOffline) => {
-        return resources = resourcesOffline;
+        resources = resourcesOffline;
+        console.log("Resources Offline resources after assign:");
+        console.log(resources);
+        return resources;
       });
     }
   }, [data, loading]);
+
+  console.log("Resources before DOM:");
+  console.log(resources);
+  console.log(loading);
 
   return (
     <main>
