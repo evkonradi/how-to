@@ -199,10 +199,7 @@ function ResourceAddEdit() {
                 <img className="small"
                   src="/images/icondelete.png"
                   alt="delete"
-<<<<<<< HEAD
                   width="10px"
-=======
->>>>>>> 5ee3aabf46ea568ff4e406d4f47f15683d55da37
                   data-number={`image-${formState.imageList.indexOf(image)}`}
                 ></img>
                 <br />
@@ -257,10 +254,7 @@ function ResourceAddEdit() {
                   <img className="small"
                     src="/images/icondelete.png"
                     alt="delete"
-<<<<<<< HEAD
                     width="3px"
-=======
->>>>>>> 5ee3aabf46ea568ff4e406d4f47f15683d55da37
                     data-number={`video-${formState.videoList.indexOf(video)}`}
                   ></img>
                   <br />

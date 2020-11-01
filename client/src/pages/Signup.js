@@ -1,5 +1,5 @@
-import React, { Component, useState } from "react";
-import { Form, FormGroup, Label, Input, Container, Col, Jumbotron } from "reactstrap";
+import React, { useState } from "react";
+import { Form, FormGroup, Input, Container, Col, Jumbotron } from "reactstrap";
 import { Button } from "@chakra-ui/core";
 
 import { useMutation } from "@apollo/react-hooks";
