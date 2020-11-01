@@ -63,7 +63,7 @@
   [@gmail.com](mailto:@gmail.com),
   [pochobs@gmail.com](mailto:pochobs@gmail.com)
 
-  ## Questions
+  ## Page Preview
   Home Page Preview:
 
   <img src="./TeachMeToPreview.jpg">
