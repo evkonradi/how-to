@@ -66,8 +66,13 @@
   ## Questions
   If you have any additional questions not answered here or wish to contact us regarding developments, please email us at 
   
-  [@gmail.com](mailto:@gmail.com),
-  [@gmail.com](mailto:@gmail.com),
+  [evkonradi@gmail.com](mailto:evkonradi@gmail.com),
+  [@gmail.com](mailto:@gmail.com ),
   [@gmail.com](mailto:@gmail.com),
   [pochobs@gmail.com](mailto:pochobs@gmail.com)
+
+  ## Page Preview
+  Home Page Preview:
+
+  <img src="./TeachMeToPreview.jpg">
 
