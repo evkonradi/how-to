@@ -1,8 +1,7 @@
 # Teach Me To
 
   ## DESCRIPTION
-  This application is a place to search and find articles, images, 
-  and videos on how to get better in my area of interest.
+  This application is a place to search and find articles, images, and videos on how to get better in a specific area of interest.
 
   ## Table of Contents
   * [Installation](#installation)
@@ -17,9 +16,9 @@
 
   ## Usage  
   You can access from your _favorite browser on your **computer, ipad, or mobile phone**_.
-  Users could search articles of interest, where they can find context, images, videos about what it was searched.
-  Users could also register to be able to create this articles with any area of interest, and be availe to catch people interest.
-  Users that have articles can also make that article to accept donations.
+  Users can search for articles of interest, where they can find content, images, and videos about a certain area of interest.
+  Users can also register for an account in order to create articles on a specific interest to share with other users.
+  Registered users that create content can also accept donations from users that enjoy their contributions.
 
   ### Presentation
 [Link](https://www.canva.com/design/DAELjSyWfPA/GurvMkKaZmnZNI9mvZS7uw/view?utm_content=DAELjSyWfPA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
@@ -64,11 +63,11 @@
 [AlfonsoBarreto](https://github.com/pochobs)
 
   ## Questions
-  If you have any additional questions not answered here or wish to contact us regarding developments, please email us at 
+  If you have any additional questions not answered here or wish to contact us regarding development, please email us at 
   
   [evkonradi@gmail.com](mailto:evkonradi@gmail.com),
   [@gmail.com](mailto:@gmail.com ),
-  [@gmail.com](mailto:@gmail.com),
+  [seekersig@gmail.com](mailto:seekersig@gmail.com),
   [pochobs@gmail.com](mailto:pochobs@gmail.com)
 
   ## Page Preview
