@@ -3,7 +3,7 @@
   ## DESCRIPTION
   This application is a place to search and find articles, images, 
   and videos on how to get better in my area of interest.
-  
+
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -51,8 +51,8 @@
   ## Contributers
     Visit per GitHubs:
     [Elena](https://github.com/evkonradi),
-    [Sarah](https://github.com/),
-    [Jennifer](https://github.com/),
+    [Sarah](https://github.com/sidoniag),
+    [Jennifer](https://github.com/jenlpac),
     [AlfonsoBarreto](https://github.com/pochobs)
 
   ## Questions
