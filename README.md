@@ -20,30 +20,30 @@
   Users can also register for an account in order to create articles on a specific interest to share with other users.
   Registered users that create content can also accept donations from users that enjoy their contributions.
 
-    * ### Presentation
+    ### Presentation
         [canva.com](https://www.canva.com/design/DAELjSyWfPA/GurvMkKaZmnZNI9mvZS7uw/view?utm_content=DAELjSyWfPA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
-    * ### Deployment
+    ### Deployment
         * [Link to app](https://floating-spire-39046.herokuapp.com)
         * [Github](https://github.com/evkonradi/teach-me-to)
         
   ## Technologies
 
-    * ### MongoDB
+    ### MongoDB
     Is a cross-platform document-oriented database program. Classified as a NoSQL database program.
-    * ### Express
+    ### Express
     is a back end web application framework for Node, it is designed for building web applications and APIs.
-    * ### React
+    ### React
     React can be used as a base in the development of single-page or mobile applications.
-    * ### Node.js
+    ### Node.js
     Is an open source, cross-platform runtime environment for developing server-side and networking applications.
-    * ### GraphQL
+    ### GraphQL
     Is a syntax that describes how to ask for data, and is generally used to load data from a server to a client.
-    * ### Stripe
+    ### Stripe
     Is a JavaScript library which you can wire into your checkout form to handle the credit card information.
-    * ### Mongoose
+    ### Mongoose
     It manages relationships between data
-    * ### JWT
+    ### JWT
     JSON Web Token (JWT) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.
     
 
