@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_RESOURCES_HOMEPAGE } from '../../utils/queries';
 import { idbPromise } from "../../utils/helpers";
@@ -9,6 +9,7 @@ import Carousel from "react-bootstrap/Carousel";
 
 const Resource = () => {
   const { loading, data } = useQuery(QUERY_RESOURCES_HOMEPAGE);
+  const [r, setR] = useState([]);
   let resources = data?.resources || [];
 
   useEffect(() => {
@@ -16,19 +17,15 @@ const Resource = () => {
       resources.forEach((resource) => {
         idbPromise('resourcesCarousel', 'put', resource);
       });
+      setR(resources);
     } else if (!loading) {
       idbPromise('resourcesCarousel', 'get').then((resourcesOffline) => {
-        resources = resourcesOffline;
-        console.log("Resources Offline resources after assign:");
-        console.log(resources);
-        return resources;
+         resources = resourcesOffline;
+         setR(resourcesOffline)
       });
     }
   }, [data, loading]);
 
-  console.log("Resources before DOM:");
-  console.log(resources);
-  console.log(loading);
 
   return (
     <main>
@@ -36,7 +33,7 @@ const Resource = () => {
         {loading ? <div>Loading...</div> : 
             <Carousel>
               {
-                resources.map((resource) => (
+                r.map((resource) => (
                   <Carousel.Item key={resource._id}>
 
                     <CardResource resource={resource} imgWidth="100%"></CardResource>
