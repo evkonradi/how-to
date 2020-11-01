@@ -5,6 +5,7 @@ import { QUERY_RESOURCE } from "../utils/queries";
 import { useParams } from "react-router-dom";
 import { Col, Row, Container, InputGroup, Input, Jumbotron } from "reactstrap";
 import { Box, Button } from "@chakra-ui/core";
+import { idbPromise } from "../utils/helpers";
 
 function ResourceAddEdit() {
   const { id } = useParams();
@@ -105,18 +106,26 @@ function ResourceAddEdit() {
   const handleFormSubmit = async event => {
       event.preventDefault();
 
-      try {
-          if (!id){
-              await addResource({ variables: { ...formState } })
-          }
-          else{
-              await updateResource({ variables: { id, ...formState } })
-          }
-
-          window.location.assign('/profile');
-      } catch (e) {
-        console.error(e);
+      if (!id){
+        try{
+          await addResource({ variables: { ...formState } })
+        }
+        catch(e){
+          console.error(e);
+          //idbPromise('newResources', 'put', { ...formState });
+        }
       }
+      else{
+        try{
+          await updateResource({ variables: { id, ...formState } });
+        }
+        catch(e){
+          console.error(e);
+          //idbPromise('updatedResources', 'put', { _id: id, ...formState });
+        }
+      }
+
+      window.location.assign('/profile');
   };
 
   //delete an image or video from the list
