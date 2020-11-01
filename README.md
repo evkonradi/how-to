@@ -59,7 +59,7 @@
     Visit per GitHubs:
 * [Elena Konradi](https://github.com/evkonradi)
 * [Sarah Garrett](https://github.com/sidoniag)
-* [Jennifer Paczkowski](https://github.com/jenlpac)
+* [Jenniffer Paczkowski](https://github.com/jenlpac)
 * [Alfonso Barreto](https://github.com/pochobs)
 
   ## Questions
@@ -67,7 +67,7 @@
   
   * [evkonradi@gmail.com](mailto:evkonradi@gmail.com)
   * [seekersig@gmail.com](mailto:@gmail.com)
-  * [@gmail.com](mailto:@gmail.com)
+  * [jenlpac@yahoo.com](mailto:jenlpac@yahoo.com)
   * [pochobs@gmail.com](mailto:pochobs@gmail.com)
   
 
