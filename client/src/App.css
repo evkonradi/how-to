@@ -298,3 +298,7 @@ a.mainCard:hover {
   background-color: #E0FBFC;
   text-decoration: none;
 }
+
+.accordion.item.list {
+  background-color: tomato;
+}

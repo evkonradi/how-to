@@ -193,7 +193,7 @@ function ResourceAddEdit() {
             <br />
             <br />
           </Col>
-          <Col xs={12}>
+          <Col xs={12} lg={10}>
             {formState.imageList.map((image) => (
               <div
                 key={`div-image-${formState.imageList.indexOf(image)}`}
@@ -216,7 +216,7 @@ function ResourceAddEdit() {
               </div>
             ))}
           </Col>
-          <Col xs={12}>
+          <Col xs={12} lg={10}>
             <InputGroup>
               <Input
                 id="imageLinkInput"

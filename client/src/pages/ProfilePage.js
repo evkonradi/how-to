@@ -2,34 +2,31 @@ import React from "react";
 // import { Col, Row, Image, Container }  from 'reactstrap';
 import { useQuery } from "@apollo/react-hooks";
 import { QUERY_ME } from "../utils/queries";
-import {
-  Col,
-  Row,
-  Container,
-  Jumbotron,
-} from "reactstrap";
+import { Col, Row, Container, Jumbotron } from "reactstrap";
 import {
   Accordion,
   AccordionItem,
   AccordionHeader,
   AccordionPanel,
   AccordionIcon,
+  Icon,
 } from "@chakra-ui/core";
 import Resource from "../components/Resource";
 import { Redirect, useParams, Link } from "react-router-dom";
 import { Divider, Box } from "@chakra-ui/core";
 import { Button } from "@chakra-ui/core";
-import { Card, CardBody, CardImg, CardTitle, CardText} from "react-bootstrap"
+import { Card, CardBody, CardImg, CardTitle, CardText } from "react-bootstrap";
 
-import Auth from '../utils/auth';
+import Auth from "../utils/auth";
 import Search from "../components/Search";
 import CardResource from "../components/CardResource";
 
-
-const ProfilePage = props => {
+const ProfilePage = (props) => {
   const { username: userParam } = useParams();
 
-  const { loading, data } = useQuery(QUERY_ME, { variables: { username: userParam } });
+  const { loading, data } = useQuery(QUERY_ME, {
+    variables: { username: userParam },
+  });
 
   const user = data?.me || data?.user || {};
   const loggedIn = Auth.loggedIn();
@@ -44,11 +41,7 @@ const ProfilePage = props => {
   }
 
   if (!user?.username) {
-    return (
-      <h1>
-        Sign up | log in 🙂
-      </h1>
-    );
+    return <h1>Sign up | log in 🙂</h1>;
   }
 
   return (
@@ -65,43 +58,60 @@ const ProfilePage = props => {
             <br />
             <br />
             <Row>
-              <Col xs={3} md="3" lg="3">
-                <Accordion allowToggle>
-                  <AccordionItem>
-                    <AccordionHeader>
-                      <Box flex="1" textAlign="left">
-                        Info
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionHeader>
-                  </AccordionItem>
-                </Accordion>
-              <p className="small">Info</p>
-              <br />
-              <h6>Username: {`${user.username}`}<br/>Name: {`${user.firstName}`} {`${user.lastName}`}<br/>Email: {`${user.email}`}</h6>
-              {/* <p className="small"></p> */}
-              <br />
-              {/* <p className="small">Wallet</p> */}
-              {/* <br /> */}
-                <a href="/resource" className="small" className="nullA">
+              <Col xs={3} md={3} lg={3}>
+
+              <Accordion allowMultiple>
+                <AccordionItem className="list">
+                  <AccordionHeader _expanded={{ bg: "#D99748", color: "white" }} as="button" rounded="sm"flex="1" px={4} h={8} textAlign="left">
+                  
+                  <p className="small">Info</p>
+                  </AccordionHeader>
+                  <AccordionPanel>
+                  <Col xs={3}>
+                  <p className="small" textAlign="left">
+                  Username: {`${user.username}`}
+                  <br />
+                  Name: {`${user.firstName}`} {`${user.lastName}`}
+                  <br />
+                  Email: {`${user.email}`}
+                </p>
+                </Col>
+                  </AccordionPanel>
+                </AccordionItem>
+
+                <AccordionItem>
+    {({ isExpanded }) => (
+      <>
+        <AccordionHeader>
+          <Box flex="1" textAlign="left">
+          <a href="/resource" className="small" className="nullA">
                   New Post
                 </a>
-              
+          </Box>
+        </AccordionHeader>
+      </>
+    )}
+        </AccordionItem>
+        </Accordion>
+
+                <br />
+               
               </Col>
               <Divider color="black" orientation="vertical" />
-              <Col xs={8} lg={10}>
-           
-                {user.resources.map((resource) =>(     
-                     <Box>           
-                      <CardResource resource={resource} imgWidth="80%"></CardResource>
-                      <Link className="plain" to={`/resource/${resource._id}`}><Button className="edit">Edit</Button></Link>
-               
-                      </Box>
+              <Col xs={8} lg={8}>
+                {user.resources.map((resource) => (
+                  <Box>
+                    <CardResource
+                      resource={resource}
+                      imgWidth="80%"
+                    ></CardResource>
+                    <Link className="plain" to={`/resource/${resource._id}`}>
+                      <Button className="edit">Edit</Button>
+                    </Link>
+                  </Box>
                 ))}
-                  
-
               </Col>
-              </Row>
+            </Row>
           </Col>
           <br />
           <br />
