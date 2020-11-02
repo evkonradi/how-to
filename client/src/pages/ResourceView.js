@@ -1,12 +1,12 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { QUERY_RESOURCE } from "../utils/queries";
-import { Col, Row, Container } from "reactstrap";
+import { Col, Row, Container, Collapse } from "reactstrap";
 import { Box } from "@chakra-ui/core";
 
 import { useParams } from "react-router-dom";
 import DonateButton from "../components/DonateButton";
-import Cart from '../components/Cart';
+import Cart from "../components/Cart";
 
 function ResourceView() {
   const { id } = useParams();
@@ -28,70 +28,63 @@ function ResourceView() {
                   <h3>{data.resource.name}</h3>
                 </Row>
               </Box>
-                <h2>{data.resource.shortDescription}</h2>
-                <br />
-                <br />
-                <h4 class="italic">Contibutor {data.resource.displayName}</h4>
-                </Col>
-            <Col xs={12}>
+              <h2>{data.resource.shortDescription}</h2>
+              <br />
+              <h4 class="italic">Contibutor {data.resource.displayName}</h4>
+
               {data.resource.images.map((image) => (
-                <Row key={`image-${data.resource.images.indexOf(image)}`}>
-                  <Row>
-                    <img
-                      src={`${image.fileURL}`}
-                      alt={`${image.imageCaption}`}
-                      width="300"
-                    ></img>
-                  </Row>
-                  <br /><br />
-                  <Row>
-                    <p class="caption">
-                      <span>{image.imageCaption}</span>
-                    </p>
-                  </Row>
-                </Row>
+                <Col key={`image-${data.resource.images.indexOf(image)}`}>
+                  <img
+                    src={`${image.fileURL}`}
+                    alt={`${image.imageCaption}`}
+                    width="100%"
+                  ></img>
+                  <p class="caption">
+                    <span>{image.imageCaption}</span>
+                  </p>
+                </Col>
               ))}
 
               <Row>
                 <p>{data.resource.resourceBody}</p>
               </Row>
-              </Col>
-              
-
-              {data.resource.videos.map((video) => (
-                <Col xs={12}>
-                  <Row key={`video-${data.resource.videos.indexOf(video)}`}>
-                    <Row>
-                      <iframe
-                        width="300"
-                        src={`${video.fileURL}`}
-                        frameBorder="0"
-                        title={video.videoCaption}
-                        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                      ></iframe>
-                    </Row>
-                    <br /> <br />
-                    <Row>
-                      <br />
-                      <p class="caption">
-                        {" "}
-                        <br />
-                        <span>{video.videoCaption}</span>
-                      </p>
-                    </Row>
+            </Col>
+            <br />
+            <br />
+            <br />
+            {data.resource.videos.map((video) => (
+              <Col xs={{ size: 12, offset: 1 }}>
+                <Row key={`video-${data.resource.videos.indexOf(video)}`}>
+                  <Row className="center">
+                    <iframe
+                      width="100%"
+                      src={`${video.fileURL}`}
+                      frameBorder="0"
+                      title={video.videoCaption}
+                      allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                    ></iframe>
                     <br />
+                    <br />
+                    <p class="caption">
+                      <span>{video.videoCaption}</span>
+                    </p>
                   </Row>
-                </Col>
-              ))}
+                  <br />
+                </Row>
+              </Col>
+            ))}
+
+            <br />
+            <br />
             <Col xs={12}>
               <br />
-            <br />
+              <br />
               <Row className="center">
                 <DonateButton resource={data.resource}></DonateButton>
               </Row>
               <br />
               <br />
-              </Col>
+            </Col>
           </Container>
           <Cart />
         </div>
@@ -101,4 +94,3 @@ function ResourceView() {
 }
 
 export default ResourceView;
-

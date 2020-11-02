@@ -120,7 +120,6 @@ const resolvers = {
         updateResource: async (parent, args, context) => {
             if (context.user){
 
-                console.log(context.user);
                 return await Resource.findByIdAndUpdate(args._id, {displayName: context.user.username, ...args}, { new: true } );
             }
 
