@@ -1,30 +1,25 @@
 import React from "react";
 // import { Col, Row, Image, Container }  from 'reactstrap';
-import { useQuery, useMutation } from "@apollo/react-hooks";
-import { QUERY_RESOURCE, QUERY_USER, QUERY_ME } from "../utils/queries";
+import { useQuery } from "@apollo/react-hooks";
+import { QUERY_ME } from "../utils/queries";
 import {
   Col,
   Row,
   Container,
   Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardLink,
   CardHeader,
-  CardTitle,
-  CardSubtitle,
   Jumbotron,
 } from "reactstrap";
 import Resource from "../components/Resource";
-import { Redirect, useParams } from "react-router-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Divider, Box, BoxProps } from "@chakra-ui/core";
+import { Redirect, useParams, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Divider, Box } from "@chakra-ui/core";
 import { Button } from "@chakra-ui/core";
 
-import { ADD_RESOURCE } from '../utils/mutations';
+// import { ADD_RESOURCE } from '../utils/mutations';
 import Auth from '../utils/auth';
 import Search from "../components/Search";
+import CardResource from "../components/CardResource";
 // import { idbPromise } from "../../utils/helpers";
 // import { useParams } from "react-router-dom";
 // import { Resource } from "../../../server/models";
@@ -32,10 +27,8 @@ import Search from "../components/Search";
 const ProfilePage = props => {
   const { username: userParam } = useParams();
 
-  const [addResource] = useMutation(ADD_RESOURCE);
-  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-    variables: { username: userParam }
-  });
+  // const [addResource] = useMutation(ADD_RESOURCE);
+  const { loading, data } = useQuery(QUERY_ME, { variables: { username: userParam } });
 
   const user = data?.me || data?.user || {};
   const loggedIn = Auth.loggedIn();
@@ -57,15 +50,15 @@ const ProfilePage = props => {
     );
   }
 
-  const handleClick = async () => {
-    try {
-      await addResource({
-        variables: { id: user._id }
-      });
-    } catch (e) {
-      console.error(e);
-    }
-  };
+  // const handleClick = async () => {
+  //   try {
+  //     await addResource({
+  //       variables: { id: user._id }
+  //     });
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // };
 
   return (
     <main>
@@ -82,28 +75,30 @@ const ProfilePage = props => {
             <br />
             <Row>
               <Col xs={3} md="3" lg="3">
-              <p className="small">Info</p>
+              <h6>Username: {`${user.username}`}<br/>Name: {`${user.firstName}`} {`${user.lastName}`}<br/>Email: {`${user.email}`}</h6>
+              {/* <p className="small"></p> */}
               <br />
-              <p className="small">Wallet</p>
-              <br />
+              {/* <p className="small">Wallet</p> */}
+              {/* <br /> */}
                 <a href="/resource" className="small" className="nullA">
                   New Post
                 </a>
-                
+              
               </Col>
               <Divider color="black" orientation="vertical" />
               <Col xs={6}>
-{/* <CardResource></CardResource> */}
 
-                <Card>
-                  <CardHeader>This is where a Card will Go</CardHeader>
-                </Card>
-                <Card>
-                  <CardHeader>This is where a Card will Go</CardHeader>
-                </Card>
-                <Card>
-                  <CardHeader>This is where a Card will Go</CardHeader>
-                </Card>
+                {user.resources.map((resource) =>(
+                  <Card>
+                    <CardHeader>
+                     
+                      <CardResource resource={resource} imgWidth="100%"></CardResource>
+                      <Link to={`/resource/${resource._id}`}><Button>Edit</Button></Link>
+                  
+                    </CardHeader>
+                  </Card>
+                ))}
+
               </Col>
               </Row>
           </Col>

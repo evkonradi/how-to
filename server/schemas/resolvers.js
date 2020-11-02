@@ -105,7 +105,7 @@ const resolvers = {
         },
         addResource: async (parent, args, context) => {
             if (context.user){
-                const resource = await Resource.create(args);
+                const resource = await Resource.create({displayName: context.user.username, ...args});
 
                 await User.findByIdAndUpdate(
                     { _id: context.user._id },
@@ -119,7 +119,8 @@ const resolvers = {
         },
         updateResource: async (parent, args, context) => {
             if (context.user){
-                return await Resource.findByIdAndUpdate(args._id, {...args}, { new: true } );
+
+                return await Resource.findByIdAndUpdate(args._id, {displayName: context.user.username, ...args}, { new: true } );
             }
 
             throw new AuthenticationError('Not logged in');
