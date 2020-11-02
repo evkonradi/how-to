@@ -302,3 +302,7 @@ a.mainCard:hover {
 .accordion.item.list {
   background-color: tomato;
 }
+
+Input.span {
+  min-width: 100%;
+}
