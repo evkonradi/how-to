@@ -6,8 +6,6 @@ import {
   Col,
   Row,
   Container,
-  Card,
-  CardHeader,
   Jumbotron,
 } from "reactstrap";
 import {
@@ -19,22 +17,18 @@ import {
 } from "@chakra-ui/core";
 import Resource from "../components/Resource";
 import { Redirect, useParams, Link } from "react-router-dom";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Divider, Box } from "@chakra-ui/core";
 import { Button } from "@chakra-ui/core";
+import { Card, CardBody, CardImg, CardTitle, CardText} from "react-bootstrap"
 
-// import { ADD_RESOURCE } from '../utils/mutations';
 import Auth from '../utils/auth';
 import Search from "../components/Search";
 import CardResource from "../components/CardResource";
-// import { idbPromise } from "../../utils/helpers";
-// import { useParams } from "react-router-dom";
-// import { Resource } from "../../../server/models";
+
 
 const ProfilePage = props => {
   const { username: userParam } = useParams();
 
-  // const [addResource] = useMutation(ADD_RESOURCE);
   const { loading, data } = useQuery(QUERY_ME, { variables: { username: userParam } });
 
   const user = data?.me || data?.user || {};
@@ -56,16 +50,6 @@ const ProfilePage = props => {
       </h1>
     );
   }
-
-  // const handleClick = async () => {
-  //   try {
-  //     await addResource({
-  //       variables: { id: user._id }
-  //     });
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
 
   return (
     <main>
@@ -105,18 +89,16 @@ const ProfilePage = props => {
               
               </Col>
               <Divider color="black" orientation="vertical" />
-              <Col xs={6}>
-
-                {user.resources.map((resource) =>(
-                  <Card>
-                    <CardHeader>
-                     
-                      <CardResource resource={resource} imgWidth="100%"></CardResource>
+              <Col xs={6} lg={8}>
+              <Box>
+                {user.resources.map((resource) =>(                
+<>
+                      <CardResource resource={resource} imgWidth="80%"></CardResource>
                       <Link to={`/resource/${resource._id}`}><Button>Edit</Button></Link>
-                  
-                    </CardHeader>
-                  </Card>
+               
+              </>
                 ))}
+                  </Box>
 
               </Col>
               </Row>

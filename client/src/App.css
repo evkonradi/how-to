@@ -243,6 +243,7 @@ float: right;
 
 .form-control {
   position: relative;
+  max-width: 300px;
 }
 
 .button.search {
