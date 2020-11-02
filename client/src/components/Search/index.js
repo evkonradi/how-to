@@ -32,10 +32,10 @@ const Search = () => {
 
   return (
     <main>
-      <Input className="center" name="searchText" onChange={handleChange} />
+      <Input className="center" width="280px" name="searchText" onChange={handleChange} />
       <Button
         className="center"
-        size="lg"
+        size="md"
         height="46px"
         width="200px"
         border="2px"
