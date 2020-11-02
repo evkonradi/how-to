@@ -250,6 +250,23 @@ float: right;
   position: relative;
 }
 
+button.edit {
+  border-radius: 25px;
+  border-color: white;
+  background-color: #D99748;
+  color: #253237;
+  text-decoration: none;
+}
+
+.link.plain {
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.link.plain:hover {
+  text-decoration: none;
+}
+
 a.center {
   color: #253237;
   text-decoration: none;

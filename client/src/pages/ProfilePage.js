@@ -89,16 +89,16 @@ const ProfilePage = props => {
               
               </Col>
               <Divider color="black" orientation="vertical" />
-              <Col xs={6} lg={8}>
-              <Box>
-                {user.resources.map((resource) =>(                
-<>
+              <Col xs={8} lg={10}>
+           
+                {user.resources.map((resource) =>(     
+                     <Box>           
                       <CardResource resource={resource} imgWidth="80%"></CardResource>
-                      <Link to={`/resource/${resource._id}`}><Button>Edit</Button></Link>
+                      <Link className="plain" to={`/resource/${resource._id}`}><Button className="edit">Edit</Button></Link>
                
-              </>
+                      </Box>
                 ))}
-                  </Box>
+                  
 
               </Col>
               </Row>

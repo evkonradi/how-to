@@ -1,5 +1,4 @@
 import React from "react";
-// import { Card, CardText, CardBody, CardHeader }  from "reactstrap";
 import { Link } from "react-router-dom";
 import { Card, CardBody, CardImg, CardTitle, CardText } from "react-bootstrap"
 
