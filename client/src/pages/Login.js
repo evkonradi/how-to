@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Input, Col, Container, Row, Jumbotron } from "reactstrap";
-import GoogleLogin from "react-google-login";
 
 import { useMutation } from "@apollo/react-hooks";
 import { LOGIN_USER } from "../utils/mutations";
@@ -41,12 +40,6 @@ const Login = (props, Component) => {
       email: "",
       password: ""
     });
-  };
-
-  const responseGoogle = (response) => {
-    console.log(response);
-    console.log(response.profileObj);
-    // this.signup(response, "google");
   };
 
   // render(){
@@ -99,19 +92,6 @@ const Login = (props, Component) => {
             Login
           </Button>
           </Row>
-          <br />
-          <br />
-          <br />
-          <br />
-          <Row>
-            <GoogleLogin
-              className="center"
-              clientId="212266341985-bfblloh84d96u203r5i5b80l745ea911.apps.googleusercontent.com"
-              onSuccess={responseGoogle}
-              onFailure={responseGoogle}
-              cookiePolicy={"single_host_origin"}
-            />
-            </Row>
           </Col>
           <div className="text-center pt-3">
             <a href="/signup" class="nullA" size="x-small">Need an Account? Sign Up.</a>

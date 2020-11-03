@@ -5,7 +5,7 @@ import { QUERY_RESOURCE } from "../utils/queries";
 import { useParams } from "react-router-dom";
 import { Col, Row, Container, InputGroup, Input, Jumbotron } from "reactstrap";
 import { Box, Button } from "@chakra-ui/core";
-import { idbPromise } from "../utils/helpers";
+//import { idbPromise } from "../utils/helpers";
 
 function ResourceAddEdit() {
   const { id } = useParams();
@@ -156,14 +156,14 @@ function ResourceAddEdit() {
       <br />
       <Container>
         <form onSubmit={handleFormSubmit}>
-          <Col xs={12}>
+          <Col>
             <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
               <h3>{id ? "Edit Article" : "New Article"}</h3>
             </Box>
           </Col>{" "}
           <br />
-          <Col xs={12}>
-            <Input
+          <Col>
+            <Input className="span"
               id="articleName"
               placeholder="Article Name"
               name="articleName"
@@ -171,7 +171,7 @@ function ResourceAddEdit() {
               value={formState.articleName}
             ></Input>
             <br />
-            <Input
+            <Input className="span"
               id="articleShortDesc"
               placeholder="Article Short Description"
               name="articleShortDesc"
@@ -179,7 +179,7 @@ function ResourceAddEdit() {
               onChange={handleChange}
             ></Input>
             <br />
-            <Input
+            <Input className="span"
               type="textarea"
               id="articleText"
               rows="20"
@@ -193,7 +193,7 @@ function ResourceAddEdit() {
             <br />
             <br />
           </Col>
-          <Col xs={12}>
+          <Col >
             {formState.imageList.map((image) => (
               <div
                 key={`div-image-${formState.imageList.indexOf(image)}`}
@@ -208,6 +208,7 @@ function ResourceAddEdit() {
                 <img className="small"
                   src="/images/icondelete.png"
                   alt="delete"
+                  width="10px"
                   data-number={`image-${formState.imageList.indexOf(image)}`}
                 ></img>
                 <br />
@@ -215,9 +216,9 @@ function ResourceAddEdit() {
               </div>
             ))}
           </Col>
-          <Col xs={12}>
+          <Col>
             <InputGroup>
-              <Input
+              <Input className="span"
                 id="imageLinkInput"
                 placeholder="Link to an image"
                 name="imageLinkInput"
@@ -228,7 +229,7 @@ function ResourceAddEdit() {
               <br />
             </InputGroup>
             <InputGroup>
-              <Input
+              <Input className="span"
                 id="imageCaption"
                 placeholder="Image Caption"
                 name="imageCaption"
@@ -262,6 +263,7 @@ function ResourceAddEdit() {
                   <img className="small"
                     src="/images/icondelete.png"
                     alt="delete"
+                    width="3px"
                     data-number={`video-${formState.videoList.indexOf(video)}`}
                   ></img>
                   <br />

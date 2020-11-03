@@ -12,12 +12,16 @@
     border-bottom-left-radius: .5rem;
     border: 2px;
     border-color: black;
+    font-size: medium;
+    z-index: 100;
   }
   
   .cart h2 {
     font-size: 1.5rem;
-    border-bottom: 1px solid var(--dark);
-    padding-bottom: .5rem;
+    /* border-bottom: 1px solid #5C6B73; */
+    color: #5C6B73;
+    font-size: large;
+    /* padding-bottom: .5rem; */
     margin: 1rem 0;
   }
   
@@ -26,6 +30,7 @@
     top: .5rem;
     right: .5rem;
     cursor: pointer;
+    font-size: large;
     color: var(--tertiary);
   }
   
@@ -34,23 +39,19 @@
   }
   
   .cart-closed {
-    /* position: fixed; */
-    top: 2%;
-    right: 1%;
-    font-size: 2rem;
+    position: absolute;
+    top: 0px;
+    right: 15px;
     cursor: pointer;
-    background-color: var(--secondary);
-    border-radius: 50%;
-    padding: .5rem;
-    width: 52px;
-    height: 52px;
-    border: 2px;
-    border-color: black;
+    width: 70px;
+    height: 60px;
+    background-color: #9DB4C0;
+    padding: 15px 20px 15px 20px;
   }
   
-  .cart-closed:hover {
+  /* .cart-closed:hover {
     transform: rotate(8deg);
-  }
+  } */
   
   .cart img {
     width: 50%;
@@ -73,7 +74,7 @@
     }
   
     .cart-closed {
-      position: relative;
+      position: absolute;
       margin: 0 auto;
     }
   }

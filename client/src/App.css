@@ -78,12 +78,14 @@ a:hover {
 
 p {
   text-align: center;
+  color: #253237;
 }
 
 p.caption {
   font-style: italic;
   color: #9e9fa0;
   font-size: x-small;
+  margin: 0;
 }
 
 img {
@@ -106,14 +108,7 @@ Card.link {
   color: #D99748;
   text-decoration: none;
 }
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+
 .dropdown-item {
   color: #9DB4C0;
   align-items: right;
@@ -143,7 +138,6 @@ li a {
   font-size: x-small;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
   color: #D99748;
   text-decoration: none;
@@ -185,7 +179,7 @@ float: right;
 
 .jumbotron.hometron {
   background-color: #9DB4C0;
-  border-radius: 0px 0px 8px 8px;
+  border-radius: 0px 0px 0px 0px;
   padding: 1.2rem;
   margin-bottom: 0px;
 }
@@ -249,18 +243,29 @@ float: right;
 
 .form-control {
   position: relative;
+  max-width: 300px;
 }
 
 .button.search {
   position: relative;
 }
-/* .horizon-center {
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-} */
+
+button.edit {
+  border-radius: 25px;
+  border-color: white;
+  background-color: #D99748;
+  color: #253237;
+  text-decoration: none;
+}
+
+.link.plain {
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.link.plain:hover {
+  text-decoration: none;
+}
 
 a.center {
   color: #253237;
@@ -293,3 +298,12 @@ a.mainCard:hover {
   background-color: #E0FBFC;
   text-decoration: none;
 }
+
+.accordion.item.list {
+  background-color: tomato;
+}
+
+Input.span {
+  min-width: 100%;
+}
+

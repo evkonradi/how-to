@@ -4,9 +4,6 @@ import { Jumbotron, Row, Col, Container} from 'reactstrap';
 import Resource from "../components/Resource";
 import Search from '../components/Search';
 
-
-import Cart from '../components/Cart';
-
 const Home = () => {
     return (
         <div>
@@ -30,7 +27,7 @@ const Home = () => {
             </Container>
             <Jumbotron className="whitespace" />
             <br />
-            {/* <Cart /> */}
+            
         </div>
     );
 };

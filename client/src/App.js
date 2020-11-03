@@ -14,6 +14,7 @@ import ProfilePage from "./pages/ProfilePage";
 import Signup from "./pages/Signup";
 import Success from "./pages/Success";
 import NoMatch from "./pages/NoMatch"
+import Cart from './components/Cart';
 import { ThemeProvider } from "@chakra-ui/core";
 
 
@@ -36,25 +37,25 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <ThemeProvider>
-       
         
           <StoreProvider>
-          <div className="main">
-            <Header />
-            
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/resource/:id?" component={ResourceAddEdit} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/signup" component={Signup} />
-              <Route exact path="/articles/:id" component={ResourceView} />
-              <Route exact path="/profile" component={ProfilePage} />
-              <Route exact path="/success" component={Success} />
-              <Route exact path="/nomatch" component={NoMatch} />
-              <Route component={NoMatch} /> 
-            </Switch>
-            
-            <Footer />
+            <div className="main">
+              <Header />
+              <Cart />
+              
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/resource/:id?" component={ResourceAddEdit} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/signup" component={Signup} />
+                <Route exact path="/articles/:id" component={ResourceView} />
+                <Route exact path="/profile" component={ProfilePage} />
+                <Route exact path="/success" component={Success} />
+                <Route exact path="/nomatch" component={NoMatch} />
+                <Route component={NoMatch} /> 
+              </Switch>
+              
+              <Footer />
             </div>
           </StoreProvider>
         

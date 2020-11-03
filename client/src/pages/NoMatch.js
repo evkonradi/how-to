@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Col, Row, Jumbotron } from 'reactstrap';
 import { Box } from '@chakra-ui/core';
-import { Card, CardBody } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 
 const NoMatch = () => { 
@@ -15,7 +15,7 @@ const NoMatch = () => {
         <Col xs={6}>
           <Box xs={12} offset={2}>
             <br />
-        <h1 className="horizon-center">no match 😿 </h1>
+        <h1 className="horizon-center">no match <span role="img" aria-label="no match">😿</span> </h1>
         <br />
         </Box>
         </Col>
