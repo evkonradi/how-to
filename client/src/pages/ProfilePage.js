@@ -1,5 +1,4 @@
 import React from "react";
-// import { Col, Row, Image, Container }  from 'reactstrap';
 import { useQuery } from "@apollo/react-hooks";
 import { QUERY_ME } from "../utils/queries";
 import { Col, Row, Container, Jumbotron } from "reactstrap";
@@ -7,16 +6,12 @@ import {
   Accordion,
   AccordionItem,
   AccordionHeader,
-  AccordionPanel,
-  AccordionIcon,
-  Icon,
+  AccordionPanel
 } from "@chakra-ui/core";
 import Resource from "../components/Resource";
 import { Redirect, useParams, Link } from "react-router-dom";
 import { Divider, Box } from "@chakra-ui/core";
 import { Button } from "@chakra-ui/core";
-import { Card, CardBody, CardImg, CardTitle, CardText } from "react-bootstrap";
-
 import Auth from "../utils/auth";
 import Search from "../components/Search";
 import CardResource from "../components/CardResource";
@@ -29,7 +24,6 @@ const ProfilePage = (props) => {
   });
 
   const user = data?.me || data?.user || {};
-  const loggedIn = Auth.loggedIn();
 
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
     console.log("Login failed");
@@ -41,7 +35,7 @@ const ProfilePage = (props) => {
   }
 
   if (!user?.username) {
-    return <h1>Sign up | log in 🙂</h1>;
+    return <h1>Sign up | log in <span role="img" aria-label="Sign up | log in">🙂</span></h1>;
   }
 
   return (
@@ -84,7 +78,7 @@ const ProfilePage = (props) => {
       <>
         <AccordionHeader>
           <Box flex="1" textAlign="left">
-          <a href="/resource" className="small" className="nullA">
+          <a href="/resource" className="nullA">
                   New Post
                 </a>
           </Box>

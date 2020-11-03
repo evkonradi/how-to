@@ -5,7 +5,7 @@ import { QUERY_RESOURCE } from "../utils/queries";
 import { useParams } from "react-router-dom";
 import { Col, Row, Container, InputGroup, Input, Jumbotron } from "reactstrap";
 import { Box, Button } from "@chakra-ui/core";
-import { idbPromise } from "../utils/helpers";
+//import { idbPromise } from "../utils/helpers";
 
 function ResourceAddEdit() {
   const { id } = useParams();

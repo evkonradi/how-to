@@ -65,3 +65,13 @@ p {
     color: $success;
     text-decoration: none;
 }
+
+.homeLink{
+    color: $success;
+    text-decoration: none;
+}
+
+.homeLink:hover{
+    text-decoration: none;
+    color:$primary;
+}

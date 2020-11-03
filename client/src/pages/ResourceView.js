@@ -1,12 +1,11 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { QUERY_RESOURCE } from "../utils/queries";
-import { Col, Row, Container, Collapse } from "reactstrap";
+import { Col, Row, Container } from "reactstrap";
 import { Box } from "@chakra-ui/core";
 
 import { useParams } from "react-router-dom";
 import DonateButton from "../components/DonateButton";
-import Cart from "../components/Cart";
 
 function ResourceView() {
   const { id } = useParams();
@@ -86,7 +85,6 @@ function ResourceView() {
               <br />
             </Col>
           </Container>
-          <Cart />
         </div>
       )}
     </main>
