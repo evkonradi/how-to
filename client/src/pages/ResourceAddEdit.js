@@ -155,7 +155,7 @@ function ResourceAddEdit() {
     <div>
       <br />
       <Container>
-        <form onSubmit={handleFormSubmit}>
+        <form onSubmit={handleFormSubmit} className="cardTextAlign">
           <Col>
             <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
               <h3>{id ? "Edit Article" : "New Article"}</h3>
@@ -193,7 +193,7 @@ function ResourceAddEdit() {
             <br />
             <br />
           </Col>
-          <Col >
+          <Col className="cardTextAlign" >
             {formState.imageList.map((image) => (
               <div
                 key={`div-image-${formState.imageList.indexOf(image)}`}
@@ -204,11 +204,11 @@ function ResourceAddEdit() {
                   alt={`${image.imageCaption}`}
                   width="300"
                 ></img>
+                <br></br>
                 <span>{image.imageCaption}</span>
-                <img className="small"
+                <img className="deleteButtonEdit" style={{width:60}}
                   src="/images/icondelete.png"
                   alt="delete"
-                  width="10px"
                   data-number={`image-${formState.imageList.indexOf(image)}`}
                 ></img>
                 <br />
@@ -240,27 +240,31 @@ function ResourceAddEdit() {
               <br />
             </InputGroup>
           </Col>
-          <Col xs={{ span: 6, offset: 7 }} lg={{ span: 6, offset: 5 }}>
+          <Col >
             <Button id="btnAddImage" onClick={handleImageAdd}>
               Add Image
             </Button>
+            <br></br>
+            <br></br>
+            <br></br>
           </Col>
           <Row>
-            <Col xs={12}>
+            <Col xs={12} className="cardTextAlign">
               {formState.videoList.map((video) => (
                 <div
                   key={`div-video-${formState.videoList.indexOf(video)}`}
                   onClick={handleDelete}
                 >
                   <iframe
-                    width="300"
                     src={`${video.fileURL}`}
+                    style={{maxWidth:500}}
                     frameBorder="0"
                     title={video.videoCaption}
                     allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                   ></iframe>
+                  <br></br>
                   <span>{video.videoCaption}</span>
-                  <img className="small"
+                  <img className="deleteButtonEdit" style={{width:60}}
                     src="/images/icondelete.png"
                     alt="delete"
                     width="3px"
@@ -286,7 +290,7 @@ function ResourceAddEdit() {
               <br />
             </InputGroup>
           </Col>
-          <Col xs={12}>
+          <Col xs={12} className="cardTextAlign">
             <InputGroup>
               <Input
                 id="videoCaption"
@@ -298,7 +302,7 @@ function ResourceAddEdit() {
               <br />
               <br />
             </InputGroup>
-            <Col xs={{ span: 6, offset: 7 }} lg={{ span: 6, offset: 5 }}>
+            <Col>
               <Button id="btnAddVideo" onClick={handleVideoAdd}>
                 Add Video
               </Button>
@@ -307,10 +311,8 @@ function ResourceAddEdit() {
             <br />
           </Col>
           
-          {/* <Col xs={{ span: 6, offset: 4 }} lg={{ span: 6, offset: 5 }}> */}
-          <Jumbotron className="whitespace">
-            <Button
-                className="center"
+          <Col className="cardTextAlign">
+          <Button
               size="lg"
               height="46px"
               width="200px"
@@ -323,8 +325,9 @@ function ResourceAddEdit() {
             >
               Submit
             </Button>
-            </Jumbotron>
-          {/* </Col> */}
+            <br></br>
+            <br></br>
+          </Col>
         </form>
         
       </Container>

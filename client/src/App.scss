@@ -7,6 +7,12 @@ $info: #C2DFE3;
 $light:#E0FBFC;
 $dark: #253237;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 h2 {
     color: $secondary;
 }
@@ -74,4 +80,18 @@ p {
 .homeLink:hover{
     text-decoration: none;
     color:$primary;
+}
+
+.cardTextAlign{
+    text-align: center;
+}
+
+.recentlyAdddeP{
+    color: $success;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.deleteButtonEdit{
+    cursor:pointer;
 }

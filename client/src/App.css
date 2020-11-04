@@ -198,11 +198,11 @@ float: right;
 }
 
 .footer {
-  font-size: x-small;
+  font-size: medium;
   text-align: center;
 }
 
-.footer.p {
+.footerP {
   color: #9DB4C0;
   text-align: center;
 }
@@ -214,7 +214,7 @@ float: right;
 .nullA {
   text-decoration: none;
   color: #9DB4C0;
-  font-size: 80%;
+  font-size: medium;
 }
 
 .nullA:hover {
@@ -243,7 +243,7 @@ float: right;
 
 .form-control {
   position: relative;
-  max-width: 300px;
+  /* max-width: 300px; */
 }
 
 .button.search {

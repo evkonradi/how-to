@@ -32,10 +32,10 @@ const Resource = () => {
     <main>
       <div>
         {loading ? <div>Loading...</div> : 
-            <Carousel>
+            <Carousel className="cardTextAlign">
               {
                 resources.map((resource) => (
-                  <Carousel.Item key={resource._id}>
+                  <Carousel.Item key={resource._id} className="cardTextAlign">
 
                     <CardResource resource={resource} imgWidth="100%"></CardResource>
 
