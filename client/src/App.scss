@@ -32,6 +32,11 @@ h5 {
     background-color: white;
 }
 
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
+}
+
 .resource {
     position: absolute;
     padding-top: 10px;
@@ -95,3 +100,4 @@ p {
 .deleteButtonEdit{
     cursor:pointer;
 }
+

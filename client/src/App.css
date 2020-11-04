@@ -307,3 +307,21 @@ Input.span {
   min-width: 100%;
 }
 
+
+.newPostLink {
+  text-decoration: none;
+  color: #D99748;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.newPostLink:hover {
+  text-decoration: none;
+  color: #D99748;
+}
+
+.dividerProfile{
+  color: #D99748;
+  height: 2px;
+}

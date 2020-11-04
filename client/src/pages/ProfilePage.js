@@ -1,19 +1,12 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { QUERY_ME } from "../utils/queries";
-import { Col, Row, Container, Jumbotron } from "reactstrap";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionHeader,
-  AccordionPanel
-} from "@chakra-ui/core";
+import { Col, Row, Container} from "reactstrap";
 import Resource from "../components/Resource";
 import { Redirect, useParams, Link } from "react-router-dom";
-import { Divider, Box } from "@chakra-ui/core";
+import { Box } from "@chakra-ui/core";
 import { Button } from "@chakra-ui/core";
 import Auth from "../utils/auth";
-import Search from "../components/Search";
 import CardResource from "../components/CardResource";
 
 const ProfilePage = (props) => {
@@ -41,80 +34,72 @@ const ProfilePage = (props) => {
   return (
     <main>
       <div>
-        <Container>
+        <Container className="cardTextAlign">
           <br />
-          <Col sm="12" md="6" lg="12" offset="3">
-            <Row>
+
+          <Row>
+            <Col>
               <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
                 <h3>Welcome Back, {`${user.firstName}`}!</h3>
               </Box>
-            </Row>
-            <br />
-            <br />
-            <Row>
-              <Col xs={3} md={3} lg={3}>
+              <br></br>
+            </Col>
+          </Row>
 
-              <Accordion allowMultiple>
-                <AccordionItem className="list">
-                  <AccordionHeader _expanded={{ bg: "#D99748", color: "white" }} as="button" rounded="sm"flex="1" px={4} h={8} textAlign="left">
-                  
-                  <p className="small">Info</p>
-                  </AccordionHeader>
-                  <AccordionPanel>
-                  <Col xs={3}>
-                  <p className="small" textAlign="left">
-                  Username: {`${user.username}`}
-                  <br />
-                  Name: {`${user.firstName}`} {`${user.lastName}`}
-                  <br />
-                  Email: {`${user.email}`}
-                </p>
-                </Col>
-                  </AccordionPanel>
-                </AccordionItem>
-
-                <AccordionItem>
-    {({ isExpanded }) => (
-      <>
-        <AccordionHeader>
-          <Box flex="1" textAlign="left">
-          <a href="/resource" className="nullA">
-                  New Post
-                </a>
-          </Box>
-        </AccordionHeader>
-      </>
-    )}
-        </AccordionItem>
-        </Accordion>
-
-                <br />
-               
-              </Col>
-              <Divider color="black" orientation="vertical" />
-              <Col xs={8} lg={8}>
-                {user.resources.map((resource) => (
+          <Row>
+            <Col sm={{size: 12}} md={{size: 3}} lg={{size: 3, offset: 1}}>
+                <span textAlign="left">
+                    Username: {`${user.username}`}<br></br>
+                </span>
+                <span textAlign="left">
+                  Name: {`${user.firstName}`} {`${user.lastName}`}<br></br>
+                </span>
+                <span textAlign="left">
+                  Email: {`${user.email}`}<br></br>
+                </span>
+                <div>
+                  <br></br>
+                  <a href="/resource" className="newPostLink">New Post</a>
+                </div>
+            </Col>
+            <Col sm={{size: 12}} md={{size: 9}} lg={{size: 7}}>
+              {user.resources.map((resource) => (
                   <Box>
                     <CardResource
                       resource={resource}
-                      imgWidth="80%"
+                      imgWidth="70%"
                     ></CardResource>
                     <Link className="plain" to={`/resource/${resource._id}`}>
                       <Button className="edit">Edit</Button>
                     </Link>
+                    <br></br><br></br>
                   </Box>
                 ))}
-              </Col>
-            </Row>
-          </Col>
-          <br />
-          <br />
-          <h2>see what others are contributing</h2>
-          <br />
-          <br />
-          <Search></Search>
-          <Resource></Resource>
-          <Jumbotron className="whitespace" />
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>
+              <hr className="dividerProfile"></hr>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col sm={{size: 12}} md={{size:8, offset:2}} className="cardTextAlign">
+              <br />
+              <h2>see what others are contributing</h2>
+              <br />
+              <br />
+            </Col>
+          </Row>
+
+          <Row>
+            <Col sm={{size: 12}} md={{size:8, offset:2}} className="cardTextAlign">
+              <Resource></Resource>
+            </Col>
+          </Row>
+
+
         </Container>
         <br />
       </div>

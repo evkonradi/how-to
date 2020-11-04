@@ -25,9 +25,6 @@ const Resource = () => {
     }
   }, [data, loading]);
 
-  console.log("Resources:");
-  console.log(resources);
-
   return (
     <main>
       <div>
