@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { QUERY_RESOURCE } from "../utils/queries";
-import { Col, Row, Container } from "reactstrap";
+import { Col, Container } from "reactstrap";
 import { Box } from "@chakra-ui/core";
 
 import { useParams } from "react-router-dom";
@@ -19,15 +19,13 @@ function ResourceView() {
         <div>Loading...</div>
       ) : (
         <div>
-          <Container>
+          <Container className="cardTextAlign">
             <br />
             <Col xs={12}>
               <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
-                <Row>
                   <h3>{data.resource.name}</h3>
-                </Row>
               </Box>
-              <h2>{data.resource.shortDescription}</h2>
+              <h4>{data.resource.shortDescription}</h4>
               <br />
               <h4 class="italic">Contibutor {data.resource.displayName}</h4>
 
@@ -38,49 +36,37 @@ function ResourceView() {
                     alt={`${image.imageCaption}`}
                     width="100%"
                   ></img>
-                  <p class="caption">
-                    <span>{image.imageCaption}</span>
-                  </p>
+                  <br></br>
+                  <span>{image.imageCaption}</span>
                 </Col>
               ))}
 
-              <Row>
-                <p>{data.resource.resourceBody}</p>
-              </Row>
+              <br></br>
+              <p>{data.resource.resourceBody}</p>
             </Col>
             <br />
             <br />
             <br />
             {data.resource.videos.map((video) => (
-              <Col xs={{ size: 12, offset: 1 }}>
-                <Row key={`video-${data.resource.videos.indexOf(video)}`}>
-                  <Row className="center">
+              <Col key={`video-${data.resource.videos.indexOf(video)}`}>
                     <iframe
-                      width="100%"
                       src={`${video.fileURL}`}
                       frameBorder="0"
+                      style={{maxWidth:500}}
                       title={video.videoCaption}
                       allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                     ></iframe>
                     <br />
-                    <br />
-                    <p class="caption">
-                      <span>{video.videoCaption}</span>
-                    </p>
-                  </Row>
-                  <br />
-                </Row>
+                    <span>{video.videoCaption}</span>
+                    <br></br>
+                    <br></br>
               </Col>
             ))}
 
-            <br />
-            <br />
             <Col xs={12}>
               <br />
               <br />
-              <Row className="center">
                 <DonateButton resource={data.resource}></DonateButton>
-              </Row>
               <br />
               <br />
             </Col>

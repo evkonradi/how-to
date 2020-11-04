@@ -3,7 +3,7 @@ import { useMutation, useQuery } from "@apollo/react-hooks";
 import { ADD_RESOURCE, UPDATE_RESOURCE } from "../utils/mutations";
 import { QUERY_RESOURCE } from "../utils/queries";
 import { useParams } from "react-router-dom";
-import { Col, Row, Container, InputGroup, Input, Jumbotron } from "reactstrap";
+import { Col, Row, Container, InputGroup, Input} from "reactstrap";
 import { Box, Button } from "@chakra-ui/core";
 //import { idbPromise } from "../utils/helpers";
 
