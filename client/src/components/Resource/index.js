@@ -9,23 +9,24 @@ import Carousel from "react-bootstrap/Carousel";
 
 const Resource = () => {
   const { loading, data } = useQuery(QUERY_RESOURCES_HOMEPAGE);
-  const [r, setR] = useState([]);
-  let resources = data?.resources || [];
+  const [resources, setResources] = useState([]);
+  //setResources(data?.resources || []);
 
   useEffect(() => {
-    if(resources.length) {
-      resources.forEach((resource) => {
+    if(data) {
+      data.resources.forEach((resource) => {
         idbPromise('resourcesCarousel', 'put', resource);
       });
-      setR(resources);
+      setResources(data.resources);
     } else if (!loading) {
       idbPromise('resourcesCarousel', 'get').then((resourcesOffline) => {
-         resources = resourcesOffline;
-         setR(resourcesOffline)
+         setResources(resourcesOffline);
       });
     }
   }, [data, loading]);
 
+  console.log("Resources:");
+  console.log(resources);
 
   return (
     <main>
@@ -33,7 +34,7 @@ const Resource = () => {
         {loading ? <div>Loading...</div> : 
             <Carousel>
               {
-                r.map((resource) => (
+                resources.map((resource) => (
                   <Carousel.Item key={resource._id}>
 
                     <CardResource resource={resource} imgWidth="100%"></CardResource>
