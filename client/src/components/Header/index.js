@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import Auth from '../../utils/auth';
+import logo from "./teach_me_to_logo-01.png";
 
 
 // export default
@@ -14,8 +15,8 @@ const Header = (Component) => {
   // render(){
   return (
     <Navbar className="mainNav" collapseOnSelect expand="lg" bg="dark" variant="light">
-    <Navbar.Toggle aria-controls="responsive-navbar-nav"><img className="small" src="/images/teach_me_to_logo-01.png" alt="logo, teach me to" /></Navbar.Toggle>
-    <Navbar.Collapse  img src="./images/teach_me_to_logo-01.png">
+    <Navbar.Toggle aria-controls="responsive-navbar-nav"><img className="small" src={logo} alt="logo, teach me to" /></Navbar.Toggle>
+    <Navbar.Collapse  img src={logo}>
     <Nav className="mr-auto">
       {Auth.loggedIn() ? (
         <>
