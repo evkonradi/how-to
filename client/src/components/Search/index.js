@@ -4,7 +4,6 @@ import { useLazyQuery } from "@apollo/react-hooks";
 import { QUERY_RESOURCES_SEARCH } from "../../utils/queries";
 import { Button } from "@chakra-ui/core";
 import CardResource from "../CardResource";
-import DonateButton from "../DonateButton";
 
 const Search = () => {
   const [searchedArticles, { data }] = useLazyQuery(QUERY_RESOURCES_SEARCH);
@@ -32,10 +31,10 @@ const Search = () => {
 
   return (
     <main>
-      <Input className="center" name="searchText" onChange={handleChange} />
+      <Input className="center" width="100%" name="searchText" onChange={handleChange} />
       <Button
         className="center"
-        size="lg"
+        size="md"
         height="46px"
         width="200px"
         border="2px"
@@ -45,7 +44,7 @@ const Search = () => {
         type="submit"
         onClick={doSearch}
       >
-        🔍 Search
+        <span role="img" aria-label="search">🔍 Search</span>
       </Button>
 
       <div>

@@ -1,37 +1,22 @@
 import React from "react";
-// import { Col, Row, Image, Container }  from 'reactstrap';
 import { useQuery } from "@apollo/react-hooks";
 import { QUERY_ME } from "../utils/queries";
-import {
-  Col,
-  Row,
-  Container,
-  Card,
-  CardHeader,
-  Jumbotron,
-} from "reactstrap";
+import { Col, Row, Container} from "reactstrap";
 import Resource from "../components/Resource";
 import { Redirect, useParams, Link } from "react-router-dom";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Divider, Box } from "@chakra-ui/core";
+import { Box } from "@chakra-ui/core";
 import { Button } from "@chakra-ui/core";
-
-// import { ADD_RESOURCE } from '../utils/mutations';
-import Auth from '../utils/auth';
-import Search from "../components/Search";
+import Auth from "../utils/auth";
 import CardResource from "../components/CardResource";
-// import { idbPromise } from "../../utils/helpers";
-// import { useParams } from "react-router-dom";
-// import { Resource } from "../../../server/models";
 
-const ProfilePage = props => {
+const ProfilePage = (props) => {
   const { username: userParam } = useParams();
 
-  // const [addResource] = useMutation(ADD_RESOURCE);
-  const { loading, data } = useQuery(QUERY_ME, { variables: { username: userParam } });
+  const { loading, data } = useQuery(QUERY_ME, {
+    variables: { username: userParam },
+  });
 
   const user = data?.me || data?.user || {};
-  const loggedIn = Auth.loggedIn();
 
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
     console.log("Login failed");
@@ -43,72 +28,78 @@ const ProfilePage = props => {
   }
 
   if (!user?.username) {
-    return (
-      <h1>
-        Sign up or log in 🙂
-      </h1>
-    );
+    return <h1>Sign up | log in <span role="img" aria-label="Sign up | log in">🙂</span></h1>;
   }
-
-  // const handleClick = async () => {
-  //   try {
-  //     await addResource({
-  //       variables: { id: user._id }
-  //     });
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
 
   return (
     <main>
       <div>
-        <Container>
+        <Container className="cardTextAlign">
           <br />
-          <Col sm="12" md="6" lg="12" offset="3">
-            <Row>
+
+          <Row>
+            <Col>
               <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
                 <h3>Welcome Back, {`${user.firstName}`}!</h3>
               </Box>
-            </Row>
-            <br />
-            <br />
-            <Row>
-              <Col xs={3} md="3" lg="3">
-              <p className="small">Info</p>
-              <br />
-              <p className="small">Wallet</p>
-              <br />
-                <a href="/resource" className="small" className="nullA">
-                  New Post
-                </a>
-                
-              </Col>
-              <Divider color="black" orientation="vertical" />
-              <Col xs={6}>
+              <br></br>
+            </Col>
+          </Row>
 
-                {user.resources.map((resource) =>(
-                  <Card>
-                    <CardHeader>
-                     
-                      <CardResource resource={resource} imgWidth="100%"></CardResource>
-                      <Link to={`/resource/${resource._id}`}><Button>Edit</Button></Link>
-                  
-                    </CardHeader>
-                  </Card>
+          <Row>
+            <Col sm={{size: 12}} md={{size: 3}} lg={{size: 3, offset: 1}}>
+                <span textAlign="left">
+                    Username: {`${user.username}`}<br></br>
+                </span>
+                <span textAlign="left">
+                  Name: {`${user.firstName}`} {`${user.lastName}`}<br></br>
+                </span>
+                <span textAlign="left">
+                  Email: {`${user.email}`}<br></br>
+                </span>
+                <div>
+                  <br></br>
+                  <a href="/resource" className="newPostLink">New Post</a>
+                </div>
+            </Col>
+            <Col sm={{size: 12}} md={{size: 9}} lg={{size: 7}}>
+              {user.resources.map((resource) => (
+                  <Box>
+                    <CardResource
+                      resource={resource}
+                      imgWidth="70%"
+                    ></CardResource>
+                    <Link className="plain" to={`/resource/${resource._id}`}>
+                      <Button className="edit">Edit</Button>
+                    </Link>
+                    <br></br><br></br>
+                  </Box>
                 ))}
+            </Col>
+          </Row>
 
-              </Col>
-              </Row>
-          </Col>
-          <br />
-          <br />
-          <h2>see what others are contributing</h2>
-          <br />
-          <br />
-          <Search></Search>
-          <Resource></Resource>
-          <Jumbotron className="whitespace" />
+          <Row>
+            <Col>
+              <hr className="dividerProfile"></hr>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col sm={{size: 12}} md={{size:8, offset:2}} className="cardTextAlign">
+              <br />
+              <h2>see what others are contributing</h2>
+              <br />
+              <br />
+            </Col>
+          </Row>
+
+          <Row>
+            <Col sm={{size: 12}} md={{size:8, offset:2}} className="cardTextAlign">
+              <Resource></Resource>
+            </Col>
+          </Row>
+
+
         </Container>
         <br />
       </div>

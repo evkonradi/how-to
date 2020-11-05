@@ -6,8 +6,10 @@ export function idbPromise(storeName, method, object) {
 
       request.onupgradeneeded = function(e) {
         const db = request.result;
-        db.createObjectStore('products', { keyPath: '_id' });
+        db.createObjectStore('resourcesCarousel', { keyPath: '_id' });
         db.createObjectStore('cart', { keyPath: '_id' });
+        //db.createObjectStore('newResources', { autoIncrement: true });
+        //db.createObjectStore('updatedResources', { keyPath: '_id' });
       };
   
       request.onerror = function(e) {
