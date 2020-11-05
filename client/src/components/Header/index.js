@@ -24,6 +24,7 @@ const Header = (Component) => {
           <NavDropdown.Item id="dropdown"><Link className="homeLink" to="/" >Home</Link></NavDropdown.Item>
           <NavDropdown.Item id="dropdown" href="/profile">Profile</NavDropdown.Item>
           <NavDropdown.Item id="dropdown" href="/" onClick={logout}>Logout</NavDropdown.Item>
+          <NavDropdown.Divider />
         </>
       ) : (
         <>
