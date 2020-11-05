@@ -92,6 +92,14 @@ export const QUERY_ME = gql`
       resourceBody
       dateCreated
       displayName
+      images {
+        fileURL
+        imageCaption
+      }
+      videos {
+        fileURL
+        videoCaption
+      }
     }
   }
 }

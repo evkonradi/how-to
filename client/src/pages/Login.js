@@ -1,10 +1,10 @@
-import React, { Component, useState } from "react";
-import { Form, FormGroup, Label, Input, Col, Container, Row, Jumbotron } from "reactstrap";
+import React, { useState } from "react";
+import { Form, FormGroup, Input, Col, Container, Row, Jumbotron } from "reactstrap";
 import GoogleLogin from "react-google-login";
 
 import { useMutation } from "@apollo/react-hooks";
 import { LOGIN_USER } from "../utils/mutations";
-import { valueFromAST } from "graphql";
+// import { valueFromAST } from "graphql";
 import { Button } from "@chakra-ui/core";
 
 // import { render } from 'node-sass';

@@ -8,7 +8,7 @@ db.once("open", async () => {
     {
       name: "Bake a Blueberry Tart",
       shortDescription: "Make a delicious blueberry tart in under an hour.",
-      displayName: "StarWarsMan",
+      displayName: "HotDogMan",
       resourceBody:
         'Ingredients \n\
     1 cup all-purpose flour\n\
@@ -38,7 +38,7 @@ db.once("open", async () => {
       name: "Make your Own Scented All-Purpose Cleaner",
       shortDescription:
         "Clean your home with all green, make-at-home, products.",
-      displayName: "StarWarsMan",
+      displayName: "HotDogMan",
       resourceBody:
         "Ingredients\n\
     One part white vinegar\n\
@@ -58,7 +58,7 @@ db.once("open", async () => {
       name: "Become a Star Gazer",
       shortDescription:
         "Learn the basics of stargazing with an introduction to Polaris, the North Star.",
-      displayName: "StarWarsMan",
+      displayName: "HotDogMan",
       resourceBody:
         "Throughout the course of the year, the Big Dipper appears to orbit Polaris, also known as the North Star, and the brightest star in the Ursa Minor, the Little Dipper.\n\
       Start by finding the two stars at the front end of the Dipper's bowl, Merak at the closed side and Dubhe at the open side.\n\
@@ -84,7 +84,7 @@ db.once("open", async () => {
     {
       name: "Knit a Hat",
       shortDescription: "Make your own hat for the upcoming winter season.",
-      displayName: "StarWarsMan",
+      displayName: "HotDogMan",
       resourceBody:
         "There's nothing better than getting to show off one of a knitted accessory that you've made yourself!\nBut for many beginner knitters, this just means scarves.\n\
           Most other types of knitted items, like hats and socks, involve knitting in the round, which scares off many beginners.\n\
@@ -113,7 +113,7 @@ db.once("open", async () => {
       name: "Make Homemade Soda",
       shortDescription:
         "Make your own homemade, caffeine-free, soda to impress your friends.",
-      displayName: "StarWarsMan",
+      displayName: "HotDogMan",
       resourceBody:
         "Believe it or not, it’s actually super easy to make homemade soda.\n\ You only need a few basic ingredients, including your favorite fresh fruit.\n\ I love that, when you’re making homemade soda, you can control the sweetness. Now, you can enjoy a tall glass of refreshing fizzy bubbles without the artificial sugars, colors, and preservatives. Woot!\nThe key ingredients of these homemade soda recipes are (1) fresh fruit “syrup” and (2) seltzer water.\n\ We will be using fresh fruit and a simple syrup made from raw honey and water to sweeten the soda.  To make your honey simple syrup, just combine some raw honey with water and cook in a pan over medium-high heat until the honey is dissolved, and then set aside to cool.  Easy peasy.",
       images: [
@@ -186,7 +186,7 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
     {
       name: "Make Homemade Babyfood",
       shortDescription: "Learn to make fresh baby food at home.",
-      displayName: "HotDogMan",
+      displayName: "StarWarsMan",
       resourceBody:
         "As a mom to three kids, I know firsthand how the urge to make homemade baby food can be both exciting and a little daunting.\n And if you have a busy schedule or other kids in the house, finding the time to actually do it can seem impossible. But, there are so many healthy foods that you can transform into baby food purees with hardly any work or special equipment at all!",
       images: [
@@ -209,7 +209,7 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
     {
       name: "Introduction to Ukulele",
       shortDescription: "Learn the basics of playing a ukulele.",
-      displayName: "HotDogMan",
+      displayName: "StarWarsMan",
       resourceBody:
         "So, you want to learn how to play a ukulele? Welcome! The first thing to notice is all the encouraging, happy people around you, cheering you on and helping you out.\n The ukulele is a social instrument, a song machine that magnetically draws people together to enjoy themselves. Be warned: The ukulele spirit is highly contagious.\n As soon as you master your first chords, strums, and songs you may find that you, too, are moved to share it with a friend.",
       images: [
@@ -233,7 +233,7 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
       name: "A Beginner Lesson to Drawing",
       shortDescription:
         "Start your exciting journey into the world of drawing.",
-      displayName: "HotDogMan",
+      displayName: "StarWarsMan",
       resourceBody:
         "We all used to draw as kids. It was easy back then, no matter if you used color pencils, a stick, or your finger on a steamy window. But even then you might have noticed that some children drew better than you.\n\ Not that you knew what better meant—all you knew was the sweetness of praise. Whenever you heard someone else being praised, and your own work ignored, you felt worse and worse. Eventually, you gave up on drawing. Why would you continue if nobody cared?\nNow, whatever the reason, you want to come back, but it seems so scary. Those children who never gave up are working as professionals now, and their art looks almost magical. How could you possibly bridge that gap? Will you ever catch up on them?",
       images: [
@@ -262,7 +262,7 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
   await User.create({
     firstName: "Frank",
     lastName: "Furter",
-    username: "ffurter",
+    username: "HotDogMan",
     displayName: "HotDogMan",
     email: "frankf@testmail.com",
     password: "password12345",
@@ -272,7 +272,7 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
   await User.create({
     firstName: "Hans",
     lastName: "Solo",
-    username: "hsolo",
+    username: "StarWarsMan",
     displayName: "StarWarsMan",
     email: "hansyboy@testmail.com",
     password: "theforce123",
