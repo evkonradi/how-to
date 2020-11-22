@@ -42,6 +42,8 @@ const Header = (Component) => {
     </Nav>
     
     </Navbar.Collapse> */} 
+    <h1>Teach Me To.</h1>
+                    <h3>What do you want to learn today?</h3>
     <Search></Search>
 <Box maxW="md" alignContent="center" display="inline" marginRight="50px" paddingTop="28px">
     <Button

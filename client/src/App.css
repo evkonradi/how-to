@@ -41,8 +41,9 @@ h1 {
   font-family:'Courier New', Courier, monospace;
   border-right:4px solid black;
   width:13ch;
-  
+  color: #f2f2f2;
 }
+
 
 .navbar {
   display: inline-flex;

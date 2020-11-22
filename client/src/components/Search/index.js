@@ -32,15 +32,15 @@ const Search = () => {
   return (
     <main>
       <Box maxW="sm"display="-webkit-inline-box" paddingRight="100px">
-      <Input maxLength="30%" name="searchText" placeholder="Search..." onChange={handleChange} />
+      <Input maxLength="50%" name="searchText" placeholder="Search..." onChange={handleChange} />
       <Button
         className="center"
         size="md"
         height="40px"
-        width="50px"
+
         border="2px"
         color="white"
-        display="inline-block"
+
         _hover={{ bg: "#D99748" }}
         type="submit"
         onClick={doSearch}

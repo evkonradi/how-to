@@ -17,7 +17,7 @@ const Header = (Component) => {
   // render(){
   return (
     <div>
- 
+   
     
     <MainNav></MainNav>
 
