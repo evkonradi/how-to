@@ -31,8 +31,8 @@ const Search = () => {
 
   return (
     <main>
-      <Box maxW="sm"display="-webkit-inline-box" paddingRight="100px">
-      <Input maxLength="50%" name="searchText" placeholder="Search..." onChange={handleChange} />
+      <Box maxW="sm"display="-webkit-inline-box">
+      <Input maxLength="50%" name="searchText" placeholder="Today I Will Learn..." onChange={handleChange} />
       <Button
         className="center"
         size="md"

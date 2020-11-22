@@ -17,7 +17,7 @@ const Header = (Component) => {
   // render(){
   return (
     <div>
-    <Navbar className="mainNav" collapseOnSelect expand="lg" bg="dark" variant="light" width="100vw">
+    <Navbar className="mainNav" collapseOnSelect expand="lg" bg="dark" variant="light" width="100vw" display="inline">
     {/* <Navbar.Toggle aria-controls="responsive-navbar-nav"><img className="small" src={logo} alt="logo, teach me to" /></Navbar.Toggle>
 
     <Navbar.Collapse  img src={logo}>
@@ -43,18 +43,19 @@ const Header = (Component) => {
     
     </Navbar.Collapse> */} 
     <h1>Teach Me To.</h1>
-                    <h3>What do you want to learn today?</h3>
+                   
     <Search></Search>
-<Box maxW="md" alignContent="center" display="inline" marginRight="50px" paddingTop="28px">
+
+<Box maxW="md" alignContent="center"  flexWrap="wrap" >
     <Button
-        className="center"
+ 
         size="md"
         height="40px"
         bg="#D99748"
         border="2px"
         borderColor="transparent"
         color="white"
-        display="inline-block"
+        verticalAlign="center"
         _hover={{ bg: "#D99748" }}
       href="/signup"
         
@@ -63,14 +64,14 @@ const Header = (Component) => {
         </Button>
     
         <Button
-        className="center"
+ 
         size="md"
         height="40px"
         border="2px"
         borderColor="transparent"
         margin="1rem"
         color="grey"
-        display="inline-block"
+        verticalAlign="center"
         _hover={{ bg: "#D99748" }}
         href="/login"
       
