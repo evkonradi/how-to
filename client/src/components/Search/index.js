@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Input } from "reactstrap";
+import { Input, Row } from "reactstrap";
 import { useLazyQuery } from "@apollo/react-hooks";
 import { QUERY_RESOURCES_SEARCH } from "../../utils/queries";
-import { Button } from "@chakra-ui/core";
+import { Button, Box } from "@chakra-ui/core";
 import CardResource from "../CardResource";
 
 const Search = () => {
@@ -31,21 +31,38 @@ const Search = () => {
 
   return (
     <main>
-      <Input className="center" width="100%" name="searchText" onChange={handleChange} />
+      <Box maxW="sm"display="-webkit-inline-box" paddingRight="100px">
+      <Input maxLength="30%" name="searchText" onChange={handleChange} />
       <Button
         className="center"
         size="md"
-        height="46px"
-        width="200px"
+        height="40px"
+        width="50px"
         border="2px"
         color="white"
-        bg="#253237"
+        display="inline-block"
         _hover={{ bg: "#D99748" }}
         type="submit"
         onClick={doSearch}
       >
-        <span role="img" aria-label="search">🔍 Search</span>
+    <span role="img" aria-label="search">🔍 </span>
       </Button>
+      </Box>
+      {/* // <Input className="center" width="100%" name="searchText" onChange={handleChange} />
+      // <Button
+      //   className="center"
+      //   size="md"
+      //   height="46px"
+      //   width="200px"
+      //   border="2px"
+      //   color="white"
+      //   bg="#253237"
+      //   _hover={{ bg: "#D99748" }}
+      //   type="submit"
+      //   onClick={doSearch}
+      // >
+      //   <span role="img" aria-label="search">🔍 Search</span>
+      // </Button> */} 
 
       <div>
         {data ? (

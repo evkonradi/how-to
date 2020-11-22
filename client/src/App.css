@@ -44,6 +44,11 @@ h1 {
   
 }
 
+.navbar {
+  display: inline-flex;
+  padding: 1rem;
+}
+
 h1.class {
   color: #D99748;
 }
@@ -192,6 +197,15 @@ float: right;
 /* .main {
   background-color: #5C6B73;
 } */
+/* .inline {
+  display: grid;
+  gap: .8rem;
+  grid-auto-flow: column;
+  grid-template-columns: (auto-fit, minmax(min-content, 1fr));
+} */
+.inline {
+  display: inline-flex;
+}
 
 .Col {
   min-height: max-content;
@@ -239,11 +253,6 @@ float: right;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
-
-.form-control {
-  position: relative;
-  /* max-width: 300px; */
 }
 
 .button.search {

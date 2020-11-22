@@ -40,8 +40,8 @@ function App() {
         
           <StoreProvider>
             <div className="main">
-              <Header />
-              <Cart />
+              <Header></Header>
+           
               
               <Switch>
                 <Route exact path="/" component={Home} />
@@ -54,7 +54,7 @@ function App() {
                 <Route exact path="/nomatch" component={NoMatch} />
                 <Route component={NoMatch} /> 
               </Switch>
-              
+             
               <Footer />
             </div>
           </StoreProvider>
