@@ -1,8 +1,6 @@
 import React from 'react';
-import { Jumbotron, Row, Col} from 'reactstrap';
-
+import { Jumbotron, Col} from 'reactstrap';
 import Resource from "../components/Resource";
-import Search from '../components/Search';
 
 const Home = () => {
     return (

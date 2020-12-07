@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input, Row } from "reactstrap";
+import { Input } from "reactstrap";
 import { useLazyQuery } from "@apollo/react-hooks";
 import { QUERY_RESOURCES_SEARCH } from "../../utils/queries";
 import { Button, Box } from "@chakra-ui/core";
