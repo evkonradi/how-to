@@ -34,7 +34,7 @@
   width: 100%;
   background-color: #D99748;
 } */
-h1 {
+h1.main {
   animation: type 3s steps(13);
   overflow:hidden;
   white-space:nowrap;
@@ -48,7 +48,7 @@ h1 {
 
 .navbar {
   display: inline-flex;
-  padding: 1rem;
+
 }
 
 h1.class {
@@ -93,6 +93,11 @@ p.caption {
   color: #9e9fa0;
   font-size: x-small;
   margin: 0;
+}
+
+.search {
+  height: 30px;
+  padding: .5rem;
 }
 
 img {

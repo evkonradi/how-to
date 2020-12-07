@@ -41,31 +41,28 @@ const Header = (Component) => {
     </Nav>
     
     </Navbar.Collapse> */} 
-    <h1>Teach Me To.</h1>
+    <h1 className="main">Teach Me To.</h1>
                    
     <Search></Search>
 
 <Box maxW="md" alignContent="center"  flexWrap="wrap" >
     <Button
- 
         size="md"
-        height="40px"
+        height="30px"
         bg="#D99748"
         border="2px"
         borderColor="transparent"
         color="white"
         verticalAlign="center"
         _hover={{ bg: "#D99748" }}
-      href="/signup"
-        
+      href="/signup"  
       >
         Signup
         </Button>
     
         <Button
- 
         size="md"
-        height="40px"
+        height="30px"
         border="2px"
         borderColor="transparent"
         margin="1rem"
@@ -73,7 +70,6 @@ const Header = (Component) => {
         verticalAlign="center"
         _hover={{ bg: "#D99748" }}
         href="/login"
-      
       >
         Login
         </Button>
