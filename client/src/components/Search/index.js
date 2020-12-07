@@ -29,6 +29,9 @@ const Search = () => {
     }
   };
 
+  console.log("Data:");
+  console.log(data);
+
   return (
     <main>
       <Input className="center" width="100%" name="searchText" onChange={handleChange} />
@@ -58,6 +61,11 @@ const Search = () => {
                 <br></br>
               </div>
             ))}
+            {data.resources_search.length === 0 &&
+              <div className="noDataFound">
+                No data found! Please try another search.
+              </div>
+            }
           </div>
         ) : null}
       </div>
