@@ -10,6 +10,7 @@ import Carousel from "react-bootstrap/Carousel";
 const Resource = () => {
   const { loading, data } = useQuery(QUERY_RESOURCES_HOMEPAGE);
   const [resources, setResources] = useState([]);
+  const resources2 = resources.slice(-5);
   //setResources(data?.resources || []);
 
   useEffect(() => {
@@ -31,7 +32,7 @@ const Resource = () => {
         {loading ? <div>Loading...</div> : 
             <Carousel className="cardTextAlign">
               {
-                resources.map((resource) => (
+                resources2.map((resource) => (
                   <Carousel.Item key={resource._id} className="cardTextAlign">
 
                     <CardResource resource={resource} imgWidth="100%"></CardResource>
