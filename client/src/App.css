@@ -53,6 +53,7 @@ h1.class {
 .Navbar.bg{
   color: #253237;
 }
+
 .mainNav {
   display: flex;
   flex-wrap: nowrap;
@@ -90,8 +91,8 @@ img {
 }
 
 .small {
-  width: 13%;
-  height: 13%;
+  width: 50px;
+  height: 50px;
 }
 
 .italic {
@@ -174,7 +175,7 @@ float: right;
 .jumbotron.hometron {
   background-color: #9DB4C0;
   border-radius: 0px 0px 0px 0px;
-  padding: 1.2rem;
+ 
   margin-bottom: 0px;
 }
 
@@ -233,6 +234,7 @@ float: right;
 
 .form-control {
   position: relative;
+  width: 80%;
   /* max-width: 300px; */
 }
 
