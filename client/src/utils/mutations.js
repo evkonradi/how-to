@@ -27,8 +27,6 @@ mutation addUser($username: String!, $firstName: String!, $lastName: String!, $d
       lastName
       displayName
       email
-
-      
     }
   }
 }
@@ -78,4 +76,20 @@ mutation updateResource($id: ID!, $articleName: String!, $articleShortDesc : Str
       }
     }
   }
+`;
+
+export const UPDATE_USER = gql`
+mutation updateUser($id: ID!, $username: String!, $firstName: String!, $lastName: String!, $displayName: String!, $email: String!, $password: String!) {
+  updateUser(_id: $id, username: $username, firstName: $firstName, lastName: $lastName, displayName: $displayName, email: $email, password: $password) {
+    token
+    user {
+      _id
+      username
+      firstName
+      lastName
+      displayName
+      email
+    }
+  }
+}
 `;
