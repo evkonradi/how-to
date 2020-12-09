@@ -9,12 +9,12 @@ const Home = () => {
         <div >
             
             <Jumbotron className="hometron">
-                <Row xs={1} md={2}>
-                    <Col xs={{ size: 12 }} sm={{ size: 6, order: 2, offset: 1}} text="center">
+                
+                    <Col xs={{ size: 12 }} sm={{ size: 12, order: 2, offset: 1}} text="center">
                     <h1>Teach Me To.</h1>
-                    <h3>What do you want to learn today?</h3>
+                    <h3 className="byline">What do you want to learn today?</h3>
                     </Col>
-                </Row>
+               
             </Jumbotron>
             
             <Col className="homesearch" sm={{size:8, offset:2}} lg={{ size:6, offset:3}}>
