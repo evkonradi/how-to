@@ -29,11 +29,6 @@
   color: #D99748;
 }
 
-/* .Container {
-  height: 100%;
-  width: 100%;
-  background-color: #D99748;
-} */
 h1 {
   animation: type 3s steps(13);
   overflow:hidden;

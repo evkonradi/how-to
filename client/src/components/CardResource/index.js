@@ -19,7 +19,6 @@ const CardResource = ({resource, imgWidth}) =>{
           <Card.Title>{resource.name}</Card.Title>
           <Card.Text className="cardText">{resource.shortDescription}</Card.Text>
           <Card.Text className="cardTime">Created: {resource.dateCreated} by {resource.displayName}</Card.Text>
-          <br></br>
           </Box>
         </Card.Body>
       </Card>
