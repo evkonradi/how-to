@@ -19,12 +19,12 @@ const ProfilePage = (props) => {
   const [updateUser] = useMutation(UPDATE_USER);
 
   const [userState, setUserState] = useState({
-    username: username,
-    firstName: firstName,
-    lastName: lastName,
-    displayName: displayName,
-    email: email,
-    password: password,
+    username: "",
+    firstName: "",
+    lastName: "",
+    displayName: "",
+    email: "",
+    password: "",
   })
 
   const user = data?.me || data?.user || {};
