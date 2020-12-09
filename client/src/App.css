@@ -137,9 +137,11 @@ li a:hover {
   color: #D99748;
   text-decoration: none;
 }
+
 .actived {
   background-color:#D99748;
 }
+
 .float-right {
 float: right;
 }
@@ -243,6 +245,7 @@ float: right;
 }
 
 button.edit {
+  padding: .25rem;
   border-radius: 25px;
   border-color: white;
   background-color: #D99748;
