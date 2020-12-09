@@ -21,7 +21,7 @@ const Home = () => {
                 <Search></Search>
             </Col><br />
 
-            <p className="recentlyAdddeP">Recently added articles</p>
+            <p className="recentlyAddP">Recently added articles</p>
             <Col id="col2" sm={{size:8, offset:2}} lg={{ size:6, offset:3}} className="carousel cardTextAlign" >
                 <Resource></Resource>
             </Col> 

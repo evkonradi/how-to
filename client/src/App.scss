@@ -68,6 +68,10 @@ p {
     color: $dark;
 }
 
+img {
+    max-height: -webkit-fill-available;
+}
+
 .footer.p {
     color: $secondary;
 }
@@ -88,10 +92,28 @@ p {
 }
 
 .cardTextAlign{
-    text-align: center;
+    text-align: right;
 }
 
-.recentlyAdddeP{
+.cardBody{
+    display: flex;
+}
+
+.cardText {
+    word-break: break;
+    text-align: right;
+    display: inline-flex;
+}
+
+.cardTime {
+    max-width: 40%;
+    font-size: xx-small;
+    text-align: right;
+
+}
+
+.recentlyAddP{
+    text-align: center;
     color: $success;
     font-size: larger;
     font-weight: bold;

@@ -77,7 +77,8 @@ a:hover {
 }
 
 p {
-  text-align: center;
+  font-size: smaller;
+  text-align: right;
   color: #253237;
 }
 
@@ -90,9 +91,9 @@ p.caption {
 
 img {
   width: 100%;
-  max-width: 500px;
-  height: auto;
-  max-height: 500px;
+  height: 100%;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 .small {
