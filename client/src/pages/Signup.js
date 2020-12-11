@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Input, Container, Col, Jumbotron } from "reactstrap";
-import { Button } from "@chakra-ui/core";
+import { Button, Box } from "@chakra-ui/core";
 
 import { useMutation } from "@apollo/react-hooks";
 import { ADD_USER } from "../utils/mutations";
@@ -44,9 +44,12 @@ const Signup = () => {
           <br />
           <Col>
           <Form className="login-form" onSubmit={handleFormSubmit}>
+            
+            <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
             <h1>
               <span className="font-weight-bold text-center">Sign Up Here.</span>
             </h1>
+            </Box>
             <br />
             <FormGroup>
               {/* <Label>User Name</Label> */}
