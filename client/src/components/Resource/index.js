@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_RESOURCES_HOMEPAGE } from '../../utils/queries';
 import { idbPromise } from "../../utils/helpers";
-//import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import CardResource from "../CardResource";
 
 import Carousel from "react-bootstrap/Carousel";
@@ -11,7 +11,7 @@ const Resource = () => {
   const { loading, data } = useQuery(QUERY_RESOURCES_HOMEPAGE);
   const [resources, setResources] = useState([]);
   const resources2 = resources.slice(-5);
-  //setResources(data?.resources || []);
+  // setResources(data?.resources || []);
 
   useEffect(() => {
     if(data) {

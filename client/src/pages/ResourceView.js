@@ -27,7 +27,7 @@ function ResourceView() {
               </Box>
               <h4>{data.resource.shortDescription}</h4>
               <br />
-              <h4 class="italic">Contibutor {data.resource.displayName}</h4>
+              <h5 class="italic">Contibutor {data.resource.displayName}</h5>
 
               {data.resource.images.map((image) => (
                 <Col key={`image-${data.resource.images.indexOf(image)}`}>

@@ -4,8 +4,10 @@ $success: #D99748;
 $danger: #D99748;;
 $warning: #F23E16;
 $info: #C2DFE3;
-$light:#E0FBFC;
+$light:whitesmoke;
 $dark: #253237;
+
+// Main
 
 * {
     margin: 0;
@@ -18,15 +20,23 @@ h2 {
 }
 
 h3 {
-    color: $success;
+    color: $light;
     font-size: .8rem;
 }
 
 h4 {
-    color: $secondary;
+    color: $success;
+    font-size: small;
+    text-align: left;
 }
 h5 {
-    color: $dark;
+    color: $primary;
+    font-size: smaller;
+}
+
+.li {
+    border-top: 10px solid orange;
+    border-bottom: 10px solid orange;
 }
 
 .container.carousel {
@@ -36,8 +46,26 @@ h5 {
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   filter: invert(1);
-  width: 10%;
+  width: auto;
+  
 }
+
+.carousel-indicators li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+
+    border-bottom: 10px solid gray;
+    opacity: .5;
+    transition: opacity .6s ease;
+  }
 
 .resource {
     position: absolute;
@@ -47,9 +75,7 @@ h5 {
 
 .jumbotron.hometron{
     background-color: $primary;
-    // border-radius: 0 0 15px 15px;
-    // padding: 1rem .5 rem;
-    // width: 100%;
+    padding: 1rem;
 }
 
 .Col.homesearch {
@@ -73,22 +99,11 @@ Header {
 
 p {
     color: $dark;
-    margin-bottom: .5rem
 }
 
 img {
-    max-height: 200px;
-    max-height: -webkit-fill-available;
+    max-height: 140px;
     padding: .2rem;
-}
-
-.footer.p {
-    color: $secondary;
-}
-
-.Card.Link {
-    color: $success;
-    text-decoration: none;
 }
 
 .homeLink{
@@ -101,13 +116,10 @@ img {
     color:$primary;
 }
 
-// CARD 
+// Card 
+
 .card{
     box-shadow: 10px 3px 6px $dark;
-}
-
-.cardTextAlign{
-    text-align: center;
 }
 
 .cardBody{
@@ -115,10 +127,18 @@ img {
     padding: 1rem;
 }
 
+.Card.Link {
+    color: $success;
+    text-decoration: none;
+}
+
 .cardText {
     word-break: break;
     text-align: right;
     display: inline-flex;
+}
+.cardTextAlign{
+    text-align: center;
 }
 
 .cardTime {
@@ -129,10 +149,12 @@ img {
 
 .recentlyAddP{
     text-align: center;
-    color: $success;
-    font-size: larger;
-    font-weight: bold;
+    color: $primary;
+    font-size: large;
+    font-weight: 500;
 }
+
+// Components
 
 .deleteButtonEdit{
     cursor:pointer;
@@ -144,3 +166,8 @@ img {
     color: var(--dark);
 }
 
+// Footer
+
+.footer.p {
+    color: $secondary;
+}

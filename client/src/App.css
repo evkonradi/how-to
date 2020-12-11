@@ -36,7 +36,7 @@ h1 {
   font-family:'Courier New', Courier, monospace;
   border-right:4px solid black;
   width:13ch;
-  
+  color: whitesmoke;
 }
 
 h1.class {
@@ -122,6 +122,7 @@ ul {
 
 li {
   float: left;
+  color: grey;
 }
 
 li a {
@@ -145,15 +146,7 @@ li a:hover {
 .float-right {
 float: right;
 }
-.footer{
-  margin-top: .1rem;
-  padding: .3rem;
-  position: static;
-  background-color:#253237;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
+
 .logoText {
   font-size: 1.3rem;
   display: block;
@@ -177,7 +170,6 @@ float: right;
 .jumbotron.hometron {
   background-color: #9DB4C0;
   border-radius: 0px 0px 0px 0px;
- 
   margin-bottom: 0px;
 }
 
@@ -188,16 +180,6 @@ float: right;
 
 .Col {
   min-height: max-content;
-}
-
-.footer {
-  font-size: medium;
-  text-align: center;
-}
-
-.footerP {
-  color: #9DB4C0;
-  text-align: center;
 }
 
 .user {
@@ -298,6 +280,8 @@ a.mainCard:hover {
   background-color: tomato;
 }
 
+
+
 Input.span {
   min-width: 100%;
 }
@@ -319,4 +303,26 @@ Input.span {
 .dividerProfile{
   color: #D99748;
   height: 2px;
+}
+
+/*  Footer */
+
+.footer{
+  margin-top: .1rem;
+  padding: .3rem;
+  position: static;
+  background-color:#253237;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer {
+  font-size: small;
+  text-align: center;
+}
+
+.footerP {
+  color: #9DB4C0;
+  text-align: center;
 }
