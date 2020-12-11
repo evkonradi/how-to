@@ -1,4 +1,4 @@
-const { User, Resource } = require('../models');
+const { User, Resource, Profit } = require('../models');
 
 const ObjectId = require('mongoose').Types.ObjectId;
 const { AuthenticationError } = require('apollo-server-express');
@@ -79,7 +79,13 @@ const resolvers = {
             });
             
             return { session: session.id };
-          }        
+        },
+        profits: async () => {
+            return Profit.find();
+        },
+        profit: async (parent) => {
+            return await Profit.findOne({ isCurrent: true });
+        }
     },
     
 
@@ -139,7 +145,30 @@ const resolvers = {
             }
 
             throw new AuthenticationError('Not logged in');
-        }
+        },
+        updateWallet: async (parent, args) => {
+
+            const {wallet} = await User.findOne({ username: args.username }, 'wallet');
+
+            const user = await User.findOneAndUpdate(
+                { username: args.username },
+                { $set: { wallet: args.amount + wallet } },
+                { new: true }
+            );
+
+            return user;
+        },
+        updateProfit: async (parent, args) => {
+
+            const data = await Profit.findOne({ isCurrent: true });
+
+            return await Profit.findOneAndUpdate(
+                { isCurrent: true },
+                { $set: { currentProfit: args.amount + data.currentProfit }},
+                { new: true }
+            );
+        },
+
     }
 }
 

@@ -38,6 +38,10 @@ const userSchema = new Schema(
             required: true,
             minlength: 5
         },
+        wallet: {
+            type: Number,
+            default: 0
+        },
         resources: [
             {
                 type: Schema.Types.ObjectId,
