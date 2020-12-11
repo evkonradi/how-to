@@ -160,8 +160,7 @@ float: right;
 }
 
 .login-form {
-  width:100%;
-  max-width: 330px;
+  max-width: 380px;
   padding: 15px;
   margin: auto;
   height: 100%;

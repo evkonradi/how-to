@@ -61,17 +61,6 @@ const ProfilePage = (props) => {
     }
   };
 
-  // const handleFormSubmit = async event => {
-  //   event.preventDefault();
-  //   try {
-  //     await updateUser({ variables: { userParam, ...userState } })
-  //     console.log(userState);
-  //   }
-  //   catch(e){
-  //     console.error(e);
-  //   }
-  // };
-
   return (
     <main>
       <div>
