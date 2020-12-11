@@ -18,7 +18,8 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     displayName: String
-    email: String
+    email: String,
+    wallet: Float,
     resourceCount: Int
     resources: [Resource]
   }
@@ -73,6 +74,12 @@ const typeDefs = gql`
     donation: Int
   }
 
+  type Profit{
+    currentProfit: Float,
+    feeRate: Float,
+    isCurrent: Boolean
+  }
+
   type Query {
     me: User
     users: [User]
@@ -81,6 +88,8 @@ const typeDefs = gql`
     resource(_id: ID!): Resource
     resources_search(text: String!): [ResourceShort]
     checkout(products: [CheckoutProductInput]!): Checkout
+    profits: [Profit]
+    profit: Profit
   }
 
   type Mutation {
@@ -89,6 +98,8 @@ const typeDefs = gql`
     addResource(name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput]): Resource
     updateResource(_id: ID!, name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput]): Resource
     deleteResource(_id: ID!): Resource
+    updateWallet(username: String!, amount: Float): User
+    updateProfit(amount: Float): Profit
   }
   `;
 
