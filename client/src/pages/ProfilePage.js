@@ -65,7 +65,7 @@ const ProfilePage = (props) => {
     <main>
       <div>
         <Container className="cardTextAlign">
-
+<br></br>
           <Row>
             <Col sm={{size: 12}} md={{size: 3}} lg={{size: 3, offset: 1}}>
                 
@@ -79,8 +79,6 @@ const ProfilePage = (props) => {
                 <span textAlign="left">
                   Email: {`${user.email}`}<br></br>
                 </span>
-                
-             
                   <br></br>
                   <a href="/resource" className="newPostLink">Create New Post</a>
                
@@ -90,7 +88,6 @@ const ProfilePage = (props) => {
                   <Box>
                     <CardResource
                       resource={resource}
-                      imgWidth="70%"
                     ></CardResource>
                     <Link className="plain" to={`/resource/${resource._id}`}>
                       <Button className="edit">Edit</Button>

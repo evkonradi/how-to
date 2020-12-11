@@ -164,6 +164,14 @@ p {
 
 // Components
 
+.donateBtn {
+    background-color: $success;
+}
+
+.donateBtn:hover {
+    background-color: whitesmoke;
+    border: 1px $success;
+}
 .deleteButtonEdit{
     cursor:pointer;
 }
