@@ -32,9 +32,9 @@ function ResourceView() {
               {data.resource.images.map((image) => (
                 <Col key={`image-${data.resource.images.indexOf(image)}`}>
                   <img
+                    className="resourceImg"
                     src={`${image.fileURL}`}
                     alt={`${image.imageCaption}`}
-                    width="100%"
                   ></img>
                   <br></br>
                   <span>{image.imageCaption}</span>

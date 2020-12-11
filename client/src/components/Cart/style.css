@@ -50,9 +50,9 @@
     border-radius: 25%;
   }
   
-  /* .cart-closed:hover {
+  .cart-closed:hover {
     transform: rotate(8deg);
-  } */
+  }
   
   .cart img {
     width: 50%;
@@ -63,6 +63,16 @@
     width: 50px;
     padding: 0;
     margin: 0 .5rem 1rem 0;
+  }
+
+  .checkoutBtn {
+    border-radius: 20px;
+    border: none;
+    color: whitesmoke;
+    background-color: #D99748;
+    padding: .25rem;
+    margin: .5rem;
+    align-self: right;
   }
   
   @media screen and (max-width: 768px) {
