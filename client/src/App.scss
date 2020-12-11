@@ -27,7 +27,7 @@ h3 {
 h4 {
     color: $success;
     font-size: small;
-    text-align: left;
+    text-align: center;
 }
 h5 {
     color: $primary;
@@ -73,6 +73,12 @@ h5 {
     width: 100%;
 }
 
+.resourceImg {
+    width:300px;
+    height:300px;
+    object-fit:cover;
+}
+
 .jumbotron.hometron{
     background-color: $primary;
     padding: 1rem;
@@ -101,8 +107,10 @@ p {
     color: $dark;
 }
 
-img {
-    max-height: 140px;
+.cardImg {
+    width:100px;
+    height:100px;
+    object-fit:cover;
     padding: .2rem;
 }
 

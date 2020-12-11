@@ -65,16 +65,6 @@ const ProfilePage = (props) => {
     <main>
       <div>
         <Container className="cardTextAlign">
-          <br />
-
-          <Row>
-            <Col>
-              <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
-                <h3>Welcome Back, {`${user.firstName}`}!</h3>
-              </Box>
-              <br></br>
-            </Col>
-          </Row>
 
           <Row>
             <Col sm={{size: 12}} md={{size: 3}} lg={{size: 3, offset: 1}}>
@@ -90,10 +80,10 @@ const ProfilePage = (props) => {
                   Email: {`${user.email}`}<br></br>
                 </span>
                 
-                <div>
+             
                   <br></br>
-                  <a href="/resource" className="newPostLink">New Post</a>
-                </div>
+                  <a href="/resource" className="newPostLink">Create New Post</a>
+               
             </Col>
             <Col sm={{size: 12}} md={{size: 9}} lg={{size: 7}}>
               {user.resources.map((resource) => (
@@ -110,6 +100,10 @@ const ProfilePage = (props) => {
                 ))}
             </Col>
           </Row>
+
+          <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
+                <h3>Welcome Back, {`${user.firstName}`}!</h3>
+              </Box>
 
           <Row>
             <Col>
