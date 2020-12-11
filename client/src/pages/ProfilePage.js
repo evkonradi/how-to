@@ -24,6 +24,7 @@ const ProfilePage = (props) => {
     lastName: "",
     displayName: "",
     email: "",
+    wallet: "",
     password: "",
   })
 
@@ -94,11 +95,14 @@ const ProfilePage = (props) => {
                     Username: <span contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span><br></br>
                 </Col>
                 <span textAlign="left">
-                  Name: <span contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span><br></br>
-                  <span contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span><br></br>
+                  First Name: <span contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span><br></br>
+                  Last Name: <span contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span><br></br>
                 </span>
                 <span textAlign="left">
-                  Email: {`${user.email}`}<br></br>
+                  Email: {`${user.email}`}<br></br><br></br>
+                </span>
+                <span textAlign="left">
+                  My wallet: ${`${user.wallet}`}<br></br>
                 </span>
                 
                 <div>
