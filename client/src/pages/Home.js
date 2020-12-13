@@ -20,10 +20,12 @@ const Home = () => {
             <Col className="homesearch" sm={{size:8, offset:2}} lg={{ size:6, offset:3}}>
                 <Search></Search>
             </Col>
-            <p className="recentlyAddP">Recently added articles</p>
-            <Col id="col2" sm={{size:8, offset:2}} lg={{ size:6, offset:3}} className="carousel cardTextAlign" >
+            <p className="recentlyAddP">Recently Added</p>
+            <Col id="col2" sm={{size:8, offset:2}} lg={{ size:6, offset:3}} className="carousel cardTextAlign">
+            
                 <Resource></Resource>
             </Col> 
+            
             <Jumbotron className="whitespace" align="center">
             <p className="copy"> Start sharing your knowledge with others on TeachMeTo.</p> 
             <p className="copy">Add images, video, and the "written" word.</p>

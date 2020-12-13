@@ -68,7 +68,7 @@ a {
   
 }
 
-.carousel-indicators li {
+.carousel-indicators.li {
     box-sizing: content-box;
     flex: 0 1 auto;
     width: 30px;
@@ -77,10 +77,9 @@ a {
     margin-left: 3px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: $dark;
     background-clip: padding-box;
-
-    border-bottom: 10px solid gray;
+    border-bottom: 10px solid black;
     opacity: .5;
     transition: opacity .6s ease;
   }
@@ -277,10 +276,13 @@ Header {
 }
 
 .recentlyAddP{
+    
     text-align: center;
     color: $primary;
-    font-size: large;
+    font-size: medium;
     font-weight: 500;
+    padding: .3rem;
+
 }
 
 // Components
