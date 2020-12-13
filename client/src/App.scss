@@ -26,7 +26,7 @@ h3 {
 
 h4 {
     color: $success;
-    margin-left: 45px;
+   
 }
 h5 {
     color: $primary;
@@ -40,6 +40,20 @@ h6 {
 .li {
     border-top: 10px solid orange;
     border-bottom: 10px solid orange;
+}
+
+p {
+    color: $dark;
+}
+
+a {
+    color: $success;
+    text-decoration: none;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
 }
 
 // Carousel
@@ -71,6 +85,26 @@ h6 {
     transition: opacity .6s ease;
   }
 
+  .copy {
+      text-align: center;
+  }
+
+.copyLink {
+    color: $success;
+    text-align: center;
+    border: 1px $success;
+    padding: .23rem;
+}
+
+.copyLink:hover {
+    text-decoration: none;
+    color: $dark;
+}
+
+  .heading {
+     text-align: right;
+  }
+
 .resource {
     position: absolute;
     padding-top: 10px;
@@ -88,6 +122,9 @@ h6 {
     max-width: 60%;
 }
 
+.title {
+   padding-left: 60px;
+}
 .subtitle {
     text-align: left;
     float: right;
@@ -122,23 +159,20 @@ h6 {
     background-color: $success;
 }
 
-a {
-    color: $success;
-    text-decoration: none;
+.title {
+    padding-left: 60px;
 }
-
 .byline{
     font-size: large;
     word-break: keep-all;
+    text-align: center;
 }
 
 Header {
     background-color: $dark;
 }
 
-p {
-    color: $dark;
-}
+// Link
 
 .homeLink{
     color: $success;
@@ -216,6 +250,10 @@ p {
     height:200px;
     object-fit:cover;
     padding: .2rem;
+}
+
+.cardImg:hover {
+    transform: rotate(357deg);
 }
 
 .Card.Link {

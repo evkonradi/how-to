@@ -13,16 +13,13 @@
     border: 2px;
     border-color: black;
     font-size: medium;
-
     z-index: 100;
   }
   
   .cart h2 {
     font-size: 1.5rem;
-    /* border-bottom: 1px solid #5C6B73; */
     color: #5C6B73;
     font-size: large;
-    /* padding-bottom: .5rem; */
     margin: 1rem 0;
   }
   

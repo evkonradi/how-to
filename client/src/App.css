@@ -34,7 +34,7 @@ h1 {
   white-space:nowrap;
   font-family:'Courier New', Courier, monospace;
   border-right:4px solid black;
-  width:13ch;
+  width:14ch;
   color: whitesmoke;
 }
 
@@ -92,11 +92,12 @@ p.caption {
 }
 
 .medium {
-  width: 85px;
-  height: 85px;
+  width: 67px;
+  height: 67px;
   position: absolute;
   top: 55px;
   float: left;
+  opacity: 90%;
 }
 
 .italic {
@@ -110,9 +111,6 @@ p.caption {
   align-items: right;
 }
 
-.mr-auto {
-  color: #9DB4C0;
-}
 ul {
   list-style-type: none;
   margin-bottom: 0px;
@@ -127,7 +125,6 @@ li {
 }
 
 li a {
-  /* display: block; */
   color: white;
   text-align: center;
   padding: .35rem;
@@ -219,7 +216,6 @@ float: right;
 .form-control {
   position: relative;
   width: 80%;
-  /* max-width: 300px; */
 }
 
 .button.search {
@@ -322,8 +318,7 @@ Input.span {
 .footer {
   font-size: small;
   text-align: center;
-  position: relative;
-  top: auto;
+
 }
 
 .footerP {
