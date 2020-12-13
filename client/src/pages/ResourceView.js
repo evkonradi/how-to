@@ -25,7 +25,9 @@ function ResourceView() {
               <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
                   <h3>{data.resource.name}</h3>
               </Box>
-              <h4>{data.resource.shortDescription}</h4>
+              <Box className="subtitle">
+              <h6>{data.resource.shortDescription}</h6>
+              </Box>
               <br />
               <h5 class="italic">Contibutor {data.resource.displayName}</h5>
 
@@ -64,12 +66,9 @@ function ResourceView() {
             ))}
 
             <Col xs={12}>
-              <br />
-              <br />
                 <DonateButton resource={data.resource}></DonateButton>
-              <br />
-              <br />
             </Col>
+            <br/>
           </Container>
         </div>
       )}

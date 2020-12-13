@@ -26,7 +26,6 @@ h3 {
 
 h4 {
     color: $success;
-    font-size: small;
     text-align: center;
 }
 h5 {
@@ -34,11 +33,16 @@ h5 {
     font-size: smaller;
 }
 
+h6 {
+    color: $primary;
+}
+
 .li {
     border-top: 10px solid orange;
     border-bottom: 10px solid orange;
 }
 
+// Carousel
 .container.carousel {
     background-color: white;
 }
@@ -79,6 +83,15 @@ h5 {
     object-fit:cover;
 }
 
+.subtitle {
+    max-width: 30%;
+    float: right;
+    border-style: solid;
+    border-color:  #D99748;
+    padding: 1rem;
+    margin: .5rem;
+}
+
 .jumbotron.hometron{
     background-color: $primary;
     padding: 1rem;
@@ -107,13 +120,6 @@ p {
     color: $dark;
 }
 
-.cardImg {
-    width:200px;
-    height:200px;
-    object-fit:cover;
-    padding: .2rem;
-}
-
 .homeLink{
     color: $success;
     text-decoration: none;
@@ -133,6 +139,13 @@ p {
 .cardBody{
     display: flex;
     padding: 1rem;
+}
+
+.cardImg {
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    padding: .2rem;
 }
 
 .Card.Link {

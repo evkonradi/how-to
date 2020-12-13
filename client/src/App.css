@@ -57,6 +57,7 @@ h1.class {
 .mainNav {
   display: flex;
   flex-wrap: nowrap;
+  max-height: 50px;
 }
 a.nav.mainNav {
   color: #5C6B73;
@@ -92,6 +93,8 @@ p.caption {
 
 .italic {
   font-style: italic;
+  color: #D99748;
+  font-size: .8rem;
 }
 
 .dropdown-item {

@@ -35,6 +35,7 @@ const Header = (Component) => {
           <NavDropdown.Divider />
         </>
       )}
+      <br/>
     </Nav>
     </Navbar.Collapse>
     </Navbar>
