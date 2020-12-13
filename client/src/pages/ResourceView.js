@@ -29,6 +29,7 @@ function ResourceView() {
               <h6 className="subtitle">{data.resource.shortDescription}</h6>
               <h5 class="italic">Contibutor: {data.resource.displayName}</h5>
               </Box>
+          
               {data.resource.images.map((image) => (
                 <Col key={`image-${data.resource.images.indexOf(image)}`}>
                   <img
@@ -40,9 +41,10 @@ function ResourceView() {
                   <span>{image.imageCaption}</span>
                 </Col>
               ))}
-
-              <br></br>
+        
+ 
               <p>{data.resource.resourceBody}</p>
+          
             </Col>
             <br />
             <br />
