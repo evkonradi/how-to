@@ -17,7 +17,6 @@
   background-color: #253237;
   min-height: 80vh;
   display: flex;
-  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -93,8 +92,8 @@ p.caption {
 }
 
 .medium {
-  width: 80px;
-  height: 80px;
+  width: 85px;
+  height: 85px;
   position: absolute;
   top: 55px;
   float: left;

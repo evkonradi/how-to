@@ -23,9 +23,9 @@ const Header = (Component) => {
         </>
       ) : (
         <>
-          <Nav.Item id="dropdown"><Link className="homeLink" to="/" >Home</Link></Nav.Item>
-          <Nav.Item id="dropdown"><Link className="loginLink" to="/login">Login</Link></Nav.Item>
-          <Nav.Item id="dropdown"><Link className="signupLink" to="/signup">Signup</Link></Nav.Item>
+          <Nav.Item><Link className="homeLink" to="/" >Home</Link></Nav.Item>
+          <Nav.Item><Link className="loginLink" to="/login">Login</Link></Nav.Item>
+          <Nav.Item><Link className="signupLink" to="/signup">Signup</Link></Nav.Item>
         </>
       )}
     </Nav>

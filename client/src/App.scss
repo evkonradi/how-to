@@ -188,6 +188,18 @@ p {
     color:$success;
 }
 
+.signupLink{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    padding: .25rem;
+}
+
+.signupLink:hover{
+    text-decoration: none;
+    color:$success;
+}
+
 // Card 
 
 .card{
