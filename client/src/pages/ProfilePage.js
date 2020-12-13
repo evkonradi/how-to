@@ -67,8 +67,8 @@ const ProfilePage = (props) => {
       <div>
         <Container className="cardTextAlign">
 <br></br>
-          <Row>
-            <Box className="profileLeft" width="30%">
+          
+            <Box className="profileLeft" minWidth="30%">
                 Username: <span contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span><br></br>
                 <span textAlign="left">
                   First Name: <span contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span><br></br>
@@ -83,7 +83,7 @@ const ProfilePage = (props) => {
                   <br></br>
                   <a href="/resource" className="newPostLink">Create New Post</a>
             </Box>
-            <Box width="70%">
+            <Box minWidth="70%">
               {user.resources.map((resource) => (
                   <Box>
                     <CardResource
@@ -96,7 +96,7 @@ const ProfilePage = (props) => {
                   </Box>
                 ))}
             </Box>
-          </Row>
+         
 
           <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
                 <h3>Welcome Back, {`${user.firstName}`}!</h3>
@@ -108,11 +108,11 @@ const ProfilePage = (props) => {
             </Col>
           </Row>
 
-          <Row>
-            <Col sm={{size: 12}} md={{size:8, offset:2}} className="cardTextAlign">
+          
+            <Col className="cardTextAlign">
               <p class="recentlyAddP">see what others are contributing</p>
             </Col>
-          </Row>
+         
 
           <Row>
             <Col sm={{size: 12}} md={{size:8, offset:2}} className="cardTextAlign">
