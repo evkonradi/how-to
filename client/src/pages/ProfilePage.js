@@ -68,11 +68,8 @@ const ProfilePage = (props) => {
         <Container className="cardTextAlign">
 <br></br>
           <Row>
-            <Col sm={{size: 12}} md={{size: 3}} lg={{size: 3, offset: 1}}>
-                
-                <Col textAlign="left">
-                    Username: <span contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span><br></br>
-                </Col>
+            <Box className="profileLeft" width="30%">
+                Username: <span contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span><br></br>
                 <span textAlign="left">
                   First Name: <span contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span><br></br>
                   Last Name: <span contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span><br></br>
@@ -81,13 +78,12 @@ const ProfilePage = (props) => {
                   Email: {`${user.email}`}<br></br><br></br>
                 </span>
                 <span textAlign="left">
-                  My wallet: ${`${user.wallet}`}<br></br>
+                  Wallet: ${`${user.wallet}`}<br></br>
                 </span>
                   <br></br>
                   <a href="/resource" className="newPostLink">Create New Post</a>
-               
-            </Col>
-            <Col sm={{size: 12}} md={{size: 9}} lg={{size: 7}}>
+            </Box>
+            <Box width="70%">
               {user.resources.map((resource) => (
                   <Box>
                     <CardResource
@@ -99,7 +95,7 @@ const ProfilePage = (props) => {
                     <br></br><br></br>
                   </Box>
                 ))}
-            </Col>
+            </Box>
           </Row>
 
           <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
@@ -114,7 +110,7 @@ const ProfilePage = (props) => {
 
           <Row>
             <Col sm={{size: 12}} md={{size:8, offset:2}} className="cardTextAlign">
-              <br />
+             
               <h2>see what others are contributing</h2>
               <br />
               <br />
