@@ -14,21 +14,31 @@ const Header = (Component) => {
 
   // render(){
   return (
-    <Nav className="mainNav" expand="lg" bg="black" variant="light">
+    <Navbar className="mainNav" collapseOnSelect expand="lg" bg="dark" variant="light">
+    <Navbar.Toggle aria-controls="responsive-navbar-nav"><img className="small" src={logo} alt="logo, teach me to" /></Navbar.Toggle>
+    <Navbar.Collapse  img src={logo}>
+    <Nav className="mr-auto">
       {Auth.loggedIn() ? (
         <>
-          <Nav.Item><Link className="homeLink" to="/" >Home</Link></Nav.Item>
-          <Nav.Item><Link className="profileLink" to="/profile" >Profile</Link></Nav.Item>
-          <Nav.Item><Link className="logoutLink" to="/logout" onClick={logout}>Logout</Link></Nav.Item>    
+          {/* <NavDropdown.Item id="dropdown" href="/">Home</NavDropdown.Item> */}
+          <NavDropdown.Item id="dropdown"><Link className="homeLink" to="/" >Home</Link></NavDropdown.Item>
+          <NavDropdown.Item id="dropdown" href="/profile">Profile</NavDropdown.Item>
+          <NavDropdown.Item id="dropdown" href="/" onClick={logout}>Logout</NavDropdown.Item>
+          <NavDropdown.Divider />
         </>
       ) : (
         <>
-          <Nav.Item id="dropdown"><Link className="homeLink" to="/" >Home</Link></Nav.Item>
-          <Nav.Item id="dropdown"><Link className="loginLink" to="/login">Login</Link></Nav.Item>
-          <Nav.Item id="dropdown"><Link className="signupLink" to="/signup">Signup</Link></Nav.Item>
+          {/* <NavDropdown.Item id="dropdown" href="/">Home</NavDropdown.Item> */}
+          <NavDropdown.Item id="dropdown"><Link className="homeLink" to="/" >Home</Link></NavDropdown.Item>
+          <NavDropdown.Item id="dropdown" href="/login">Login</NavDropdown.Item>
+          <NavDropdown.Item id="dropdown" href="/signup">Signup</NavDropdown.Item>
+          <NavDropdown.Divider />
         </>
       )}
+      <br/>
     </Nav>
+    </Navbar.Collapse>
+    </Navbar>
 
 
     

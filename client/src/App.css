@@ -50,15 +50,15 @@ h1.class {
     width:13ch;
   }
 }
-.Navbar.bg{
-  color: #253237;
-}
 
 .mainNav {
-  display: flex;
+  display: inline-flex;
   flex-wrap: nowrap;
   max-height: 40px;
+  background-color: #253237;
+  padding: .3rem;
 }
+
 a.nav.mainNav {
   color: #5C6B73;
   text-decoration: none;

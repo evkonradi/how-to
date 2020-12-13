@@ -1,6 +1,5 @@
 import React from 'react';
 import { Jumbotron, Col} from 'reactstrap';
-
 import Resource from "../components/Resource";
 import Search from '../components/Search';
 
