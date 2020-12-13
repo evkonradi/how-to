@@ -1,5 +1,5 @@
 const db = require("./connection");
-const { User, Resource } = require("../models");
+const { User, Resource, Profit } = require("../models");
 
 db.once("open", async () => {
   await Resource.deleteMany();
@@ -265,6 +265,7 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
     username: "HotDogMan",
     displayName: "HotDogMan",
     email: "frankf@testmail.com",
+    wallet: 15,
     password: "password12345",
     resources: [resources[0]._id, resources[1]._id, resources[2]._id, resources[3]._id, resources[4]._id]
   });
@@ -280,6 +281,16 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
   });
 
   console.log("users seeded");
+
+  await Profit.deleteMany();
+
+  await Profit.create({
+    isCurrent: true,
+    currentProfit: 0,
+    feeRate: 10
+  });
+
+  console.log("profit seeded");
 
   process.exit();
 });
