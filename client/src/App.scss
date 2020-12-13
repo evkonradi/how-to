@@ -143,11 +143,49 @@ p {
 .homeLink{
     color: $success;
     text-decoration: none;
+    font-size: small;
+    padding: .5rem;
 }
 
 .homeLink:hover{
     text-decoration: none;
-    color:$primary;
+    color: white;
+}
+
+.loginLink{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    padding: .25rem;
+}
+
+.loginLink:hover{
+    text-decoration: none;
+    color:$success;
+}
+
+.logoutLink{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    padding: .25rem;
+}
+
+.logoutLink:hover{
+    text-decoration: none;
+    color:$success;
+}
+
+.profileLink{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    padding: .25rem;
+}
+
+.profileLink:hover{
+    text-decoration: none;
+    color:$success;
 }
 
 // Card 
