@@ -84,12 +84,18 @@ h6 {
 }
 
 .subtitle {
-    max-width: 30%;
+    text-align: left;
     float: right;
     border-style: solid;
     border-color:  #D99748;
-    padding: 1rem;
+    padding: .5rem;
     margin: .5rem;
+}
+
+.one-third {
+    max-width: 33%;
+    float: left;
+    margin-left: 20px;
 }
 
 .jumbotron.hometron{

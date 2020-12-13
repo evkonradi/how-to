@@ -25,12 +25,10 @@ function ResourceView() {
               <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
                   <h3>{data.resource.name}</h3>
               </Box>
-              <Box className="subtitle">
-              <h6>{data.resource.shortDescription}</h6>
+              <Box className="one-third">
+              <h6 className="subtitle">{data.resource.shortDescription}</h6>
+              <h5 class="italic">Contibutor: {data.resource.displayName}</h5>
               </Box>
-              <br />
-              <h5 class="italic">Contibutor {data.resource.displayName}</h5>
-
               {data.resource.images.map((image) => (
                 <Col key={`image-${data.resource.images.indexOf(image)}`}>
                   <img
