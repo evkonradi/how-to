@@ -110,10 +110,7 @@ const ProfilePage = (props) => {
 
           <Row>
             <Col sm={{size: 12}} md={{size:8, offset:2}} className="cardTextAlign">
-             
-              <h2>see what others are contributing</h2>
-              <br />
-              <br />
+              <p class="recentlyAddP">see what others are contributing</p>
             </Col>
           </Row>
 

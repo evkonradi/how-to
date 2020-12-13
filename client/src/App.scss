@@ -16,7 +16,8 @@ $dark: #253237;
 }
 
 h2 {
-    color: $secondary;
+    color: $primary;
+    font-size: xx-small;
 }
 
 h3 {
@@ -286,7 +287,8 @@ Header {
 }
 
 .profileLeft {
-    align-self: left;
+    float: left;
+    text-align: left;
     max-width: 30%;
 }
 
@@ -314,4 +316,14 @@ Header {
 
 .footer.p {
     color: $secondary;
+}
+
+@media screen and (max-width: 768px) {
+
+    .profileLeft {
+        float: left;
+        text-align: left;
+        
+    }
+
 }
