@@ -57,7 +57,7 @@ h1.class {
 .mainNav {
   display: flex;
   flex-wrap: nowrap;
-  max-height: 50px;
+  max-height: 40px;
 }
 a.nav.mainNav {
   color: #5C6B73;
@@ -314,6 +314,8 @@ Input.span {
 .footer {
   font-size: small;
   text-align: center;
+  position: relative;
+  top: auto;
 }
 
 .footerP {

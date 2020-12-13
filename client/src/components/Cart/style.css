@@ -40,14 +40,15 @@
   
   .cart-closed {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 30px;
+    right: 15px;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     background-color: #FFFFFF;
     border: #D99748 solid 2px;
     border-radius: 25%;
+    padding: .18rem;
   }
   
   .cart-closed:hover {
