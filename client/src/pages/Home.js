@@ -2,13 +2,15 @@ import React from 'react';
 import { Jumbotron, Col} from 'reactstrap';
 import Resource from "../components/Resource";
 import Search from '../components/Search';
+import logo from "./teach_me_to_logo-01.png";
 
 const Home = () => {
     return (
         <div >
             
             <Jumbotron className="hometron">
-                    <Col xs={{ size: 12 }} sm={{ size: 12, offset: 1}} text="center">
+            <img className="medium" src={logo} alt="logo, teach me to" />
+                    <Col xs={{ size: 12 }} sm={{ size: 12, offset: 2}} text="center">
                     <h1>Teach Me To.</h1>
                     <h4 className="byline">What do you want to learn today?</h4>
                     </Col>

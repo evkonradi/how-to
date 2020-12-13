@@ -92,6 +92,14 @@ p.caption {
   height: 50px;
 }
 
+.medium {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 55px;
+  float: left;
+}
+
 .italic {
   font-style: italic;
   color: #D99748;
