@@ -18,9 +18,9 @@ function DonateButton({resource}){
         if (!itemInCart) {
             dispatch({
                 type: ADD_TO_CART,
-                product: { _id: resource._id, name: resource.name, shortDescription: resource.shortDescription, donation: 5 }
+                product: { _id: resource._id, name: resource.name, shortDescription: resource.shortDescription, donation: 5, author: resource.displayName }
             });
-            idbPromise('cart', 'put', { ...resource, donation: 5 });
+            idbPromise('cart', 'put', { _id: resource._id, name: resource.name, shortDescription: resource.shortDescription, donation: 5, author: resource.displayName });
         }
         
     };

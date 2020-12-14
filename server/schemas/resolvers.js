@@ -148,27 +148,32 @@ const resolvers = {
         },
         updateWallet: async (parent, args) => {
 
-            const {wallet} = await User.findOne({ username: args.username }, 'wallet');
+            const data = await Profit.findOne({ isCurrent: true });
 
             const user = await User.findOneAndUpdate(
                 { username: args.username },
-                { $set: { wallet: args.amount + wallet } },
+                { $inc: { wallet: args.amount-args.amount*data.feeRate/100 } },
+                { new: true }
+            );
+
+            await Profit.findOneAndUpdate(
+                { isCurrent: true },
+                { $inc: { currentProfit: args.amount*data.feeRate/100 }},
                 { new: true }
             );
 
             return user;
         },
-        updateProfit: async (parent, args) => {
+        // updateProfit: async (parent, args) => {
 
-            const data = await Profit.findOne({ isCurrent: true });
+        //     const data = await Profit.findOne({ isCurrent: true });
 
-            return await Profit.findOneAndUpdate(
-                { isCurrent: true },
-                { $set: { currentProfit: args.amount + data.currentProfit }},
-                { new: true }
-            );
-        },
-
+        //     return await Profit.findOneAndUpdate(
+        //         { isCurrent: true },
+        //         { $set: { currentProfit: args.amount*data.feeRate/100 + data.currentProfit }},
+        //         { new: true }
+        //     );
+        // }
     }
 }
 

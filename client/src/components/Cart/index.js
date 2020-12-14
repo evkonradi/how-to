@@ -57,7 +57,7 @@ const Cart = () => {
                             name: item.name,  
                             shortDescription: item.shortDescription,
                             donation: item.donation,
-                            author: "HotDogMan"
+                            author: item.author
                           });
         });
 

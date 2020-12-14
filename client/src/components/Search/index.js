@@ -29,9 +29,6 @@ const Search = () => {
     }
   };
 
-  console.log("Data:");
-  console.log(data);
-
   return (
     <main>
       <Input className="center" width="80%" name="searchText" onChange={handleChange} />

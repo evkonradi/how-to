@@ -46,7 +46,6 @@ const ProfilePage = (props) => {
 
   const handleChange = (event) => {
     event.preventDefault();
-    console.log("A change was made");
     const { name, value } = event.target;
 
     setUserState({
@@ -55,7 +54,6 @@ const ProfilePage = (props) => {
     });
     try {
       updateUser({ variables: { userParam, ...userState } })
-      console.log(userState);
     }
     catch(e){
       console.error(e);

@@ -99,7 +99,6 @@ const typeDefs = gql`
     updateResource(_id: ID!, name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput]): Resource
     deleteResource(_id: ID!): Resource
     updateWallet(username: String!, amount: Float): User
-    updateProfit(amount: Float): Profit
   }
   `;
 
