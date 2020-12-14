@@ -246,8 +246,10 @@ Header {
 }
 
 .cardImg {
-    width:200px;
-    height:200px;
+    width: 150px;
+    min-height: 50px;
+    max-height: 150px;
+    overflow: hidden;
     object-fit:cover;
     padding: .2rem;
 }
