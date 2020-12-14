@@ -85,7 +85,7 @@ const Cart = () => {
                     ))}
                     <div className="flex-row space-between">
                         <strong>Total: ${calculateTotal()}</strong>
-                        <button onClick={submitCheckout}>
+                        <button className="checkoutBtn" onClick={submitCheckout}>
                         checkout</button>
                     </div>
                 </div>

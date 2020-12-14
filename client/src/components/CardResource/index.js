@@ -13,7 +13,7 @@ const CardResource = ({resource, imgWidth}) =>{
       <Card outline color='dark' className="cardTextAlign">
         <Card.Body className="cardBody">
         <Box maxWidth="40%">
-          <Card.Img variant="top" src={resource.images.length ? resource.images[0].fileURL : "/images/teach_me_to_logo-01.png"} style={{width:imgWidth}} alt = {resource.name} />
+          <Card.Img className="cardImg" variant="top" src={resource.images.length ? resource.images[0].fileURL : "/images/teach_me_to_logo-01.png"} style={{width:imgWidth}} alt = {resource.name} />
           </Box>
           <Box maxWidth="60%">
           <Card.Title>{resource.name}</Card.Title>

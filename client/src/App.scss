@@ -4,8 +4,10 @@ $success: #D99748;
 $danger: #D99748;;
 $warning: #F23E16;
 $info: #C2DFE3;
-$light:#E0FBFC;
+$light:whitesmoke;
 $dark: #253237;
+
+// Main
 
 * {
     margin: 0;
@@ -14,47 +16,35 @@ $dark: #253237;
 }
 
 h2 {
-    color: $secondary;
+    color: $primary;
+    font-size: xx-small;
 }
 
 h3 {
-    color: $success;
+    color: $light;
     font-size: .8rem;
 }
 
 h4 {
-    color: $secondary;
+    color: $success;
+   
 }
 h5 {
+    color: $primary;
+    font-size: smaller;
+}
+
+h6 {
+    color: $primary;
+}
+
+.li {
+    border-top: 10px solid orange;
+    border-bottom: 10px solid orange;
+}
+
+p {
     color: $dark;
-}
-
-.container.carousel {
-    background-color: white;
-}
-
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-  filter: invert(1);
-  width: 10%;
-}
-
-.resource {
-    position: absolute;
-    padding-top: 10px;
-    width: 100%;
-}
-
-.jumbotron.hometron{
-    background-color: $primary;
-    // border-radius: 0 0 15px 15px;
-    // padding: 1rem .5 rem;
-    // width: 100%;
-}
-
-.Col.homesearch {
-    position: center;
-    background-color: $success;
 }
 
 a {
@@ -62,52 +52,192 @@ a {
     text-decoration: none;
 }
 
+.main {
+    width: 100vw;
+    height: 100vh;
+}
+
+// Carousel
+.container.carousel {
+    background-color: white;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
+  width: auto;
+  
+}
+
+.carousel-indicators.li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: $dark;
+    background-clip: padding-box;
+    border-bottom: 10px solid black;
+    opacity: .5;
+    transition: opacity .6s ease;
+  }
+
+  .copy {
+      text-align: center;
+  }
+
+.copyLink {
+    color: $success;
+    text-align: center;
+    border: 1px $success;
+    padding: .23rem;
+}
+
+.copyLink:hover {
+    text-decoration: none;
+    color: $dark;
+}
+
+  .heading {
+     text-align: right;
+  }
+
+.resource {
+    position: absolute;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.resourceImg {
+    width:350px;
+    height:350px;
+    object-fit:cover;
+    position: relative;
+}
+
+.resourceBody {
+    max-width: 60%;
+}
+
+.title {
+   padding-left: 60px;
+}
+.subtitle {
+    text-align: left;
+    float: right;
+    border-style: solid;
+    border-color:  #D99748;
+    padding: .5rem;
+    margin: .5rem;
+    position: absolute;
+    top: 50px;
+    background: white;
+    opacity: 80%;
+    z-index: 100;
+}
+
+.one-third {
+    max-width: 33%;
+    float: left;
+    margin-left: 20px;
+    position: relative;
+    z-index: 100;
+    width: 30%;
+    
+}
+
+.jumbotron.hometron{
+    background-color: $primary;
+    padding: 1rem;
+}
+
+.Col.homesearch {
+    position: center;
+    background-color: $success;
+}
+
+.title {
+    padding-left: 60px;
+}
 .byline{
     font-size: large;
     word-break: keep-all;
+    text-align: center;
 }
 
 Header {
     background-color: $dark;
 }
 
-p {
-    color: $dark;
-    margin-bottom: .5rem
-}
-
-img {
-    max-height: 200px;
-    max-height: -webkit-fill-available;
-    padding: .2rem;
-}
-
-.footer.p {
-    color: $secondary;
-}
-
-.Card.Link {
-    color: $success;
-    text-decoration: none;
-}
+// Link
 
 .homeLink{
     color: $success;
     text-decoration: none;
+    font-size: small;
+    padding: .5rem;
 }
 
 .homeLink:hover{
     text-decoration: none;
-    color:$primary;
+    color: white;
 }
 
-// CARD 
+.loginLink{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    padding: .25rem;
+}
+
+.loginLink:hover{
+    text-decoration: none;
+    color:$success;
+}
+
+.logoutLink{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    padding: .25rem;
+}
+
+.logoutLink:hover{
+    text-decoration: none;
+    color:$success;
+}
+
+.profileLink{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    padding: .25rem;
+}
+
+.profileLink:hover{
+    text-decoration: none;
+    color:$success;
+}
+
+.signupLink{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    padding: .25rem;
+}
+
+.signupLink:hover{
+    text-decoration: none;
+    color:$success;
+}
+
+// Card 
+
 .card{
     box-shadow: 10px 3px 6px $dark;
-}
-
-.cardTextAlign{
-    text-align: center;
 }
 
 .cardBody{
@@ -115,10 +245,29 @@ img {
     padding: 1rem;
 }
 
+.cardImg {
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    padding: .2rem;
+}
+
+.cardImg:hover {
+    transform: rotate(357deg);
+}
+
+.Card.Link {
+    color: $success;
+    text-decoration: none;
+}
+
 .cardText {
     word-break: break;
     text-align: right;
     display: inline-flex;
+}
+.cardTextAlign{
+    text-align: center;
 }
 
 .cardTime {
@@ -129,11 +278,29 @@ img {
 
 .recentlyAddP{
     text-align: center;
-    color: $success;
-    font-size: larger;
-    font-weight: bold;
+    color: $primary;
+    font-size: medium;
+    font-weight: 500;
+    padding: .3rem;
 }
 
+.profileLeft {
+   
+    text-align: left;
+    max-width: 25%;
+    margin-left: 1rem;
+}
+
+// Components
+
+.donateBtn {
+    background-color: $success;
+}
+
+.donateBtn:hover {
+    background-color: whitesmoke;
+    border: 1px $success;
+}
 .deleteButtonEdit{
     cursor:pointer;
 }
@@ -144,3 +311,18 @@ img {
     color: var(--dark);
 }
 
+// Footer
+
+.footer.p {
+    color: $secondary;
+}
+
+@media screen and (max-width: 768px) {
+
+    .profileLeft {
+        float: left;
+        text-align: left;
+        
+    }
+
+}

@@ -25,24 +25,26 @@ function ResourceView() {
               <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
                   <h3>{data.resource.name}</h3>
               </Box>
-              <h4>{data.resource.shortDescription}</h4>
-              <br />
-              <h4 class="italic">Contibutor {data.resource.displayName}</h4>
-
+              <Box className="one-third">
+              <h6 className="subtitle">{data.resource.shortDescription}</h6>
+              <h5 class="italic">Contibutor: {data.resource.displayName}</h5>
+              </Box>
+          
               {data.resource.images.map((image) => (
                 <Col key={`image-${data.resource.images.indexOf(image)}`}>
                   <img
+                    className="resourceImg"
                     src={`${image.fileURL}`}
                     alt={`${image.imageCaption}`}
-                    width="100%"
                   ></img>
                   <br></br>
                   <span>{image.imageCaption}</span>
                 </Col>
               ))}
-
-              <br></br>
+        
+ 
               <p>{data.resource.resourceBody}</p>
+          
             </Col>
             <br />
             <br />
@@ -64,12 +66,9 @@ function ResourceView() {
             ))}
 
             <Col xs={12}>
-              <br />
-              <br />
                 <DonateButton resource={data.resource}></DonateButton>
-              <br />
-              <br />
             </Col>
+            <br/>
           </Container>
         </div>
       )}

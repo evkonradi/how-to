@@ -4,7 +4,7 @@ import { Form, FormGroup, Input, Col, Container, Row, Jumbotron } from "reactstr
 import { useMutation } from "@apollo/react-hooks";
 import { LOGIN_USER } from "../utils/mutations";
 // import { valueFromAST } from "graphql";
-import { Button } from "@chakra-ui/core";
+import { Button, Box } from "@chakra-ui/core";
 
 // import { render } from 'node-sass';
 
@@ -48,9 +48,9 @@ const Login = (props, Component) => {
         <br /><br />
         <Container>
         <Form className="login-form" onSubmit={handleFormSubmit}>
-            <Row>
+        <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
           <h1 className="font-weight-bold">Welcome Back!</h1>
-          </Row>
+          </Box>
           <br />
           <FormGroup>
             {/* <Label>Email</Label> */}

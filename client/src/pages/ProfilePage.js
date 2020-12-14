@@ -60,38 +60,14 @@ const ProfilePage = (props) => {
     }
   };
 
-  // const handleFormSubmit = async event => {
-  //   event.preventDefault();
-  //   try {
-  //     await updateUser({ variables: { userParam, ...userState } })
-  //     console.log(userState);
-  //   }
-  //   catch(e){
-  //     console.error(e);
-  //   }
-  // };
-
   return (
     <main>
       <div>
         <Container className="cardTextAlign">
-          <br />
-
-          <Row>
-            <Col>
-              <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
-                <h3>Welcome Back, {`${user.firstName}`}!</h3>
-              </Box>
-              <br></br>
-            </Col>
-          </Row>
-
-          <Row>
-            <Col sm={{size: 12}} md={{size: 3}} lg={{size: 3, offset: 1}}>
-                
-                <Col textAlign="left">
-                    Username: <span contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span><br></br>
-                </Col>
+<br></br>
+          
+            <Box className="profileLeft" minWidth="30%">
+                Username: <span contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span><br></br>
                 <span textAlign="left">
                   First Name: <span contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span><br></br>
                   Last Name: <span contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span><br></br>
@@ -100,20 +76,16 @@ const ProfilePage = (props) => {
                   Email: {`${user.email}`}<br></br><br></br>
                 </span>
                 <span textAlign="left">
-                  My wallet: ${`${user.wallet}`}<br></br>
+                  Wallet: ${`${user.wallet}`}<br></br>
                 </span>
-                
-                <div>
                   <br></br>
-                  <a href="/resource" className="newPostLink">New Post</a>
-                </div>
-            </Col>
-            <Col sm={{size: 12}} md={{size: 9}} lg={{size: 7}}>
+                  <a href="/resource" className="newPostLink">Create New Post</a>
+            </Box>
+            <Box minWidth="70%">
               {user.resources.map((resource) => (
                   <Box>
                     <CardResource
                       resource={resource}
-                      imgWidth="70%"
                     ></CardResource>
                     <Link className="plain" to={`/resource/${resource._id}`}>
                       <Button className="edit">Edit</Button>
@@ -121,8 +93,12 @@ const ProfilePage = (props) => {
                     <br></br><br></br>
                   </Box>
                 ))}
-            </Col>
-          </Row>
+            </Box>
+         
+
+          <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
+                <h3>Welcome Back, {`${user.firstName}`}!</h3>
+              </Box>
 
           <Row>
             <Col>
@@ -130,14 +106,11 @@ const ProfilePage = (props) => {
             </Col>
           </Row>
 
-          <Row>
-            <Col sm={{size: 12}} md={{size:8, offset:2}} className="cardTextAlign">
-              <br />
-              <h2>see what others are contributing</h2>
-              <br />
-              <br />
+          
+            <Col className="cardTextAlign">
+              <p class="recentlyAddP">see what others are contributing</p>
             </Col>
-          </Row>
+         
 
           <Row>
             <Col sm={{size: 12}} md={{size:8, offset:2}} className="cardTextAlign">

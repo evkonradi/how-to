@@ -14,30 +14,21 @@ const Header = (Component) => {
 
   // render(){
   return (
-    <Navbar className="mainNav" collapseOnSelect expand="lg" bg="dark" variant="light">
-    <Navbar.Toggle aria-controls="responsive-navbar-nav"><img className="small" src={logo} alt="logo, teach me to" /></Navbar.Toggle>
-    <Navbar.Collapse  img src={logo}>
-    <Nav className="mr-auto">
+    <Nav className="mainNav" expand="lg" bg="black" variant="light">
       {Auth.loggedIn() ? (
         <>
-          {/* <NavDropdown.Item id="dropdown" href="/">Home</NavDropdown.Item> */}
-          <NavDropdown.Item id="dropdown"><Link className="homeLink" to="/" >Home</Link></NavDropdown.Item>
-          <NavDropdown.Item id="dropdown" href="/profile">Profile</NavDropdown.Item>
-          <NavDropdown.Item id="dropdown" href="/" onClick={logout}>Logout</NavDropdown.Item>
-          <NavDropdown.Divider />
+          <Nav.Item><Link className="homeLink" to="/" >Home</Link></Nav.Item>
+          <Nav.Item><Link className="profileLink" to="/profile" >Profile</Link></Nav.Item>
+          <Nav.Item><Link className="logoutLink" to="/logout" onClick={logout}>Logout</Link></Nav.Item>    
         </>
       ) : (
         <>
-          {/* <NavDropdown.Item id="dropdown" href="/">Home</NavDropdown.Item> */}
-          <NavDropdown.Item id="dropdown"><Link className="homeLink" to="/" >Home</Link></NavDropdown.Item>
-          <NavDropdown.Item id="dropdown" href="/login">Login</NavDropdown.Item>
-          <NavDropdown.Item id="dropdown" href="/signup">Signup</NavDropdown.Item>
-          <NavDropdown.Divider />
+          <Nav.Item><Link className="homeLink" to="/" >Home</Link></Nav.Item>
+          <Nav.Item><Link className="loginLink" to="/login">Login</Link></Nav.Item>
+          <Nav.Item><Link className="signupLink" to="/signup">Signup</Link></Nav.Item>
         </>
       )}
     </Nav>
-    </Navbar.Collapse>
-    </Navbar>
 
 
     
@@ -46,3 +37,33 @@ const Header = (Component) => {
 }
 
 export default Header;
+
+// import React, { useState } from 'react';
+// import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+
+// const Example = (props) => {
+//   const [collapsed, setCollapsed] = useState(true);
+
+//   const toggleNavbar = () => setCollapsed(!collapsed);
+
+//   return (
+//     <div>
+//       <Navbar color="faded" light>
+//         <NavbarBrand href="/" className="mr-auto">reactstrap</NavbarBrand>
+//         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
+//         <Collapse isOpen={!collapsed} navbar>
+//           <Nav navbar>
+//             <NavItem>
+//               <NavLink href="/Login">Login</NavLink>
+//             </NavItem>
+//             <NavItem>
+//               <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+//             </NavItem>
+//           </Nav>
+//         </Collapse>
+//       </Navbar>
+//     </div>
+//   );
+// }
+
+// export default Header;

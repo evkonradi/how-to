@@ -35,7 +35,7 @@ db.once("open", async () => {
     },
 
     {
-      name: "Make your Own Scented All-Purpose Cleaner",
+      name: "Make your Own All-Purpose Cleaner",
       shortDescription:
         "Clean your home with all green, make-at-home, products.",
       displayName: "HotDogMan",
