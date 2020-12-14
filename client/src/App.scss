@@ -19,8 +19,9 @@ h2 {
 
 h3 {
     color: $success;
-    font-style: italic;
+    font-size: .8rem;
 }
+
 h4 {
     color: $secondary;
 }
@@ -35,6 +36,7 @@ h5 {
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   filter: invert(1);
+  width: 10%;
 }
 
 .resource {
@@ -60,12 +62,24 @@ a {
     text-decoration: none;
 }
 
+.byline{
+    font-size: large;
+    word-break: keep-all;
+}
+
 Header {
     background-color: $dark;
 }
 
 p {
     color: $dark;
+    margin-bottom: .5rem
+}
+
+img {
+    max-height: 200px;
+    max-height: -webkit-fill-available;
+    padding: .2rem;
 }
 
 .footer.p {
@@ -87,11 +101,34 @@ p {
     color:$primary;
 }
 
+// CARD 
+.card{
+    box-shadow: 10px 3px 6px $dark;
+}
+
 .cardTextAlign{
     text-align: center;
 }
 
-.recentlyAdddeP{
+.cardBody{
+    display: flex;
+    padding: 1rem;
+}
+
+.cardText {
+    word-break: break;
+    text-align: right;
+    display: inline-flex;
+}
+
+.cardTime {
+    font-size: xx-small;
+    text-align: right;
+
+}
+
+.recentlyAddP{
+    text-align: center;
     color: $success;
     font-size: larger;
     font-weight: bold;

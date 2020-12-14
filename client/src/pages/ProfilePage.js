@@ -1,13 +1,14 @@
-import React from "react";
-import { useQuery } from "@apollo/react-hooks";
+import React, { useState } from "react";
+import { useMutation, useQuery } from "@apollo/react-hooks";
 import { QUERY_ME } from "../utils/queries";
-import { Col, Row, Container} from "reactstrap";
+import { Col, Row, Container } from "reactstrap";
 import Resource from "../components/Resource";
 import { Redirect, useParams, Link } from "react-router-dom";
 import { Box } from "@chakra-ui/core";
 import { Button } from "@chakra-ui/core";
 import Auth from "../utils/auth";
 import CardResource from "../components/CardResource";
+import { UPDATE_USER } from "../utils/mutations";
 
 const ProfilePage = (props) => {
   const { username: userParam } = useParams();
@@ -15,6 +16,17 @@ const ProfilePage = (props) => {
   const { loading, data } = useQuery(QUERY_ME, {
     variables: { username: userParam },
   });
+  const [updateUser] = useMutation(UPDATE_USER);
+
+  const [userState, setUserState] = useState({
+    username: "",
+    firstName: "",
+    lastName: "",
+    displayName: "",
+    email: "",
+    wallet: "",
+    password: "",
+  })
 
   const user = data?.me || data?.user || {};
 
@@ -30,6 +42,34 @@ const ProfilePage = (props) => {
   if (!user?.username) {
     return <h1>Sign up | log in <span role="img" aria-label="Sign up | log in">🙂</span></h1>;
   }
+
+
+  const handleChange = (event) => {
+    event.preventDefault();
+    const { name, value } = event.target;
+
+    setUserState({
+      ...userState,
+      [name]: value,
+    });
+    try {
+      updateUser({ variables: { userParam, ...userState } })
+    }
+    catch(e){
+      console.error(e);
+    }
+  };
+
+  // const handleFormSubmit = async event => {
+  //   event.preventDefault();
+  //   try {
+  //     await updateUser({ variables: { userParam, ...userState } })
+  //     console.log(userState);
+  //   }
+  //   catch(e){
+  //     console.error(e);
+  //   }
+  // };
 
   return (
     <main>
@@ -48,15 +88,21 @@ const ProfilePage = (props) => {
 
           <Row>
             <Col sm={{size: 12}} md={{size: 3}} lg={{size: 3, offset: 1}}>
+                
+                <Col textAlign="left">
+                    Username: <span contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span><br></br>
+                </Col>
                 <span textAlign="left">
-                    Username: {`${user.username}`}<br></br>
+                  First Name: <span contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span><br></br>
+                  Last Name: <span contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span><br></br>
                 </span>
                 <span textAlign="left">
-                  Name: {`${user.firstName}`} {`${user.lastName}`}<br></br>
+                  Email: {`${user.email}`}<br></br><br></br>
                 </span>
                 <span textAlign="left">
-                  Email: {`${user.email}`}<br></br>
+                  My wallet: ${`${user.wallet}`}<br></br>
                 </span>
+                
                 <div>
                   <br></br>
                   <a href="/resource" className="newPostLink">New Post</a>

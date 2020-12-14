@@ -84,6 +84,7 @@ export const QUERY_ME = gql`
     lastName
     displayName
     email
+    wallet
     resourceCount
     resources {
       _id

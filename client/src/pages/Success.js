@@ -13,7 +13,6 @@ function Success() {
   useEffect(()=>{
 
     async function walletTransaction(item){
-      console.log(item);
       await updateWallet({ variables: { username: item.author, amount: item.donation } });
     };
 

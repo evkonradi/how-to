@@ -29,11 +29,6 @@
   color: #D99748;
 }
 
-/* .Container {
-  height: 100%;
-  width: 100%;
-  background-color: #D99748;
-} */
 h1 {
   animation: type 3s steps(13);
   overflow:hidden;
@@ -58,6 +53,7 @@ h1.class {
 .Navbar.bg{
   color: #253237;
 }
+
 .mainNav {
   display: flex;
   flex-wrap: nowrap;
@@ -77,7 +73,8 @@ a:hover {
 }
 
 p {
-  text-align: center;
+  font-size: smaller;
+  text-align: right;
   color: #253237;
 }
 
@@ -90,14 +87,12 @@ p.caption {
 
 img {
   width: 100%;
-  max-width: 500px;
-  height: auto;
-  max-height: 500px;
+  max-height: 50px;
 }
 
 .small {
-  width: 13%;
-  height: 13%;
+  width: 50px;
+  height: 50px;
 }
 
 .italic {
@@ -142,9 +137,11 @@ li a:hover {
   color: #D99748;
   text-decoration: none;
 }
+
 .actived {
   background-color:#D99748;
 }
+
 .float-right {
 float: right;
 }
@@ -180,7 +177,7 @@ float: right;
 .jumbotron.hometron {
   background-color: #9DB4C0;
   border-radius: 0px 0px 0px 0px;
-  padding: 1.2rem;
+ 
   margin-bottom: 0px;
 }
 
@@ -188,10 +185,6 @@ float: right;
   background-color: transparent;
   width: 100%;
 }
-
-/* .main {
-  background-color: #5C6B73;
-} */
 
 .Col {
   min-height: max-content;
@@ -243,6 +236,7 @@ float: right;
 
 .form-control {
   position: relative;
+  width: 80%;
   /* max-width: 300px; */
 }
 
@@ -251,6 +245,7 @@ float: right;
 }
 
 button.edit {
+  padding: .25rem;
   border-radius: 25px;
   border-color: white;
   background-color: #D99748;

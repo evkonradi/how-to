@@ -148,12 +148,7 @@ const resolvers = {
         },
         updateWallet: async (parent, args) => {
 
-            console.log("Args:");
-            console.log(args);
-            // const {wallet} = await User.findOne({ username: args.username }, 'wallet');
             const data = await Profit.findOne({ isCurrent: true });
-            console.log("Current Profit:");
-            console.log(data.currentProfit);
 
             const user = await User.findOneAndUpdate(
                 { username: args.username },
