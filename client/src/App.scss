@@ -15,6 +15,10 @@ $dark: #253237;
     box-sizing: border-box;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 h2 {
     color: $primary;
     font-size: xx-small;
@@ -54,9 +58,59 @@ a {
 }
 
 .main {
-    width: 100vw;
+    width: 100%;
     min-height: 100%;
 }
+
+Header {
+    background-color: $dark;
+}
+
+// Text Styles
+.byline{
+    font-size: medium;
+    word-break: keep-all;
+    text-align: center;
+}
+
+.copy {
+    text-align: center;
+}
+
+.copyLink {
+  color: $success;
+  text-align: center;
+  border: 1px $success;
+  padding: .23rem;
+}
+
+.copyLink:hover {
+  text-decoration: none;
+  color: $dark;
+}
+
+.heading {
+   text-align: right;
+}
+
+.title {
+    padding-left: 60px;
+    font-size: 2rem;
+ }
+
+ .subtitle {
+     text-align: left;
+     float: right;
+     border-style: solid;
+     border-color:  #D99748;
+     padding: .5rem;
+     margin: .5rem;
+     position: absolute;
+     top: 50px;
+     background: white;
+     opacity: 80%;
+     z-index: 100;
+ }
 
 // Carousel
 .container.carousel {
@@ -86,25 +140,7 @@ a {
     transition: opacity .6s ease;
   }
 
-  .copy {
-      text-align: center;
-  }
-
-.copyLink {
-    color: $success;
-    text-align: center;
-    border: 1px $success;
-    padding: .23rem;
-}
-
-.copyLink:hover {
-    text-decoration: none;
-    color: $dark;
-}
-
-  .heading {
-     text-align: right;
-  }
+// Resource Styles 
 
 .resource {
     position: absolute;
@@ -122,23 +158,6 @@ a {
 
 .resourceBody {
     max-width: 60%;
-}
-
-.title {
-   padding-left: 60px;
-}
-.subtitle {
-    text-align: left;
-    float: right;
-    border-style: solid;
-    border-color:  #D99748;
-    padding: .5rem;
-    margin: .5rem;
-    position: absolute;
-    top: 50px;
-    background: white;
-    opacity: 80%;
-    z-index: 100;
 }
 
 .one-third {
@@ -161,25 +180,12 @@ a {
     background-color: $success;
 }
 
-.title {
-    padding-left: 60px;
-}
-.byline{
-    font-size: large;
-    word-break: keep-all;
-    text-align: center;
-}
-
-Header {
-    background-color: $dark;
-}
-
 // Link
 
 .homeLink{
     color: $success;
     text-decoration: none;
-    font-size: small;
+    font-size: medium;
     padding: .5rem;
 }
 

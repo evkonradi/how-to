@@ -187,8 +187,9 @@ float: right;
 .nullA {
   text-decoration: none;
   color: #9DB4C0;
-  font-size: smaller;
+  font-size: small;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .nullA:hover {
@@ -310,15 +311,14 @@ Input.span {
 
 .footer{
   margin-top: 1rem;
-  padding: .3rem;
+
   position: fixed;
   background-color:#253237;
   bottom: 0;
   left: 0;
   width: 100%;
-  display: inline-flex;
-  justify-content: space-evenly;
-  z-index: 200;
+  justify-content: center;
+
 }
 
 .footer {
