@@ -34,7 +34,8 @@ function ResourceView() {
                 <Col key={`image-${data.resource.images.indexOf(image)}`}>
                   <img
                     className="resourceImg"
-                    src={`${image.fileURL}`}
+
+                    src={`${image.fileURL} `} 
                     alt={`${image.imageCaption}`}
                   ></img>
                   <br></br>

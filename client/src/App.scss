@@ -112,10 +112,11 @@ a {
 }
 
 .resourceImg {
-    width:350px;
-    height:350px;
-    object-fit:cover;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
     position: relative;
+    padding: 1rem;
 }
 
 .resourceBody {
@@ -246,9 +247,9 @@ Header {
 }
 
 .cardImg {
+    min-width: 75px;
     width: 150px;
-    min-height: 50px;
-    max-height: 150px;
+    height: 150px;
     overflow: hidden;
     object-fit:cover;
     padding: .2rem;
@@ -287,7 +288,6 @@ Header {
 }
 
 .profileLeft {
-   
     text-align: left;
     max-width: 25%;
     margin-left: 1rem;
@@ -326,5 +326,9 @@ Header {
         text-align: left;
         
     }
+
+    .button.edit {
+        font-size: small;
+      }
 
 }

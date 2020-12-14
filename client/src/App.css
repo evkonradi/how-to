@@ -223,7 +223,7 @@ float: right;
 }
 
 button.edit {
-  padding: .25rem;
+  padding: .1rem;
   border-radius: 25px;
   border-color: transparent;
   background-color: #D99748;
@@ -231,6 +231,7 @@ button.edit {
   margin: .25rem;
   text-decoration: none;
   float: right;
+  font-size: x-small;
 }
 
 .link.plain {

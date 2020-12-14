@@ -90,7 +90,7 @@ const ProfilePage = (props) => {
                       resource={resource}
                     ></CardResource>
                     <Link className="plain" to={`/resource/${resource._id}`}>
-                      <Button className="edit">Edit</Button>
+                      <Button className="edit">EDIT</Button>
                     </Link>
                     <br></br><br></br>
                   </Box>

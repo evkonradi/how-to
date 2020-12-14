@@ -35,7 +35,7 @@ const Resource = () => {
                 resources2.map((resource) => (
                   <Carousel.Item key={resource._id} className="cardTextAlign">
 
-                    <CardResource resource={resource} imgWidth="100%"></CardResource>
+                    <CardResource resource={resource}></CardResource>
 
                   </Carousel.Item>
                 ))
