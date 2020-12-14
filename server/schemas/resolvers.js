@@ -1,4 +1,4 @@
-const { User, Resource, Profit } = require('../models');
+const { User, Resource, Profit, Transaction } = require('../models');
 
 const ObjectId = require('mongoose').Types.ObjectId;
 const { AuthenticationError } = require('apollo-server-express');
@@ -85,6 +85,9 @@ const resolvers = {
         },
         profit: async (parent) => {
             return await Profit.findOne({ isCurrent: true });
+        },
+        transactions: async () => {
+            return Transaction.find().sort({ "dateCreated": 1 });
         }
     },
     
@@ -148,6 +151,8 @@ const resolvers = {
         },
         updateWallet: async (parent, args) => {
 
+            console.log("Args:");
+            console.log(args);
             const data = await Profit.findOne({ isCurrent: true });
 
             const user = await User.findOneAndUpdate(
@@ -160,6 +165,10 @@ const resolvers = {
                 { isCurrent: true },
                 { $inc: { currentProfit: args.amount*data.feeRate/100 }},
                 { new: true }
+            );
+
+            await Transaction.create(
+                {username: args.username, resource_id: args.resource_id, resource_name: args.resource_name, amount: args.amount}
             );
 
             return user;

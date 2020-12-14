@@ -74,7 +74,7 @@ const ProfilePage = (props) => {
                 
                   Email: <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.email}>{`${user.email}`}</span><br></br><br></br>
 
-                  Wallet: ${`${user.wallet}`}<br></br>
+                  Wallet: ${`${user.wallet.toFixed(2)}`}<br></br>
                
                   <br></br>
                   <a href="/resource" className="newPostLink">Create New Post</a>

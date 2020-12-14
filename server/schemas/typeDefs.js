@@ -80,6 +80,14 @@ const typeDefs = gql`
     isCurrent: Boolean
   }
 
+  type Transaction{
+    dateCreated: String,
+    username: String,
+    resource_id: ID,
+    resource_name: String,
+    amount: Float
+  }
+
   type Query {
     me: User
     users: [User]
@@ -90,6 +98,7 @@ const typeDefs = gql`
     checkout(products: [CheckoutProductInput]!): Checkout
     profits: [Profit]
     profit: Profit
+    transactions: [Transaction]
   }
 
   type Mutation {
@@ -98,7 +107,7 @@ const typeDefs = gql`
     addResource(name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput]): Resource
     updateResource(_id: ID!, name: String!, shortDescription: String!, resourceBody: String, images: [ImageInput], videos: [VideoInput]): Resource
     deleteResource(_id: ID!): Resource
-    updateWallet(username: String!, amount: Float): User
+    updateWallet(username: String!, amount: Float, resource_id: ID, resource_name: String): User
   }
   `;
 

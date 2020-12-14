@@ -13,7 +13,10 @@ function Success() {
   useEffect(()=>{
 
     async function walletTransaction(item){
-      await updateWallet({ variables: { username: item.author, amount: item.donation } });
+
+      console.log("Item:");
+      console.log(item);
+      await updateWallet({ variables: { username: item.author, amount: item.donation, resource_id: item._id, resource_name: item.name } });
     };
 
     async function clearShoppingCart(){
