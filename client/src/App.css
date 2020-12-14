@@ -234,7 +234,7 @@ button.edit {
   margin: .25rem;
   text-decoration: none;
   float: right;
-  font-size: x-small;
+  font-size: small;
 }
 
 .link.plain {
@@ -282,12 +282,9 @@ a.mainCard:hover {
   background-color: tomato;
 }
 
-
-
 Input.span {
   min-width: 100%;
 }
-
 
 .newPostLink {
   text-decoration: none;
