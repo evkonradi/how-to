@@ -1,15 +1,21 @@
 import React, { useEffect } from "react";
-//import { useMutation } from "@apollo/react-hooks";
-//import {ADD_ORDER} from "../utils/mutations";
+import { useMutation } from "@apollo/react-hooks";
+import {UPDATE_WALLET} from "../utils/mutations";
 import { idbPromise } from "../utils/helpers";
 import { useStoreContext } from '../utils/GlobalState';
 import { CLEAR_CART } from '../utils/actions';
 
 function Success() {
 
-  const [, dispatch] = useStoreContext();
+  const [state, dispatch] = useStoreContext();
+  const [updateWallet] = useMutation(UPDATE_WALLET);
 
   useEffect(()=>{
+
+    async function walletTransaction(item){
+      console.log(item);
+      await updateWallet({ variables: { username: item.author, amount: item.donation } });
+    };
 
     async function clearShoppingCart(){
       const cart = await idbPromise('cart', 'get');
@@ -18,13 +24,25 @@ function Success() {
         idbPromise('cart', 'delete', item);
       });
 
-      dispatch({ type: CLEAR_CART });
+      if (state.cart.length){
+
+        state.cart.forEach((item)=>{
+          try{
+            walletTransaction(item);
+          }
+          catch(e){
+            console.error(e);
+          };
+        });
+
+        dispatch({ type: CLEAR_CART });
+      }
   
     }
 
     clearShoppingCart();
 
-  },[dispatch])
+  },[dispatch, state.cart, updateWallet])
 
 
     return (

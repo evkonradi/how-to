@@ -79,3 +79,15 @@ mutation updateResource($id: ID!, $articleName: String!, $articleShortDesc : Str
     }
   }
 `;
+
+export const UPDATE_WALLET = gql`
+mutation($username: String!, $amount: Float){
+  updateWallet(username: $username, amount: $amount){
+     _id,
+    username,
+    displayName,
+    wallet
+  }
+}
+`;
+
