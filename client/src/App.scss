@@ -45,6 +45,7 @@ h6 {
 
 p {
     color: $dark;
+    margin-bottom: 0;
 }
 
 a {
@@ -54,7 +55,7 @@ a {
 
 .main {
     width: 100vw;
-    height: 100vh;
+    min-height: 100%;
 }
 
 // Carousel

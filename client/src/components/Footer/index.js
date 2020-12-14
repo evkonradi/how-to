@@ -1,14 +1,14 @@
+import { AspectRatioBox } from "@chakra-ui/core";
 import React from "react";
+import { Box } from "@chakra-ui/core";
 
 const Footer = () => (
-  <div className="footer">
-    <div>
-      <span className="footerP">teachmeto© 2020</span>  
-    </div>
-    <div>
-      <a class="nullA" href="https://github.com/evkonradi/teach-me-to">Proudly made in Texas</a>
-    </div>
-  </div>
+  <Box className="footer">
+   
+      <p className="footerP">teachmeto© 2020</p>
+      <p class="nullA" href="https://github.com/evkonradi/teach-me-to">Proudly made in Texas</p>
+   
+  </Box>
 );
 
 export default Footer;

@@ -66,8 +66,7 @@ const ProfilePage = (props) => {
     <main>
       <div>
         <Container className="cardTextAlign">
-<br></br>
-          
+          <Box h="40px" bg="transparent"></Box>
             <Box className="profileLeft" minWidth="30%">
                 Username: <span contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span><br></br>
                 <span textAlign="left">
