@@ -54,9 +54,11 @@ function ResourceView() {
             {data.resource.videos.map((video) => (
               <Col key={`video-${data.resource.videos.indexOf(video)}`}>
                     <iframe
+                      className="video"
                       src={`${video.fileURL}`}
                       frameBorder="0"
-                      style={{maxWidth:500}}
+                    
+                      
                       title={video.videoCaption}
                       allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                     ></iframe>
