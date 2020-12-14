@@ -68,17 +68,16 @@ const ProfilePage = (props) => {
         <Container className="cardTextAlign">
           <Box h="40px" bg="transparent"></Box>
             <Box className="profileLeft" minWidth="30%">
-                Username: <span contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span><br></br>
-                <span textAlign="left">
-                  First Name: <span contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span><br></br>
-                  Last Name: <span contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span><br></br>
-                </span>
-                <span textAlign="left">
-                  Email: {`${user.email}`}<br></br><br></br>
-                </span>
-                <span textAlign="left">
+                Username: <span className="smallBox" contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span><br></br>
+                
+                  First Name: <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span><br></br>
+                  Last Name: <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span><br></br>
+                
+                
+                  Email: <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.email}>{`${user.email}`}</span><br></br><br></br>
+
                   Wallet: ${`${user.wallet}`}<br></br>
-                </span>
+               
                   <br></br>
                   <a href="/resource" className="newPostLink">Create New Post</a>
             </Box>
