@@ -104,7 +104,7 @@ p.caption {
 .italic {
   font-style: italic;
   color: #D99748;
-  font-size: .8rem;
+  font-size: medium;
 }
 
 .dropdown-item {
