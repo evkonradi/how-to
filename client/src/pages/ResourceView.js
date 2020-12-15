@@ -7,6 +7,7 @@ import { Box } from "@chakra-ui/core";
 import { useParams } from "react-router-dom";
 import DonateButton from "../components/DonateButton";
 
+
 function ResourceView() {
   const { id } = useParams();
   const { loading, data } = useQuery(QUERY_RESOURCE, {
