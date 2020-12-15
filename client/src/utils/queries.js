@@ -127,3 +127,17 @@ export const QUERY_CHECKOUT = gql`
     }
   }
 `;
+
+export const QUERY_TRANSACTIONSUSER = gql`
+query($username: String!)
+{transactionsUser(username: $username)
+  {
+    dateCreated,
+    username,
+    resource_id,
+    resource_name,
+    amount,
+    fee
+  }
+}
+`;

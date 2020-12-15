@@ -374,8 +374,32 @@ Header {
     background-color: $dark;
 }
 
-// Footer
+//statement
+.statement-container{
+    width:90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
+    text-align: center;
+}
+.statement-grid{
+    margin-top: 30px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 1fr 1fr;
+}
 
+.statement-item-head{
+    padding: 5px;
+    margin: 5px;
+    background-color: $success;
+}
+
+.statement-item-line{
+    margin: 5px;
+}
+
+// Footer
 .footer.p {
     color: $secondary;
 }

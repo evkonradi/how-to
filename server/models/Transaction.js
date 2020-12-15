@@ -26,6 +26,10 @@ const transactionSchema = new Schema({
     amount: {
         type: Number,
         required: true
+    },
+    fee: {
+        type: Number,
+        required: true
     }
   });
 

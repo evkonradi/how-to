@@ -10,6 +10,7 @@ import Auth from "../utils/auth";
 import CardResource from "../components/CardResource";
 import { UPDATE_USER } from "../utils/mutations";
 
+
 const ProfilePage = (props) => {
   const { username: userParam } = useParams();
 
@@ -75,7 +76,8 @@ const ProfilePage = (props) => {
                 <p className="profileField">First Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span>
                 <p className="profileField">Last Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span>
                 <p className="profileField">Email</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.email}>{`${user.email}`}</span>
-                <p className="profileField">Wallet</p> ${`${user.wallet.toFixed(2)}`}
+                <p className="profileField">Wallet</p> ${`${user.wallet.toFixed(2)}`}<br></br>
+                  <Link to="/statement/">See Statement</Link><br></br>
                 <Box className="newPostBtn" >
                   <a className="plainA" href="/resource">Create New Post</a>
                   </Box>
