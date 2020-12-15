@@ -85,23 +85,26 @@ Header {
 .copy {
     text-align: center;
     padding: .5rem;
+    color: white;
+    font-size: medium;
 }
 
 .copyBox {
     border: 1px solid $success;
     border-radius: 3px;
+    background-color: $success;
 }
 
 .copyLink {
-  color: $success;
+  color: $primary;
   text-align: center;
-  border: 1px $success;
+  border: 1px $primary;
   padding: .23rem;
 }
 
 .copyLink:hover {
   text-decoration: none;
-  color: $dark;
+  color: white;
 }
 
 .heading {
@@ -119,7 +122,7 @@ Header {
      float: right;
      border-style: solid;
      border-color:  #D99748;
-     padding: .5rem;
+     padding: 1rem;
      margin: .5rem;
      top: 50px;
      background:#D99748;
