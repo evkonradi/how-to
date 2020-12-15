@@ -49,7 +49,7 @@ h6 {
 
 p {
     color: $dark;
-    margin-bottom: 0rem;
+    margin-bottom: 2rem;
 }
 
 a {
@@ -72,7 +72,7 @@ Header {
     position: absolute;
     top: 55px;
     float: left;
-    opacity: 90%;
+    // opacity: 90%;
 }
 
 // Text Styles
@@ -85,23 +85,26 @@ Header {
 .copy {
     text-align: center;
     padding: .5rem;
+    color: white;
+    font-size: medium;
 }
 
 .copyBox {
     border: 1px solid $success;
     border-radius: 3px;
+    background-color: $success;
 }
 
 .copyLink {
-  color: $success;
+  color: $primary;
   text-align: center;
-  border: 1px $success;
+  border: 1px $primary;
   padding: .23rem;
 }
 
 .copyLink:hover {
   text-decoration: none;
-  color: $dark;
+  color: white;
 }
 
 .heading {
@@ -114,17 +117,16 @@ Header {
  }
 
  .subtitle {
+     color: white;
      text-align: left;
      float: right;
      border-style: solid;
      border-color:  #D99748;
-     padding: .5rem;
+     padding: 1rem;
      margin: .5rem;
-     position: absolute;
      top: 50px;
-     background: white;
-     opacity: 80%;
-     z-index: 100;
+     background:#D99748;
+
  }
 
  .signupText {
@@ -186,12 +188,11 @@ Header {
 }
 
 .one-third {
-    max-width: 33%;
+    width: 40%;
     float: left;
     margin-left: 20px;
     position: relative;
-    z-index: 100;
-    width: 30%;
+    
     
 }
 
@@ -297,7 +298,6 @@ Header {
     min-width: 75px;
     overflow: hidden;
     object-fit:cover;
-    padding: .2rem;
 }
 
 .card-img-size-carousel{

@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { QUERY_RESOURCE } from "../utils/queries";
-import { Col, Container } from "reactstrap";
+import { Col, Container, Row } from "reactstrap";
 import { Box } from "@chakra-ui/core";
 
 import { useParams } from "react-router-dom";
@@ -27,17 +27,18 @@ function ResourceView() {
                   <h3>{data.resource.name}</h3>
               </Box>
               <br/>
-              <Box className="one-third">
+              <Row>
+              <Col className="one-third">
               <h6 className="subtitle">{data.resource.shortDescription}</h6>
-              <h5 class="italic">Contributor: {data.resource.displayName}</h5>
-              <h5 class="italic">Cost: {data.resource.cost}</h5>
-              </Box>
-          
+              <h5 className="italic">Contributor: {data.resource.displayName}</h5>
+              <h5 className="italic">Cost: {data.resource.cost}</h5>
+              </Col>
+              <Col xs={6}>
               {data.resource.images.map((image) => (
                 <Col key={`image-${data.resource.images.indexOf(image)}`}>
                   <img
+                  class="img-fluid"
                     className="resourceImg"
-
                     src={`${image.fileURL} `} 
                     alt={`${image.imageCaption}`}
                   ></img>
@@ -45,6 +46,8 @@ function ResourceView() {
                   <span>{image.imageCaption}</span>
                 </Col>
               ))}
+              </Col>
+              </Row>
         
  
               <p>{data.resource.resourceBody}</p>

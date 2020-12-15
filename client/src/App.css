@@ -98,13 +98,13 @@ p.caption {
   position: absolute;
   top: 55px;
   float: left;
-  opacity: 90%;
+  /* opacity: 90%; */
 }
 
 .italic {
   font-style: italic;
   color: #D99748;
-  font-size: .8rem;
+  font-size: medium;
 }
 
 .dropdown-item {

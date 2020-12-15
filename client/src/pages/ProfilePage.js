@@ -100,20 +100,15 @@ const ProfilePage = (props) => {
               <hr className="dividerProfile"></hr>
             </Col>
           </Row>
-
-          
             <Col className="cardTextAlign">
               <p class="recentlyAddP">see what others are contributing</p>
             </Col>
-         
-
           <Row>
             <Col className="cardTextAlign">
               <Resource></Resource>
             </Col>
           </Row>
           <br></br><br></br><br></br>
-
         </Container>
         <br />
       </div>
