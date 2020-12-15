@@ -4,6 +4,7 @@ import Resource from "../components/Resource";
 import Search from '../components/Search';
 import logo from "./teach_me_to_logo-01.png";
 import { Link } from 'react-router-dom';
+import { Box } from "@chakra-ui/core";
 
 const Home = () => {
     return (
@@ -20,17 +21,20 @@ const Home = () => {
             <Col className="homesearch" sm={{size:8, offset:2}} lg={{ size:6, offset:3}}>
                 <Search></Search>
             </Col>
-            <p className="recentlyAddP">Recently Added</p>
-            <Col id="col2" sm={{size:8, offset:2}} lg={{ size:6, offset:3}} className="carousel cardTextAlign">
             
+            <p className="recentlyAddP">Recently Added</p>
+
+            <Box id="col2" sm={{size:8, offset:2}} lg={{ size:6, offset:3}} className="carouselMain" >
                 <Resource></Resource>
-            </Col> 
+            </Box> 
             
             <Jumbotron className="whitespace" align="center">
-            <p className="copy"> Start sharing your knowledge with others on TeachMeTo.</p> 
+            <Box className="copyBox" maxW="50%">
+            <p className="copy"> Start creating and sharing your knowledge with others on TeachMeTo.</p> 
             <p className="copy">Add images, video, and the "written" word.</p>
             <Link className="copyLink" to="/signup">Signup |</Link>
             <Link className="copyLink" to="/login">Login</Link>
+            </Box>
             </Jumbotron>
             
         </div>

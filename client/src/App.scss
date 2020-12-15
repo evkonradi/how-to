@@ -75,6 +75,12 @@ Header {
 
 .copy {
     text-align: center;
+    padding: .5rem;
+}
+
+.copyBox {
+    border: 1px solid $success;
+    border-radius: 3px;
 }
 
 .copyLink {
@@ -142,6 +148,11 @@ Header {
     border-bottom: 10px solid black;
     opacity: .5;
     transition: opacity .6s ease;
+  }
+
+  .carouselMain {
+    background-color: $primary;
+    padding: 20px;
   }
 
 // Resource Styles 
