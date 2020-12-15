@@ -16,6 +16,7 @@ function ResourceAddEdit() {
     articleText: "",
     imageLinkInput: "",
     imageCaption: "",
+    cost: "",
     imageList: [],
     videoLinkInput: "",
     videoCaption: "",
@@ -37,6 +38,7 @@ function ResourceAddEdit() {
         articleName: data.resource.name,
         articleShortDesc: data.resource.shortDescription,
         articleText: data.resource.resourceBody,
+        cost: data.resource.cost,
         imageLinkInput: "",
         imageCaption: "",
         imageList: data.resource.images.map((image) => {
@@ -60,6 +62,7 @@ function ResourceAddEdit() {
   // update state based on form input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
+    console.log([name] + ": " + value);
 
     setFormState({
       ...formState,
@@ -108,16 +111,18 @@ function ResourceAddEdit() {
 
       if (!id){
         try{
-          await addResource({ variables: { ...formState } })
+          await addResource({ variables: { ...formState } });
+          console.log("New resource added");
         }
         catch(e){
           console.error(e);
           //idbPromise('newResources', 'put', { ...formState });
         }
       }
-      else{
+      else {
         try{
           await updateResource({ variables: { id, ...formState } });
+          console.log("Resource updated");
         }
         catch(e){
           console.error(e);
@@ -189,6 +194,15 @@ function ResourceAddEdit() {
               onChange={handleChange}
             >
               Please enter your article text here.
+            </Input>
+            <br />
+            <Input className="span"
+              id="cost"
+              placeholder="Enter cost for this article."
+              name="cost"
+              value={formState.cost}
+              onChange={handleChange}
+            >
             </Input>
             <br />
             <br />
