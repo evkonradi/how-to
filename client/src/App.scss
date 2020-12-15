@@ -425,6 +425,16 @@ Header {
     margin: 5px;
 }
 
+.statement-total{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: right;
+    font-weight: bold;
+}
+.statement-total-amounts{
+    font-weight: bold;
+}
+
 // Footer
 .footer.p {
     color: $secondary;

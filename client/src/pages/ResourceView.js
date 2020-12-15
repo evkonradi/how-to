@@ -7,6 +7,7 @@ import { Box } from "@chakra-ui/core";
 import { useParams } from "react-router-dom";
 import DonateButton from "../components/DonateButton";
 
+
 function ResourceView() {
   const { id } = useParams();
   const { loading, data } = useQuery(QUERY_RESOURCE, {
@@ -28,7 +29,8 @@ function ResourceView() {
               <br/>
               <Box className="one-third">
               <h6 className="subtitle">{data.resource.shortDescription}</h6>
-              <h5 class="italic">Contibutor: {data.resource.displayName}</h5>
+              <h5 class="italic">Contributor: {data.resource.displayName}</h5>
+              <h5 class="italic">Cost: {data.resource.cost}</h5>
               </Box>
           
               {data.resource.images.map((image) => (
