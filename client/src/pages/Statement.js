@@ -10,12 +10,22 @@ const Statement = () => {
         variables: { username:  Auth.getProfile().data.username },
     });    
 
+    let totalAmount = 0;
+    let totalFee = 0;
+
     if (!Auth.loggedIn()) {
         return <Redirect to="/" />;
     }
 
     if (loading) {
         return <div>Loading...</div>;
+    }
+
+    if (data){
+        data.transactionsUser.forEach(trx => {
+            totalAmount += parseFloat(trx.amount);
+            totalFee += parseFloat(trx.fee);
+        })            
     }
 
     return (
@@ -35,11 +45,15 @@ const Statement = () => {
                         <span className="statement-item-line">{trx.dateCreated}</span>
                         <span className="statement-item-line">{trx.username}</span>
                         <span className="statement-item-line">{trx.resource_name}</span>
-                        <span className="statement-item-line">${trx.amount}</span>
-                        <span className="statement-item-line">${trx.fee}</span>
+                        <span className="statement-item-line">${trx.amount.toFixed(2)}</span>
+                        <span className="statement-item-line">${trx.fee.toFixed(2)}</span>
                     </>
                     // </div>
                 ))}
+
+                <span className="statement-total">Total:</span>
+                <span className="statement-total-amounts">${totalAmount.toFixed(2)}</span>
+                <span className="statement-total-amounts">${totalFee.toFixed(2)}</span>
             </div>
         </div>
     );
