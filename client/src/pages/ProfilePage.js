@@ -65,21 +65,22 @@ const ProfilePage = (props) => {
     <main>
       <div>
         <Container className="cardTextAlign">
-          <Box h="40px" bg="transparent"></Box>
+        <Box h="40px" bg="transparent"></Box>
+          <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
+                <h3>Welcome Back, {`${user.firstName}`}!</h3>
+              </Box>
+              
             <Box className="profileLeft" minWidth="30%">
-                Username: <span className="smallBox" contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span><br></br>
+                <p className="profileField">Username</p> <span className="smallBox" contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span>
                 
-                  First Name: <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span><br></br>
-                  Last Name: <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span><br></br>
-                
-                
-                  Email: <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.email}>{`${user.email}`}</span><br></br><br></br>
-
-                  Wallet: ${`${user.wallet.toFixed(2)}`}<br></br>
-                  <Link to="/statement/">See Statement</Link><br></br>
-               
-                  <br></br>
-                  <a href="/resource" className="newPostLink">Create New Post</a>
+                <p className="profileField">First Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span>
+                <p className="profileField">Last Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span>
+                <p className="profileField">Email</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.email}>{`${user.email}`}</span>
+                <p className="profileField">Wallet</p> ${`${user.wallet.toFixed(2)}`}<br></br>
+                  <Link className="statement" to="/statement/">Statement</Link><br></br>
+                <Box className="newPostBtn" >
+                  <a className="plainA" href="/resource">Create New Post</a>
+                  </Box>
             </Box>
             <Box minWidth="70%">
               {user.resources.map((resource) => (
@@ -94,12 +95,6 @@ const ProfilePage = (props) => {
                   </Box>
                 ))}
             </Box>
-         
-
-          <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
-                <h3>Welcome Back, {`${user.firstName}`}!</h3>
-              </Box>
-
           <Row>
             <Col>
               <hr className="dividerProfile"></hr>

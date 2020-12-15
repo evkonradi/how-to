@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_RESOURCES_HOMEPAGE } from '../../utils/queries';
 import { idbPromise } from "../../utils/helpers";
+import { Box } from "@chakra-ui/core";
 // import { useParams } from "react-router-dom";
 import CardResource from "../CardResource";
 
@@ -36,7 +37,7 @@ const Resource = () => {
                   <Carousel.Item key={resource._id} className="cardTextAlign">
 
                     <CardResource resource={resource}></CardResource>
-
+                    
                   </Carousel.Item>
                 ))
               }

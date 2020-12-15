@@ -92,13 +92,11 @@ const Login = (props, Component) => {
             Login
           </Button>
           </Row>
+          <p className="signupText">Need an Account? <br/>
+          <a href="/signup" class="nullA">Sign Up.</a></p>
+
           </Col>
-          <div className="text-center pt-3">
-            <a href="/signup" class="nullA" size="x-small">Need an Account? Sign Up.</a>
-            {/* <span className="p-2">|</span>
-            <a href="/signup">Forgot Password</a> */}
-          </div>
-        </Form>
+        </Form>   
         {error && <div>Login failed</div>}
         <Jumbotron className="whitespace" />
         <Jumbotron className="whitespace" />

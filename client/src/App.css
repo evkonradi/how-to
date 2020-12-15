@@ -114,7 +114,7 @@ p.caption {
 
 ul {
   list-style-type: none;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   overflow: hidden;
   background-color: #253237;
   align-content: space-between;
@@ -186,14 +186,15 @@ float: right;
 
 .nullA {
   text-decoration: none;
-  color: #9DB4C0;
-  font-size: smaller;
+  color: #D99748;
+  font-size: small;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .nullA:hover {
   text-decoration: none;
-  color: #D99748;
+  color: #5C6B73;
 }
 
 .signup {
@@ -233,7 +234,29 @@ button.edit {
   margin: .25rem;
   text-decoration: none;
   float: right;
-  font-size: x-small;
+  font-size: small;
+}
+
+.badgeNew {
+  padding: .5rem;
+  margin-top: 2rem;
+  border-radius: 50px 50px;
+  border-color: transparent;
+  background-color: #D99748;
+  color: white;
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  font-size: small;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.new {
+  color: white;
+  font-size: medium;
+  text-align: center;
 }
 
 .link.plain {
@@ -281,12 +304,9 @@ a.mainCard:hover {
   background-color: tomato;
 }
 
-
-
 Input.span {
   min-width: 100%;
 }
-
 
 .newPostLink {
   text-decoration: none;
@@ -310,15 +330,14 @@ Input.span {
 
 .footer{
   margin-top: 1rem;
-  padding: .3rem;
+
   position: fixed;
   background-color:#253237;
   bottom: 0;
   left: 0;
   width: 100%;
-  display: inline-flex;
-  justify-content: space-evenly;
-  z-index: 200;
+  justify-content: center;
+
 }
 
 .footer {
