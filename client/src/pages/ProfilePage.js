@@ -68,15 +68,16 @@ const ProfilePage = (props) => {
           <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
                 <h3>Welcome Back, {`${user.firstName}`}!</h3>
               </Box>
-              <Box h="20px" bg="transparent"></Box>
+              
             <Box className="profileLeft" minWidth="30%">
                 <p className="profileField">Username</p> <span className="smallBox" contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span>
                 
                 <p className="profileField">First Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span>
                 <p className="profileField">Last Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span>
                 <p className="profileField">Email</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.email}>{`${user.email}`}</span>
-                <p className="profileField">Wallet</p> ${`${user.wallet.toFixed(2)}`}<br></br>
-                  <a href="/resource" className="profileField">Create New Post</a>
+                <p className="profileField">Wallet</p> ${`${user.wallet.toFixed(2)}`}
+                <Box h="20px" bg="transparent"></Box>
+                  <a href="/resource" className="profileFieldA">Create New Post</a>
             </Box>
             <Box minWidth="70%">
               {user.resources.map((resource) => (

@@ -312,9 +312,24 @@ Header {
     margin-bottom: 0;
 }
 
-.profileField:hover {
-    color: $primary;
+.profileFieldA{
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    margin-bottom: 0;
+    border: 1px solid $success;
+    border-radius: 3px;
+    padding:.25rem;
+    background-color: $success;
+    margin: .25rem;
+}
+
+.profileFieldA:hover {
     text-decoration: none;
+    color: white;
+    background-color: $primary;
+    border: 1px solid $primary;
 }
 
 .smallBox {
