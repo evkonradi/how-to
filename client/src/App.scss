@@ -312,24 +312,32 @@ Header {
     margin-bottom: 0;
 }
 
-.profileFieldA{
+.newPostBtn{
     font-size: medium;
     font-weight: bold;
-    color: white;
     text-align: left;
     margin-bottom: 0;
     border: 1px solid $success;
     border-radius: 3px;
-    padding:.25rem;
     background-color: $success;
-    margin: .25rem;
+    text-decoration: none;
+    text-align: center;
 }
 
-.profileFieldA:hover {
+.newPostBtn:hover {
     text-decoration: none;
+    color: $success;
+    background-color: white;
+    border: 1px solid $success;
+}
+
+.plainA {
     color: white;
-    background-color: $primary;
-    border: 1px solid $primary;
+}
+
+.plainA:hover {
+    color: $success;
+    text-decoration: none;
 }
 
 .smallBox {

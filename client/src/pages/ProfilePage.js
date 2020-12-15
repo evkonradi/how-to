@@ -76,8 +76,9 @@ const ProfilePage = (props) => {
                 <p className="profileField">Last Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span>
                 <p className="profileField">Email</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.email}>{`${user.email}`}</span>
                 <p className="profileField">Wallet</p> ${`${user.wallet.toFixed(2)}`}
-                <Box h="20px" bg="transparent"></Box>
-                  <a href="/resource" className="profileFieldA">Create New Post</a>
+                <Box className="newPostBtn" >
+                  <a className="plainA" href="/resource">Create New Post</a>
+                  </Box>
             </Box>
             <Box minWidth="70%">
               {user.resources.map((resource) => (
