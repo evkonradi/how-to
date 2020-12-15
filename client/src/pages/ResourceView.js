@@ -28,7 +28,7 @@ function ResourceView() {
               </Box>
               <br/>
               <Row>
-              <Col xs={3} className="one-third">
+              <Col className="one-third">
               <h6 className="subtitle">{data.resource.shortDescription}</h6>
               <h5 className="italic">Contributor: {data.resource.displayName}</h5>
               <h5 className="italic">Cost: {data.resource.cost}</h5>
@@ -37,8 +37,8 @@ function ResourceView() {
               {data.resource.images.map((image) => (
                 <Col key={`image-${data.resource.images.indexOf(image)}`}>
                   <img
+                  class="img-fluid"
                     className="resourceImg"
-
                     src={`${image.fileURL} `} 
                     alt={`${image.imageCaption}`}
                   ></img>
