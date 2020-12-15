@@ -55,6 +55,7 @@ const typeDefs = gql`
     displayName: String,
     resourceBody: String,
     dateCreated: String
+    cost: String,
     images: [Image]
   }
 
