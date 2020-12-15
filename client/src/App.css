@@ -254,9 +254,10 @@ button.edit {
 }
 
 .new {
-  color: white;
+  color: #D99748;
   font-size: medium;
   text-align: center;
+  font-weight: bold;
 }
 
 .link.plain {

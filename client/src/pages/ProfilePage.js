@@ -86,7 +86,7 @@ const ProfilePage = (props) => {
               {user.resources.map((resource) => (
                   <Box>
                     <CardResource
-                      resource={resource}
+                      resource={resource} useClass="card-img-size-search"
                     ></CardResource>
                     <Link className="plain" to={`/resource/${resource._id}`}>
                       <Button className="edit">EDIT</Button>
@@ -108,11 +108,11 @@ const ProfilePage = (props) => {
          
 
           <Row>
-            <Col sm={{size: 12}} md={{size:8, offset:2}} className="cardTextAlign">
+            <Col className="cardTextAlign">
               <Resource></Resource>
             </Col>
           </Row>
-
+          <br></br><br></br><br></br>
 
         </Container>
         <br />

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_RESOURCES_HOMEPAGE } from '../../utils/queries';
 import { idbPromise } from "../../utils/helpers";
-import { Box } from "@chakra-ui/core";
+// import { Box } from "@chakra-ui/core";
 // import { useParams } from "react-router-dom";
 import CardResource from "../CardResource";
 
@@ -29,14 +29,14 @@ const Resource = () => {
 
   return (
     <main>
-      <div>
+      <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
         {loading ? <div>Loading...</div> : 
             <Carousel className="cardTextAlign">
               {
                 resources2.map((resource) => (
                   <Carousel.Item key={resource._id} className="cardTextAlign">
 
-                    <CardResource resource={resource}></CardResource>
+                    <CardResource resource={resource} useClass="card-img-size-carousel"></CardResource>
                     
                   </Carousel.Item>
                 ))

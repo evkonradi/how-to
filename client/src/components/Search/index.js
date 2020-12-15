@@ -53,7 +53,7 @@ const Search = () => {
             <br></br>
             {data.resources_search.map((article) => (
               <div key={article._id}>
-                <CardResource resource={article} imgWidth="100%"></CardResource>
+                <CardResource resource={article} useClass="card-img-size-search"></CardResource>
                 {/* <DonateButton resource={article}></DonateButton> */}
                 <br></br>
               </div>
