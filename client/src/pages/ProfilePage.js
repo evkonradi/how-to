@@ -10,6 +10,7 @@ import Auth from "../utils/auth";
 import CardResource from "../components/CardResource";
 import { UPDATE_USER } from "../utils/mutations";
 
+
 const ProfilePage = (props) => {
   const { username: userParam } = useParams();
 
@@ -75,6 +76,7 @@ const ProfilePage = (props) => {
                   Email: <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.email}>{`${user.email}`}</span><br></br><br></br>
 
                   Wallet: ${`${user.wallet.toFixed(2)}`}<br></br>
+                  <Link to="/statement/">See Statement</Link><br></br>
                
                   <br></br>
                   <a href="/resource" className="newPostLink">Create New Post</a>

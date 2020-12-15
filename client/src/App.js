@@ -13,6 +13,7 @@ import ResourceView from './pages/ResourceView';
 import ProfilePage from "./pages/ProfilePage";
 import Signup from "./pages/Signup";
 import Success from "./pages/Success";
+import Statement from "./pages/Statement";
 import NoMatch from "./pages/NoMatch"
 import Cart from './components/Cart';
 import { ThemeProvider } from "@chakra-ui/core";
@@ -51,6 +52,7 @@ function App() {
                 <Route exact path="/articles/:id" component={ResourceView} />
                 <Route exact path="/profile" component={ProfilePage} />
                 <Route exact path="/success" component={Success} />
+                <Route exact path="/statement/" component={Statement} />
                 <Route exact path="/nomatch" component={NoMatch} />
                 <Route component={NoMatch} /> 
               </Switch>

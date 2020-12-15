@@ -85,7 +85,8 @@ const typeDefs = gql`
     username: String,
     resource_id: ID,
     resource_name: String,
-    amount: Float
+    amount: Float,
+    fee: Float
   }
 
   type Query {
@@ -99,6 +100,7 @@ const typeDefs = gql`
     profits: [Profit]
     profit: Profit
     transactions: [Transaction]
+    transactionsUser(username: String!): [Transaction]
   }
 
   type Mutation {

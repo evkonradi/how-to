@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import { Nav } from 'react-bootstrap'
 import Auth from '../../utils/auth';
-import logo from "./teach_me_to_logo-01.png";
+// import logo from "./teach_me_to_logo-01.png";
 
 
 // export default

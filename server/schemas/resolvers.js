@@ -83,11 +83,14 @@ const resolvers = {
         profits: async () => {
             return Profit.find();
         },
-        profit: async (parent) => {
+        profit: async () => {
             return await Profit.findOne({ isCurrent: true });
         },
         transactions: async () => {
-            return Transaction.find().sort({ "dateCreated": 1 });
+            return await Transaction.find().sort({ "dateCreated": 1 });
+        },
+        transactionsUser: async (parent,{ username }) => {
+            return await Transaction.find({username}).sort({ "dateCreated": 1 });
         }
     },
     
@@ -168,7 +171,13 @@ const resolvers = {
             );
 
             await Transaction.create(
-                {username: args.username, resource_id: args.resource_id, resource_name: args.resource_name, amount: args.amount}
+                {
+                    username: args.username, 
+                    resource_id: args.resource_id, 
+                    resource_name: args.resource_name, 
+                    amount: args.amount-args.amount*data.feeRate/100,
+                    fee: args.amount*data.feeRate/100
+                }
             );
 
             return user;

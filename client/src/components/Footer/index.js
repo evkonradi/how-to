@@ -1,4 +1,4 @@
-import { AspectRatioBox } from "@chakra-ui/core";
+// import { AspectRatioBox } from "@chakra-ui/core";
 import React from "react";
 import { Box } from "@chakra-ui/core";
 
