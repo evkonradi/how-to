@@ -24,8 +24,9 @@ const Home = () => {
             <Box bg="transparent" h="30px"></Box>
             
             <Box id="col2" sm={{size:8, offset:2}} lg={{ size:6, offset:3}} className="carouselMain" >
+            {/* <Box className="badgeNew">NEW POST</Box> */}
+            <p className="new">NEW POSTS</p>
                 <Resource></Resource>
-                <Box className="badgeNew">NEW POST</Box>
             </Box> 
             
             <Jumbotron className="whitespace" align="center">

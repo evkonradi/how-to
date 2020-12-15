@@ -249,10 +249,14 @@ button.edit {
   height: 60px;
   font-size: small;
   text-align: center;
-  justify-self: center;
-  position: absolute;
-  top: 160px;
-  left: 300px;
+  justify-content: center;
+
+}
+
+.new {
+  color: white;
+  font-size: medium;
+  text-align: center;
 }
 
 .link.plain {
