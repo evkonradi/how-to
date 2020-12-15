@@ -77,7 +77,7 @@ const ProfilePage = (props) => {
                 <p className="profileField">Last Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span>
                 <p className="profileField">Email</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.email}>{`${user.email}`}</span>
                 <p className="profileField">Wallet</p> ${`${user.wallet.toFixed(2)}`}<br></br>
-                  <Link to="/statement/">See Statement</Link><br></br>
+                  <Link className="statement" to="/statement/">Statement</Link><br></br>
                 <Box className="newPostBtn" >
                   <a className="plainA" href="/resource">Create New Post</a>
                   </Box>

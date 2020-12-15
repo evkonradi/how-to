@@ -21,11 +21,11 @@ const Home = () => {
             <Col className="homesearch" sm={{size:8, offset:2}} lg={{ size:6, offset:3}}>
                 <Search></Search>
             </Col>
+            <Box bg="transparent" h="30px"></Box>
             
-            <p className="recentlyAddP">Recently Added</p>
-
             <Box id="col2" sm={{size:8, offset:2}} lg={{ size:6, offset:3}} className="carouselMain" >
                 <Resource></Resource>
+                <Box className="badgeNew">NEW POST</Box>
             </Box> 
             
             <Jumbotron className="whitespace" align="center">

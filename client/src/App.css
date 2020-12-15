@@ -114,7 +114,7 @@ p.caption {
 
 ul {
   list-style-type: none;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   overflow: hidden;
   background-color: #253237;
   align-content: space-between;
@@ -235,6 +235,24 @@ button.edit {
   text-decoration: none;
   float: right;
   font-size: small;
+}
+
+.badgeNew {
+  padding: .5rem;
+  margin-top: 2rem;
+  border-radius: 50px 50px;
+  border-color: transparent;
+  background-color: #D99748;
+  color: white;
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  font-size: small;
+  text-align: center;
+  justify-self: center;
+  position: absolute;
+  top: 160px;
+  left: 300px;
 }
 
 .link.plain {

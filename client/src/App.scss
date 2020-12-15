@@ -257,6 +257,17 @@ Header {
     color:$success;
 }
 
+.statement {
+    color: $primary;
+    text-decoration: none;
+    font-size: small;
+}
+
+.statement:hover {
+    color: $success;
+    text-decoration: none;
+}
+
 // Card 
 
 .card{
