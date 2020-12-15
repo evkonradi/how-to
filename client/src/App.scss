@@ -263,6 +263,10 @@ Header {
     box-shadow: 10px 3px 6px $dark;
 }
 
+.card-body {
+    height: 200px;
+}
+
 .cardBody{
     display: flex;
     padding: 1rem;
