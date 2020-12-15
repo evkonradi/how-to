@@ -6,7 +6,7 @@ const Footer = () => (
   <Box className="footer">
    
       <p className="footerP">teachmeto© 2020</p>
-      <p class="nullA" href="https://github.com/evkonradi/teach-me-to">Proudly made in Texas</p>
+      <p className="nullA" href="https://github.com/evkonradi/teach-me-to">Proudly made in Texas</p>
    
   </Box>
 );
