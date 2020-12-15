@@ -51,6 +51,10 @@ const resourceSchema = new Schema({
       type: String,
       required: true
     },
+    cost: {
+      type: String,
+      required: true
+    },
     images: [imageSchema],
     videos: [videoSchema]
   });

@@ -9,6 +9,7 @@ query resource($_id: ID!) {
       displayName
       resourceBody
       dateCreated
+      cost
       images{
             fileURL
             imageCaption
@@ -29,6 +30,7 @@ export const QUERY_RESOURCES_HOMEPAGE = gql`
       shortDescription 
       displayName
       dateCreated
+      cost
       images{
         fileURL
         imageCaption
@@ -45,6 +47,7 @@ query resource_search($text: String!) {
     shortDescription
     displayName
     dateCreated
+    cost
     images{
       fileURL
       imageCaption
@@ -70,6 +73,7 @@ query user($username: String!) {
       resourceBody
       dateCreated
       displayName
+      cost
     }
   }
 }
@@ -93,6 +97,7 @@ export const QUERY_ME = gql`
       resourceBody
       dateCreated
       displayName
+      cost
       images {
         fileURL
         imageCaption
