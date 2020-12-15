@@ -1,5 +1,5 @@
 const db = require("./connection");
-const { User, Resource, Profit } = require("../models");
+const { User, Resource, Profit, Transaction } = require("../models");
 
 db.once("open", async () => {
   await Resource.deleteMany();
@@ -301,6 +301,9 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
   });
 
   console.log("profit seeded");
+
+  await Transaction.deleteMany();
+  console.log("Transactions deleted");
 
   process.exit();
 });

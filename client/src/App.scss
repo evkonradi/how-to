@@ -66,6 +66,15 @@ Header {
     background-color: $dark;
 }
 
+.medium {
+    width: 67px;
+    height: 67px;
+    position: absolute;
+    top: 55px;
+    float: left;
+    opacity: 90%;
+}
+
 // Text Styles
 .byline{
     font-size: medium;

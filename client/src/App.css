@@ -51,12 +51,12 @@ h1.class {
 }
 
 .mainNav {
-  display: inline-flex;
-  flex-wrap: nowrap;
+  /* display: inline-flex;
+  flex-wrap: nowrap; */
   max-height: 45px;
   background-color: #253237;
   padding: .5rem;
-  align-items: space-between;
+  /* align-items: space-between; */
 }
 
 a.nav.mainNav {
