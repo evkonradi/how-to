@@ -419,6 +419,11 @@ Header {
 }
 
 //statement
+.statement{
+    color: #D99748;
+    font-size: larger;
+    font-weight: bold;
+}
 .statement-container{
     width:90%;
     margin-left: 5%;
@@ -454,6 +459,10 @@ Header {
 }
 
 // Footer
+.footer{
+    padding: 10px 5px;
+    font-size: small;
+}
 .footer.p {
     color: $secondary;
 }

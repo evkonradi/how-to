@@ -341,6 +341,9 @@ function ResourceAddEdit() {
             </Button>
             <br></br>
             <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
           </Col>
         </form>
         
