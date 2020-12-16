@@ -77,7 +77,7 @@ function ResourceView() {
             <Col xs={12}>
                 <DonateButton resource={data.resource}></DonateButton>
             </Col>
-            <br/><br/>
+            <br/><br/><br/><br/>
           </Container>
         </div>
       )}
