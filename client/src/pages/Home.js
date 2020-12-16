@@ -8,8 +8,7 @@ import { Box } from "@chakra-ui/core";
 
 const Home = () => {
     return (
-        <div >
-            
+        <div>
             <Jumbotron className="hometron">
             <img className="medium" src={logo} alt="logo, teach me to" />
                     <Col className="heading"  text="center">
@@ -17,19 +16,14 @@ const Home = () => {
                     <h4 className="byline">What do you want to learn today?</h4>
                     </Col>
             </Jumbotron>
-            
             <Col className="homesearch" sm={{size:8, offset:2}} lg={{ size:6, offset:3}}>
                 <Search></Search>
             </Col>
-            <Box bg="transparent" h="30px"></Box>
-
             <Box id="col2" sm={{size:8, offset:2}} lg={{ size:6, offset:3}} className="carouselMain" >
             {/* <Box className="badgeNew">NEW POST</Box> */}
             <p className="new">NEW POSTS</p>
                 <Resource></Resource>
             </Box> 
-
-           
             <Jumbotron className="whitespace" align="center">
             <Box className="copyBox" maxW="50%">
             <p className="copy"> Start creating and sharing your knowledge with others on TeachMeTo.</p> 
@@ -38,8 +32,6 @@ const Home = () => {
             <Link className="copyLink" to="/login">Login</Link>
             </Box>
             </Jumbotron>
-
-
         </div>
     );
 };
