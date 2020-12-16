@@ -3,7 +3,6 @@ import { useQuery } from "@apollo/react-hooks";
 import { QUERY_RESOURCE } from "../utils/queries";
 import { Col, Container, Row } from "reactstrap";
 import { Box } from "@chakra-ui/core";
-
 import { useParams } from "react-router-dom";
 import DonateButton from "../components/DonateButton";
 

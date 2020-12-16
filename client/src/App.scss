@@ -320,19 +320,20 @@ Header {
 }
 
 .cardText {
+    padding-left: 60px;
     word-break: break;
     text-align: right;
     display: inline-flex;
 }
 .cardTextAlign{
-    text-align: center;
+    text-align: right;
     
 }
 
 .cardTime {
     font-size: xx-small;
     text-align: right;
-
+    padding-left: 60px;
 }
 
 .recentlyAddP{
