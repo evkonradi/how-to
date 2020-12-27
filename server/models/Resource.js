@@ -52,27 +52,13 @@ const resourceSchema = new Schema({
       required: true
     },
     cost: {
-      type: String,
+      type: Number,
       required: true
     },
     images: [imageSchema],
     videos: [videoSchema]
   });
 
-//   const cardSchema = new Schema({
-//     name: {
-//         type: String,
-//         required: true,
-//         trim: true
-//       },
-//       shortDescription: {
-//         type: String,
-//         required: true
-//       },
-//       images: [imageSchema],
-//   })
-  
   const Resource = mongoose.model('Resource', resourceSchema);
-//   const Resource = mongoose.model('Resource', resourceSchema, getResourceSchema);
   module.exports = Resource;
   

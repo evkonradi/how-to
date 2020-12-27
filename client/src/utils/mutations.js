@@ -33,7 +33,7 @@ mutation addUser($username: String!, $firstName: String!, $lastName: String!, $d
 `;
 
 export const ADD_RESOURCE = gql`
-mutation addResource($articleName: String!, $articleShortDesc : String!, $articleText: String!, $cost: String!,
+mutation addResource($articleName: String!, $articleShortDesc : String!, $articleText: String!, $cost: Float!,
     $imageList: [ImageInput], $videoList: [VideoInput]) {
       addResource(name: $articleName, shortDescription: $articleShortDesc, resourceBody: $articleText, cost: $cost,
       images:$imageList, videos: $videoList) {
@@ -57,7 +57,7 @@ mutation addResource($articleName: String!, $articleShortDesc : String!, $articl
 `;
 
 export const UPDATE_RESOURCE = gql`
-mutation updateResource($id: ID!, $articleName: String!, $articleShortDesc : String!, $articleText: String!, $cost: String!,
+mutation updateResource($id: ID!, $articleName: String!, $articleShortDesc : String!, $articleText: String!, $cost: Float!,
   $imageList: [ImageInput], $videoList: [VideoInput]) {
     updateResource(_id: $id, name: $articleName, shortDescription: $articleShortDesc, resourceBody: $articleText, cost: $cost,
       images:$imageList, videos: $videoList) {

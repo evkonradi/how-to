@@ -14,6 +14,13 @@ function ResourceView() {
     variables: { _id: id },
   });
 
+  const needPayForResource = () =>{
+    if ((Math.round(parseFloat(data.resource.cost)*100)/100) === 0)
+      return false;
+    else
+      return true;
+  }
+
   return (
     <main>
       {loading ? (
@@ -22,6 +29,7 @@ function ResourceView() {
         <div>
           <Container className="cardTextAlign">
             <br />
+
             <Col xs={12}>
               <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
                   <h3>{data.resource.name}</h3>
@@ -29,9 +37,21 @@ function ResourceView() {
               <br/>
               <Row>
               <Col className="one-third">
-              <h6 className="subtitle">{data.resource.shortDescription}</h6>
-              <h5 className="italic">Contributor: {data.resource.displayName}</h5>
-              <h5 className="italic">Cost: {data.resource.cost}</h5>
+                <h6 className="subtitle">{data.resource.shortDescription}</h6>
+                <h5 className="italic">Contributor: {data.resource.displayName}</h5>
+
+                {needPayForResource() ? (
+                  <h5 className="italic">Cost: ${data.resource.cost}</h5>
+                ) : (
+                  <h5 className="italic">FREE Resource</h5>
+              )}
+
+                {needPayForResource() ? (
+                  <Col >
+                    <DonateButton resource={data.resource}></DonateButton>
+                  </Col>
+                ): null}
+
               </Col>
               <Col xs={6}>
               {data.resource.images.map((image) => (
@@ -74,9 +94,6 @@ function ResourceView() {
               </Col>
             ))}
 
-            <Col xs={12}>
-                <DonateButton resource={data.resource}></DonateButton>
-            </Col>
             <br/><br/><br/><br/>
           </Container>
         </div>

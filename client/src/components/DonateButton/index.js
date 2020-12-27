@@ -27,7 +27,7 @@ function DonateButton({resource}){
 
     return(
         <div>
-            <Button className="donateBtn" onClick={addToCart}>donate ♡</Button>
+            <Button className="donateBtn" onClick={addToCart}>Please pay to view</Button>
         </div>
     );
   
