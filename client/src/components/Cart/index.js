@@ -44,7 +44,7 @@ const Cart = () => {
     function calculateTotal() {
         let sum = 0;
         state.cart.forEach(item => {
-          sum += item.donation;
+          sum += item.cost;
         });
         return sum.toFixed(2);
     }
@@ -56,7 +56,7 @@ const Cart = () => {
           productsCard.push({_id: item._id, 
                             name: item.name,  
                             shortDescription: item.shortDescription,
-                            donation: item.donation,
+                            cost: item.cost,
                             author: item.author
                           });
         });

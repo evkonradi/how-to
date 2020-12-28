@@ -73,7 +73,7 @@ const typeDefs = gql`
     name: String,
     shortDescription: String,
     author: String,
-    donation: Int
+    cost: Float
   }
 
   type Profit{

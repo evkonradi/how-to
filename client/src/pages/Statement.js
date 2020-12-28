@@ -36,7 +36,7 @@ const Statement = () => {
                 <span className="statement-item-head">Date</span>
                 <span className="statement-item-head">Author</span>
                 <span className="statement-item-head">Resource</span>
-                <span className="statement-item-head">Donation to Author</span>
+                <span className="statement-item-head">Payment to Author</span>
                 <span className="statement-item-head">Fee amount</span>
 
                 {data.transactionsUser.map((trx) => (

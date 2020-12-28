@@ -59,7 +59,7 @@ const resolvers = {
               // generate price id using the product id
               const price = await stripe.prices.create({
                 product: product.id,
-                unit_amount: products[i].donation * 100,
+                unit_amount: products[i].cost * 100,
                 currency: 'usd',
               });
       
@@ -154,8 +154,6 @@ const resolvers = {
         },
         updateWallet: async (parent, args) => {
 
-            console.log("Args:");
-            console.log(args);
             const data = await Profit.findOne({ isCurrent: true });
 
             const user = await User.findOneAndUpdate(

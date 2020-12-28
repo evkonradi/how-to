@@ -5,7 +5,7 @@ import { Col, Container, Row } from "reactstrap";
 import { Box } from "@chakra-ui/core";
 
 import { useParams } from "react-router-dom";
-import DonateButton from "../components/DonateButton";
+import PayButton from "../components/PayButton";
 
 
 function ResourceView() {
@@ -48,7 +48,7 @@ function ResourceView() {
 
                 {needPayForResource() ? (
                   <Col >
-                    <DonateButton resource={data.resource}></DonateButton>
+                    <PayButton resource={data.resource}></PayButton>
                   </Col>
                 ): null}
 

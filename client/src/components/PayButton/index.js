@@ -6,7 +6,7 @@ import { Button } from "reactstrap";
 
 import { idbPromise } from "../../utils/helpers";
 
-function DonateButton({resource}){
+function PayButton({resource}){
 
     const [state, dispatch] = useStoreContext();
     const { cart } = state;
@@ -18,9 +18,9 @@ function DonateButton({resource}){
         if (!itemInCart) {
             dispatch({
                 type: ADD_TO_CART,
-                product: { _id: resource._id, name: resource.name, shortDescription: resource.shortDescription, donation: 5, author: resource.displayName }
+                product: { _id: resource._id, name: resource.name, shortDescription: resource.shortDescription, cost: resource.cost, author: resource.displayName }
             });
-            idbPromise('cart', 'put', { _id: resource._id, name: resource.name, shortDescription: resource.shortDescription, donation: 5, author: resource.displayName });
+            idbPromise('cart', 'put', { _id: resource._id, name: resource.name, shortDescription: resource.shortDescription, cost: resource.cost, author: resource.displayName });
         }
         
     };
@@ -33,4 +33,4 @@ function DonateButton({resource}){
   
 }
 
-export default DonateButton;
+export default PayButton;

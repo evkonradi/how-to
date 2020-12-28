@@ -14,9 +14,7 @@ function Success() {
 
     async function walletTransaction(item){
 
-      console.log("Item:");
-      console.log(item);
-      await updateWallet({ variables: { username: item.author, amount: item.donation, resource_id: item._id, resource_name: item.name } });
+      await updateWallet({ variables: { username: item.author, amount: item.cost, resource_id: item._id, resource_name: item.name } });
     };
 
     async function clearShoppingCart(){
@@ -51,7 +49,7 @@ function Success() {
       <div>
         <div style={{ height: 560, clear: "both", paddingTop: 120, textAlign: "center" }} >
           <h2>
-            Thank you for your donation!
+            Thank you for your payment!
           </h2>
         </div>
       </div>
