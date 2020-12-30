@@ -1,9 +1,9 @@
-$primary:#5C6B73;
-$secondary: #9DB4C0;
+$primary:#3F6844;
+$secondary: #5DAA68;
 $success: #D99748;
 $danger: #D99748;;
 $warning: #F23E16;
-$info: #C2DFE3;
+$info: #FAF1CF;
 $light:whitesmoke;
 $dark: #253237;
 
@@ -16,7 +16,9 @@ $dark: #253237;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.8rem;
+    color: $success;
+    padding: .8rem;
 }
 
 h2 {
@@ -30,9 +32,10 @@ h3 {
 }
 
 h4 {
-    color: $success;
-   
+    color: wheat;
+    padding: .3rem;
 }
+
 h5 {
     color: $primary;
     font-size: smaller;
@@ -62,9 +65,6 @@ a {
     min-height: 100%;
 }
 
-Header {
-    background-color: $dark;
-}
 
 .medium {
     width: 67px;
@@ -72,7 +72,22 @@ Header {
     position: absolute;
     top: 55px;
     float: left;
+    padding: .8rem;
     // opacity: 90%;
+}
+
+.hometron{
+    background-color: $primary;
+    padding: 1rem;
+}
+
+.mainNav {
+    max-height: 45px;
+    background-color:$primary;
+    padding: .5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 // Text Styles
@@ -80,6 +95,7 @@ Header {
     font-size: medium;
     word-break: keep-all;
     text-align: center;
+    font-size: 1.8rem;
 }
 
 .copy {
@@ -92,7 +108,9 @@ Header {
 .copyBox {
     border: 1px solid $success;
     border-radius: 3px;
-    background-color: $success;
+    background-color: transparent;
+    align-items: center;
+    padding: .3rem;
 }
 
 .copyLink {
@@ -196,11 +214,6 @@ Header {
     
 }
 
-.jumbotron.hometron{
-    background-color: $primary;
-    padding: 1rem;
-}
-
 .Col.homesearch {
     position: center;
     background-color: $success;
@@ -301,13 +314,13 @@ Header {
 }
 
 .card-img-size-carousel{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 }
 
 .card-img-size-search{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 
 .cardImg:hover {
@@ -317,6 +330,7 @@ Header {
 .Card.Link {
     color: $success;
     text-decoration: none;
+    text-align: right;
 }
 
 .cardText {
@@ -460,12 +474,27 @@ Header {
 
 // Footer
 .footer{
-    padding: 10px 5px;
+    margin-top: 1rem;
+    // position: fixed;
+    background-color:#253237;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .footer {
     font-size: small;
-}
-.footer.p {
-    color: $secondary;
-}
+    text-align: center;
+  }
+  
+  .footerP {
+    color: #9DB4C0;
+    text-align: center;
+    margin-bottom: 0;
+    font-size:small;
+  }
+  
 
 //shopping cart
 .trash:hover{

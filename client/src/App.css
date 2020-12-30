@@ -29,48 +29,13 @@
 }
 
 h1 {
-  animation: type 3s steps(13);
+  /* animation: type 3s steps(13);
   overflow:hidden;
   white-space:nowrap;
   font-family:'Courier New', Courier, monospace;
   border-right:4px solid black;
   width:14ch;
-  color: whitesmoke;
-}
-
-h1.class {
-  color: #D99748;
-}
-@keyframes type {
-  0% {
-    width:0ch;
-  }
-  100% {
-    width:13ch;
-  }
-}
-
-.mainNav {
-  /* display: inline-flex;
-  flex-wrap: nowrap; */
-  max-height: 45px;
-  background-color: #253237;
-  padding: .5rem;
-  /* align-items: space-between; */
-}
-
-a.nav.mainNav {
-  color: #5C6B73;
-  text-decoration: none;
-}
-a.nav.mainNav:hover {
-  color: #D99748;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #D99748;
-  text-decoration: none;
+  color: whitesmoke; */
 }
 
 p {
@@ -92,31 +57,17 @@ p.caption {
   height: 50px;
 }
 
-.medium {
-  width: 67px;
-  height: 67px;
-  position: absolute;
-  top: 55px;
-  float: left;
-  /* opacity: 90%; */
-}
-
 .italic {
   font-style: italic;
   color: #D99748;
   font-size: medium;
 }
 
-.dropdown-item {
-  color: #9DB4C0;
-  align-items: right;
-}
-
 ul {
   list-style-type: none;
   margin-bottom: 0;
   overflow: hidden;
-  background-color: #253237;
+  
   align-content: space-between;
 }
 
@@ -165,17 +116,6 @@ float: right;
   height: 100%;
 }
 
-.jumbotron.hometron {
-  background-color: #9DB4C0;
-  border-radius: 0px 0px 0px 0px;
-  margin-bottom: 0px;
-}
-
-.jumbotron.whitespace {
-  background-color: transparent;
-  width: 100%;
-}
-
 .Col {
   min-height: max-content;
 }
@@ -207,14 +147,14 @@ float: right;
   color: #5C6B73;
 }
 
-.center {
+/* .center {
   margin: 0;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 70%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
+} */
 
 .form-control {
   position: relative;
@@ -301,10 +241,6 @@ a.mainCard:hover {
   text-decoration: none;
 }
 
-.accordion.item.list {
-  background-color: tomato;
-}
-
 Input.span {
   min-width: 100%;
 }
@@ -325,31 +261,4 @@ Input.span {
 .dividerProfile{
   color: #D99748;
   height: 2px;
-}
-
-/*  Footer */
-
-.footer{
-  margin-top: 1rem;
-
-  position: fixed;
-  background-color:#253237;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  justify-content: center;
-
-}
-
-.footer {
-  font-size: small;
-  text-align: center;
-
-}
-
-.footerP {
-  color: #9DB4C0;
-  text-align: center;
-  margin-bottom: 0;
-  font-size:small;
 }

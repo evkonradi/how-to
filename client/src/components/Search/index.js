@@ -33,10 +33,9 @@ const Search = () => {
     <main>
       <Input className="center" width="80%" name="searchText" onChange={handleChange} />
       <Button
-        className="center"
         size="md"
-        height="46px"
-        width="200px"
+        height="40px"
+        width="100px"
         border="2px"
         color="white"
         bg="#253237"
@@ -44,7 +43,7 @@ const Search = () => {
         type="submit"
         onClick={doSearch}
       >
-        <span role="img" aria-label="search">🔍 Search</span>
+        <span role="img" aria-label="search">🔍 </span>
       </Button>
 
       <div>

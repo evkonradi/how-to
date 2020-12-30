@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Nav } from 'react-bootstrap'
 import Auth from '../../utils/auth';
+import Search from '../Search';
 // import logo from "./teach_me_to_logo-01.png";
 
 
@@ -14,18 +15,20 @@ const Header = (Component) => {
 
   // render(){
   return (
-    <Nav className="mainNav" expand="lg" bg="black" variant="light">
+    <Nav className="mainNav">
       {Auth.loggedIn() ? (
         <>
           <Nav.Item><Link className="homeLink" to="/">HOME</Link></Nav.Item>
           <Nav.Item><Link className="profileLink" to="/profile" >PROFILE</Link></Nav.Item>
-          <Nav.Item><Link className="logoutLink" to="/logout" onClick={logout}>LOGOUT</Link></Nav.Item>    
+          <Nav.Item><Link className="logoutLink" to="/logout" onClick={logout}>LOGOUT</Link></Nav.Item>  
+          <Search></Search>  
         </>
       ) : (
         <>
           <Nav.Item><Link className="homeLink" to="/" >HOME</Link></Nav.Item>
           <Nav.Item><Link className="loginLink" to="/login">LOGIN</Link></Nav.Item>
           <Nav.Item><Link className="signupLink" to="/signup">SIGNUP</Link></Nav.Item>
+          <Search></Search> 
         </>
       )}
     </Nav>
