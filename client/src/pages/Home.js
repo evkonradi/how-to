@@ -64,11 +64,14 @@ Add images - videos - & words to help others learn.<br/> Share resource with a F
             <Link className="copyLink" to="/signup">Signup |</Link>
             <Link className="copyLink" to="/login">Login</Link>
             {/* </Box> */}
-   
+            </Box>
+            <Box className="copyBox" >
+                <h4 className="byline">NEW POSTS</h4>
             <Box className="main-grid-item" >
                 <Resource></Resource>
                 </Box>
                 </Box>
+               
                
             </div>
                     {/* <Col className="homesearch" sm={{size:8, offset:2}} lg={{ size:6, offset:3}} bg={$primary}>
