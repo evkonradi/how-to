@@ -21,14 +21,14 @@ const Header = (Component) => {
           <Nav.Item><Link className="homeLink" to="/">HOME</Link></Nav.Item>
           <Nav.Item><Link className="profileLink" to="/profile" >PROFILE</Link></Nav.Item>
           <Nav.Item><Link className="logoutLink" to="/logout" onClick={logout}>LOGOUT</Link></Nav.Item>  
-          <Search></Search>  
+        
         </>
       ) : (
         <>
           <Nav.Item><Link className="homeLink" to="/" >HOME</Link></Nav.Item>
           <Nav.Item><Link className="loginLink" to="/login">LOGIN</Link></Nav.Item>
           <Nav.Item><Link className="signupLink" to="/signup">SIGNUP</Link></Nav.Item>
-          <Search></Search> 
+          
         </>
       )}
     </Nav>

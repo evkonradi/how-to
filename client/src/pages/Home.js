@@ -58,6 +58,7 @@ const Home = () => {
                     <img className="medium" src={logo} alt="logo, teach me to" />
                     <h1>Teach Me To.</h1>
                     <h4 className="byline">What do you want to learn today?</h4>
+                    <Search></Search>
             <p className="copy"> Start creating and sharing your knowledge with others on TeachMeTo.</p> 
             <p className="copy">Add images - videos - & words. Help teach others with the option to offer FREE or PAID resources.</p>
             <Link className="copyLink" to="/signup">Signup |</Link>

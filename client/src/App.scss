@@ -67,9 +67,9 @@ a {
 
 
 .medium {
-    width: 67px;
-    height: 67px;
-    position: absolute;
+    width: 77px;
+    height: 77px;
+   
     top: 55px;
     float: left;
     padding: .8rem;
@@ -295,7 +295,8 @@ a {
 // Card 
 
 .card{
-    box-shadow: 10px 3px 6px $dark;
+    // box-shadow: 10px 3px 6px $dark;
+    margin: .5rem;
 }
 
 // .card-body {
@@ -304,11 +305,13 @@ a {
 
 .cardBody{
     display: flex;
+    flex-wrap: overflow;
     padding: 1rem;
+    width: 200px;
+    height: 200px;
 }
 
 .cardImg {
-    min-width: 75px;
     overflow: hidden;
     object-fit:cover;
 }
@@ -316,11 +319,12 @@ a {
 .card-img-size-carousel{
     width: 100px;
     height: 100px;
+    float: left;
 }
 
 .card-img-size-search{
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
 }
 
 .cardImg:hover {
@@ -337,6 +341,7 @@ a {
     word-break: break;
     text-align: right;
     display: inline-flex;
+    font-size: small;
 }
 .cardTextAlign{
     text-align: center;
@@ -432,6 +437,16 @@ a {
     background-color: $dark;
 }
 
+
+.home-grid-card{
+   
+}
+
+.card-grid-item{
+    padding: .3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+}
 //main
 .main-container{
     width:100%;
@@ -493,7 +508,7 @@ a {
 .footer{
     margin-top: 1rem;
     // position: fixed;
-    background-color:#253237;
+    background-color:$primary;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -506,7 +521,7 @@ a {
   }
   
   .footerP {
-    color: #9DB4C0;
+    color: $success;
     text-align: center;
     margin-bottom: 0;
     font-size:small;
