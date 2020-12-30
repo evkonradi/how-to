@@ -9,6 +9,7 @@ const CardResource = ({resource, useClass}) =>{
 
 
     <Link className="mainCard" to={`/articles/${resource._id}`} key={resource._id}>
+      <Box>
       <Card outline color='dark'>
         <Card.Body className="cardBody">
         <Box>
@@ -20,6 +21,7 @@ const CardResource = ({resource, useClass}) =>{
           </Box>
         </Card.Body>
       </Card>
+      </Box>
     </Link>
 
 );
