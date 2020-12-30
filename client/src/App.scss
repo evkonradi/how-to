@@ -111,7 +111,8 @@ a {
     border-radius: 3px;
     background-color: transparent;
     align-items: center;
-    padding: .3rem;
+    padding: .8rem;
+    margin: 1rem;
 }
 
 .copyLink {
@@ -436,13 +437,17 @@ a {
 
 
 .home-grid-card{
-   
+    width: 200px;
+    display: grid;
+   grid-template-columns: 3fr 3fr 3fr;
 }
 
 .card-grid-item{
     padding: .3rem;
     display: grid;
-    grid-template-columns: 1fr;
+    // grid-template-columns: 3fr 3fr 1fr ;
+   
+    // grid-template-columns: 3fr 2fr 3fr;
 }
 //main
 .main-container{
@@ -458,7 +463,7 @@ a {
 
 .main-grid-item{
     display: grid;
-    grid-template-columns: 9fr 3fr;
+    
 }
 
 //statement
