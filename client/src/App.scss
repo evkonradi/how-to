@@ -114,7 +114,7 @@ a {
 }
 
 .copyLink {
-  color: $primary;
+  color: $success;
   text-align: center;
   border: 1px $primary;
   padding: .23rem;
@@ -314,13 +314,13 @@ a {
 }
 
 .card-img-size-carousel{
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
 }
 
 .card-img-size-search{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
 
 .cardImg:hover {
@@ -430,6 +430,23 @@ a {
     height: 300px;
     padding: 0px;
     background-color: $dark;
+}
+
+//main
+.main-container{
+    width:100%;
+    text-align: center;
+}
+
+.main-grid{
+    margin-top: 30px;
+    text-align: center;
+   
+}
+
+.main-grid-item{
+    display: grid;
+    grid-template-columns: 9fr 3fr;
 }
 
 //statement

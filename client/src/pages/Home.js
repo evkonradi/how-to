@@ -48,25 +48,28 @@ import $primary from '../App.scss';
 
 const Home = () => {
     return (
-        <div >
-     <Col className="homesearch" sm={{size:8, offset:2}} lg={{ size:6, offset:3}} bg={$primary}>
-                {/* <Search></Search> */}
-            </Col>
+        <div className="main-container">
+            
+
+            <div className="main-grid">
             <Box className="hometron">
-                    <Box bg="transparent" h="30px"></Box>
-                    <Box className="copyBox" maxW="80%">
+                    <Box className="main-grid-item" >
+                    <Box className="copyBox" >
                     <img className="medium" src={logo} alt="logo, teach me to" />
                     <h1>Teach Me To.</h1>
                     <h4 className="byline">What do you want to learn today?</h4>
             <p className="copy"> Start creating and sharing your knowledge with others on TeachMeTo.</p> 
-            <p className="copy">Add images, video, and the "written" word.</p>
+            <p className="copy">Add images - videos - & words. Help teach others with the option to offer FREE or PAID resources.</p>
             <Link className="copyLink" to="/signup">Signup |</Link>
             <Link className="copyLink" to="/login">Login</Link>
             </Box>
-
-            <p className="new">NEW POSTS</p>
+   
+            <Box className="main-grid-item" >
                 <Resource></Resource>
-            </Box>
+                </Box>
+                </Box>
+                </Box>
+            </div>
                     {/* <Col className="homesearch" sm={{size:8, offset:2}} lg={{ size:6, offset:3}} bg={$primary}>
                 <Search></Search>
             </Col> */}
