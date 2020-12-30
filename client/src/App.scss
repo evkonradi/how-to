@@ -300,10 +300,6 @@ a {
     margin: .5rem;
 }
 
-// .card-body {
-//     // height: 200px;
-// }
-
 .cardBody{
     display: flex;
     flex-wrap: overflow;
@@ -546,4 +542,67 @@ a {
         font-size: small;
       }
 
+  
+}
+
+@media screen and (max-width: 360px) {
+
+.card{
+    // box-shadow: 10px 3px 6px $dark;
+    margin: .5rem;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.cardBody{
+    display: flex;
+    flex-wrap: overflow;
+    width: 100px;
+    height: 100px;
+}
+
+.cardImg {
+    overflow: hidden;
+    object-fit:cover;
+}
+
+.card-img-size-carousel{
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.card-img-size-search{
+    width: 70px;
+    height: 70px;
+}
+
+.cardImg:hover {
+    transform: rotate(357deg);
+}
+
+.Card.Link {
+    color: $success;
+    text-decoration: none;
+    text-align: right;
+}
+
+.cardText {
+    word-break: break;
+    text-align: center;
+    display: inline-flex;
+    font-size: small;
+}
+.cardTextAlign{
+    text-align: center;
+    
+}
+
+.cardTime {
+    font-size: xx-small;
+    text-align: right;
+
+}
 }
