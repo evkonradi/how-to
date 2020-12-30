@@ -67,9 +67,9 @@ Add images - videos - & words to help others learn.<br/> Share resource with a F
             </Box>
             <Box className="copyBox" >
                 <h4 className="byline">NEW POSTS</h4>
-            <Box className="main-grid-item" >
+            
                 <Resource></Resource>
-                </Box>
+                
                 </Box>
                
                

@@ -437,17 +437,12 @@ a {
 
 
 .home-grid-card{
-    width: 200px;
     display: grid;
-   grid-template-columns: 3fr 3fr 3fr;
+    grid-template-columns: 3fr 3fr 3fr ;
 }
 
 .card-grid-item{
     padding: .3rem;
-    display: grid;
-    // grid-template-columns: 3fr 3fr 1fr ;
-   
-    // grid-template-columns: 3fr 2fr 3fr;
 }
 //main
 .main-container{
