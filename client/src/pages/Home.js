@@ -6,6 +6,7 @@ import logo from "./teach_me_to_logo-01.png";
 import { Link } from 'react-router-dom';
 import { Box } from "@chakra-ui/core";
 import $primary from '../App.scss';
+// import graphic from "./../public/AdobeStock_graphic.png";
 
 // const Home = () => {
 //     return (
@@ -63,6 +64,7 @@ const Home = () => {
 Add images - videos - & words to help others learn.<br/> Share resource with a FREE or PAID option.</p>
             <Link className="copyLink" to="/signup">Signup |</Link>
             <Link className="copyLink" to="/login">Login</Link>
+            {/* <image src={graphic}></image> */}
             {/* </Box> */}
             </Box>
             <Box className="copyBox" >

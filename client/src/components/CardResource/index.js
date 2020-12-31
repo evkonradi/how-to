@@ -15,7 +15,7 @@ const CardResource = ({resource, useClass}) =>{
         <Box>
           {/* <Card.Img className={`cardImg ${useClass}`} variant="top" src={resource.images.length ? resource.images[0].fileURL : "/images/teach_me_to_logo-01.png"} alt = {resource.name} /> */}
           <img className={`cardImg ${useClass}`} variant="top" src={resource.images.length ? resource.images[0].fileURL : "/images/teach_me_to_logo-01.png"} alt = {resource.name} />
-          <Card.Title>{resource.name}</Card.Title>
+          <Card.Title className="cardTitle">{resource.name}</Card.Title>
           <Card.Text className="cardText">{resource.shortDescription}</Card.Text>
           <Card.Text className="cardTime">Created: {resource.dateCreated} by {resource.displayName}</Card.Text>
           </Box>

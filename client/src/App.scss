@@ -306,8 +306,9 @@ a {
     display: flex;
     flex-wrap: overflow;
     padding: 1rem;
-    width: 200px;
+    // width: 200px;
     height: 200px;
+    overflow: hidden;
 }
 
 .cardImg {
@@ -324,23 +325,37 @@ a {
 .card-img-size-search{
     width: 150px;
     height: 150px;
+    float: left;
+    text-align: right
 }
 
 .cardImg:hover {
     transform: rotate(357deg);
 }
 
-.Card.Link {
+.cardTitle {
     color: $success;
+    text-decoration: none;
+    text-align: right;
+}
+
+.cardTitle:hover {
+    color: $dark;
     text-decoration: none;
     text-align: right;
 }
 
 .cardText {
     word-break: break;
-    text-align: right;
+    overflow: hidden;
+    text-align: center;
     display: inline-flex;
     font-size: small;
+}
+
+.cardText:hover {
+    text-decoration: none;
+    color: $success;
 }
 .cardTextAlign{
     text-align: center;
@@ -583,10 +598,11 @@ a {
     transform: rotate(357deg);
 }
 
-.Card.Link {
+.cardTitle {
     color: $success;
     text-decoration: none;
     text-align: right;
+    size: x-small;
 }
 
 .cardText {
