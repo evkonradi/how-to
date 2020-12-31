@@ -103,7 +103,7 @@ const ProfilePage = (props) => {
             </Col>
           </Row>
             <Col className="cardTextAlign">
-              <p class="recentlyAddP">see what others are contributing</p>
+              <p class="recentlyAddP">SEE WHAT'S NEW</p>
             </Col>
           <Row>
             <Col className="cardTextAlign">
