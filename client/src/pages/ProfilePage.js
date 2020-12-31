@@ -63,22 +63,22 @@ const ProfilePage = (props) => {
 
   return (
     <main>
-      <div>
+      <div className="main-container">
         <Container className="cardTextAlign">
         <Box h="40px" bg="transparent"></Box>
-          <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
-                <h3>Welcome Back, {`${user.firstName}`}!</h3>
-              </Box>
+          <Box  className="copyBox" w="100%" p={4} color="#C2DFE3">
+                <h4>Welcome Back, {`${user.firstName}`}!</h4>
+             
               
             <Box className="profileLeft" minWidth="30%">
                 <p className="profileField">Username</p> <span className="smallBox" contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span>
-                
                 <p className="profileField">First Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span>
                 <p className="profileField">Last Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span>
                 <p className="profileField">Email</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.email}>{`${user.email}`}</span>
                 <p className="profileField">Wallet</p> ${`${user.wallet.toFixed(2)}`}<br></br><br></br>
-
-                <Link className="statement" to="/statement/">See Statement</Link><br></br><br></br>
+                <Box className="newPostBtn" >
+                <a className="plainA" to="/statement/">See Statement</a>
+                </Box>
                 <Box className="newPostBtn" >
                   <a className="plainA" href="/resource">Create New Post</a>
                 </Box>
@@ -111,6 +111,7 @@ const ProfilePage = (props) => {
             </Col>
           </Row>
           <br></br><br></br><br></br>
+          </Box>
         </Container>
         <br />
       </div>

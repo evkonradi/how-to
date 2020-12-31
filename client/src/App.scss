@@ -395,9 +395,10 @@ a {
     margin-bottom: 0;
     border: 1px solid $success;
     border-radius: 3px;
-    background-color: $success;
+    background-color: transparent;
     text-decoration: none;
     text-align: center;
+    margin: .3rem;
 }
 
 .newPostBtn:hover {

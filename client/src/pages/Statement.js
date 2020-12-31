@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 import Auth from "../utils/auth";
 import { useQuery } from "@apollo/react-hooks";
 import { QUERY_TRANSACTIONSUSER } from "../utils/queries";
-
+import { Box } from "@chakra-ui/core";
 const Statement = () => {
 
     const { loading, data } = useQuery(QUERY_TRANSACTIONSUSER, {
@@ -29,9 +29,10 @@ const Statement = () => {
     }
 
     return (
+        <div class="main-container">
         <div className="statement-container" >
             <h4>Transaction History for {Auth.getProfile().data.username} </h4>
-
+        <Box className="copyBox">
             <div className="statement-grid">
                 <span className="statement-item-head">Date</span>
                 <span className="statement-item-head">Author</span>
@@ -55,6 +56,9 @@ const Statement = () => {
                 <span className="statement-total-amounts">${totalAmount.toFixed(2)}</span>
                 <span className="statement-total-amounts">${totalFee.toFixed(2)}</span>
             </div>
+            </Box>
+        </div>
+        
         </div>
     );
 };
