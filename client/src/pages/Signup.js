@@ -38,14 +38,12 @@ const Signup = () => {
 
   return (
     <main>
-      <div>
-        <Container>
-          <br />
-          <br />
-          <Col>
+      <div className="main-container">
+      <Box bg="transparent" height="40px"></Box>
+        <Box className="copyBox">
           <Form className="login-form" onSubmit={handleFormSubmit}>
             
-            <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
+            <Box bg="wheat" w="100%" p={4} color="#C2DFE3">
             <h1>
               <span className="font-weight-bold text-center">Sign Up Here.</span>
             </h1>
@@ -133,10 +131,8 @@ const Signup = () => {
             </Jumbotron>
             <br />
           </Form>
-          </Col>
-       
-        </Container>
-      </div>
+          </Box>
+          </div>
     </main>
   );
 };
