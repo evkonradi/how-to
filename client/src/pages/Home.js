@@ -56,7 +56,7 @@ const Home = () => {
                     {/* <Box className="main-grid-item" > */}
                     <Box className="copyBox" >
                     <img className="medium" src={logo} alt="logo, teach me to" />
-                    <h1>Teach Me To.</h1>
+                    <h1>TeachMeTo</h1>
                     <h4 className="byline">WHAT DO YOU WANT TO LEARN TODAY?</h4>
                     <Search></Search>
             <p className="copy"> Start creating and sharing your knowledge with others on TeachMeTo.<br/>

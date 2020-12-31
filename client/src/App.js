@@ -16,8 +16,6 @@ import Statement from "./pages/Statement";
 import NoMatch from "./pages/NoMatch"
 import Cart from './components/Cart';
 import { ThemeProvider } from "@chakra-ui/core";
-
-
 import { StoreProvider } from "./utils/GlobalState";
 
 const client = new ApolloClient({
