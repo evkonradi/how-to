@@ -33,9 +33,10 @@ function ResourceView() {
               <Box bg="wheat" w="100%" p={4} color="#C2DFE3">
                   <h2>{data.resource.name}</h2>
               </Box> 
+              <Box bg="transparent" height="20px"></Box>
               <Box className="one-third">
-                <h6 className="subtitle">{data.resource.shortDescription}</h6>
-                <h5 className="italic">Contributor: {data.resource.displayName}</h5>
+              <p className="recentAddP">Contributor: {data.resource.displayName}</p>
+                <h4 className="subtitle">{data.resource.shortDescription}</h4>
 
                 {needPayForResource() ? (
                   <h5 className="italic">Cost: ${data.resource.cost}</h5>
@@ -48,28 +49,26 @@ function ResourceView() {
                     <PayButton resource={data.resource}></PayButton>
                   </Col>
                 ): null}
-
               </Box>
-              <Box xs={6}>
+              <Box bg="transparent" height="20px"></Box>
+              <p>{data.resource.resourceBody}</p>
+              
+              <Box>
+              
               {data.resource.images.map((image) => (
                 <Col key={`image-${data.resource.images.indexOf(image)}`}>
                   <img
-                  class="img-fluid"
                     className="resourceImg"
                     src={`${image.fileURL} `} 
                     alt={`${image.imageCaption}`}
                   ></img>
-                  <br></br>
-                  <span>{image.imageCaption}</span>
+                  
+                  <p className="recentAddP">{image.imageCaption}</p>
                 </Col>
+                
               ))}
+           
               </Box>
-
-        
- <Box>
-              <p>{data.resource.resourceBody}</p>
-          
-            </Box>
             {data.resource.videos.map((video) => (
               <Col key={`video-${data.resource.videos.indexOf(video)}`}>
                     <iframe
@@ -80,7 +79,7 @@ function ResourceView() {
                       allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                     ></iframe>
                     <br />
-                    <span>{video.videoCaption}</span>
+                    <p className="recentAddP">{video.videoCaption}</p>
                     <br></br>
                     <br></br>
               </Col>
