@@ -26,17 +26,14 @@ function ResourceView() {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <div>
-          <Container className="cardTextAlign">
-            <br />
-
+        <div className="main-container">
+          <Box bg="transparent" height="40px"></Box>
+          <Box className="copyBox">
             <Col xs={12}>
-              <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
-                  <h3>{data.resource.name}</h3>
-              </Box>
-              <br/>
-              <Row>
-              <Col className="one-third">
+              <Box bg="wheat" w="100%" p={4} color="#C2DFE3">
+                  <h2>{data.resource.name}</h2>
+              </Box> 
+              <Box className="one-third">
                 <h6 className="subtitle">{data.resource.shortDescription}</h6>
                 <h5 className="italic">Contributor: {data.resource.displayName}</h5>
 
@@ -52,8 +49,8 @@ function ResourceView() {
                   </Col>
                 ): null}
 
-              </Col>
-              <Col xs={6}>
+              </Box>
+              <Box xs={6}>
               {data.resource.images.map((image) => (
                 <Col key={`image-${data.resource.images.indexOf(image)}`}>
                   <img
@@ -66,24 +63,19 @@ function ResourceView() {
                   <span>{image.imageCaption}</span>
                 </Col>
               ))}
-              </Col>
-              </Row>
+              </Box>
+
         
- 
+ <Box>
               <p>{data.resource.resourceBody}</p>
           
-            </Col>
-            <br />
-            <br />
-            <br />
+            </Box>
             {data.resource.videos.map((video) => (
               <Col key={`video-${data.resource.videos.indexOf(video)}`}>
                     <iframe
                       className="video"
                       src={`${video.fileURL}`}
                       frameBorder="0"
-                    
-                      
                       title={video.videoCaption}
                       allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                     ></iframe>
@@ -93,9 +85,8 @@ function ResourceView() {
                     <br></br>
               </Col>
             ))}
-
-            <br/><br/><br/><br/>
-          </Container>
+            </Col>
+            </Box>
         </div>
       )}
     </main>
