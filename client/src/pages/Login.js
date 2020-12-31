@@ -43,9 +43,11 @@ const Login = (props, Component) => {
 
   // render(){
   return (
+    <div className="main-container">
     <main>
-        <br /><br />
-        <Container>
+      
+      <Box bg="transparent" height="40px"></Box>
+        <Box className="copyBox">
         <Form className="login-form" onSubmit={handleFormSubmit}>
         <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
           <h1 className="font-weight-bold">Welcome Back!</h1>
@@ -97,10 +99,9 @@ const Login = (props, Component) => {
           </Col>
         </Form>   
         {error && <div>Login failed</div>}
-        <Jumbotron className="whitespace" />
-        <Jumbotron className="whitespace" />
-        </Container>
+        </Box>
     </main>
+    </div>
   );
   // };
 };

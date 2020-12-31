@@ -11,7 +11,7 @@ import Carousel from "react-bootstrap/Carousel";
 const Resource = () => {
   const { loading, data } = useQuery(QUERY_RESOURCES_HOMEPAGE);
   const [resources, setResources] = useState([]);
-  const resources2 = resources.slice(-5);
+  const resources2 = resources.slice(-6);
   // setResources(data?.resources || []);
 
   useEffect(() => {
