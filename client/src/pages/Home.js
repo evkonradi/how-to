@@ -6,7 +6,7 @@ import logo from "./teach_me_to_logo-01.png";
 import { Link } from 'react-router-dom';
 import { Box } from "@chakra-ui/core";
 import $primary from '../App.scss';
-// import graphic from "./../public/AdobeStock_graphic.png";
+import graphic from "./AdobeStock_graphic.png";
 
 // const Home = () => {
 //     return (
@@ -55,17 +55,18 @@ const Home = () => {
             <div className="main-grid">
            <Box bg="transparent" height="40px"></Box>
                     {/* <Box className="main-grid-item" > */}
-                    <Box className="copyBox" >
+                    <Box className="copyBox">
                     <img className="medium" src={logo} alt="logo, teach me to" />
                     <h1>TeachMeTo</h1>
                     <h4 className="byline">WHAT DO YOU WANT TO LEARN TODAY?</h4>
                     <Search></Search>
+                    <img className="graphic" src={graphic}/>
             <p className="copy"> Start creating and sharing your knowledge with others on TeachMeTo.<br/>
 Add images - videos - & words to help others learn.<br/> Share resource with a FREE or PAID option.</p>
             <Link className="copyLink" to="/signup">Signup |</Link>
             <Link className="copyLink" to="/login">Login</Link>
-            {/* <image src={graphic}></image> */}
-            {/* </Box> */}
+   
+            
             </Box>
             <Box className="copyBox" >
                 <h4 className="byline">SEE WHAT'S NEW</h4>

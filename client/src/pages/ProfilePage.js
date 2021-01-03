@@ -64,12 +64,10 @@ const ProfilePage = (props) => {
   return (
     <main>
       <div className="main-container">
-        <Container className="cardTextAlign">
+        
         <Box h="40px" bg="transparent"></Box>
           <Box  className="copyBox" w="100%" p={4} color="#C2DFE3">
-                <h4>Welcome Back, {`${user.firstName}`}!</h4>
-             
-              
+                <h4>Welcome Back, {`${user.firstName}`}!</h4> 
             <Box className="profileLeft" minWidth="30%">
                 <p className="profileField">Username</p> <span className="smallBox" contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span>
                 <p className="profileField">First Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span>
@@ -93,7 +91,6 @@ const ProfilePage = (props) => {
                     <Link className="plain" to={`/resource/${resource._id}`}>
                       <Button className="edit">EDIT</Button>
                     </Link>
-                    <br></br><br></br>
                   </Box>
                 ))}
             </Box>
@@ -102,18 +99,11 @@ const ProfilePage = (props) => {
               <hr className="dividerProfile"></hr>
             </Col>
           </Row>
-            <Col className="cardTextAlign">
-              <p class="recentlyAddP">SEE WHAT'S NEW</p>
-            </Col>
-          <Row>
-            <Col className="cardTextAlign">
+          <Box maxWidth="60%">
+            <p class="recentlyAddP">SEE WHAT'S NEW</p>
               <Resource></Resource>
-            </Col>
-          </Row>
-          <br></br><br></br><br></br>
+              </Box>
           </Box>
-        </Container>
-        <br />
       </div>
     </main>
   );
