@@ -61,6 +61,13 @@ const ProfilePage = (props) => {
     }
   };
 
+  const isResourceFree = (cost) => {
+    if ((Math.round(parseFloat(cost)*100)/100) === 0)
+      return true;
+    else
+      return false;
+  }
+
   return (
     <main>
       <div>
@@ -85,17 +92,36 @@ const ProfilePage = (props) => {
                 <br></br>
             </Box>
             <Box minWidth="70%">
+             
+              <h4>My Contributions</h4>
               {user.resources.map((resource) => (
                   <Box>
                     <CardResource
                       resource={resource} useClass="card-img-size-search"
                     ></CardResource>
+                    <span className="profileFreeOrPaid">
+                      COST: {isResourceFree(resource.cost) ? (`FREE`) : (`$${resource.cost}` )}
+                    </span>
                     <Link className="plain" to={`/resource/${resource._id}`}>
                       <Button className="edit">EDIT</Button>
                     </Link>
-                    <br></br><br></br>
+                    <br></br><br></br><br></br>
                   </Box>
                 ))}
+
+              <h4>My Purchased resources</h4>
+              {user.paidResources.map((resource) => (
+                  <Box>
+                    <CardResource
+                      resource={resource} useClass="card-img-size-search"
+                    ></CardResource>
+                    <Link className="plain" to={`/articles/${resource._id}`}>
+                      <Button className="edit">VIEW</Button>
+                    </Link>
+                    <br></br><br></br><br></br>
+                  </Box>
+                ))}
+
             </Box>
           <Row>
             <Col>
