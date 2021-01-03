@@ -48,6 +48,12 @@ const userSchema = new Schema(
                 ref: 'Resource'
             }
         ],
+        paidResources: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Resource'
+            }
+        ]
     },
     {
         toJSON: {

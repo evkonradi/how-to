@@ -106,3 +106,4 @@ mutation updateUser($id: ID!, $username: String!, $firstName: String!, $lastName
   }
 }
 `;
+
