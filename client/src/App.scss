@@ -69,7 +69,7 @@ a:hover {
 }
 
 .center {
-    max-width: 50%;
+    max-width: 60%;
     align-self: center;
 }
 
@@ -98,6 +98,11 @@ a:hover {
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+.search {
+   display: inline-flex;
+    max-width: 80%;
 }
 
 // Text Styles
@@ -592,9 +597,16 @@ a:hover {
 
 @media screen and (max-width: 360px) {
 
+    .home-grid-card{
+        display: grid;
+        grid-template-columns: 1fr ;
+        margin-bottom: 20px;
+    }
+
 .card{
     // box-shadow: 10px 3px 6px $dark;
     margin: .5rem;
+    max-width: 100%;
 }
 
 .card-body {
@@ -604,8 +616,8 @@ a:hover {
 .cardBody{
     display: flex;
     flex-wrap: overflow;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 }
 
 .cardImg {
@@ -631,12 +643,13 @@ a:hover {
 .cardTitle {
     color: $success;
     text-decoration: none;
-    text-align: right;
+    text-align: left;
     size: x-small;
+
 }
 
 .cardText {
-    word-break: break;
+
     text-align: center;
     display: inline-flex;
     font-size: small;
