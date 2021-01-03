@@ -74,8 +74,8 @@ a:hover {
 }
 
 .medium {
-    width: 77px;
-    height: 77px;
+    width: 88px;
+    height: 88px;
     top: 55px;
     float: left;
 }
@@ -89,6 +89,10 @@ a:hover {
 .hometron{
     background-color: $primary;
     padding: 1rem;
+}
+
+.mainTitle {
+    font-size: 5rem;
 }
 
 .mainNav {
@@ -353,9 +357,7 @@ a:hover {
 }
 
 .cardFill {
-    max-width: 80%;
-    align-content: center;
-    vertical-align: middle;
+
 }
 
 .cardTitle {
@@ -596,6 +598,14 @@ a:hover {
 }
 
 @media screen and (max-width: 360px) {
+
+    .medium{
+        float: none;
+    }
+
+    .mainTitle {
+        font-size: 3rem;
+    }
 
     .home-grid-card{
         display: grid;

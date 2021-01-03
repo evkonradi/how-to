@@ -6,7 +6,7 @@ import logo from "./teach_me_to_logo-01.png";
 import { Link } from 'react-router-dom';
 import { Box } from "@chakra-ui/core";
 import $primary from '../App.scss';
-import graphic from "./AdobeStock_graphic.png";
+import graphic from "./AdobeStock_276150433_graphic.png";
 
 // const Home = () => {
 //     return (
@@ -57,7 +57,7 @@ const Home = () => {
                     {/* <Box className="main-grid-item" > */}
                     <Box className="copyBox">
                     <img className="medium" src={logo} alt="logo, teach me to" />
-                    <h1>TeachMeTo</h1>
+                    <h1 className="mainTitle">TeachMeTo</h1>
                     <h4 className="byline">WHAT DO YOU WANT TO LEARN TODAY?</h4>
                     <Search></Search>
                     <img className="graphic" src={graphic}/>
