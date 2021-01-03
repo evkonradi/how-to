@@ -56,6 +56,11 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: none;
+    text-emphasis: none;
+}
+
 .main-container {
     width: 100%;
     height: 100%;
@@ -135,10 +140,10 @@ a {
    text-align: right;
 }
 
-.title {
-    padding-left: 60px;
-    font-size: 2rem;
- }
+// .title {
+//     padding-left: 60px;
+//     font-size: 2rem;
+//  }
 
  .subtitle {
      color: wheat;
@@ -157,39 +162,39 @@ a {
      text-align: center;
  }
 
-// Carousel
-.container.carousel {
-    background-color: wheat;
-}
+// // Carousel
+// .container.carousel {
+//     background-color: wheat;
+// }
 
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-  filter: invert(1);
-  width: auto;
+// .carousel-control-next-icon,
+// .carousel-control-prev-icon {
+//   filter: invert(1);
+//   width: auto;
   
-}
+// }
 
-.carousel-indicators.li {
-    box-sizing: content-box;
-    flex: 0 1 auto;
-    width: 30px;
-    height: 3px;
-    margin-right: 3px;
-    margin-left: 3px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: $dark;
-    background-clip: padding-box;
-    border-bottom: 10px solid black;
-    opacity: .5;
-    transition: opacity .6s ease;
-  }
+// .carousel-indicators.li {
+//     box-sizing: content-box;
+//     flex: 0 1 auto;
+//     width: 30px;
+//     height: 3px;
+//     margin-right: 3px;
+//     margin-left: 3px;
+//     text-indent: -999px;
+//     cursor: pointer;
+//     background-color: $dark;
+//     background-clip: padding-box;
+//     border-bottom: 10px solid black;
+//     opacity: .5;
+//     transition: opacity .6s ease;
+//   }
 
-  .carouselMain {
-    background-color: #edeeee;
-    padding: 20px 20px 50px 20px;
-    margin-top: 50px;
-  }
+//   .carouselMain {
+//     background-color: #edeeee;
+//     padding: 20px 20px 50px 20px;
+//     margin-top: 50px;
+//   }
 
 // Resource Styles 
 
@@ -300,6 +305,11 @@ a {
 
 // Card 
 
+
+.mainCard:hover {
+    text-decoration: none;
+
+}
 .card{
     // box-shadow: 10px 3px 6px $dark;
     margin: .5rem;
@@ -311,6 +321,7 @@ a {
     padding: 1rem;
     // width: 200px;
     height: 200px;
+    width: 200px;
     overflow: hidden;
 }
 
@@ -336,6 +347,12 @@ a {
     transform: rotate(357deg);
 }
 
+.cardFill {
+    max-width: 80%;
+    align-content: center;
+    vertical-align: middle;
+}
+
 .cardTitle {
     color: $success;
     text-decoration: none;
@@ -348,12 +365,14 @@ a {
     text-align: right;
 }
 
+
 .cardText {
     word-break: break;
     overflow: hidden;
     text-align: center;
     display: inline-flex;
-    font-size: small;
+    font-size: medium;
+    color:$primary;
 }
 
 .cardText:hover {
@@ -529,7 +548,7 @@ a {
     width: 100%;
     justify-content: center;
     text-align: center;
-    vertical-align: center;
+    vertical-align: middle;
   }
   
   .footerP {
