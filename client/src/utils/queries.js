@@ -125,6 +125,21 @@ export const QUERY_ME_BASIC = gql`
 }
 `;
 
+export const QUERY_USER_PAID_RESOURCES = gql`
+query user($username: String!) {
+  user(username: $username) {
+    _id
+    username
+    paidResources {
+      _id
+      name
+      shortDescription
+      dateCreated
+      displayName
+    }
+  }
+}`;
+
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [CheckoutProductInput]!) {
     checkout(products: $products) {

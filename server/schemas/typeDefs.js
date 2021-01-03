@@ -22,6 +22,7 @@ const typeDefs = gql`
     wallet: Float,
     resourceCount: Int
     resources: [Resource]
+    paidResources: [Resource]
   }
 
   type Image{

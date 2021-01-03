@@ -33,7 +33,8 @@ const resolvers = {
         user: async (parent, { username }) => {
             return await User.findOne({ username })
             .select('-__v -password')
-            .populate('resources');
+            .populate('resources')
+            .populate('paidResources');
         },
         resources_search: async (parent, { text }) => {
             return await Resource.find( {$or: [{ resourceBody: {$regex: text, $options: 'i'}}, {name: {$regex: text, $options: 'i'}},
@@ -152,34 +153,46 @@ const resolvers = {
 
             throw new AuthenticationError('Not logged in');
         },
-        updateWallet: async (parent, args) => {
+        updateWallet: async (parent, args, context) => {
 
-            const data = await Profit.findOne({ isCurrent: true });
+            if (context.user){
 
-            const user = await User.findOneAndUpdate(
-                { username: args.username },
-                { $inc: { wallet: args.amount-args.amount*data.feeRate/100 } },
-                { new: true }
-            );
+                const data = await Profit.findOne({ isCurrent: true });
 
-            await Profit.findOneAndUpdate(
-                { isCurrent: true },
-                { $inc: { currentProfit: args.amount*data.feeRate/100 }},
-                { new: true }
-            );
+                const user = await User.findOneAndUpdate(
+                    { username: args.username },
+                    { $inc: { wallet: args.amount-args.amount*data.feeRate/100 } },
+                    { new: true }
+                );
 
-            await Transaction.create(
-                {
-                    username: args.username, 
-                    resource_id: args.resource_id, 
-                    resource_name: args.resource_name, 
-                    amount: args.amount-args.amount*data.feeRate/100,
-                    fee: args.amount*data.feeRate/100
-                }
-            );
+                await Profit.findOneAndUpdate(
+                    { isCurrent: true },
+                    { $inc: { currentProfit: args.amount*data.feeRate/100 }},
+                    { new: true }
+                );
 
-            return user;
-        },
+                await Transaction.create(
+                    {
+                        username: args.username, 
+                        resource_id: args.resource_id, 
+                        resource_name: args.resource_name, 
+                        amount: args.amount-args.amount*data.feeRate/100,
+                        fee: args.amount*data.feeRate/100
+                    }
+                );
+
+                const me = await User.findByIdAndUpdate(
+                    { _id: context.user._id },
+                    { $push: { paidResources: args.resource_id } },
+                    { new: true }
+                );
+
+                return user;
+            }
+
+            throw new AuthenticationError('Not logged in');
+
+        }
         // updateProfit: async (parent, args) => {
 
         //     const data = await Profit.findOne({ isCurrent: true });

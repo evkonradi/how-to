@@ -544,6 +544,18 @@ a {
     cursor: pointer;
 }
 
+//View Resource Page
+.dollarSignContainer{
+    width: 100%;
+    background-color: $light;
+    text-align: center;
+}
+
+.imgDollar{
+    width: 90%;
+    max-width: 401px;
+}
+
 @media screen and (max-width: 768px) {
 
     .profileLeft {
