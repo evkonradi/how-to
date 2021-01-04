@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Input, Col, Container, Row, Jumbotron } from "reactstrap";
-
+import { Link } from 'react-router-dom';
 import { useMutation } from "@apollo/react-hooks";
 import { LOGIN_USER } from "../utils/mutations";
 // import { valueFromAST } from "graphql";
@@ -78,23 +78,23 @@ const Login = (props, Component) => {
           <br />
 
           <Col xs={12} md={12} lg={12} offset={6}>
-            <Row>
+     
           <Button
             className="center"
             size="lg"
             height="46px"
             width="200px"
             border="2px"
-            color="white"
-            bg="#5C6B73"
-            _hover={{ bg: "#D99748" }}
+            bg="#D99748"
+            color="wheat"
+            _hover={{ color: "#253237" }}
             type="submit"
           >
             Login
           </Button>
-          </Row>
+          
           <p className="signupText">Need an Account? <br/>
-          <a href="/signup" class="nullA">Sign Up.</a></p>
+          <Link className="copyLink" to="/signup">Signup</Link></p>
 
           </Col>
         </Form>   

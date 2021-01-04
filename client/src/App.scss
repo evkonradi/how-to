@@ -15,7 +15,7 @@ $dark: #253237;
 }
 
 h1 {
-    color: $success;
+    color: $primary;
     padding: .5rem;
 }
 
@@ -71,6 +71,7 @@ a:hover {
 .center {
     max-width: 60%;
     align-self: center;
+    display: flex;
 }
 
 .medium {
@@ -93,6 +94,7 @@ a:hover {
 
 .mainTitle {
     font-size: 5rem;
+    color: $success;
 }
 
 .mainNav {
