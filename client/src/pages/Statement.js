@@ -30,9 +30,10 @@ const Statement = () => {
 
     return (
         <div class="main-container">
+            <Box bg="transparent" height="40px" />
+            <Box className="copyBox">
         <div className="statement-container" >
             <h4>Transaction History for {Auth.getProfile().data.username} </h4>
-        <Box className="copyBox">
             <div className="statement-grid">
                 <span className="statement-item-head">Date</span>
                 <span className="statement-item-head">Author</span>
@@ -56,8 +57,8 @@ const Statement = () => {
                 <span className="statement-total-amounts">${totalAmount.toFixed(2)}</span>
                 <span className="statement-total-amounts">${totalFee.toFixed(2)}</span>
             </div>
+            </div>
             </Box>
-        </div>
         
         </div>
     );

@@ -545,9 +545,11 @@ a:hover {
     grid-column-end: 4;
     text-align: right;
     font-weight: bold;
+    color: wheat;
 }
 .statement-total-amounts{
     font-weight: bold;
+    color: wheat;
 }
 
 // Footer
@@ -675,5 +677,11 @@ a:hover {
     font-size: xx-small;
     text-align: right;
 
+}
+.statement-grid{
+    margin-top: 30px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
 }
 }

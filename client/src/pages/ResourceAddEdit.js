@@ -156,13 +156,14 @@ function ResourceAddEdit() {
   }
 
   return (
-    <div>
-      <br />
-      <Container>
+      <main className="main-container">
+        <Box bg="transparent" height="40px"></Box>
+        <Box className="copyBox">
+        
         <form onSubmit={handleFormSubmit} className="cardTextAlign">
           <Col>
-            <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
-              <h3>{id ? "Edit Article" : "New Article"}</h3>
+            <Box bg="wheat" w="100%" p={4} color="#C2DFE3">
+              <h1>{id ? "Edit Article" : "New Article"}</h1>
             </Box>
           </Col>{" "}
           <br />
@@ -254,7 +255,17 @@ function ResourceAddEdit() {
             </InputGroup>
           </Col>
           <Col >
-            <Button id="btnAddImage" onClick={handleImageAdd}>
+            <Button 
+            className="center"
+              size="md"
+              height="36px"
+              width="100px"
+              border="2px"
+              bg="wheat"
+              color="#253237"
+              _hover={{ color: "#D99748" }}
+              id="btnAddImage" 
+              onClick={handleImageAdd}>
               Add Image
             </Button>
             <br></br>
@@ -316,7 +327,16 @@ function ResourceAddEdit() {
               <br />
             </InputGroup>
             <Col>
-              <Button id="btnAddVideo" onClick={handleVideoAdd}>
+              <Button className="center"
+            size="md"
+            height="36px"
+            width="100px"
+            border="2px"
+            bg="wheat"
+            color="#253237"
+            _hover={{ color: "#D99748" }}
+              id="btnAddVideo"
+              onClick={handleVideoAdd}>
                 Add Video
               </Button>
               {/* </InputGroupAddon> */}
@@ -325,29 +345,28 @@ function ResourceAddEdit() {
           </Col>
           
           <Col className="cardTextAlign">
-          <Button
-              size="lg"
-              height="46px"
-              width="200px"
-              border="2px"
-              color="white"
-              bg="#5C6B73"
-              _hover={{ bg: "#D99748" }}
-              type="submit"
-              id="btnSubmit"
-            >
+
+<Button
+            className="center"
+            size="lg"
+            height="46px"
+            width="200px"
+            border="2px"
+            bg="#D99748"
+            color="wheat"
+            _hover={{ color: "#253237" }}
+            type="submit"
+            id="btnSubmit"
+          >
               Submit
             </Button>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
+    
           </Col>
+         
         </form>
-        
-      </Container>
-    </div>
+        </Box>
+        </main>
+
   );
 }
 
