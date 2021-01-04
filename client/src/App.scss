@@ -76,6 +76,12 @@ a:hover {
     padding: .8rem;
 }
 
+.caption {
+    color: $success;
+    font-size: small;
+
+}
+
 .center {
     max-width: 80%;
     align-self: center;
@@ -515,6 +521,14 @@ a:hover {
 
 .main-grid-item{
     display: grid;  
+}
+
+.photo-grid {
+    display: grid;
+}
+
+.photo-grid-item {
+    display: grid;
 }
 
 .profile-grid {

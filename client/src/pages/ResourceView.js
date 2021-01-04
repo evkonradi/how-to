@@ -133,24 +133,24 @@ function ResourceView() {
 
                 </Col>
                 
-                <Col xs={6}>
+                <Box className="photo-grid">
                   {!needPayForResource() ? (
                     <>
                       {data.resource.images.map((image) => (
-                        <Col key={`image-${data.resource.images.indexOf(image)}`}>
+                        <Box className="photo-grid-item" key={`image-${data.resource.images.indexOf(image)}`}>
                           <img
                           class="img-fluid"
                             className="resourceImg"
                             src={`${image.fileURL} `} 
                             alt={`${image.imageCaption}`}
                           ></img>
-                          <br></br>
-                          <span>{image.imageCaption}</span>
-                        </Col>
+               
+                          <p className="caption">{image.imageCaption}</p>
+                        </Box>
                       ))}
                     </>
                   ): null}  
-                </Col>
+                </Box>
 
               </Row>
         
@@ -173,7 +173,7 @@ function ResourceView() {
                           allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                         ></iframe>
                         <br />
-                        <span>{video.videoCaption}</span>
+                        <p className="caption">{video.videoCaption}</p>
                         <br></br>
                         <br></br>
                   </Col>
