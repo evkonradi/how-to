@@ -31,6 +31,7 @@ h3 {
 h4 {
     color: wheat;
     padding: .3rem;
+    text-align: center;
 }
 
 h5 {
@@ -510,12 +511,18 @@ a:hover {
 
 .main-grid{
     text-align: center;
-   
 }
 
 .main-grid-item{
+    display: grid;  
+}
+
+.profile-grid {
     display: grid;
-    
+}
+
+.profile-grid-item {
+    display: grid;
 }
 
 //statement

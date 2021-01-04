@@ -64,10 +64,11 @@ const ProfilePage = (props) => {
   return (
     <main>
       <div className="main-container-light">
-        
+      <div className="profile-grid">
         <Box h="40px" bg="transparent"></Box>
-          <Box  className="copyBox" w="100%" p={4} color="#C2DFE3">
+          <Box className="copyBox" w="100%" p={4} color="#C2DFE3">
                 <h4>Welcome Back, {`${user.firstName}`}!</h4> 
+                <Box className="profile-grid-item">
             <Box className="profileLeft" minWidth="30%">
                 <p className="profileField">Username</p> <span className="smallBox" contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span>
                 <p className="profileField">First Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span>
@@ -82,7 +83,9 @@ const ProfilePage = (props) => {
                 </Box>
                 <br></br>
             </Box>
-            <Box className="copyBox" minWidth="70%">
+            </Box>
+            <Box className="profile-grid-item">
+            <Box>
               {user.resources.map((resource) => (
                   <Box>
                     <CardResource
@@ -94,16 +97,15 @@ const ProfilePage = (props) => {
                   </Box>
                 ))}
             </Box>
-          <Row>
-            <Col>
-              <hr className="dividerProfile"></hr>
-            </Col>
-          </Row>
-          <Box maxWidth="60%">
-            <p class="recentlyAddP">SEE WHAT'S NEW</p>
+            </Box>
+            <Box className="profile-grid-item">
+          <Box className="copyBox">
+            <h4>SEE WHAT'S NEW</h4>
               <Resource></Resource>
               </Box>
+              </Box>
           </Box>
+          </div>
       </div>
     </main>
   );
