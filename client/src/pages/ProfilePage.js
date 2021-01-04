@@ -82,7 +82,7 @@ const ProfilePage = (props) => {
                 </Box>
                 <br></br>
             </Box>
-            <Box minWidth="70%">
+            <Box className="copyBox" minWidth="70%">
               {user.resources.map((resource) => (
                   <Box>
                     <CardResource

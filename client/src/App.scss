@@ -336,12 +336,12 @@ a:hover {
 }
 
 .cardBody{
-    display: flex;
-    flex-wrap: overflow;
+    // display: flex;
+    flex-flow: wrap;
+    // flex-wrap: overflow;
     padding: 1rem;
     // width: 200px;
     height: 200px;
-    width: 200px;
     overflow: hidden;
 }
 
@@ -351,8 +351,8 @@ a:hover {
 }
 
 .card-img-size-carousel{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     float: left;
 }
 
@@ -360,7 +360,6 @@ a:hover {
     width: 150px;
     height: 150px;
     float: left;
-    text-align: right
 }
 
 .cardImg:hover {
@@ -368,13 +367,15 @@ a:hover {
 }
 
 .cardFill {
-
+    text-align: right;
+    word-break: keep-all;
 }
 
 .cardTitle {
     color: $success;
     text-decoration: none;
     text-align: right;
+    word-break: keep-all;
 }
 
 .cardTitle:hover {
@@ -387,8 +388,7 @@ a:hover {
 .cardText {
     word-break: break;
     overflow: hidden;
-    text-align: center;
-    display: inline-flex;
+    display: block;
     font-size: medium;
     color:$primary;
 }
@@ -403,9 +403,9 @@ a:hover {
 }
 
 .cardTime {
-    font-size: xx-small;
+    font-size: x-small;
     text-align: right;
-
+    color: $primary;
 }
 
 .recentlyAddP{
