@@ -509,7 +509,6 @@ a:hover {
 }
 
 .main-grid{
-    margin-top: 30px;
     text-align: center;
    
 }
@@ -649,9 +648,9 @@ a:hover {
 }
 
 .cardBody{
-    display: flex;
-    flex-wrap: overflow;
-    width: 120px;
+    // display: flex;
+    flex-flow: wrap;
+    // width: 120px;
     height: 120px;
 }
 
@@ -675,11 +674,16 @@ a:hover {
     transform: rotate(357deg);
 }
 
+.cardFill {
+    text-align: right;
+    word-break: keep-all;
+}
+
 .cardTitle {
     color: $success;
     text-decoration: none;
-    text-align: left;
-    size: x-small;
+    text-align: right;
+    size: .8rem;
 
 }
 
@@ -689,14 +693,11 @@ a:hover {
     display: inline-flex;
     font-size: small;
 }
-.cardTextAlign{
-    text-align: center;
-    
-}
 
 .cardTime {
-    font-size: xx-small;
+    font-size: x-small;
     text-align: right;
+    color: $primary;
 
 }
 .statement-grid{
