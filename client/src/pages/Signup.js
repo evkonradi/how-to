@@ -113,22 +113,21 @@ const Signup = () => {
               />
             </FormGroup>
             <br />
-            <Jumbotron className="whitespace">
-            <Button
-              className="center"
-              size="lg"
-              height="46px"
-              width="200px"
-              border="2px"
-              //   borderColor="green.500"
-              color="white"
-              bg="#5C6B73"
-              _hover={{ bg: "#D99748" }}
-              type="submit"
-            >
+            <Box>
+      <Button
+      className="center"
+      size="lg"
+      height="46px"
+      width="200px"
+      border="2px"
+      bg="#D99748"
+      color="wheat"
+      _hover={{ color: "#253237" }}
+      type="submit"
+    >
               Join
             </Button>
-            </Jumbotron>
+            </Box>
             <br />
           </Form>
           </Box>
