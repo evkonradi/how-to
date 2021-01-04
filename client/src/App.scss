@@ -82,6 +82,7 @@ a:hover {
   
 }
 
+
 .medium {
     width: 88px;
     height: 88px;
@@ -182,38 +183,38 @@ a:hover {
  }
 
 // // Carousel
-// .container.carousel {
-//     background-color: wheat;
-// }
+.container.carousel {
+    background-color: wheat;
+}
 
-// .carousel-control-next-icon,
-// .carousel-control-prev-icon {
-//   filter: invert(1);
-//   width: auto;
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
+  width: auto;
   
-// }
+}
 
-// .carousel-indicators.li {
-//     box-sizing: content-box;
-//     flex: 0 1 auto;
-//     width: 30px;
-//     height: 3px;
-//     margin-right: 3px;
-//     margin-left: 3px;
-//     text-indent: -999px;
-//     cursor: pointer;
-//     background-color: $dark;
-//     background-clip: padding-box;
-//     border-bottom: 10px solid black;
-//     opacity: .5;
-//     transition: opacity .6s ease;
-//   }
+.carousel-indicators.li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: $dark;
+    background-clip: padding-box;
+    border-bottom: 10px solid black;
+    opacity: .5;
+    transition: opacity .6s ease;
+  }
 
-//   .carouselMain {
-//     background-color: #edeeee;
-//     padding: 20px 20px 50px 20px;
-//     margin-top: 50px;
-//   }
+  .carouselMain {
+    background-color: #edeeee;
+    padding: 20px 20px 50px 20px;
+    margin-top: 50px;
+  }
 
 // Resource Styles 
 
@@ -592,6 +593,18 @@ a:hover {
 .imgDollar{
     width: 90%;
     max-width: 401px;
+}
+
+@media screen and (max-width: 1300px) {
+    .card {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .card {
+        max-width: 80%;
+    }
 }
 
 @media screen and (max-width: 768px) {
