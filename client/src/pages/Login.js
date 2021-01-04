@@ -92,7 +92,7 @@ const Login = (props, Component) => {
           >
             Login
           </Button>
-          
+          <Box bg="transparent" height="20px"></Box>
           <p className="signupText">Need an Account? <br/>
           <Link className="copyLink" to="/signup">Signup</Link></p>
 

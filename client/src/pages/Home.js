@@ -62,7 +62,7 @@ const Home = () => {
                     <Search></Search>
                     <img className="graphic" src={graphic}/>
             <p className="copy"> Start creating and sharing your knowledge with others on TeachMeTo.<br/>
-Add images - videos - & words to help others learn.<br/> Share resource with a FREE or PAID option.</p>
+Add images - videos - & words to help others learn.<br/> Share FREE or $$$ resources today.</p>
             <Link className="copyLink" to="/signup">Signup |</Link>
             <Link className="copyLink" to="/login">Login</Link>
    
