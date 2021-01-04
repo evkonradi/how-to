@@ -42,7 +42,11 @@ function ResourceView() {
         });
       }
 
-      console.log(isPaidResource);
+      if (getUsername() === data.resource.displayName)
+      {
+        isPaidResource = false; 
+      }
+
       return isPaidResource;
     }
   }

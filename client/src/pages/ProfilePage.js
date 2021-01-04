@@ -115,9 +115,6 @@ const ProfilePage = (props) => {
                     <CardResource
                       resource={resource} useClass="card-img-size-search"
                     ></CardResource>
-                    <Link className="plain" to={`/articles/${resource._id}`}>
-                      <Button className="edit">VIEW</Button>
-                    </Link>
                     <br></br><br></br><br></br>
                   </Box>
                 ))}
