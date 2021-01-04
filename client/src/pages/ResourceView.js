@@ -56,11 +56,11 @@ function ResourceView() {
           <Box bg="transparent" height="40px"></Box>
           <Box className="copyBox">
             <Col xs={12}>
-              <Box bg="wheat" w="100%" p={4} color="#C2DFE3">
-                  <h2>{data.resource.name}</h2>
+              <Box bg="wheat" w="100%" p={4} color="#253237">
+                  <h1>{data.resource.name}</h1>
               </Box> 
               <Box bg="transparent" height="20px"></Box>
-              <Box className="one-third">
+              {/* <Box className="one-third">
               <p className="recentAddP">Contributor: {data.resource.displayName}</p>
                 <h4 className="subtitle">{data.resource.shortDescription}</h4>
 
@@ -74,10 +74,10 @@ function ResourceView() {
                   <Col >
                     <PayButton resource={data.resource}></PayButton>
                   </Col>
-                ): null}
-              </Box>
+                ): null} */}
+              {/* </Box> */}
         
-              <Box bg="transparent" height="20px"></Box>
+              {/* <Box bg="transparent" height="20px"></Box>
               <p>{data.resource.resourceBody}</p>
               
               <Box>
@@ -110,13 +110,8 @@ function ResourceView() {
                     <br></br>
                     <br></br>
               </Col>
-            ))}
+            ))} */}
        
-        
-              <Box bg="#5C6B73" w="100%" p={4} color="#C2DFE3">
-                  <h3>{data.resource.name}</h3>
-              </Box>
-              <br/>
               <Row>
                 <Col className="one-third">
                   <h6 className="subtitle">{data.resource.shortDescription}</h6>
@@ -131,7 +126,9 @@ function ResourceView() {
                   {needPayForResource() ? (
                     <Col >
                       <PayButton resource={data.resource}></PayButton>
-                    </Col>
+                   
+                         <Box bg="transparent" height="30px"></Box>
+                         </Col>
                   ): null}
 
                 </Col>
@@ -172,8 +169,6 @@ function ResourceView() {
                           className="video"
                           src={`${video.fileURL}`}
                           frameBorder="0"
-                        
-                          
                           title={video.videoCaption}
                           allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                         ></iframe>

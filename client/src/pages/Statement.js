@@ -29,7 +29,7 @@ const Statement = () => {
     }
 
     return (
-        <div class="main-container">
+        <div class="main-container-light">
             <Box bg="transparent" height="40px" />
             <Box className="copyBox">
         <div className="statement-container" >

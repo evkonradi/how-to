@@ -63,7 +63,7 @@ const ProfilePage = (props) => {
 
   return (
     <main>
-      <div className="main-container">
+      <div className="main-container-light">
         
         <Box h="40px" bg="transparent"></Box>
           <Box  className="copyBox" w="100%" p={4} color="#C2DFE3">

@@ -2,7 +2,7 @@ import React from "react";
 
 import { useStoreContext } from '../../utils/GlobalState';
 import { ADD_TO_CART } from '../../utils/actions';
-import { Button } from "reactstrap";
+import { Button, Box } from "@chakra-ui/core";
 
 import { idbPromise } from "../../utils/helpers";
 
@@ -27,7 +27,20 @@ function PayButton({resource}){
 
     return(
         <div>
-            <Button className="donateBtn" onClick={addToCart}>Please pay to view</Button>
+            <Box>
+            <Button 
+              className="center"
+              size="lg"
+              height="60px"
+              width="200px"
+              border="2px"
+              bg="wheat"
+              color="#253237"
+              _hover={{ color: "#D99748" }}
+               onClick={addToCart}
+               >Please pay to view
+               </Button>
+               </Box>
         </div>
     );
   
