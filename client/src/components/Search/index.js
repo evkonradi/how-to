@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Input } from "reactstrap";
 import { useLazyQuery } from "@apollo/react-hooks";
 import { QUERY_RESOURCES_SEARCH } from "../../utils/queries";
-import { Button, Box } from "@chakra-ui/core";
+import { Button, Box, Flex } from "@chakra-ui/core";
 import CardResource from "../CardResource";
 
 const Search = () => {
@@ -50,14 +50,19 @@ const Search = () => {
  
 
       <div>
+      <Box className="search">
         {data ? (
           <div>
             <br></br>
             {data.resources_search.map((article) => (
+              <Flex alignSelf="center">
               <div key={article._id}>
+               
                 <CardResource resource={article} useClass="card-img-size-search"></CardResource>
-                <br></br>
+                
               </div>
+              </Flex>
+      
             ))}
             {data.resources_search.length === 0 &&
               <div className="noDataFound">
@@ -66,7 +71,9 @@ const Search = () => {
             }
           </div>
         ) : null}
+        </Box>
       </div>
+
     </main>
   );
 };

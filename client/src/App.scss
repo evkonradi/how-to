@@ -124,7 +124,7 @@ a:hover {
 
 .search {
    display: inline-flex;
-    max-width: 80%;
+   text-align: -webkit-center;
 }
 
 // Text Styles
@@ -149,6 +149,7 @@ a:hover {
     background-color: $primary;
     align-items: center;
     padding: .8rem;
+    text-align: -webkit-center;
 }
 
 .copyLink {
@@ -404,10 +405,6 @@ a:hover {
     text-decoration: none;
     color: $success;
 }
-.cardTextAlign{
-    text-align: center;
-    
-}
 
 .cardTime {
     font-size: x-small;
@@ -538,6 +535,7 @@ a:hover {
 .profile-grid-item {
     display: grid;
 }
+
 
 //statement
 .statement{

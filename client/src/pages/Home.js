@@ -4,8 +4,7 @@ import Resource from "../components/Resource";
 import Search from '../components/Search';
 import logo from "./teach_me_to_logo-01.png";
 import { Link } from 'react-router-dom';
-import { Box } from "@chakra-ui/core";
-import $primary from '../App.scss';
+import { Box, Flex } from "@chakra-ui/core";
 import graphic from "./AdobeStock_276150433_graphic.png";
 
 // const Home = () => {
@@ -59,7 +58,9 @@ const Home = () => {
                     <img className="medium" src={logo} alt="logo, teach me to" />
                     <h1 className="mainTitle">TeachMeTo</h1>
                     <h4 className="byline">WHAT DO YOU WANT TO LEARN TODAY?</h4>
+                    
                     <Search></Search>
+                
                     <img className="graphic" src={graphic}/>
             <p className="copy"> Start creating and sharing your knowledge with others on TeachMeTo.<br/>
 Add images - videos - & words to help others learn.<br/> Share FREE or $$$ resources today.</p>
@@ -69,13 +70,11 @@ Add images - videos - & words to help others learn.<br/> Share FREE or $$$ resou
             
             </Box>
             <Box className="copyBox" >
-                <h4 className="byline">SEE WHAT'S NEW</h4>
-            
+            <h4 className="byline">SEE WHAT'S NEW</h4>
+                <Flex display="center">
                 <Resource></Resource>
-                
-                </Box>
-               
-               
+                </Flex>
+                </Box>   
             </div>
                     {/* <Col className="homesearch" sm={{size:8, offset:2}} lg={{ size:6, offset:3}} bg={$primary}>
                 <Search></Search>
