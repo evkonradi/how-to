@@ -467,6 +467,11 @@ a:hover {
     padding: 2px;
     border: 1px solid $success;
     border-radius: 2px;
+    color: wheat;
+}
+
+.wheat {
+    color: wheat;
 }
 
 // Components
@@ -626,6 +631,7 @@ a:hover {
 // Profile
 .profileFreeOrPaid{
     font-weight: bold;
+    color: wheat;
 }
 
 //Edit/Add Resource

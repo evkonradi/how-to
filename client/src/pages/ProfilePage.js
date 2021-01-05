@@ -106,7 +106,8 @@ const ProfilePage = (props) => {
                 <p className="profileField">First Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span>
                 <p className="profileField">Last Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span>
                 <p className="profileField">Email</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.email}>{`${user.email}`}</span>
-                <p className="profileField">Wallet</p> ${`${user.wallet.toFixed(2)}`}<br></br><br></br>
+                <p className="profileField">Wallet</p> <span className="wheat">${`${user.wallet.toFixed(2)}`}</span>
+                <br></br><br></br>
                 <Box className="newPostBtn" >
                 <a className="plainA" href="/statement/">See Statement</a>
                 </Box>
@@ -117,10 +118,9 @@ const ProfilePage = (props) => {
             </Box>
             </Box>
             <Box className="profile-grid-item">
-            <Box>
-            <Box minWidth="70%">
+            <Box maxWidth="70%">
              
-              <h4>My Contributions</h4>
+              <h5>My Contributions</h5>
               {user.resources.map((resource) => (
                   <Box>
                     <CardResource
@@ -139,7 +139,7 @@ const ProfilePage = (props) => {
 
               {!user.resources.length ? <span className="profileFreeOrPaid">You have not contributed any resources yet.</span> : null }
 
-              <h4>My Purchased resources</h4>
+              <h5>My Purchased resources</h5>
               {user.paidResources.map((resource) => (
                   <Box>
                     <CardResource
@@ -160,7 +160,7 @@ const ProfilePage = (props) => {
               </Box>
               </Box>
           </Box>
-          </Box>
+
           </div>
       </div>
     </main>
