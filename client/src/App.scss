@@ -623,6 +623,20 @@ a:hover {
     .card {
         max-width: 80%;
     }
+// Profile
+.profileFreeOrPaid{
+    font-weight: bold;
+}
+
+//Edit/Add Resource
+.costInput{
+    display: inline;
+    width: 60px;
+}
+
+.errorMessage{
+    color: $warning;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
@@ -725,4 +739,5 @@ a:hover {
     display: grid;
     grid-template-columns: 1fr 3fr 3fr;
 }
-}
+
+}}

@@ -107,3 +107,11 @@ mutation updateUser($id: ID!, $username: String!, $firstName: String!, $lastName
 }
 `;
 
+export const DELETE_RESOURCE = gql`
+mutation deleteResource($id: ID!) {
+    deleteResource(_id: $id) {
+      _id
+      name
+    }
+  }
+`;

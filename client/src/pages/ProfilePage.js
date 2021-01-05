@@ -8,7 +8,7 @@ import { Box } from "@chakra-ui/core";
 import { Button } from "@chakra-ui/core";
 import Auth from "../utils/auth";
 import CardResource from "../components/CardResource";
-import { UPDATE_USER } from "../utils/mutations";
+import { UPDATE_USER, DELETE_RESOURCE } from "../utils/mutations";
 
 
 const ProfilePage = (props) => {
@@ -18,6 +18,7 @@ const ProfilePage = (props) => {
     variables: { username: userParam },
   });
   const [updateUser] = useMutation(UPDATE_USER);
+  const [deleteResource] = useMutation(DELETE_RESOURCE);
 
   const [userState, setUserState] = useState({
     username: "",
@@ -44,7 +45,7 @@ const ProfilePage = (props) => {
     return <h1>Sign up | log in <span role="img" aria-label="Sign up | log in">🙂</span></h1>;
   }
 
-
+  // Handle changes on the form
   const handleChange = (event) => {
     event.preventDefault();
     const { name, value } = event.target;
@@ -60,6 +61,37 @@ const ProfilePage = (props) => {
       console.error(e);
     }
   };
+
+  // Check if Resource is free
+  const isResourceFree = (cost) => {
+    if ((Math.round(parseFloat(cost)*100)/100) === 0)
+      return true;
+    else
+      return false;
+  }
+
+  // Delete Resource
+  const handleDelete = async event =>{
+    event.preventDefault();
+
+    const targetEl = event.target;
+
+    if (targetEl.hasAttribute("data-number")){
+
+      const attrValue = targetEl.getAttribute("data-number");
+      const resourceId = attrValue.replace("image-", "");
+      console.log(resourceId);
+
+      try{
+        await deleteResource({ variables: {id: resourceId } });
+        window.location.assign('/profile');
+      }
+      catch(e){
+        console.error(e);
+      }
+    }
+  }
+
 
   return (
     <main>
@@ -86,16 +118,39 @@ const ProfilePage = (props) => {
             </Box>
             <Box className="profile-grid-item">
             <Box>
+            <Box minWidth="70%">
+             
+              <h4>My Contributions</h4>
               {user.resources.map((resource) => (
                   <Box>
                     <CardResource
                       resource={resource} useClass="card-img-size-search"
                     ></CardResource>
+                    <span className="profileFreeOrPaid">
+                      COST: {isResourceFree(resource.cost) ? (`FREE`) : (`$${resource.cost}` )}
+                    </span>
                     <Link className="plain" to={`/resource/${resource._id}`}>
                       <Button className="edit">EDIT</Button>
                     </Link>
+                    <Button className="edit" data-number={`image-${resource._id}`} onClick={handleDelete}>delete</Button>
+                    <br></br><br></br><br></br>
                   </Box>
                 ))}
+
+              {!user.resources.length ? <span className="profileFreeOrPaid">You have not contributed any resources yet.</span> : null }
+
+              <h4>My Purchased resources</h4>
+              {user.paidResources.map((resource) => (
+                  <Box>
+                    <CardResource
+                      resource={resource} useClass="card-img-size-search"
+                    ></CardResource>
+                    <br></br><br></br><br></br>
+                  </Box>
+                ))}
+              
+              {!user.paidResources.length ? <span className="profileFreeOrPaid">You have not purchased any resources yet.</span> : null }
+
             </Box>
             </Box>
             <Box className="profile-grid-item">
@@ -104,6 +159,7 @@ const ProfilePage = (props) => {
               <Resource></Resource>
               </Box>
               </Box>
+          </Box>
           </Box>
           </div>
       </div>

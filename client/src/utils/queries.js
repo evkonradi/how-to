@@ -107,6 +107,17 @@ export const QUERY_ME = gql`
         videoCaption
       }
     }
+    paidResources {
+      _id
+      name
+      shortDescription
+      dateCreated
+      displayName
+      images {
+        fileURL
+        imageCaption
+      }
+    }
   }
 }
 `;
