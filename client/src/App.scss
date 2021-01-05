@@ -489,6 +489,17 @@ Header {
     font-weight: bold;
 }
 
+//Edit/Add Resource
+.costInput{
+    display: inline;
+    width: 60px;
+}
+
+.errorMessage{
+    color: $warning;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 768px) {
 
     .profileLeft {

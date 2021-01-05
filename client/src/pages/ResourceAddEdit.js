@@ -67,6 +67,7 @@ function ResourceAddEdit() {
       ...formState,
       [name]: value,
     });
+
   };
 
   // add images to the list of images
@@ -103,33 +104,46 @@ function ResourceAddEdit() {
 
   };
 
+  const isCostValid = () =>{
+
+    const floatFormat = /^\d*\.?\d*$/;
+
+    if (formState.cost.toString().match(floatFormat))
+      return true;
+    else
+      return false;
+  }
 
   //submit form and save data to the database
   const handleFormSubmit = async event => {
       event.preventDefault();
 
+      if (!isCostValid())
+        return;
+
+      const costValue = Math.round(parseFloat(formState.cost)*100)/100;  
+
       if (!id){
         try{
-          await addResource({ variables: { ...formState } });
+          await addResource({ variables: { ...formState, cost: costValue } });
           console.log("New resource added");
+          window.location.assign('/profile');
         }
         catch(e){
           console.error(e);
-          //idbPromise('newResources', 'put', { ...formState });
         }
       }
       else {
         try{
-          await updateResource({ variables: { id, ...formState } });
+          await updateResource({ variables: { id, ...formState, cost: costValue } });
           console.log("Resource updated");
+          window.location.assign('/profile');
         }
         catch(e){
           console.error(e);
-          //idbPromise('updatedResources', 'put', { _id: id, ...formState });
         }
       }
 
-      window.location.assign('/profile');
   };
 
   //delete an image or video from the list
@@ -190,19 +204,21 @@ function ResourceAddEdit() {
               cols="100"
               name="articleText"
               value={formState.articleText}
+              placeholder= "Please enter your article text here."
               onChange={handleChange}
             >
-              Please enter your article text here.
             </Input>
             <br />
+            <span>Please enter cost for this article (0 for FREE article), $</span>
             <Input className="span"
               id="cost"
-              placeholder="Enter cost for this article."
+              placeholder="0"
               name="cost"
               value={formState.cost}
               onChange={handleChange}
             >
             </Input>
+            {!isCostValid() ? <span className="errorMessage">Please enter a valid cost!</span> : null}
             <br />
             <br />
           </Col>
