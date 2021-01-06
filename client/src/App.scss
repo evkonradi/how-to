@@ -721,8 +721,7 @@ a:hover {
 .cardTitle {
     color: $success;
     text-decoration: none;
-    text-align: right;
-    size: .8rem;
+    text-align: -webkit-auto;
 
 }
 
@@ -730,12 +729,13 @@ a:hover {
 
     text-align: center;
     display: inline-flex;
-    font-size: small;
+    font-size: medium;
+    text-align: -webkit-auto;
 }
 
 .cardTime {
-    font-size: x-small;
-    text-align: right;
+    font-size: small;
+    text-align: -webkit-auto;
     color: $primary;
 
 }
