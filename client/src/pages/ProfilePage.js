@@ -99,7 +99,9 @@ const ProfilePage = (props) => {
       <div className="profile-grid">
         <Box h="40px" bg="transparent"></Box>
           <Box className="copyBox" w="100%" p={4} color="#C2DFE3">
-                <h4>Welcome Back, {`${user.firstName}`}!</h4> 
+                <Box className="copyBox"><h4>Welcome Back, {`${user.firstName}`}!</h4> 
+                </Box>
+                <Box bg="transparent" height="40px" />
                 <Box className="profile-grid-item">
             <Box className="profileLeft" minWidth="30%">
                 <p className="profileField">Username</p> <span className="smallBox" contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span>
@@ -153,13 +155,14 @@ const ProfilePage = (props) => {
 
             </Box>
             </Box>
-            <Box className="profile-grid-item">
-          <Box className="copyBox">
+            <Box bg="transparent" height="40px" />
+            {/* <Box className="profile-grid-item"> */}
+ 
             <h4>SEE WHAT'S NEW</h4>
               <Resource></Resource>
+         
               </Box>
-              </Box>
-          </Box>
+          {/* </Box> */}
 
           </div>
       </div>
