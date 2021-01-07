@@ -72,5 +72,5 @@ If you have any additional questions not answered here or wish to contact us reg
 ## Page Preview
 Home Page Preview:
 
-<img src="./TeachMeToPreview.jpg">
+<img src="./TeachMeToPreview.png">
 

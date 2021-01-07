@@ -660,14 +660,14 @@ a:hover {
   
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 400px) {
 
     .medium{
         float: none;
     }
 
     .mainTitle {
-        font-size: 3rem;
+        font-size: -webkit-xxx-large;
     }
 
     .home-grid-card{
@@ -680,6 +680,7 @@ a:hover {
     // box-shadow: 10px 3px 6px $dark;
     margin: .5rem;
     max-width: 100%;
+    display: -webkit-auto;
 }
 
 .card-body {
@@ -690,7 +691,8 @@ a:hover {
     // display: flex;
     flex-flow: wrap;
     // width: 120px;
-    height: 120px;
+    height: 200px;
+    width: 200px;
 }
 
 .cardImg {
@@ -699,14 +701,14 @@ a:hover {
 }
 
 .card-img-size-carousel{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     float: left;
 }
 
 .card-img-size-search{
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
 }
 
 .cardImg:hover {
@@ -721,13 +723,14 @@ a:hover {
 .cardTitle {
     color: $success;
     text-decoration: none;
-    text-align: -webkit-auto;
-
+    // text-align: -webkit-auto;
+    width: fit-content;
+    
 }
 
 .cardText {
 
-    text-align: center;
+
     display: inline-flex;
     font-size: medium;
     text-align: -webkit-auto;
