@@ -7,12 +7,105 @@ $info: #FAF1CF;
 $light:wheat;
 $dark: #253237;
 
-// Main
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+@media screen and (max-width: 2000px) {
+    .graphic {
+        height: 850px;
+        width: 850px;
+    }
+
+    // .card-img-size-search {
+    //     width: 200px;
+    // }
+    
+
+    
+
+
+    .card {
+        width: 650px;
+        flex-flow: wrap;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+    }
+
+    .cardBody {
+        width: 300px;
+    }
+
+    .cardFill {
+        width: 300px;
+        
+    }
+
+    .cardBody{
+        flex-flow: wrap;
+        padding: 1rem;
+        overflow: hidden;
+    }
+    
+    .cardImg {
+        overflow: hidden;
+        object-fit:cover;
+    }
+    
+    .card-img-size-carousel{
+        width: 200px;
+        height: 200px;
+        float: left;
+    }
+    
+    
+    .cardImg:hover {
+        transform: rotate(357deg);
+    }
+    
+    .cardFill {
+        text-align: left;
+        word-break: keep-all;
+    }
+    
+    .cardTitle {
+        color: $success;
+        text-decoration: none;
+        text-align: left;
+        word-break: keep-all;
+    }
+    
+    .cardTitle:hover {
+        color: $dark;
+        text-decoration: none;
+        text-align: left;
+    }
+    
+    
+    .cardText {
+        word-break: break;
+        overflow: hidden;
+        display: block;
+        font-size: medium;
+        color:$primary;
+    }
+    
+    .cardText:hover {
+        text-decoration: none;
+        color: $success;
+    }
+    
+    .cardTime {
+        font-size: small;
+        text-align: left;
+        color: $primary;
+    }
+}
+
+
 
 h1 {
     color: $primary;
