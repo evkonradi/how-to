@@ -139,6 +139,7 @@ const ProfilePage = (props) => {
 
               {!user.resources.length ? <span className="profileFreeOrPaid">You have not contributed any resources yet.</span> : null }
 
+            <Box bg="transparent" height="20px" />
               <h5>My Purchased resources</h5>
               {user.paidResources.map((resource) => (
                   <Box>

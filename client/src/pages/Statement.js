@@ -33,7 +33,9 @@ const Statement = () => {
             <Box bg="transparent" height="40px" />
             <Box className="copyBox">
         <div className="statement-container" >
+        <Box className="copyBox">
             <h4>Transaction History for {Auth.getProfile().data.username} </h4>
+           </Box>
             <div className="statement-grid">
                 <span className="statement-item-head">Date</span>
                 <span className="statement-item-head">Author</span>

@@ -237,11 +237,11 @@ function ResourceAddEdit() {
                   width="300"
                 ></img>
                 <br></br>
-                <span>{image.imageCaption}</span>
+                <span><p>{image.imageCaption}</p></span>
                 <img
                   className="deleteButtonEdit"
                   style={{ width: 60 }}
-                  src="/images/icondelete.png"
+                  src="/images/icons8-delete-64.png"
                   alt="delete"
                   data-number={`image-${formState.imageList.indexOf(image)}`}
                 ></img>
@@ -310,12 +310,13 @@ function ResourceAddEdit() {
                     allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                   ></iframe>
                   <br></br>
-                  <span>{video.videoCaption}</span>
+                  <span><p>{video.videoCaption}</p></span>
                   <img
                     className="deleteButtonEdit"
                     style={{ width: 60 }}
-                    src="/images/icondelete.png"
+                    src="/images/icons8-delete-64.png"
                     alt="delete"
+                    bg="transparent"
                     width="3px"
                     data-number={`video-${formState.videoList.indexOf(video)}`}
                   ></img>
