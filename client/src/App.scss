@@ -153,6 +153,7 @@ a:hover {
     background-color: $primary;
     align-items: center;
     padding: .8rem;
+    margin: 3rem;
     text-align: -webkit-center;
 }
 
@@ -478,6 +479,10 @@ a:hover {
     color: wheat;
 }
 
+.form-control {
+    width: auto;
+}
+
 // Components
 
 .donateBtn {
@@ -661,6 +666,10 @@ a:hover {
         font-size: small;
       }
 
+    .copyBox {
+        margin: .5rem;
+    }
+
   
 }
 
@@ -751,6 +760,10 @@ a:hover {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 3fr 3fr;
+}
+
+.copyBox {
+    margin: .5rem;
 }
 
 }}

@@ -12,11 +12,12 @@ const Home = () => {
   return (
     <div className="main-container">
       <div className="main-grid">
-        <Box bg="transparent" height="40px"></Box>
-        {/* <Box className="main-grid-item" > */}
-        <Box className="copyBox">
-          <img className="medium" src={logo} alt="logo, teach me to" />
-          <h1 className="mainTitle">TeachMeTo</h1>
+        <Box bg="transparent" height="80px"></Box>
+        <Box className="main-grid-item" >
+        
+          {/* <img className="medium" src={logo} alt="logo, teach me to" /> */}
+          <Box >
+            <h1 className="mainTitle">TeachMeTo</h1>
           <h4 className="byline">WHAT DO YOU WANT TO LEARN TODAY?</h4>
 
           <Search></Search>
@@ -36,9 +37,10 @@ const Home = () => {
             Login
           </Link>
         </Box>
+        </Box>
         <Box bg="transparent" height="40px" />
 
-        <Box className="copyBox">
+        <Box className="copyBox" >
           <Box bg="transparent" height="40px" />
           <h4 className="byline">SEE WHAT'S NEW</h4>
           <Flex display="center">
