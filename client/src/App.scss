@@ -50,6 +50,7 @@ h6 {
 
 p {
     color: wheat;
+    font-size: medium;
 }
 
 a {
@@ -62,8 +63,24 @@ a:hover {
     text-emphasis: none;
 }
 
+.edit {
+   float: right;
+   margin: .2rem;
+}
+
+.edit:hover {
+    border: 1px solid $success;
+    background-color: $primary;
+    color: $success;
+}
+
+.resourceProfile {
+    display: inline-table;
+}
+
 .span {
     color: wheat;
+    font-size: medium;
 }
 
 .main-container {

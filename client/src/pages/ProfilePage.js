@@ -118,11 +118,11 @@ const ProfilePage = (props) => {
             </Box>
             </Box>
             <Box className="profile-grid-item">
-            <Box maxWidth="70%">
+            <Box>
              
               <h5>My Contributions</h5>
               {user.resources.map((resource) => (
-                  <Box>
+                  <Box className="resourceProfile">
                     <CardResource
                       resource={resource} useClass="card-img-size-search"
                     ></CardResource>
@@ -130,9 +130,20 @@ const ProfilePage = (props) => {
                       COST: {isResourceFree(resource.cost) ? (`FREE`) : (`$${resource.cost}` )}
                     </span>
                     <Link className="plain" to={`/resource/${resource._id}`}>
-                      <Button className="edit">EDIT</Button>
+                      <Button 
+                      className="edit"
+                      bg="wheat"
+                      padding=".3rem"
+                      >Edit</Button>
                     </Link>
-                    <Button className="edit" data-number={`image-${resource._id}`} onClick={handleDelete}>delete</Button>
+                    <Button 
+                    className="edit"
+                    bg="wheat"
+                    padding=".3rem"
+                    data-number={`image-${resource._id}`} 
+                    onClick={handleDelete}>
+                      Delete
+                      </Button>
                     <br></br><br></br><br></br>
                   </Box>
                 ))}
@@ -155,8 +166,6 @@ const ProfilePage = (props) => {
             </Box>
             </Box>
             </Box>
-            <Box bg="transparent" height="40px" />
-            {/* <Box className="profile-grid-item"> */}
                 <Box className="copyBox">
             <h4>SEE WHAT'S NEW</h4>
               <Resource></Resource>

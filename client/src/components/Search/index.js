@@ -65,8 +65,9 @@ const Search = () => {
       
             ))}
             {data.resources_search.length === 0 &&
-              <div className="noDataFound">
+              <div className="noDataFound"><p>
                 No data found! Please try another search.
+                </p>
               </div>
             }
           </div>
