@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { useMutation, useQuery } from "@apollo/react-hooks";
 import { QUERY_ME } from "../utils/queries";
-import { Col, Row, Container } from "reactstrap";
 import Resource from "../components/Resource";
 import { Redirect, useParams, Link } from "react-router-dom";
 import { Box } from "@chakra-ui/core";
 import { Button } from "@chakra-ui/core";
 import Auth from "../utils/auth";
 import CardResource from "../components/CardResource";
-import { UPDATE_USER, DELETE_RESOURCE } from "../utils/mutations";
+import { DELETE_RESOURCE } from "../utils/mutations";
 
 
 const ProfilePage = (props) => {
@@ -17,10 +16,10 @@ const ProfilePage = (props) => {
   const { loading, data } = useQuery(QUERY_ME, {
     variables: { username: userParam },
   });
-  const [updateUser] = useMutation(UPDATE_USER);
+  // const [updateUser] = useMutation(UPDATE_USER);
   const [deleteResource] = useMutation(DELETE_RESOURCE);
 
-  const [userState, setUserState] = useState({
+  const [userState] = useState({
     username: "",
     firstName: "",
     lastName: "",
@@ -46,21 +45,21 @@ const ProfilePage = (props) => {
   }
 
   // Handle changes on the form
-  const handleChange = (event) => {
-    event.preventDefault();
-    const { name, value } = event.target;
+  // const handleChange = (event) => {
+  //   event.preventDefault();
+  //   const { name, value } = event.target;
 
-    setUserState({
-      ...userState,
-      [name]: value,
-    });
-    try {
-      updateUser({ variables: { userParam, ...userState } })
-    }
-    catch(e){
-      console.error(e);
-    }
-  };
+  //   setUserState({
+  //     ...userState,
+  //     [name]: value,
+  //   });
+  //   try {
+  //     updateUser({ variables: { userParam, ...userState } })
+  //   }
+  //   catch(e){
+  //     console.error(e);
+  //   }
+  // };
 
   // Check if Resource is free
   const isResourceFree = (cost) => {
@@ -104,10 +103,10 @@ const ProfilePage = (props) => {
                 <Box bg="transparent" height="40px" />
                 <Box className="profile-grid-item">
             <Box className="profileLeft" minWidth="30%">
-                <p className="profileField">Username</p> <span className="smallBox" contentEditable="true" onChange={handleChange} name={userState.username}>{`${user.username}`}</span>
-                <p className="profileField">First Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.firstName}>{`${user.firstName}`}</span>
-                <p className="profileField">Last Name</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.lastName}>{`${user.lastName}`}</span>
-                <p className="profileField">Email</p> <span className="smallBox" contentEditable="true" onChange={handleChange} value={userState.email}>{`${user.email}`}</span>
+                <p className="profileField">Username</p> <span className="smallBox" name={userState.username}>{`${user.username}`}</span>
+                <p className="profileField">First Name</p> <span className="smallBox" value={userState.firstName}>{`${user.firstName}`}</span>
+                <p className="profileField">Last Name</p> <span className="smallBox" value={userState.lastName}>{`${user.lastName}`}</span>
+                <p className="profileField">Email</p> <span className="smallBox" value={userState.email}>{`${user.email}`}</span>
                 <p className="profileField">Wallet</p> <span className="wheat">${`${user.wallet.toFixed(2)}`}</span>
                 <br></br><br></br>
                 <Box className="newPostBtn" >

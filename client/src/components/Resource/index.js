@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_RESOURCES_HOMEPAGE } from '../../utils/queries';
 import { idbPromise } from "../../utils/helpers";
-import { Box } from "@chakra-ui/core";
-// import { useParams } from "react-router-dom";
 import CardResource from "../CardResource";
 
 import Carousel from "react-bootstrap/Carousel";
@@ -26,28 +24,6 @@ const Resource = () => {
       });
     }
   }, [data, loading]);
-
-  // return(
-  // <main>
-  //     <div >
-  //       {loading ? <div>Loading...</div> : 
-  //           <Box className="home-grid-card">
-  //             {
-  //               resources2.map((resource) => (
-  //                 <Box className="card-grid-item" key={resource._id} className="cardTextAlign">
-
-  //                   <CardResource resource={resource} useClass="card-img-size-carousel"></CardResource>
-                    
-  //                 </Box>
-  //               ))
-  //             }
-  //           </Box>
-            
-  //       }
-  //     </div>
-  //   </main>
-  // );
-  //     };
 
   return (
     <main>

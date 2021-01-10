@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Nav } from 'react-bootstrap'
 import Auth from '../../utils/auth';
-import Search from '../Search';
 // import logo from "./teach_me_to_logo-01.png";
 
 

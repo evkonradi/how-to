@@ -272,9 +272,9 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
   await User.create({
     firstName: "Frank",
     lastName: "Furter",
-    username: "HotDogMan",
-    displayName: "HotDogMan",
-    email: "frankf@testmail.com",
+    username: "ffurter",
+    displayName: "ffurter",
+    email: "ffurter@testmail.com",
     wallet: 15,
     password: "password12345",
     resources: [resources[0]._id, resources[1]._id, resources[2]._id, resources[3]._id, resources[4]._id]
@@ -283,9 +283,9 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
   await User.create({
     firstName: "Hans",
     lastName: "Solo",
-    username: "StarWarsMan",
-    displayName: "StarWarsMan",
-    email: "hansyboy@testmail.com",
+    username: "hsolo",
+    displayName: "hsolo",
+    email: "hsolo@testmail.com",
     password: "theforce123",
     resources: [resources[5]._id, resources[6]._id, resources[7]._id, resources[8]._id, resources[9]._id]
   });
