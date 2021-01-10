@@ -118,11 +118,12 @@ const ProfilePage = (props) => {
             </Box>
             </Box>
             <Box className="profile-grid-item">
-            <Box>
+  
              
-              <h5>My Contributions</h5>
+             
               {user.resources.map((resource) => (
                   <Box className="resourceProfile">
+                     <h5>My Contributions</h5>
                     <CardResource
                       resource={resource} useClass="card-img-size-search"
                     ></CardResource>
@@ -164,7 +165,7 @@ const ProfilePage = (props) => {
               {!user.paidResources.length ? <span className="profileFreeOrPaid">You have not purchased any resources yet.</span> : null }
 
             </Box>
-            </Box>
+     
             </Box>
                 <Box className="copyBox">
             <h4>SEE WHAT'S NEW</h4>
