@@ -47,7 +47,7 @@ const resourceSchema = new Schema({
         default: Date.now ,
         get: timestamp => moment(timestamp).format('MMM DD, YYYY')
     },
-    displayName: {
+    username: {
       type: String,
       required: true
     },

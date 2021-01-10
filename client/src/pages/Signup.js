@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, FormGroup, Input, Container, Col, Jumbotron } from "reactstrap";
+import { Form, FormGroup, Input } from "reactstrap";
 import { Button, Box } from "@chakra-ui/core";
 
 import { useMutation } from "@apollo/react-hooks";
@@ -8,7 +8,7 @@ import { ADD_USER } from "../utils/mutations";
 import Auth from '../utils/auth';
 
 const Signup = () => {
-    const [formState, setFormState] = useState({ username: '', firstName: '', lastName: '', displayName: '', email: '', password: '' });
+    const [formState, setFormState] = useState({ username: '', firstName: '', lastName: '', email: '', password: '' });
     const [addUser] = useMutation(ADD_USER);
 
   const handleChange = (event) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
-import { Box, Flex } from "@chakra-ui/core";
+import { Box } from "@chakra-ui/core";
 
 const CardResource = ({resource, useClass}) =>{
 
@@ -18,7 +18,7 @@ const CardResource = ({resource, useClass}) =>{
           <Box className="cardFill">
           <Card.Title className="cardTitle">{resource.name}</Card.Title>
           <Card.Text className="cardText">{resource.shortDescription}</Card.Text>
-          <Card.Text className="cardTime">Created: {resource.dateCreated} by {resource.displayName}</Card.Text>
+          <Card.Text className="cardTime">Created: {resource.dateCreated} by {resource.username}</Card.Text>
           </Box>
         </Card.Body>
   

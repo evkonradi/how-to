@@ -3,7 +3,7 @@ import { useMutation, useQuery } from "@apollo/react-hooks";
 import { ADD_RESOURCE, UPDATE_RESOURCE } from "../utils/mutations";
 import { QUERY_RESOURCE } from "../utils/queries";
 import { useParams } from "react-router-dom";
-import { Col, Row, Container, InputGroup, Input} from "reactstrap";
+import { Col, Row, InputGroup, Input } from "reactstrap";
 import { Box, Button } from "@chakra-ui/core";
 //import { idbPromise } from "../utils/helpers";
 
@@ -67,7 +67,6 @@ function ResourceAddEdit() {
       ...formState,
       [name]: value,
     });
-
   };
 
   // add images to the list of images
@@ -88,92 +87,89 @@ function ResourceAddEdit() {
     });
   };
 
-    // add videos to the list of videos 
-    const handleVideoAdd = (event) =>{
-      event.preventDefault();
+  // add videos to the list of videos
+  const handleVideoAdd = (event) => {
+    event.preventDefault();
 
-      let {videoList} = formState;
-      videoList.push({fileURL: formState.videoLinkInput, videoCaption: formState.videoCaption});
+    let { videoList } = formState;
+    videoList.push({
+      fileURL: formState.videoLinkInput,
+      videoCaption: formState.videoCaption,
+    });
 
-      setFormState({
-          ...formState,
-          videoList: videoList,
-          videoLinkInput: "",
-          videoCaption:""
-      });
-
+    setFormState({
+      ...formState,
+      videoList: videoList,
+      videoLinkInput: "",
+      videoCaption: "",
+    });
   };
 
-  const isCostValid = () =>{
-
+  const isCostValid = () => {
     const floatFormat = /^\d*\.?\d*$/;
 
-    if (formState.cost.toString().match(floatFormat))
-      return true;
-    else
-      return false;
-  }
+    if (formState.cost.toString().match(floatFormat)) return true;
+    else return false;
+  };
 
   //submit form and save data to the database
-  const handleFormSubmit = async event => {
-      event.preventDefault();
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
 
-      if (!isCostValid())
-        return;
+    if (!isCostValid()) return;
 
-      const costValue = Math.round(parseFloat(formState.cost)*100)/100;  
+    const costValue = Math.round(parseFloat(formState.cost) * 100) / 100;
 
-      if (!id){
-        try{
-          await addResource({ variables: { ...formState, cost: costValue } });
-          console.log("New resource added");
-          window.location.assign('/profile');
-        }
-        catch(e){
-          console.error(e);
-        }
+    if (!id) {
+      try {
+        await addResource({ variables: { ...formState, cost: costValue } });
+        console.log("New resource added");
+        window.location.assign("/profile");
+      } catch (e) {
+        console.error(e);
       }
-      else {
-        try{
-          await updateResource({ variables: { id, ...formState, cost: costValue } });
-          console.log("Resource updated");
-          window.location.assign('/profile');
-        }
-        catch(e){
-          console.error(e);
-        }
+    } else {
+      try {
+        await updateResource({
+          variables: { id, ...formState, cost: costValue },
+        });
+        console.log("Resource updated");
+        window.location.assign("/profile");
+      } catch (e) {
+        console.error(e);
       }
-
+    }
   };
 
   //delete an image or video from the list
-  const handleDelete = async event =>{
-      event.preventDefault();
+  const handleDelete = async (event) => {
+    event.preventDefault();
 
-      const targetEl = event.target;
+    const targetEl = event.target;
 
-      if (targetEl.hasAttribute("data-number")){
-          const attrValue = targetEl.getAttribute("data-number");
-          const elPosition = parseInt(attrValue.replace("image-", "").replace("video-",""));
+    if (targetEl.hasAttribute("data-number")) {
+      const attrValue = targetEl.getAttribute("data-number");
+      const elPosition = parseInt(
+        attrValue.replace("image-", "").replace("video-", "")
+      );
 
-          if (attrValue.indexOf("image") > -1){
-              let itemsList = formState.imageList;
-              itemsList.splice(elPosition, 1);
-              setFormState({ ...formState, imageList: itemsList });
-          }
-          else{
-              let itemsList = formState.videoList;
-              itemsList.splice(elPosition, 1);
-              setFormState({ ...formState, videoList: itemsList });
-          }
+      if (attrValue.indexOf("image") > -1) {
+        let itemsList = formState.imageList;
+        itemsList.splice(elPosition, 1);
+        setFormState({ ...formState, imageList: itemsList });
+      } else {
+        let itemsList = formState.videoList;
+        itemsList.splice(elPosition, 1);
+        setFormState({ ...formState, videoList: itemsList });
       }
-  }
+    }
+  };
 
   return (
-      <main className="main-container">
-        <Box bg="transparent" height="40px"></Box>
-        <Box className="copyBox">
-        
+    <main className="main-container">
+      <Box bg="transparent" height="60px"></Box>
+      <Box className="copyBox">
+        <Box bg="transparent" height="20px"></Box>
         <form onSubmit={handleFormSubmit} className="cardTextAlign">
           <Col>
             <Box bg="wheat" w="100%" p={4} color="#C2DFE3">
@@ -182,7 +178,8 @@ function ResourceAddEdit() {
           </Col>{" "}
           <br />
           <Col>
-            <Input className="span"
+            <Input
+              className="span"
               id="articleName"
               placeholder="Article Name"
               name="articleName"
@@ -190,7 +187,8 @@ function ResourceAddEdit() {
               value={formState.articleName}
             ></Input>
             <br />
-            <Input className="span"
+            <Input
+              className="span"
               id="articleShortDesc"
               placeholder="Article Short Description"
               name="articleShortDesc"
@@ -198,32 +196,36 @@ function ResourceAddEdit() {
               onChange={handleChange}
             ></Input>
             <br />
-            <Input className="span"
+            <Input
+              className="span"
               type="textarea"
               id="articleText"
               rows="20"
               cols="100"
               name="articleText"
               value={formState.articleText}
-              placeholder= "Please enter your article text here."
+              placeholder="Please enter your article text here."
               onChange={handleChange}
-            >
-            </Input>
+            ></Input>
             <br />
-            <span>Please enter cost for this article (0 for FREE article), $</span>
-            <Input className="span"
+            <span>
+              <p>Please enter cost for this article (0 for FREE article), $</p>
+            </span>
+            <Input
+              className="span"
               id="cost"
               placeholder="0"
               name="cost"
               value={formState.cost}
               onChange={handleChange}
-            >
-            </Input>
-            {!isCostValid() ? <span className="errorMessage">Please enter a valid cost!</span> : null}
+            ></Input>
+            {!isCostValid() ? (
+              <span className="errorMessage">Please enter a valid cost!</span>
+            ) : null}
             <br />
             <br />
           </Col>
-          <Col className="cardTextAlign" >
+          <Col className="cardTextAlign">
             {formState.imageList.map((image) => (
               <div
                 key={`div-image-${formState.imageList.indexOf(image)}`}
@@ -236,7 +238,9 @@ function ResourceAddEdit() {
                 ></img>
                 <br></br>
                 <span>{image.imageCaption}</span>
-                <img className="deleteButtonEdit" style={{width:60}}
+                <img
+                  className="deleteButtonEdit"
+                  style={{ width: 60 }}
                   src="/images/icondelete.png"
                   alt="delete"
                   data-number={`image-${formState.imageList.indexOf(image)}`}
@@ -248,7 +252,8 @@ function ResourceAddEdit() {
           </Col>
           <Col>
             <InputGroup>
-              <Input className="span"
+              <Input
+                className="span"
                 id="imageLinkInput"
                 placeholder="Link to an image"
                 name="imageLinkInput"
@@ -259,7 +264,8 @@ function ResourceAddEdit() {
               <br />
             </InputGroup>
             <InputGroup>
-              <Input className="span"
+              <Input
+                className="span"
                 id="imageCaption"
                 placeholder="Image Caption"
                 name="imageCaption"
@@ -270,9 +276,9 @@ function ResourceAddEdit() {
               <br />
             </InputGroup>
           </Col>
-          <Col >
-            <Button 
-            className="center"
+          <Col>
+            <Button
+              className="center"
               size="md"
               height="36px"
               width="100px"
@@ -280,8 +286,9 @@ function ResourceAddEdit() {
               bg="wheat"
               color="#253237"
               _hover={{ color: "#D99748" }}
-              id="btnAddImage" 
-              onClick={handleImageAdd}>
+              id="btnAddImage"
+              onClick={handleImageAdd}
+            >
               Add Image
             </Button>
             <br></br>
@@ -297,14 +304,16 @@ function ResourceAddEdit() {
                 >
                   <iframe
                     src={`${video.fileURL}`}
-                    style={{maxWidth:500}}
+                    style={{ maxWidth: 500 }}
                     frameBorder="0"
                     title={video.videoCaption}
                     allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                   ></iframe>
                   <br></br>
                   <span>{video.videoCaption}</span>
-                  <img className="deleteButtonEdit" style={{width:60}}
+                  <img
+                    className="deleteButtonEdit"
+                    style={{ width: 60 }}
                     src="/images/icondelete.png"
                     alt="delete"
                     width="3px"
@@ -343,46 +352,44 @@ function ResourceAddEdit() {
               <br />
             </InputGroup>
             <Col>
-              <Button className="center"
-            size="md"
-            height="36px"
-            width="100px"
-            border="2px"
-            bg="wheat"
-            color="#253237"
-            _hover={{ color: "#D99748" }}
-              id="btnAddVideo"
-              onClick={handleVideoAdd}>
+              <Button
+                className="center"
+                size="md"
+                height="36px"
+                width="100px"
+                border="2px"
+                bg="wheat"
+                color="#253237"
+                _hover={{ color: "#D99748" }}
+                id="btnAddVideo"
+                onClick={handleVideoAdd}
+              >
                 Add Video
               </Button>
               {/* </InputGroupAddon> */}
             </Col>
             <br />
           </Col>
-          
           <Col className="cardTextAlign">
-
-<Button
-            className="center"
-            size="lg"
-            height="46px"
-            width="200px"
-            border="2px"
-            bg="#D99748"
-            color="wheat"
-            _hover={{ color: "#253237" }}
-            type="submit"
-            id="btnSubmit"
-          >
+            <Button
+              className="center"
+              size="lg"
+              height="46px"
+              width="200px"
+              border="2px"
+              bg="#D99748"
+              color="wheat"
+              _hover={{ color: "#253237" }}
+              type="submit"
+              id="btnSubmit"
+            >
               Submit
             </Button>
-    
           </Col>
-         
+          <Box bg="transparent" height="20px"></Box>
         </form>
-        </Box>
-        </main>
-
+      </Box>
+    </main>
   );
 }
 

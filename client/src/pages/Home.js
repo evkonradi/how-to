@@ -1,5 +1,4 @@
 import React from "react";
-import { Jumbotron, Col } from "reactstrap";
 import Resource from "../components/Resource";
 import Search from "../components/Search";
 import logo from "./teach_me_to_logo-01.png";
@@ -22,7 +21,7 @@ const Home = () => {
 
           <Search></Search>
 
-          <img className="graphic" src={graphic} />
+          <img className="graphic" src={graphic} alt="Tech Me To"/>
           <p className="copy">
             {" "}
             Start creating and sharing your knowledge with others on TeachMeTo.

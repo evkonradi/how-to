@@ -6,7 +6,7 @@ query resource($_id: ID!) {
       _id
       name
       shortDescription
-      displayName
+      username
       resourceBody
       dateCreated
       cost
@@ -28,7 +28,7 @@ export const QUERY_RESOURCES_HOMEPAGE = gql`
       _id
       name
       shortDescription 
-      displayName
+      username
       dateCreated
       cost
       images{
@@ -45,7 +45,7 @@ query resource_search($text: String!) {
     _id
     name
     shortDescription
-    displayName
+    username
     dateCreated
     cost
     images{
@@ -63,7 +63,6 @@ query user($username: String!) {
     username
     firstName
     lastName
-    displayName
     email
     resourceCount
     resources {
@@ -72,7 +71,7 @@ query user($username: String!) {
       shortDescription
       resourceBody
       dateCreated
-      displayName
+      username
       cost
     }
   }
@@ -86,7 +85,6 @@ export const QUERY_ME = gql`
     username
     firstName
     lastName
-    displayName
     email
     wallet
     resourceCount
@@ -96,7 +94,7 @@ export const QUERY_ME = gql`
       shortDescription
       resourceBody
       dateCreated
-      displayName
+      username
       cost
       images {
         fileURL
@@ -112,7 +110,7 @@ export const QUERY_ME = gql`
       name
       shortDescription
       dateCreated
-      displayName
+      username
       images {
         fileURL
         imageCaption
@@ -129,7 +127,6 @@ export const QUERY_ME_BASIC = gql`
     username
     firstName
     lastName
-    displayName
     email
     resourceCount
   }
@@ -146,7 +143,7 @@ query user($username: String!) {
       name
       shortDescription
       dateCreated
-      displayName
+      username
     }
   }
 }`;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, FormGroup, Input, Col, Container, Row, Jumbotron } from "reactstrap";
+import { Form, FormGroup, Input, Col } from "reactstrap";
 import { Link } from 'react-router-dom';
 import { useMutation } from "@apollo/react-hooks";
 import { LOGIN_USER } from "../utils/mutations";
