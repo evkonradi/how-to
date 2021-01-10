@@ -84,7 +84,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
             </FormGroup>
-            <FormGroup>
+            {/* <FormGroup>
             <Input
                 className="inputMain"
                 type="displayName"
@@ -94,7 +94,7 @@ const Signup = () => {
                 value={formState.displayName}
                 onChange={handleChange}
               />
-            </FormGroup>
+            </FormGroup> */}
             <FormGroup>
               <Input
                 className="inputMain"
