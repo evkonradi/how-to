@@ -17,7 +17,6 @@ const typeDefs = gql`
     username: String
     firstName: String
     lastName: String
-    displayName: String
     email: String,
     wallet: Float,
     resourceCount: Int
@@ -43,7 +42,7 @@ const typeDefs = gql`
     shortDescription: String,
     resourceBody: String,
     dateCreated: String,
-    displayName: String,
+    username: String,
     cost: Float,
     images: [Image]
     videos: [Video]
@@ -53,7 +52,7 @@ const typeDefs = gql`
     _id: ID,
     name: String,
     shortDescription: String,
-    displayName: String,
+    username: String,
     resourceBody: String,
     dateCreated: String
     cost: Float,
@@ -108,7 +107,7 @@ const typeDefs = gql`
 
   type Mutation {
     login(email: String!, password: String!): Auth
-    addUser(username: String!, firstName: String!, lastName: String!, displayName: String!, email: String!, password: String!): Auth
+    addUser(username: String!, firstName: String!, lastName: String!, email: String!, password: String!): Auth
     addResource(name: String!, shortDescription: String!, resourceBody: String, cost: Float!, images: [ImageInput], videos: [VideoInput]): Resource
     updateResource(_id: ID!, name: String!, shortDescription: String!, resourceBody: String!, cost: Float!, images: [ImageInput], videos: [VideoInput]): Resource
     deleteResource(_id: ID!): Resource

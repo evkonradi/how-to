@@ -8,7 +8,7 @@ import { ADD_USER } from "../utils/mutations";
 import Auth from '../utils/auth';
 
 const Signup = () => {
-    const [formState, setFormState] = useState({ username: '', firstName: '', lastName: '', displayName: '', email: '', password: '' });
+    const [formState, setFormState] = useState({ username: '', firstName: '', lastName: '', email: '', password: '' });
     const [addUser] = useMutation(ADD_USER);
 
   const handleChange = (event) => {
@@ -77,16 +77,6 @@ const Signup = () => {
                 name="lastName"
                 id="lastName"
                 value={formState.lastName}
-                onChange={handleChange}
-              />
-            </FormGroup>
-            <FormGroup>
-            <Input
-                type="displayName"
-                placeholder="Display Name"
-                name="displayName"
-                id="displayName"
-                value={formState.displayName}
                 onChange={handleChange}
               />
             </FormGroup>

@@ -21,12 +21,6 @@ const userSchema = new Schema(
             unique: false,
             trim: true
         },
-        displayName: {
-            type: String,
-            required: true,
-            unique: true,
-            trim: true
-        },
         email: {
             type: String,
             required: true,

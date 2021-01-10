@@ -18,9 +18,9 @@ function PayButton({resource}){
         if (!itemInCart) {
             dispatch({
                 type: ADD_TO_CART,
-                product: { _id: resource._id, name: resource.name, shortDescription: resource.shortDescription, cost: resource.cost, author: resource.displayName }
+                product: { _id: resource._id, name: resource.name, shortDescription: resource.shortDescription, cost: resource.cost, author: resource.username }
             });
-            idbPromise('cart', 'put', { _id: resource._id, name: resource.name, shortDescription: resource.shortDescription, cost: resource.cost, author: resource.displayName });
+            idbPromise('cart', 'put', { _id: resource._id, name: resource.name, shortDescription: resource.shortDescription, cost: resource.cost, author: resource.username });
         }
         
     };

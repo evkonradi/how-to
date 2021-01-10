@@ -9,7 +9,6 @@ mutation login($email: String!, $password: String!) {
       username
       firstName
       lastName
-      displayName
       email
     }
   }
@@ -17,15 +16,14 @@ mutation login($email: String!, $password: String!) {
 `;
 
 export const ADD_USER = gql`
-mutation addUser($username: String!, $firstName: String!, $lastName: String!, $displayName: String!, $email: String!, $password: String!) {
-  addUser(username: $username, firstName: $firstName, lastName: $lastName, displayName: $displayName, email: $email, password: $password) {
+mutation addUser($username: String!, $firstName: String!, $lastName: String!, $email: String!, $password: String!) {
+  addUser(username: $username, firstName: $firstName, lastName: $lastName, email: $email, password: $password) {
     token
     user {
       _id
       username
       firstName
       lastName
-      displayName
       email
     }
   }
@@ -40,7 +38,7 @@ mutation addResource($articleName: String!, $articleShortDesc : String!, $articl
         _id
         name
         shortDescription
-        displayName
+        username
         resourceBody
         dateCreated
         cost
@@ -64,7 +62,7 @@ mutation updateResource($id: ID!, $articleName: String!, $articleShortDesc : Str
       _id
       name
       shortDescription
-      displayName
+      username
       resourceBody
       dateCreated
       cost
@@ -85,22 +83,20 @@ mutation($username: String!, $amount: Float, $resource_id: ID, $resource_name: S
   updateWallet(username: $username, amount: $amount, resource_id: $resource_id, resource_name: $resource_name){
      _id,
     username,
-    displayName,
     wallet
   }
 }
 `;
 
 export const UPDATE_USER = gql`
-mutation updateUser($id: ID!, $username: String!, $firstName: String!, $lastName: String!, $displayName: String!, $email: String!, $password: String!) {
-  updateUser(_id: $id, username: $username, firstName: $firstName, lastName: $lastName, displayName: $displayName, email: $email, password: $password) {
+mutation updateUser($id: ID!, $username: String!, $firstName: String!, $lastName: String!, $email: String!, $password: String!) {
+  updateUser(_id: $id, username: $username, firstName: $firstName, lastName: $lastName, email: $email, password: $password) {
     token
     user {
       _id
       username
       firstName
       lastName
-      displayName
       email
     }
   }

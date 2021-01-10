@@ -42,7 +42,7 @@ function ResourceView() {
         });
       }
 
-      if (getUsername() === data.resource.displayName)
+      if (getUsername() === data.resource.username)
       {
         isPaidResource = false; 
       }
@@ -64,62 +64,11 @@ function ResourceView() {
                   <h1>{data.resource.name}</h1>
               </Box> 
               <Box bg="transparent" height="20px"></Box>
-              {/* <Box className="one-third">
-              <p className="recentAddP">Contributor: {data.resource.displayName}</p>
-                <h4 className="subtitle">{data.resource.shortDescription}</h4>
-
-                {needPayForResource() ? (
-                  <h5 className="italic">Cost: ${data.resource.cost}</h5>
-                ) : (
-                  <h5 className="italic">FREE Resource</h5>
-              )}
-
-                {needPayForResource() ? (
-                  <Col >
-                    <PayButton resource={data.resource}></PayButton>
-                  </Col>
-                ): null} */}
-              {/* </Box> */}
-        
-              {/* <Box bg="transparent" height="20px"></Box>
-              <p>{data.resource.resourceBody}</p>
-              
-              <Box>
-              
-              {data.resource.images.map((image) => (
-                <Col key={`image-${data.resource.images.indexOf(image)}`}>
-                  <img
-                    className="resourceImg"
-                    src={`${image.fileURL} `} 
-                    alt={`${image.imageCaption}`}
-                  ></img>
-                  
-                  <p className="recentAddP">{image.imageCaption}</p>
-                </Col>
-                
-              ))}
-           
-              </Box>
-            {data.resource.videos.map((video) => (
-              <Col key={`video-${data.resource.videos.indexOf(video)}`}>
-                    <iframe
-                      className="video"
-                      src={`${video.fileURL}`}
-                      frameBorder="0"
-                      title={video.videoCaption}
-                      allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                    ></iframe>
-                    <br />
-                    <p className="recentAddP">{video.videoCaption}</p>
-                    <br></br>
-                    <br></br>
-              </Col>
-            ))} */}
        
               <Row>
                 <Col className="one-third">
                   <h6 className="subtitle">{data.resource.shortDescription}</h6>
-                  <h5 className="italic">Contributor: {data.resource.displayName}</h5>
+                  <h5 className="italic">Contributor: {data.resource.username}</h5>
 
                   {needPayForResource() ? (
                     <h5 className="italic">Cost: ${data.resource.cost}</h5>

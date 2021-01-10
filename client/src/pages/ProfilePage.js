@@ -23,7 +23,6 @@ const ProfilePage = (props) => {
     username: "",
     firstName: "",
     lastName: "",
-    displayName: "",
     email: "",
     wallet: "",
     password: "",
