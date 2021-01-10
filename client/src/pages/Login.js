@@ -46,16 +46,19 @@ const Login = (props, Component) => {
     <div className="main-container">
     <main>
       
-      <Box bg="transparent" height="40px"></Box>
+      <Box bg="transparent" height="60px"></Box>
         <Box className="copyBox">
+        <Box bg="transparent" height="20px"></Box>
         <Form className="login-form" onSubmit={handleFormSubmit}>
-        <Box bg="wheat" w="100%" p={4} color="#C2DFE3">
+        <Box bg="wheat" w="100%" p={4} color="#C2DFE3" maxW="80%">
           <h1 className="font-weight-bold">Welcome Back!</h1>
           </Box>
+          <Box bg="transparent" height="20px"></Box>
           <br />
           <FormGroup>
-            {/* <Label>Email</Label> */}
+   
             <Input
+              className="inputMain"
               type="email"
               placeholder="Email"
               name="email"
@@ -65,8 +68,9 @@ const Login = (props, Component) => {
             />
           </FormGroup>
           <FormGroup>
-            {/* <Label>Password</Label> */}
+  
             <Input
+              className="inputMain"
               type="password"
               placeholder="Password"
               name="password"
@@ -98,7 +102,8 @@ const Login = (props, Component) => {
 
           </Col>
         </Form>   
-        {error && <div>Login failed</div>}
+        <Box bg="transparent" height="20px"></Box>
+        {error && <div><p>Login failed</p></div>}
         </Box>
     </main>
     </div>

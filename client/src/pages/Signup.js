@@ -39,19 +39,21 @@ const Signup = () => {
   return (
     <main>
       <div className="main-container">
-      <Box bg="transparent" height="40px"></Box>
+      <Box bg="transparent" height="60px"></Box>
         <Box className="copyBox">
+        <Box bg="transparent" height="40px"></Box>
           <Form className="login-form" onSubmit={handleFormSubmit}>
             
-            <Box bg="wheat" w="100%" p={4} color="#C2DFE3">
+            <Box bg="wheat" w="100%" p={4} color="#C2DFE3" maxWidth="80%">
             <h1>
               <span className="font-weight-bold text-center">Sign Up Here.</span>
             </h1>
             </Box>
-            <br />
+            <Box bg="transparent" height="20px"></Box>
+
             <FormGroup>
-              {/* <Label>User Name</Label> */}
               <Input
+                className="inputMain"
                 type="username"
                 placeholder="User Name"
                 name="username"
@@ -62,6 +64,7 @@ const Signup = () => {
             </FormGroup>
             <FormGroup>
             <Input
+                className="inputMain"
                 type="firstName"
                 placeholder="First Name"
                 name="firstName"
@@ -72,6 +75,7 @@ const Signup = () => {
             </FormGroup>
             <FormGroup>
             <Input
+                className="inputMain"
                 type="lastName"
                 placeholder="Last Name"
                 name="lastName"
@@ -82,6 +86,7 @@ const Signup = () => {
             </FormGroup>
             <FormGroup>
             <Input
+                className="inputMain"
                 type="displayName"
                 placeholder="Display Name"
                 name="displayName"
@@ -91,8 +96,8 @@ const Signup = () => {
               />
             </FormGroup>
             <FormGroup>
-              {/* <Label>Email</Label> */}
               <Input
+                className="inputMain"
                 type="email"
                 placeholder="Email"
                 name="email"
@@ -102,8 +107,8 @@ const Signup = () => {
               />
             </FormGroup>
             <FormGroup>
-              {/* <Label>Password</Label> */}
               <Input
+                className="inputMain"
                 type="password"
                 placeholder="Password"
                 name="password"
