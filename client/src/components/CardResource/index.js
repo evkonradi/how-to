@@ -9,22 +9,23 @@ const CardResource = ({resource, useClass}) =>{
 
 
     <Link className="mainCard" to={`/articles/${resource._id}`} key={resource._id}>
-      <Box height="250px" width="500px">
       
-      <Card outline color='dark'>
+      <div className="cardClass">
      
         <Card.Body className="cardBody">
-          <img className={`cardImg ${useClass}`} variant="top" src={resource.images.length ? resource.images[0].fileURL : "/images/teach_me_to_logo-01.png"} alt = {resource.name} />
           <Box className="cardFill">
-          <Card.Title className="cardTitle">{resource.name}</Card.Title>
-          <Card.Text className="cardText">{resource.shortDescription}</Card.Text>
-          <Card.Text className="cardTime">Created: {resource.dateCreated} by {resource.username}</Card.Text>
+            <img className={`cardImg ${useClass}`} variant="top" src={resource.images.length ? resource.images[0].fileURL : "/images/teach_me_to_logo-01.png"} alt = {resource.name} />
+          </Box>
+          <Box className="cardFill">
+            <Card.Title className="cardTitle">{resource.name}</Card.Title>
+            <Card.Text className="cardText">{resource.shortDescription}</Card.Text>
+            <Card.Text className="cardTime">Created: {resource.dateCreated} by {resource.username}</Card.Text>
           </Box>
         </Card.Body>
   
-      </Card>
+      </div>
  
-      </Box>
+      {/* </Box> */}
     </Link>
 
 );

@@ -150,6 +150,11 @@ a:hover {
 .search {
    display: inline-flex;
    text-align: -webkit-center;
+   text-align: center;
+   width:86%;
+   max-width: 960px;
+   justify-content: center;
+   margin-bottom: 50px;
 }
 
 // Text Styles
@@ -221,11 +226,19 @@ a:hover {
     background-color: wheat;
 }
 
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-  filter: invert(1);
-  width: auto;
-  
+.carousel{
+    width: 100%;
+    max-width: 960px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width:5%;
 }
 
 .carousel-indicators.li {
@@ -359,24 +372,36 @@ a:hover {
 
 // Card 
 
-
 .mainCard:hover {
     text-decoration: none;
 
 }
-.card{
-    // box-shadow: 10px 3px 6px $dark;
-    margin: .5rem;
+
+.cardClass{
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 50px;
+    display: inline-flex;
+    justify-content: center;
+    background-color: whitesmoke;
+
 }
 
 .cardBody{
-    // display: flex;
     flex-flow: wrap;
-    // flex-wrap: overflow;
     padding: 1rem;
-    // width: 200px;
-    height: 200px;
-    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cardFill {
+    word-break: keep-all;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .cardImg {
@@ -385,8 +410,8 @@ a:hover {
 }
 
 .card-img-size-carousel{
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     float: left;
 }
 
@@ -400,15 +425,10 @@ a:hover {
     transform: rotate(357deg);
 }
 
-.cardFill {
-    text-align: right;
-    word-break: keep-all;
-}
-
 .cardTitle {
     color: $success;
     text-decoration: none;
-    text-align: right;
+    text-align: center;
     word-break: keep-all;
 }
 
@@ -434,9 +454,11 @@ a:hover {
 
 .cardTime {
     font-size: small;
-    text-align: right;
+    text-align: center;
     color: $primary;
 }
+
+
 
 .recentlyAddP{
     text-align: center;
@@ -542,6 +564,11 @@ a:hover {
     padding: .3rem;
 }
 //main
+
+// .main{
+//     text-align: center;
+// }
+
 .main-container{
     width:100%;
     text-align: center;
@@ -651,16 +678,11 @@ a:hover {
     max-width: 401px;
 }
 
-@media screen and (max-width: 1300px) {
-    .card {
-        max-width: 60%;
-    }
-}
+// @media screen and (max-width: 1300px) {
+// }
 
 @media screen and (max-width: 1020px) {
-    .card {
-        max-width: 80%;
-    }
+
 // Profile
 .profileFreeOrPaid{
     font-weight: bold;
@@ -694,6 +716,9 @@ a:hover {
         margin: .5rem;
     }
 
+    .carousel{
+        width: 100%;
+    }
   
 }
 
@@ -713,81 +738,19 @@ a:hover {
         margin-bottom: 20px;
     }
 
-.card{
-    // box-shadow: 10px 3px 6px $dark;
-    margin: .5rem;
-    max-width: 100%;
-    display: -webkit-auto;
-}
+    .card-body {
+        padding: 0;
+    }
 
-.card-body {
-    padding: 0;
-}
+    .statement-grid{
+        margin-top: 30px;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 3fr 3fr;
+    }
 
-.cardBody{
-    // display: flex;
-    flex-flow: wrap;
-    // width: 120px;
-    height: 300px;
-    width: 300px;
-}
-
-.cardImg {
-    overflow: hidden;
-    object-fit:cover;
-}
-
-.card-img-size-carousel{
-    width: 100px;
-    height: 100px;
-    float: left;
-}
-
-.card-img-size-search{
-    width: 80px;
-    height: 80px;
-}
-
-.cardImg:hover {
-    transform: rotate(357deg);
-}
-
-.cardFill {
-    text-align: right;
-    word-break: keep-all;
-}
-
-.cardTitle {
-    color: $success;
-    text-decoration: none;
-    // text-align: -webkit-auto;
-    width: fit-content;
-    
-}
-
-.cardText {
-
-
-    display: inline-flex;
-    font-size: medium;
-    text-align: -webkit-auto;
-}
-
-.cardTime {
-    font-size: small;
-    text-align: -webkit-auto;
-    color: $primary;
-
-}
-.statement-grid{
-    margin-top: 30px;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 3fr 3fr;
-}
-
-.copyBox {
-    margin: .5rem;
-}
+    .copyBox {
+        margin: .5rem;
+    }
 
 }}

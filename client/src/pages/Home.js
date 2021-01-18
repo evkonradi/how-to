@@ -1,7 +1,6 @@
 import React from "react";
 import Resource from "../components/Resource";
 import Search from "../components/Search";
-import logo from "./teach_me_to_logo-01.png";
 import { Link } from "react-router-dom";
 import { Box, Flex } from "@chakra-ui/core";
 import graphic from "./AdobeStock_276150433_graphic.png";
@@ -45,6 +44,7 @@ const Home = () => {
           <Flex display="center">
             <Resource></Resource>
           </Flex>
+          <Box bg="transparent" height="40px" />
         </Box>
       </div>
     </div>

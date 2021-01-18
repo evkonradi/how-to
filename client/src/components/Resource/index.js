@@ -27,12 +27,12 @@ const Resource = () => {
 
   return (
     <main>
-      <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
         {loading ? <div>Loading...</div> : 
-            <Carousel className="cardTextAlign">
+            <Carousel nextIcon="" nextLabel="" prevIcon="" prevLabel="">
               {
                 resources2.map((resource) => (
-                  <Carousel.Item key={resource._id} className="cardTextAlign">
+                  <Carousel.Item key={resource._id} >
+                    {/* <Carousel nextIcon="" nextLabel="" prevIcon="" prevLabel=""></Carousel> */}
 
                     <CardResource resource={resource} useClass="card-img-size-carousel"></CardResource>
                     
@@ -41,7 +41,6 @@ const Resource = () => {
               }
             </Carousel>
         }
-      </div>
     </main>
   );
 };
