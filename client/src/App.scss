@@ -135,12 +135,15 @@ a:hover {
 }
 
 .mainNav {
-    max-height: 45px;
+    max-height: 55px;
     background-color:$primary;
     padding: .5rem;
     position: fixed;
     top: 0;
     width: 100%;
+    border-bottom: 10px solid $info;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .inputMain {
@@ -649,9 +652,15 @@ a:hover {
     background-color:$primary;
     left: 0;
     width: 100%;
-    justify-content: center;
-    text-align: center;
-    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    border-top: 10px solid $info;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    // text-align: center;
+    // vertical-align: middle;
   }
   
   .footerP {
