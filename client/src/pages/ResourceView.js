@@ -73,7 +73,6 @@ function ResourceView() {
                   {needPayForResource() ? (
                     <h5 className="italic">Cost: ${data.resource.cost}</h5>
                     ) : ( null
-                    // <h5 className="italic">FREE Resource</h5>
                   )}
 
                   {needPayForResource() ? (

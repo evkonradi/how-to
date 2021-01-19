@@ -37,7 +37,7 @@ h4 {
 
 h5 {
     color: $success;
-    font-size: smaller;
+    font-size: 1.25rem;
 }
 
 h6 {
@@ -109,7 +109,7 @@ a:hover {
 }
 
 .span {
-    color: wheat;
+    color: $dark;
     font-size: medium;
 }
 
@@ -151,7 +151,6 @@ a:hover {
 .graphic {
     width: 250px;
     height: 250px;
-    opacity: 80%;
 }
 
 .hometron{
