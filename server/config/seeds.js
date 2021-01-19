@@ -269,7 +269,7 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
 
   await User.deleteMany();
 
-  await User.collection.dropIndex("displayName_1");
+  //await User.collection.dropIndex("displayName_1");
 
   await User.create({
     firstName: "Frank",
