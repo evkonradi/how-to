@@ -416,7 +416,7 @@ a:hover {
     display: inline-flex;
     justify-content: center;
     background-color: whitesmoke;
-
+    align-items: center;
 }
 
 .cardBody{
@@ -488,6 +488,11 @@ a:hover {
     font-size: small;
     text-align: center;
     color: $primary;
+}
+
+.cardContainer{
+    padding-left: 1px;
+    padding-right: 1px;
 }
 
 
@@ -774,7 +779,22 @@ a:hover {
     .carousel{
         width: 100%;
     }
-  
+
+    // .photo-grid{
+    //     width: 100%;
+    // }
+    // .photo-grid-item{
+    //     justify-items: center;
+    // }
+
+    // .one-third{
+    //     margin-left: 0;
+    // }
+    
+    // .subtitle{
+    //     text-align: center;
+    //     float: none;
+    // }
 }
 
 @media screen and (max-width: 400px) {

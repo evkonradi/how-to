@@ -7,6 +7,7 @@ const CardResource = ({resource, useClass}) =>{
 
   return (
 
+    <div className="cardContainer">
 
     <Link className="mainCard" to={`/articles/${resource._id}`} key={resource._id}>
       
@@ -27,6 +28,7 @@ const CardResource = ({resource, useClass}) =>{
  
       {/* </Box> */}
     </Link>
+    </div>
 
 );
 };
