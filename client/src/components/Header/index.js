@@ -31,9 +31,6 @@ const Header = (Component) => {
         </>
       )}
     </Nav>
-
-
-    
   );
 // }
 }

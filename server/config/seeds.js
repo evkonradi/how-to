@@ -276,7 +276,7 @@ Making a spaceship is pretty easy, I could drop a cube into my 3D model, and tel
     lastName: "Furter",
     username: "ffurter",
     email: "ffurter@testmail.com",
-    wallet: 15,
+    wallet: 0,
     password: "password12345",
     resources: [resources[0]._id, resources[1]._id, resources[2]._id, resources[3]._id, resources[4]._id]
   });

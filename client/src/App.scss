@@ -6,6 +6,7 @@ $warning: #F23E16;
 $info: #FAF1CF;
 $light:wheat;
 $dark: #253237;
+$menuBG:#182024;
 
 // Main
 * {
@@ -79,8 +80,32 @@ a:hover {
 }
 
 .profileCard{
+    width: 100%;
     display: flex;
-    
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
+.profileCardCostButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -40px;
+}
+
+.width100{
+    width: 100%;
+}
+
+.profileWelcomeBack{
+    border: 1px solid $success;
+    border-radius: 3px;
+    background-color: $primary;
+    align-items: center;
+    padding: .8rem;
+    text-align: -webkit-center;
+    max-width: 900px;
 }
 
 .span {
@@ -141,14 +166,14 @@ a:hover {
 
 .mainNav {
     max-height: 55px;
-    background-color:$primary;
+    background-color:$menuBG;
     padding: .5rem;
     position: fixed;
     top: 0;
     width: 100%;
-    border-bottom: 10px solid $info;
     padding-top: 10px;
     padding-bottom: 10px;
+    z-index: 10;
 }
 
 .inputMain {
@@ -514,7 +539,7 @@ a:hover {
 }
 
 .plainA:hover {
-    color: $success;
+    color: $dark;
     text-decoration: none;
 }
 
@@ -610,6 +635,21 @@ a:hover {
         color:#C2DFE3;
 }
 
+.profileBgSeeNew{
+    background-color: $success;
+    padding: 3rem;
+}
+
+.profileSeeNew {
+    border: 1px solid $success;
+    border-radius: 3px;
+    background-color: $primary;
+    align-items: center;
+    padding: .8rem;
+    // margin: 3rem;
+    text-align: -webkit-center;
+}
+
 
 //statement
 .statement{
@@ -658,18 +698,16 @@ a:hover {
 
 // Footer
 .footer{
-    background-color:$primary;
+    background-color:$menuBG;
     left: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center ;
     align-items: center;
-    border-top: 10px solid $info;
+    // border-top: 10px solid $info;
     padding-top: 10px;
     padding-bottom: 10px;
-    // text-align: center;
-    // vertical-align: middle;
   }
   
   .footerP {

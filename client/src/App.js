@@ -37,7 +37,7 @@ function App() {
         <ThemeProvider>
         
           <StoreProvider>
-            <div className="main">
+            <div>
               <Header />
               <Cart />
               

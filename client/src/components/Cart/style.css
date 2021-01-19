@@ -48,6 +48,7 @@
     border: #D99748 solid 2px;
     border-radius: 25%;
     padding: .18rem;
+    z-index: 100;
   }
   
   .cart-closed:hover {
