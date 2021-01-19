@@ -734,10 +734,6 @@ a:hover {
     max-width: 401px;
 }
 
-// @media screen and (max-width: 1300px) {
-// }
-
-@media screen and (max-width: 1020px) {
 
 // Profile
 .profileFreeOrPaid{
@@ -748,13 +744,14 @@ a:hover {
 //Edit/Add Resource
 .costInput{
     display: inline;
-    width: 60px;
+    width: 200px !important;
 }
 
 .errorMessage{
     color: $warning;
     font-weight: bold;
 }
+
 
 @media screen and (max-width: 768px) {
 
@@ -809,4 +806,4 @@ a:hover {
         margin: .5rem;
     }
 
-}}
+}

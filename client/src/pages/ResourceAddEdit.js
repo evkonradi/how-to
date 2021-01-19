@@ -212,12 +212,13 @@ function ResourceAddEdit() {
               <p>Please enter cost for this article (0 for FREE article), $</p>
             </span>
             <Input
-              className="span"
+              className="costInput"
               id="cost"
               placeholder="0"
               name="cost"
               value={formState.cost}
               onChange={handleChange}
+              width="80px"
             ></Input>
             {!isCostValid() ? (
               <span className="errorMessage">Please enter a valid cost!</span>
@@ -238,13 +239,23 @@ function ResourceAddEdit() {
                 ></img>
                 <br></br>
                 <span><p>{image.imageCaption}</p></span>
-                <img
-                  className="deleteButtonEdit"
-                  style={{ width: 60 }}
-                  src="/images/icons8-delete-64.png"
-                  alt="delete"
+
+                <Button
+                  className="center"
+                  size="md"
+                  height="36px"
+                  width="100px"
+                  border="2px"
+                  bg="wheat"
+                  color="#253237"
+                  _hover={{ color: "#D99748" }}
+                  id="btnAddImage"
+                  onClick={handleDelete}
                   data-number={`image-${formState.imageList.indexOf(image)}`}
-                ></img>
+                >
+                  Delete
+                </Button>
+
                 <br />
                 <br />
               </div>
@@ -311,15 +322,22 @@ function ResourceAddEdit() {
                   ></iframe>
                   <br></br>
                   <span><p>{video.videoCaption}</p></span>
-                  <img
-                    className="deleteButtonEdit"
-                    style={{ width: 60 }}
-                    src="/images/icons8-delete-64.png"
-                    alt="delete"
-                    bg="transparent"
-                    width="3px"
+
+                  <Button
+                    className="center"
+                    size="md"
+                    height="36px"
+                    width="100px"
+                    border="2px"
+                    bg="wheat"
+                    color="#253237"
+                    _hover={{ color: "#D99748" }}
+                    id="btnAddImage"
+                    onClick={handleDelete}
                     data-number={`video-${formState.videoList.indexOf(video)}`}
-                  ></img>
+                  >
+                    Delete
+                  </Button>
                   <br />
                   <br />
                 </div>

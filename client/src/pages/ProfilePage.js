@@ -147,7 +147,7 @@ const ProfilePage = (props) => {
                   ))}
               </div>
 
-              {!user.resources.length ? <span className="profileFreeOrPaid">You have not contributed any resources yet.</span> : null }
+              {!user.resources.length ? <span className="profileFreeOrPaid">You have not contributed any resources yet. <br /><br /></span> : null }
 
               <Box bg="transparent" height="20px" />
               <h5>My Purchased resources</h5>
@@ -161,7 +161,7 @@ const ProfilePage = (props) => {
                   </Box>
                 ))}
               
-              {!user.paidResources.length ? <span className="profileFreeOrPaid">You have not purchased any resources yet.</span> : null }
+              {!user.paidResources.length ? <span className="profileFreeOrPaid">You have not purchased any resources yet. <br /><br /></span> : null }
      
             </div>
 
