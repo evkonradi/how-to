@@ -78,6 +78,11 @@ a:hover {
     display: inline-table;
 }
 
+.profileCard{
+    display: flex;
+    
+}
+
 .span {
     color: wheat;
     font-size: medium;
@@ -597,9 +602,13 @@ a:hover {
     display: grid;
 }
 
-// .profile-grid-item {
-//     display: grid;
-// }
+.profileContainer{
+        background-color: $primary;
+        align-items: center;
+        text-align: -webkit-center;
+        padding-top: 100px;
+        color:#C2DFE3;
+}
 
 
 //statement

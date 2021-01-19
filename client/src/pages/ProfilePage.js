@@ -92,41 +92,33 @@ const ProfilePage = (props) => {
 
 
   return (
-    <main>
-      <div className="main-container-light">
-      <div className="profile-grid">
-        <Box h="40px" bg="transparent"></Box>
-          <Box className="copyBox" w="100%" p={4} color="#C2DFE3">
-                <Box className="copyBox"><h4>Welcome Back, {`${user.firstName}`}!</h4> 
+        <>
+          <div className="profileContainer">
+              <h4>Welcome Back, {`${user.firstName}`}!</h4>
+              <Box bg="transparent" height="40px" />
+              <Box className="profile-grid-item">
+                <Box className="profileLeft" minWidth="30%">
+                  <p className="profileField">Username</p> <span className="smallBox" name={userState.username}>{`${user.username}`}</span>
+                  <p className="profileField">First Name</p> <span className="smallBox" value={userState.firstName}>{`${user.firstName}`}</span>
+                  <p className="profileField">Last Name</p> <span className="smallBox" value={userState.lastName}>{`${user.lastName}`}</span>
+                  <p className="profileField">Email</p> <span className="smallBox" value={userState.email}>{`${user.email}`}</span>
+                  <p className="profileField">Wallet</p> <span className="wheat">${`${user.wallet.toFixed(2)}`}</span>
+                  <br></br><br></br>
+                  <Box className="newPostBtn" >
+                    <a className="plainA" href="/statement/">See Statement</a>
+                  </Box>
+                  <Box className="newPostBtn" >
+                    <a className="plainA" href="/resource/">Create New Post</a>
+                  </Box>
+                  <br></br>
                 </Box>
-                <Box bg="transparent" height="40px" />
-                <Box className="profile-grid-item">
-            <Box className="profileLeft" minWidth="30%">
-                <p className="profileField">Username</p> <span className="smallBox" name={userState.username}>{`${user.username}`}</span>
-                <p className="profileField">First Name</p> <span className="smallBox" value={userState.firstName}>{`${user.firstName}`}</span>
-                <p className="profileField">Last Name</p> <span className="smallBox" value={userState.lastName}>{`${user.lastName}`}</span>
-                <p className="profileField">Email</p> <span className="smallBox" value={userState.email}>{`${user.email}`}</span>
-                <p className="profileField">Wallet</p> <span className="wheat">${`${user.wallet.toFixed(2)}`}</span>
-                <br></br><br></br>
-                <Box className="newPostBtn" >
-                <a className="plainA" href="/statement/">See Statement</a>
-                </Box>
-                <Box className="newPostBtn" >
-                  <a className="plainA" href="/resource/">Create New Post</a>
-                </Box>
-                <br></br>
-            </Box>
-            </Box>
-            <Box className="profile-grid-item">
+              </Box>
+            
+              <h5>My Contributions</h5>
   
-             
-             
               {user.resources.map((resource) => (
-                  <Box className="resourceProfile">
-                     <h5>My Contributions</h5>
-                    <CardResource
-                      resource={resource} useClass="card-img-size-search"
-                    ></CardResource>
+                  <div className="profileCard">
+                    <CardResource resource={resource} useClass="card-img-size-search"></CardResource>
                     <span className="profileFreeOrPaid">
                       COST: {isResourceFree(resource.cost) ? (`FREE`) : (`$${resource.cost}` )}
                     </span>
@@ -138,21 +130,22 @@ const ProfilePage = (props) => {
                       >Edit</Button>
                     </Link>
                     <Button 
-                    className="edit"
-                    bg="wheat"
-                    padding=".3rem"
-                    data-number={`image-${resource._id}`} 
-                    onClick={handleDelete}>
-                      Delete
-                      </Button>
+                      className="edit"
+                      bg="wheat"
+                      padding=".3rem"
+                      data-number={`image-${resource._id}`} 
+                      onClick={handleDelete}>
+                        Delete
+                    </Button>
                     <br></br><br></br><br></br>
-                  </Box>
+                  </div>
                 ))}
 
               {!user.resources.length ? <span className="profileFreeOrPaid">You have not contributed any resources yet.</span> : null }
 
-            <Box bg="transparent" height="20px" />
+              <Box bg="transparent" height="20px" />
               <h5>My Purchased resources</h5>
+  
               {user.paidResources.map((resource) => (
                   <Box>
                     <CardResource
@@ -163,20 +156,15 @@ const ProfilePage = (props) => {
                 ))}
               
               {!user.paidResources.length ? <span className="profileFreeOrPaid">You have not purchased any resources yet.</span> : null }
-
-            </Box>
      
-            </Box>
-                <Box className="copyBox">
-            <h4>SEE WHAT'S NEW</h4>
-              <Resource></Resource>
-              </Box>
-         
-          {/* </Box> */}
+            </div>
 
-          </div>
-      </div>
-    </main>
+            <Box className="copyBox">
+              <h4>SEE WHAT'S NEW</h4>
+              <Resource></Resource>
+            </Box>
+
+          </>
   );
 };
 
